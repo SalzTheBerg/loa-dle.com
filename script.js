@@ -6,6 +6,7 @@ fetch("characterList.json")
     .then(data => {
         characterList = data;
         availableCharacterNames = characterList.map(character => character.name);
+        availableCharacterNames.sort();
     })
     .catch(error => console.error("Error loading character data:", error));
 
