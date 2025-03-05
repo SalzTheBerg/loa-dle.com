@@ -19,10 +19,24 @@ const wrongColor = "rgb(238, 42, 0)";
 
 var characterToGuess = null;
 
-function createRow(indexOfChar) {
-    if(!characterToGuess) {
-        characterToGuess = characterList[Math.floor(Math.random() * characterList.length)];
+function getDailyCharacter() {
+    const today = new Date().toISOString().split('T')[0];
+    const hash = fnv1aHash(today);
+    return characterList[hash % characterList.length];
+}
+
+function fnv1aHash(today) {
+    let hash = 0x811c9dc5;
+    for (let i = 0; i < today.length; i++) {
+        hash ^= today.charCodeAt(i);
+        hash = (hash * 0x01000193) >>> 0;
     }
+    console.log(hash);
+    return hash;
+}
+
+function createRow(indexOfChar) {
+    characterToGuess = getDailyCharacter();
 
     var table = document.getElementById("guess_table")
     var newRow = table.insertRow();

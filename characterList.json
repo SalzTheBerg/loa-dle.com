@@ -36,15 +36,6 @@
         "status": ["Alive"]
     },
     {
-        "name": "Ealyn",
-        "gender": "Female",
-        "race": ["Sylvain"],
-        "region": ["North Vern"],
-        "occupation": ["Queen", "Combatant"],
-        "affinity": ["Rapport", "Ally", "Affection"],
-        "status": ["Alive"]
-    },
-    {
         "name": "Avele",
         "gender": "Female",
         "race": ["Human"],
@@ -232,6 +223,15 @@
         "occupation": ["Combatant", "?"],
         "affinity": ["Enemy", "?"],
         "status": ["?"]
+    },
+    {
+        "name": "Ealyn",
+        "gender": "Female",
+        "race": ["Sylvain"],
+        "region": ["North Vern"],
+        "occupation": ["Queen", "Combatant"],
+        "affinity": ["Rapport", "Ally", "Affection"],
+        "status": ["Alive"]
     },
     {
         "name": "Beatrice",
