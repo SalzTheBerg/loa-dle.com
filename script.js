@@ -34,7 +34,7 @@ function createRow(indexOfChar) {
 
     let image = character.name + ".webp";
 
-    newCell.style.backgroundImage = "url('/Icons/" + image + "')";
+    newCell.style.backgroundImage = "url('Icons/" + image + "')";
 
     for (let i = 1; i < 7; i++) {
         let newCell = newRow.insertCell(i);
@@ -118,7 +118,7 @@ inputField.addEventListener("input", function () {
     suggestions.forEach(suggestion => {
         let suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item')
-        suggestionItem.innerHTML = '<img src="/Icons/' + suggestion + '.webp">' + suggestion;
+        suggestionItem.innerHTML = '<img src="Icons/' + suggestion + '.webp">' + suggestion;
         suggestionsContainer.appendChild(suggestionItem);
     });
 });
