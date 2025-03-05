@@ -40,7 +40,7 @@ function createRow(indexOfChar) {
     characterToGuess = getDailyCharacter();
 
     var table = document.getElementById("guess_table")
-    var newRow = table.insertRow();
+    var newRow = table.insertRow(1);
     let character = characterList[indexOfChar];
 
     let attributes = ["name", "gender", "race", "region", "occupation", "affinity", "status"]
