@@ -93,7 +93,7 @@
         "name": "Nineveh",
         "gender": "Female",
         "race": ["Lazenith"],
-        "region": ["Sea of Procyon, Elgacia"],
+        "region": ["Elgacia", "Sea of Procyon"],
         "occupation": ["Combatant", "Sidereal"],
         "affinity": ["Rapport", "Ally", "Affection"],
         "status": ["Alive"]
