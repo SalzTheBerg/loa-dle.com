@@ -6,10 +6,30 @@
     </head>
     <body>
         <h1>LOA'dle</h1>
-        <p>Lost Ark guesser</p>
+        <p>Guess the class of the ability screenshot!</p>
+
+        <label class="grayscale">
+            <input type="checkbox" checked id="grayscale_checkbox">
+            <span class="slider_round"></span>
+        </label>
+        <span>Toggle grayscale</span>
+
+        <br>
+
+        <label class="rotation">
+            <input type="checkbox" checked id="rotation_checkbox">
+            <span class="slider_round"></span>
+        </label>
+        <span>Toggle rotation</span>
+
+        <br>
+
+        <div id="guess_image"></div>
+
+        <br>
         
         <div>
-            <input type="text" id="input_guess" placeholder="Enter character name here..." autocomplete="off">
+            <input type="text" id="input_guess" placeholder="Enter class here..." autocomplete="off">
             <button id="input_submit" onclick="getInput()">Guess!</button>
         </div>
         <br>

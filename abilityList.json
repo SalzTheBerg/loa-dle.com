@@ -1,0 +1,58 @@
+{
+    "Scrapper": {
+        "abilities": [
+            "Battering Fists",
+            "Blazing Bombardment",
+            "Chain Destruction Fist",
+            "Charging Blow",
+            "Continuous Push",
+            "Critical Blow",
+            "Crushing Smite",
+            "Death Rattle",
+            "Dragon Advent",
+            "Explosive Fist",
+            "Fierce Tiger Strike",
+            "Fist of the Wind God",
+            "Heaven and Earth Strike",
+            "Instant Hit",
+            "Iron Cannon Blow",
+            "Judgement",
+            "Mysterious Art_ Blast of Ruination",
+            "Potent Rising Fist",
+            "Roundup Sweep",
+            "Shredding Strike",
+            "Supernova",
+            "Undefeated Dragon King"
+        ]
+    },
+    "Gunslinger": {
+        "abilities": [
+            "AT02 Grenade",
+            "Bullet Prison",
+            "Bullet Rain",
+            "Bullseye",
+            "Catastrophe",
+            "Death Fire",
+            "Dexterous Shot",
+            "Dual Buckshot",
+            "Equilibrium",
+            "Eye of Twilight",
+            "Focused Shot",
+            "High-Caliber HE Bullet",
+            "Hour of Judgment",
+            "Last Request",
+            "Meteor Stream",
+            "Peacekeeper",
+            "Perfect Shot",
+            "Plasma Bullet",
+            "Quick Step",
+            "Seven Shotguns",
+            "Sharpshooter",
+            "Shotgun Rapid Fire",
+            "Somersault Shot",
+            "Spiral Flame",
+            "Spiral Tracker",
+            "Target Down"
+        ]
+    }
+}
