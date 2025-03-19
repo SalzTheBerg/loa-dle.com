@@ -54,5 +54,107 @@
             "Spiral Tracker",
             "Target Down"
         ]
+    },
+    "Deathblade": {
+        "abilities": [
+            "Blade Assault",
+            "Blade Dance",
+            "Blitz Rush",
+            "Breaking Moon",
+            "Dark Axel",
+            "Death Sentence",
+            "Deathly Slash",
+            "Earth Cleaver",
+            "Fallstar",
+            "Fatal Wave",
+            "Flash Blink",
+            "Head Hunt",
+            "Maelstrom",
+            "Moonlight Sonic",
+            "Soul Absorber",
+            "Spincutter",
+            "Surprise Attack",
+            "Turning Slash",
+            "Twin Shadows",
+            "Upper Slash",
+            "Void Strike",
+            "Wind Cut"
+        ]
+    },
+    "Arcanist": {
+        "abilities": [
+            "Call of Destiny",
+            "Celestial Rain",
+            "Checkmate",
+            "Dancing of Spineflower",
+            "Dark Resurrection",
+            "Dealer's Flip",
+            "Deathbound",
+            "Evoke",
+            "Four of a Kind",
+            "Mysterious Stampede",
+            "Prismatic Mirror",
+            "Quadra Accelerate",
+            "Return",
+            "Scratch Dealer",
+            "Secret Garden",
+            "Serendipity",
+            "Spiral Edge",
+            "Stream of Edge",
+            "The Devil",
+            "The Sun",
+            "Unlimited Shuffle"
+        ]
+    },
+    "Bard": {
+        "abilities": [
+            "Aria",
+            "Dissonance",
+            "Guardian Tune",
+            "Harp of Rhythm",
+            "Heavenly Tune",
+            "March",
+            "Note Bundle",
+            "Oratorio",
+            "Prelude of Death",
+            "Prelude of Storm",
+            "Rhapsody of Light",
+            "Rhythm Buckshot",
+            "Sonatina",
+            "Sonic Vibration",
+            "Sound Shock",
+            "Sound Wave",
+            "Soundholic",
+            "Stigma",
+            "Symphonia",
+            "Vivace",
+            "Wind of Music"
+        ]
+    },
+    "Wardancer": {
+        "abilities": [
+            "Deadly Dive",
+            "Energy Combustion",
+            "Esoteric Skill_ Azure Dragon Supreme Fist",
+            "Esoteric Skill_ Blast Formation",
+            "Esoteric Skill_ Call of the Wind God",
+            "Esoteric Skill_ Rising Fire Dragon",
+            "Esoteric Skill_ Sprial Impact",
+            "Esoteric Skill_ Thunderclap Kick",
+            "Flash Heat Fang",
+            "Leaping Dragon",
+            "Lightning Kick",
+            "Moon Flash Kick",
+            "Phoenix Advent",
+            "Roar of Courage",
+            "Sky Shattering Blow",
+            "Sweeping Hidden Tracking",
+            "Sweeping Kick",
+            "Swift Wind Kick",
+            "Triple Fist",
+            "Ultimate Skill_ Fist of Dominance",
+            "Ultimate Skill_ Flash Rage Blow",
+            "Wind's Whisper"
+        ]
     }
 }

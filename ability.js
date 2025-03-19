@@ -21,6 +21,7 @@ const wrongColor = "rgb(238, 42, 0)";
 
 let dailyClass;
 let dailySkill;
+let dailyImage;
 
 fetch("abilityList.json")
     .then(response => response.json())
@@ -41,11 +42,11 @@ function loadImg() {
     dailySkill = abilityList[dailyClass].abilities[Math.floor(Math.random()*abilityList[dailyClass].abilities.length)];
 
     imageDiv.innerHTML = '<img src="Abilities/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
+    dailyImage = document.getElementById("dailySkill");
     applyFilters();
 }
 
 function applyFilters() {
-    const dailyImage = document.getElementById("dailySkill");
     if (grayscaleCheckbox.checked) {
         dailyImage.style.filter = "grayscale(100%)";
     } else {
@@ -59,7 +60,6 @@ function applyFilters() {
 };
 
 document.getElementById("grayscale_checkbox").addEventListener("change", function() {
-    const dailyImage = document.getElementById("dailySkill");
     if (grayscaleCheckbox.checked) {
         dailyImage.style.filter = "grayscale(100%)";
     } else {
@@ -68,7 +68,6 @@ document.getElementById("grayscale_checkbox").addEventListener("change", functio
 });
 
 document.getElementById("rotation_checkbox").addEventListener("change", function() {
-    const dailyImage = document.getElementById("dailySkill");
     if (rotationCheckbox.checked) {
         dailyImage.style.transform = "rotate(" + dailyRotation + "deg)";
     } else {
@@ -110,6 +109,9 @@ function createRow(indexOfChar) {
         newCell.style.backgroundColor = correctColor;
         inputContent.style.display = "none";
         inputSubmit.style.display = "none";
+        dailyImage.style.filter = "grayscale(0%)";
+        dailyImage.style.transform = "rotate(" + 0 + "deg)";
+
         guessSkillName();
     } else newCell.style.backgroundColor = wrongColor;
 }
