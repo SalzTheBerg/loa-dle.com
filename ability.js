@@ -77,9 +77,9 @@ document.getElementById("rotation_checkbox").addEventListener("change", function
 });
 
 function getInput() {
-    /*//clearing suggestion container
+    //clearing suggestion container
     let suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';*/
+    suggestionsContainer.innerHTML = '';
     let value = inputContent.value.toLowerCase();
 
     for (let i = 0; i < classList.length; i++) {
@@ -98,8 +98,6 @@ function getInput() {
 }
 
 function createRow(indexOfChar) {
-    let suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';
 
     let newRow = guessTable.insertRow(0);
     let classGuess = classList[indexOfChar];
