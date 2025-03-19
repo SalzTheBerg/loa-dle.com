@@ -156,5 +156,30 @@
             "Ultimate Skill_ Flash Rage Blow",
             "Wind's Whisper"
         ]
+    },
+    "Soulfist": {
+        "abilities": [
+            "Bolting Crash",
+            "Celestial Palm",
+            "Crippling Barrier",
+            "Deadly Finger",
+            "Decimation Ray",
+            "Energy Blast",
+            "Energy Bullet",
+            "Energy Release",
+            "Flash Step",
+            "Force Orb",
+            "Illustion Strike",
+            "Lightning Palm",
+            "Magnetic Palm",
+            "Merciless Pummel",
+            "Palm Burst",
+            "Pulverizing Palm",
+            "Rule the World",
+            "Shadowbreaker",
+            "Sky Slash",
+            "Tempest Blast",
+            "World Decimation"
+        ]
     }
 }
