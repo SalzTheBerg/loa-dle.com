@@ -1,5 +1,5 @@
-var characterList = [];
-var availableCharacterNames = [];
+let characterList = [];
+let availableCharacterNames = [];
 
 fetch("characterList.json")
     .then(response => response.json())
@@ -10,9 +10,9 @@ fetch("characterList.json")
     })
     .catch(error => console.error("Error loading character data:", error));
 
-var guessTable = document.getElementById("guess_table");
-var inputField = document.getElementById("input_guess");
-var usedCharacters = [];
+const guessTable = document.getElementById("guess_table");
+const inputField = document.getElementById("input_guess");
+const usedCharacters = [];
 
 const correctColor = "rgb(96, 220, 0)";
 const partialMatchColor = "rgb(225, 225, 0)";
@@ -94,8 +94,6 @@ function getInput() {
 
     inputField.value = "";
 }
-
-var inputField = document.getElementById("input_guess");
 
 inputField.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
