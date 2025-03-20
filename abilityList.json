@@ -206,5 +206,29 @@
             "Spinning Dagger",
             "Spirit Catch"
         ]
+    },
+    "Artist": {
+        "abilities": [
+            "Masterwork_ Efflorescence",
+            "Masterwork_ Spectacle",
+            "Paint_ Butterfly Dream",
+            "Paint_ Cattle Drive",
+            "Paint_ Crane Wing",
+            "Paint_ Dragon Engraving",
+            "Paint_ Drawing Orchids",
+            "Paint_ Illusion Door",
+            "Paint_ Ink Well",
+            "Paint_ Inkrise",
+            "Paint_ Moonsketch",
+            "Paint_ Pouncing Tiger",
+            "Paint_ Starry Night",
+            "Paint_ Sun Well",
+            "Paint_ Sunsketch",
+            "Stroke_ Hopper",
+            "Stroke_ Ink Shower",
+            "Stroke_ One Stroke",
+            "Stroke_ Sprinkle",
+            "Stroke_ Upward Stroke"
+        ]
     }
 }
