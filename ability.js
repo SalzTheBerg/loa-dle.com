@@ -198,3 +198,24 @@ function getSkillInput() {
 
     inputContent.value = "";
 }
+
+skillGuess.addEventListener("input", function () {
+    let query = this.value.toLowerCase();
+    let suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().startsWith(query));
+
+    if (query === '') {
+        document.getElementById("suggestions").innerHTML = '';
+        return;
+    }
+
+    let suggestionsContainer = document.getElementById("suggestions");
+    suggestionsContainer.innerHTML = '';
+
+
+    suggestions.forEach(suggestion => {
+        let suggestionItem = document.createElement("div");
+        suggestionItem.classList.add('suggestion-item')
+        suggestionItem.innerHTML = suggestion;
+        suggestionsContainer.appendChild(suggestionItem);
+    });
+});
