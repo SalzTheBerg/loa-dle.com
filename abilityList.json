@@ -181,5 +181,30 @@
             "Tempest Blast",
             "World Decimation"
         ]
+    },
+    "Reaper": {
+        "abilities": [
+            "Black Mist",
+            "Call of the Knife",
+            "Dance of Fury",
+            "Deathscythe",
+            "Distortion",
+            "Finishing Step",
+            "Glowing Brand",
+            "Lunar Eclipse_ Cadenza",
+            "Phantom Dancer",
+            "Piercing Blade",
+            "Rage Spear",
+            "Reaper's Call",
+            "Shadow Double",
+            "Shadow Knife",
+            "Shadow Storm",
+            "Shadow Trap",
+            "Shadow Vortex",
+            "Silent Rage",
+            "Solar Eclipse_ Requiem",
+            "Spinning Dagger",
+            "Spirit Catch"
+        ]
     }
 }
