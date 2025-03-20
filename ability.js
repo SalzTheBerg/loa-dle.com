@@ -18,6 +18,7 @@ const inputSubmit = document.getElementById("input_submit");
 const inputDiv = document.getElementById("input_div");
 const skillInput = document.getElementById("skill_input_div");
 const skillGuess = document.getElementById("skill_guess");
+const skillSubmit = document.getElementById("skill_submit");
 
 const correctColor = "rgb(96, 220, 0)";
 const wrongColor = "rgb(238, 42, 0)";
@@ -218,4 +219,23 @@ skillGuess.addEventListener("input", function () {
         suggestionItem.innerHTML = suggestion;
         suggestionsContainer.appendChild(suggestionItem);
     });
+});
+
+skillGuess.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+
+        let query = this.value.toLowerCase();
+
+        if (query === '') {
+            return;
+        }
+
+        let suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().startsWith(query));
+
+        if (suggestions.length > 0) {
+            this.value = suggestions[0];
+        }
+        skillSubmit.click();
+    }
 });
