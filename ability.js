@@ -14,7 +14,10 @@ const rotationCheckbox = document.getElementById("rotation_checkbox");
 const guessTable = document.getElementById("guess_table")
 
 const inputContent = document.getElementById("input_guess");
-const inputSubmit = document.getElementById("input_submit")
+const inputSubmit = document.getElementById("input_submit");
+const inputDiv = document.getElementById("input_div");
+const skillInput = document.getElementById("skill_input_div");
+const skillGuess = document.getElementById("skill_guess");
 
 const correctColor = "rgb(96, 220, 0)";
 const wrongColor = "rgb(238, 42, 0)";
@@ -112,7 +115,17 @@ function createRow(indexOfChar) {
         dailyImage.style.filter = "grayscale(0%)";
         dailyImage.style.transform = "rotate(" + 0 + "deg)";
 
-        guessSkillName();
+        const para = document.createElement("p");
+        const head = document.createElement("h2");
+        const node1 = document.createTextNode("Congratulations!");
+        const node2 = document.createTextNode("Can you also guess the ability name?");
+        head.appendChild(node1);
+        para.appendChild(node2);
+        inputDiv.appendChild(head);
+        inputDiv.appendChild(para);
+
+        document.querySelectorAll("br.removable").forEach(br => br.remove());
+        skillInput.style.display = "block";
     } else newCell.style.backgroundColor = wrongColor;
 }
 
@@ -168,3 +181,20 @@ inputContent.addEventListener("input", function () {
         suggestionsContainer.appendChild(suggestionItem);
     });
 });
+
+function getSkillInput() {
+    //clearing suggestion container
+    let suggestionsContainer = document.getElementById("suggestions");
+    suggestionsContainer.innerHTML = '';
+    let value = skillGuess.value.toLowerCase();
+
+    if (value === dailySkill.toLowerCase()) {
+        alert("Richtig");
+    } else {
+        alert("Falsch");
+        alert(dailySkill);
+        alert(value);
+    }
+
+    inputContent.value = "";
+}

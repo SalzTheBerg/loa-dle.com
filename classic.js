@@ -12,13 +12,15 @@ fetch("characterList.json")
 
 const guessTable = document.getElementById("guess_table");
 const inputField = document.getElementById("input_guess");
+const inputSubmit = document.getElementById("input_submit")
+const inputDiv = document.getElementById("input_div");
 const usedCharacters = [];
 
 const correctColor = "rgb(96, 220, 0)";
 const partialMatchColor = "rgb(225, 225, 0)";
 const wrongColor = "rgb(238, 42, 0)";
 
-var characterToGuess = null;
+let characterToGuess;
 
 function getDailyCharacter() {
     const today = new Date().toISOString().split('T')[0];
@@ -39,8 +41,7 @@ function fnv1aHash(today) {
 function createRow(indexOfChar) {
     characterToGuess = getDailyCharacter();
 
-    var table = document.getElementById("guess_table")
-    var newRow = table.insertRow(1);
+    let newRow = guessTable.insertRow(1);
     let character = characterList[indexOfChar];
 
     let attributes = ["name", "gender", "race", "region", "occupation", "affinity", "status"]
@@ -70,6 +71,20 @@ function createRow(indexOfChar) {
             newCell.innerHTML = character[attributeName];
         }
     }
+    if (characterToGuess === characterList[indexOfChar]) {
+        inputField.style.display = "none";
+        inputSubmit.style.display = "none";
+        const para = document.createElement("p");
+        const head = document.createElement("h2");
+        const node1 = document.createTextNode("Congratulations!");
+        const node2 = document.createTextNode("You've guessed the daily character, you can check out the other modes or come back tomorrow.");
+        head.appendChild(node1);
+        para.appendChild(node2);
+        inputDiv.appendChild(head);
+        inputDiv.appendChild(para);
+
+        document.querySelectorAll("br.removable").forEach(br => br.remove());
+    }
 }
 
 function getInput() {
@@ -77,8 +92,7 @@ function getInput() {
     let suggestionsContainer = document.getElementById("suggestions");
     suggestionsContainer.innerHTML = '';
 
-    let inputContent = document.getElementById("input_guess");
-    let value = inputContent.value.toLowerCase();
+    let value = inputField.value.toLowerCase();
 
     for (let i = 0; i < characterList.length; i++) {
         let character = characterList[i];
