@@ -312,5 +312,33 @@
             "Thrust Impact",
             "Wild Slash"
         ]
+    },
+    "Glavier": {
+        "abilities": [
+            "4-Headed-Dragon",
+            "Blue Dragon's Claw",
+            "Chain Slash",
+            "Cutting Wind",
+            "Deadly Red Dragon",
+            "Double Strike",
+            "Dragon's Rampage",
+            "Dragonscale Defense",
+            "Flash Kick",
+            "Half Moon Slash",
+            "Raging Dragon Slash",
+            "Red Dragon's Horn",
+            "Shackling Blue Dragon",
+            "Soul Cutter",
+            "Spear Dive",
+            "Spiraling Spear",
+            "Stampeding Slash",
+            "Starfall Pounce",
+            "Thorn Jab",
+            "Thrust of Destruction",
+            "Wheel of Blades",
+            "Windsplitter",
+            "Yeon-style Spear Technique_ Spear Meteor",
+            "Yeon-style Spear Technique_ Storming Red Dragon"
+        ]
     }
 }
