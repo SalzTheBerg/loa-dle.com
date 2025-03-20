@@ -280,5 +280,37 @@
             "Thrashing",
             "Vestige"
         ]
+    },
+    "Shadowhunter": {
+        "abilities": [
+            "Blood Marsh",
+            "Blood Massacre",
+            "Brutal Cross",
+            "Cruel Cutter",
+            "Death Claw",
+            "Decimate",
+            "Demolition",
+            "Demon Vision",
+            "Demonic Clone",
+            "Demonic Slash",
+            "Demon's Grip",
+            "Destruction",
+            "Fallen Ruin",
+            "Gate of Eruption",
+            "Gore Bleeding",
+            "Grind Chain",
+            "Howl",
+            "Leaping Blow",
+            "Nimble Cut",
+            "Piercing Thorn",
+            "Rising Claw",
+            "Ruining Rush",
+            "Sharpened Cut",
+            "Slasher",
+            "Spinning Dive",
+            "Spinning Weapon",
+            "Thrust Impact",
+            "Wild Slash"
+        ]
     }
 }
