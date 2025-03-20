@@ -230,5 +230,55 @@
             "Stroke_ Sprinkle",
             "Stroke_ Upward Stroke"
         ]
+    },
+    "Slayer": {
+        "abilities": [
+            "Brutal Impact",
+            "Cross Blade",
+            "Cruel Pierce",
+            "Execute",
+            "Fatal Sword",
+            "Final Blow",
+            "Flame Deathblade",
+            "Flash Blade",
+            "Flying Strike",
+            "Furious Claw",
+            "Fury Blade",
+            "Ground Smash",
+            "Guillotine",
+            "Hurricane Sword",
+            "Mountain Cleave",
+            "Punishing Draw",
+            "Ragna Break",
+            "Spinning Sword",
+            "Spiral Deathblade",
+            "Volcanic Eruption",
+            "Wild Rush",
+            "Wild Stomp"
+        ]
+    },
+    "Souleater": {
+        "abilities": [
+            "Astaros",
+            "Death Order",
+            "Death Slash",
+            "Death Yard",
+            "Deathbringer",
+            "Fatal Finale",
+            "Frenzy Scythe",
+            "Ghost Step",
+            "Gluttony",
+            "Guillotine Swing",
+            "Harvest",
+            "Lethal Spinning",
+            "Lunatic Edge",
+            "Reaper's Scythe",
+            "Rusted Nail",
+            "Soul Drain",
+            "Spectral Coffin",
+            "The End",
+            "Thrashing",
+            "Vestige"
+        ]
     }
 }
