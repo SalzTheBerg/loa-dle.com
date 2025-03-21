@@ -126,8 +126,6 @@ function createRow(indexOfChar) {
         para.appendChild(node2);
         inputDiv.appendChild(head);
         inputDiv.appendChild(para);
-
-        document.querySelectorAll("br.removable").forEach(br => br.remove());
     } else newCell.style.backgroundColor = wrongColor;
 }
 
@@ -169,7 +167,7 @@ function removeItem(array, itemToRemove) {
 
 inputContent.addEventListener("input", function () {
     let query = this.value.toLowerCase();
-    
+
     let suggestions = availableClasses.filter(name => name.toLowerCase().startsWith(query));
     if (classGuessed) {
         suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().includes(query));
