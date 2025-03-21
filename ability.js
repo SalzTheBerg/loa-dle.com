@@ -27,6 +27,8 @@ let dailyClass;
 let dailySkill;
 let dailyImage;
 
+let classGuessed = false;
+
 fetch("abilityList.json")
     .then(response => response.json())
     .then(data => {
@@ -110,9 +112,9 @@ function createRow(indexOfChar) {
     newCell.innerHTML = classGuess;
 
     if (classList[indexOfChar] === dailyClass) {
+        classGuessed = true;
         newCell.style.backgroundColor = correctColor;
-        inputContent.style.display = "none";
-        inputSubmit.style.display = "none";
+        inputContent.placeholder = "Enter skill name..."
         dailyImage.style.filter = "grayscale(0%)";
         dailyImage.style.transform = "rotate(" + 0 + "deg)";
 
@@ -126,12 +128,7 @@ function createRow(indexOfChar) {
         inputDiv.appendChild(para);
 
         document.querySelectorAll("br.removable").forEach(br => br.remove());
-        skillInput.style.display = "block";
     } else newCell.style.backgroundColor = wrongColor;
-}
-
-function guessSkillName() {
-    return;
 }
 
 inputContent.addEventListener("keypress", function(event) {
@@ -143,14 +140,22 @@ inputContent.addEventListener("keypress", function(event) {
         if (query === '') {
             return;
         }
-
+        
         let suggestions = availableClasses.filter(name => name.toLowerCase().startsWith(query));
         removeItem(availableClasses, suggestions[0]);
+
+        if (classGuessed) {
+            suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().includes(query));
+        }
 
         if (suggestions.length > 0) {
             this.value = suggestions[0];
         }
-        inputSubmit.click();
+        if (classGuessed) {
+            getSkillInput();
+        } else {
+            getInput();
+        }
     }
 });
 
@@ -164,7 +169,11 @@ function removeItem(array, itemToRemove) {
 
 inputContent.addEventListener("input", function () {
     let query = this.value.toLowerCase();
+    
     let suggestions = availableClasses.filter(name => name.toLowerCase().startsWith(query));
+    if (classGuessed) {
+        suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().includes(query));
+    }
 
     if (query === '') {
         document.getElementById("suggestions").innerHTML = '';
@@ -187,7 +196,7 @@ function getSkillInput() {
     //clearing suggestion container
     let suggestionsContainer = document.getElementById("suggestions");
     suggestionsContainer.innerHTML = '';
-    let value = skillGuess.value.toLowerCase();
+    let value = inputContent.value.toLowerCase();
 
     if (value === dailySkill.toLowerCase()) {
         alert("Richtig");
@@ -199,43 +208,3 @@ function getSkillInput() {
 
     inputContent.value = "";
 }
-
-skillGuess.addEventListener("input", function () {
-    let query = this.value.toLowerCase();
-    let suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().startsWith(query));
-
-    if (query === '') {
-        document.getElementById("suggestions").innerHTML = '';
-        return;
-    }
-
-    let suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';
-
-
-    suggestions.forEach(suggestion => {
-        let suggestionItem = document.createElement("div");
-        suggestionItem.classList.add('suggestion-item')
-        suggestionItem.innerHTML = suggestion;
-        suggestionsContainer.appendChild(suggestionItem);
-    });
-});
-
-skillGuess.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-
-        let query = this.value.toLowerCase();
-
-        if (query === '') {
-            return;
-        }
-
-        let suggestions = abilityList[dailyClass].abilities.filter(name => name.toLowerCase().startsWith(query));
-
-        if (suggestions.length > 0) {
-            this.value = suggestions[0];
-        }
-        skillSubmit.click();
-    }
-});
