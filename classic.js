@@ -72,8 +72,6 @@ function createRow(indexOfChar) {
         }
     }
     if (characterToGuess === characterList[indexOfChar]) {
-        inputField.style.display = "none";
-        inputSubmit.style.display = "none";
         const para = document.createElement("p");
         const head = document.createElement("h2");
         const node1 = document.createTextNode("Congratulations!");
