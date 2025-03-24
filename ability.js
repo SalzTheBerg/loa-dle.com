@@ -25,6 +25,7 @@ const skillInput = document.getElementById("skill_input_div");
 const skillGuess = document.getElementById("skill_guess");
 const skillSubmit = document.getElementById("skill_submit");
 const suggestionsContainer = document.getElementById("suggestions");
+const responseMessage = document.getElementById("response_message");
 
 const correctColor = "rgb(96, 220, 0)";
 const wrongColor = "rgb(238, 42, 0)";
@@ -144,8 +145,8 @@ function createRow(indexOfChar) {
         const node2 = document.createTextNode("Can you also guess the ability name?");
         head.appendChild(node1);
         para.appendChild(node2);
-        suggestionsContainer.appendChild(head);
-        suggestionsContainer.appendChild(para);
+        responseMessage.appendChild(head);
+        responseMessage.appendChild(para);
     } else if (checkForGenderUnlock()) {
         classGuessed = true;
         newCell.style.backgroundColor = correctColor;
@@ -161,9 +162,9 @@ function createRow(indexOfChar) {
         head.appendChild(node1);
         para.appendChild(node2);
         para2.appendChild(node3);
-        suggestionsContainer.appendChild(head);
-        suggestionsContainer.appendChild(para);
-        suggestionsContainer.appendChild(para2);
+        responseMessage.appendChild(head);
+        responseMessage.appendChild(para);
+        responseMessage.appendChild(para2);
     } else newCell.style.backgroundColor = wrongColor;
 }
 
