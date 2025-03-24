@@ -29,6 +29,7 @@ let dailyImage;
 
 let classGuessed = false;
 
+//loading the abilityList.json and saving data in abilityList array and class names in classList and availableClasses, calls the loadImg(); function after finishing
 fetch("abilityList.json")
     .then(response => response.json())
     .then(data => {
@@ -43,6 +44,7 @@ fetch("abilityList.json")
     })
     .catch(error => console.error("Error loading character data:", error));
 
+//loads the daily image randomly and adding it to the DOM, calls the applyFilters(); method when done
 function loadImg() {
     dailyClass = classList[Math.floor(Math.random()*classList.length)];
     dailySkill = abilityList[dailyClass].abilities[Math.floor(Math.random()*abilityList[dailyClass].abilities.length)];
@@ -52,6 +54,7 @@ function loadImg() {
     applyFilters();
 }
 
+//applys grayscale and rotation to the image based on checkboxes
 function applyFilters() {
     if (grayscaleCheckbox.checked) {
         dailyImage.style.filter = "grayscale(100%)";
@@ -65,6 +68,8 @@ function applyFilters() {
     }
 };
 
+//event listener for grayscale checkbox
+//TODO: change checkbox to extra window
 document.getElementById("grayscale_checkbox").addEventListener("change", function() {
     if (grayscaleCheckbox.checked) {
         dailyImage.style.filter = "grayscale(100%)";
@@ -73,6 +78,8 @@ document.getElementById("grayscale_checkbox").addEventListener("change", functio
     }
 });
 
+//event listener for rotation checkbox
+//TODO: change checkbox to extra window
 document.getElementById("rotation_checkbox").addEventListener("change", function() {
     if (rotationCheckbox.checked) {
         dailyImage.style.transform = "rotate(" + dailyRotation + "deg)";
@@ -81,6 +88,7 @@ document.getElementById("rotation_checkbox").addEventListener("change", function
     }
 });
 
+//called upon submit or enter -> reads input and adds tablerow (calling createRow(); function) when input == className
 function getInput() {
     //clearing suggestion container
     let suggestionsContainer = document.getElementById("suggestions");
@@ -102,6 +110,7 @@ function getInput() {
     inputContent.value = "";
 }
 
+//creates new tablerow for displaying guesses and enables the skill name guess upon correct guess
 function createRow(indexOfChar) {
 
     let newRow = guessTable.insertRow(0);
@@ -129,6 +138,7 @@ function createRow(indexOfChar) {
     } else newCell.style.backgroundColor = wrongColor;
 }
 
+//event listener for pressing enter in input field -> calls the submit button function and removes input as a suggestion
 inputContent.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -157,6 +167,7 @@ inputContent.addEventListener("keypress", function(event) {
     }
 });
 
+//function to remove an item out of an array input(array, itemToRemove) output nothing
 function removeItem(array, itemToRemove) {
     const index = array.indexOf(itemToRemove);
 
@@ -165,6 +176,7 @@ function removeItem(array, itemToRemove) {
     }
 }
 
+//event listener for keyboard input in guess field
 inputContent.addEventListener("input", function () {
     let query = this.value.toLowerCase();
 
@@ -190,19 +202,21 @@ inputContent.addEventListener("input", function () {
     });
 });
 
+//function similar to getInput(); but only called after class is already guessed
 function getSkillInput() {
     //clearing suggestion container
     let suggestionsContainer = document.getElementById("suggestions");
     suggestionsContainer.innerHTML = '';
-    let value = inputContent.value.toLowerCase();
+    let value = inputContent.value;
 
-    if (value === dailySkill.toLowerCase()) {
-        alert("Richtig");
+    if (value === dailySkill) {
+        alert("Correct !");
     } else {
-        alert("Falsch");
-        alert(dailySkill);
-        alert(value);
+        alert("Wrong! ):<");
+        alert("The skill to guess was: " + dailySkill);
+        alert("You entered: " + value);
     }
 
-    inputContent.value = "";
+    inputDiv.style.display = "none";
+    document.querySelectorAll("br.removable").forEach(br => br.remove());
 }
