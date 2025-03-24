@@ -1,0 +1,70 @@
+{
+    "groups": [
+        {
+            "groupID": ["Berserker", "Slayer"],
+            "skills": [
+                {
+                    "Berserker": "Assault Blade",
+                    "Slayer": "Flash Blade"
+                },
+                {
+                    "Berserker": "Crime Hazard",
+                    "Slayer": "Fury Blade"
+                },
+                {
+                    "Berserker": "Diving Slash",
+                    "Slayer": "Flying Strike"
+                },
+                {
+                    "Berserker": "Double Slash",
+                    "Slayer": "Cross Blade"
+                },
+                {
+                    "Berserker": "Finish Strike",
+                    "Slayer": "Fatal Sword"
+                },
+                {
+                    "Berserker": "Hell Blade",
+                    "Slayer": "Volcanic Eruption"
+                },
+                {
+                    "Berserker": "Maelstrom",
+                    "Slayer": "Ground Smash"
+                },
+                {
+                    "Berserker": "Mountain Crash",
+                    "Slayer": "Wild Stomp"
+                },
+                {
+                    "Berserker": "Shoulder Charge",
+                    "Slayer": "Wild Rush"
+                },
+                {
+                    "Berserker": "Tempest Slash",
+                    "Slayer": "Final Blow"
+                },
+                {
+                    "Berserker": "Whirlwind",
+                    "Slayer": "Hurricane Sword"
+                },
+                {
+                    "Berserker": "Wind Blade",
+                    "Slayer": "Spinning Sword"
+                },
+                {
+                    "Berserker": "Sword Storm",
+                    "Slayer": "Mountain Cleave"
+                }
+            ]
+        },
+        {
+            "groupID": ["Striker", "Wardancer"],
+            "skills": [
+                {
+                    "Striker": "",
+                    "Wardancer": ""
+                }
+            ]
+        }
+    ]    
+}
