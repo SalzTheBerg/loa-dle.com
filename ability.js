@@ -180,7 +180,7 @@ function createRow(indexOfChar) {
         const para2 = document.createElement("p");
         const head = document.createElement("h2");
         const node1 = document.createTextNode("Congratulations!");
-        const node2 = document.createTextNode("The daily class was " + dailyClass + " But since this is also a skill for " + alternateClass + " it counts!");
+        const node2 = document.createTextNode("The daily class was " + dailyClass + ", but since this is also a skill for " + alternateClass + " it counts!");
         const node3 = document.createTextNode("Can you also guess the ability name?");
         head.appendChild(node1);
         para.appendChild(node2);
@@ -265,6 +265,7 @@ inputContent.addEventListener("input", function () {
     let suggestions = availableClasses.filter(name => name.toLowerCase().startsWith(query));
     if (classGuessed) {
         suggestions = abilityList[alternateClass].abilities.filter(name => name.toLowerCase().includes(query));
+        suggestions = suggestions.map(name => name.replace(/_/g, ":"));
     }
 
     if (query === '') {
@@ -293,8 +294,8 @@ function getSkillInput() {
         alert("Correct !");
     } else {
         alert("Wrong! ):<");
-        alert("The skill to guess was: " + alternateSkill);
-        alert("You entered: " + value);
+        alert("The skill to guess was: " + alternateSkill.replace(/_/g, ":"));
+        alert("You entered: " + value.replace(/_/g, ":"));
     }
 
     inputDiv.style.display = "none";
