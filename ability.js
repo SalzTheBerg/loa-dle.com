@@ -30,6 +30,8 @@ const responseMessage = document.getElementById("response_message");
 const correctColor = "rgb(96, 220, 0)";
 const wrongColor = "rgb(238, 42, 0)";
 
+const today = new Date().toISOString().split('T')[0];
+
 let dailyClass;
 let dailySkill;
 let dailyImage;
@@ -57,12 +59,33 @@ Promise.all([
 
 //loads the daily image randomly and adding it to the DOM, calls the applyFilters(); method when done
 function loadImg() {
-    dailyClass = classList[Math.floor(Math.random()*classList.length)];
-    dailySkill = abilityList[dailyClass].abilities[Math.floor(Math.random()*abilityList[dailyClass].abilities.length)];
+    dailyClass = getDailyClass();
+    dailySkill = getDailySkill();
 
     imageDiv.innerHTML = '<img src="Abilities/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
     applyFilters();
+}
+
+function getDailyClass() {
+    const hash = fnv1aHash(today);
+    return classList[hash % classList.length];
+}
+
+function getDailySkill() {
+    const hash = fnv1aHash(today);
+    return abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
+}
+
+//hashes the input by fnv1a hashing
+function fnv1aHash(today) {
+    let hash = 0x811c9dc5;
+    for (let i = 0; i < today.length; i++) {
+        hash ^= today.charCodeAt(i);
+        hash = (hash * 0x01000193) >>> 0;
+    }
+    console.log(hash);
+    return hash;
 }
 
 //applys grayscale and rotation to the image based on checkboxes
