@@ -279,7 +279,12 @@ inputContent.addEventListener("input", function () {
     suggestions.forEach(suggestion => {
         let suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item');
-        suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
+        if (!classGuessed) {
+            suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
+        } else { 
+            suggestionItem.innerHTML = suggestion;
+            suggestionItem.style.paddingLeft = "3px";
+        }
         suggestionsContainer.appendChild(suggestionItem);
     });
 });
@@ -291,13 +296,12 @@ function getSkillInput() {
     let value = inputContent.value;
 
     if (value === alternateSkill) {
-        alert("Correct !");
+        responseMessage.innerHTML = "Skill name and class entered correctly!<br>Congratulations!";
     } else {
-        alert("Wrong! ):<");
-        alert("The skill to guess was: " + alternateSkill.replace(/_/g, ":"));
-        alert("You entered: " + value.replace(/_/g, ":"));
+        responseMessage.innerHTML = "Wrong! ):<<br>The skill to guess was: " + alternateSkill.replace(/_/g, ":") + "<br> At least you got the class right!";
     }
 
     inputDiv.style.display = "none";
+    
     document.querySelectorAll("br.removable").forEach(br => br.remove());
 }
