@@ -195,7 +195,7 @@
         "region": ["Petrania", "Arthetine", "Shushire"],
         "occupation": ["Combatant", "Legion Commander"],
         "affinity": ["Enemy"],
-        "status": ["?"]
+        "status": ["Alive"]
     },
     {
         "name": "Echidna",
@@ -204,7 +204,7 @@
         "region": ["Petrania", "Kurzan"],
         "occupation": ["Combatant", "Legion Commander"],
         "affinity": ["Enemy"],
-        "status": ["?"]
+        "status": ["Deceased"]
     },
     {
         "name": "Aegir",
@@ -213,16 +213,16 @@
         "region": ["Petrania", "Kurzan"],
         "occupation": ["Combatant", "Kazeros Servant"],
         "affinity": ["Enemy"],
-        "status": ["?"]
+        "status": ["Deceased"]
     },
     {
         "name": "Lauriel",
         "gender": "Male",
         "race": ["Lazenith"],
         "region": ["Elgacia"],
-        "occupation": ["Combatant", "?"],
-        "affinity": ["Enemy", "?"],
-        "status": ["?"]
+        "occupation": ["Combatant"],
+        "affinity": ["Enemy"],
+        "status": ["Deceased"]
     },
     {
         "name": "Ealyn",
@@ -249,7 +249,7 @@
         "region": ["Rethramis", "Luterra"],
         "occupation": ["Combatant"],
         "affinity": ["Rapport", "Ally"],
-        "status": ["?"]
+        "status": ["Alive"]
     },
     {
         "name": "Ren",

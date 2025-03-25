@@ -279,7 +279,7 @@ inputContent.addEventListener("input", function () {
     suggestions.forEach(suggestion => {
         let suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item');
-        suggestionItem.innerHTML = suggestion;
+        suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
         suggestionsContainer.appendChild(suggestionItem);
     });
 });

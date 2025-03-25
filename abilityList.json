@@ -198,6 +198,36 @@
             "Wind Cut"
         ]
     },
+    "Destroyer": {
+        "abilities": [
+            "Big Bang",
+            "Chain Strike",
+            "Dreadnaught",
+            "Earth Eater",
+            "Earth Smasher",
+            "Earth Wave",
+            "Endure Pain",
+            "Full Swing",
+            "Galaxy Break",
+            "Gravitational Energy",
+            "Gravity Compression",
+            "Gravity Impact",
+            "Heavy Crush",
+            "Hyper Big Bang",
+            "Jumping Smash",
+            "Neutralizer",
+            "Perfect Swing",
+            "Power Shoulder",
+            "Power Strike",
+            "Run",
+            "Running Crash",
+            "Seismic Hammer",
+            "Stand Up",
+            "Supernova",
+            "Terra Break",
+            "Vortex Gravity"
+        ]
+    },
     "Glavier": {
         "abilities": [
             "4-Headed-Dragon",
@@ -228,6 +258,37 @@
             "Yeon-style Spear Technique_ Galaxy Flying Spear",
             "Yeon-style Spear Technique_ Spear Meteor",
             "Yeon-style Spear Technique_ Storming Red Dragon"
+        ]
+    },
+    "Gunlancer": {
+        "abilities": [
+            "Bash",
+            "Battlefield Shield",
+            "Charge",
+            "Charged Stinger",
+            "Counter Gunlance",
+            "Dash Upper Fire",
+            "Defensive Stance",
+            "Fire Bullet",
+            "Guardian's Oath",
+            "Guardian's Protection",
+            "Guardian's Thundercrack",
+            "Gunlance Shot",
+            "Hook Chain",
+            "Justice Served",
+            "Lance of Judgment",
+            "Leap Attack",
+            "Nelasia's Energy",
+            "Rising Gunlance",
+            "Sharp Gunlance",
+            "Shield Bash",
+            "Shield Charge",
+            "Shield Dash",
+            "Shield Shock",
+            "Shout of Hatred",
+            "Spear Dash",
+            "Stand Up",
+            "Surge Cannon"
         ]
     },
     "Gunslinger": {
@@ -264,35 +325,36 @@
             "Target Down"
         ]
     },
-    "Gunlancer": {
+    "Paladin": {
         "abilities": [
-            "Bash",
-            "Battlefield Shield",
+            "Alithanes's Devotion",
+            "Alithanes's Judgment",
+            "Alithanes's Light",
+            "Alithanes's Rage",
             "Charge",
-            "Charged Stinger",
-            "Counter Gunlance",
-            "Dash Upper Fire",
-            "Defensive Stance",
-            "Fire Bullet",
-            "Guardian's Oath",
-            "Guardian's Protection",
-            "Guardian's Thundercrack",
-            "Gunlance Shot",
-            "Hook Chain",
-            "Justice Served",
-            "Lance of Judgment",
-            "Leap Attack",
-            "Nelasia's Energy",
-            "Rising Gunlance",
-            "Sharp Gunlance",
-            "Shield Bash",
-            "Shield Charge",
-            "Shield Dash",
-            "Shield Shock",
-            "Shout of Hatred",
-            "Spear Dash",
+            "Dash Slash",
+            "Divine Justice",
+            "Execution of Judgment",
+            "Execution of Justice",
+            "Executor's Sword",
+            "Flash Slash",
+            "Flash Thrust",
+            "God's Decree",
+            "Heavenly Blessings",
+            "Holy Area",
+            "Holy Aura",
+            "Holy Explosion",
+            "Holy Protection",
+            "Holy Sword",
+            "Light of Judgment",
+            "Light Shock",
+            "Punishment",
+            "Sacred Executioner",
+            "Spin Slash",
+            "Sprint",
             "Stand Up",
-            "Surge Cannon"
+            "Sword of Justice",
+            "Wrath of God"
         ]
     },
     "Reaper": {
