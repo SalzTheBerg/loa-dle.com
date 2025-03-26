@@ -10,6 +10,8 @@ let genderUnlockGroups = [];
 let alternateClass;
 let alternateSkill;
 
+let suggestionItem
+
 const imageDiv = document.getElementById("guess_image");
 
 const grayscaleCheckbox = document.getElementById("grayscale_checkbox");
@@ -128,6 +130,11 @@ function getInput() {
     suggestionsContainer.innerHTML = '';
     let value = inputContent.value.toLowerCase();
 
+    if (classGuessed) {
+        getSkillInput();
+        return;
+    }
+
     for (let i = 0; i < classList.length; i++) {
         let className = classList[i];
         if (value === className.toLowerCase() && !usedClasses.includes(value)) {
@@ -241,11 +248,7 @@ inputContent.addEventListener("keypress", function(event) {
         if (suggestions.length > 0) {
             this.value = suggestions[0];
         }
-        if (classGuessed) {
-            getSkillInput();
-        } else {
-            getInput();
-        }
+        getInput();
     }
 });
 
@@ -277,7 +280,7 @@ inputContent.addEventListener("input", function () {
 
 
     suggestions.forEach(suggestion => {
-        let suggestionItem = document.createElement("div");
+        suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item');
         if (!classGuessed) {
             suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
@@ -285,15 +288,20 @@ inputContent.addEventListener("input", function () {
             suggestionItem.innerHTML = suggestion;
             suggestionItem.style.paddingLeft = "3px";
         }
-        //suggestionItem.setAttribute("class", "autocomplete_item");
+
+        //event listener for click in suggestion items
+        //IMPORTANT NOTE: Currently splits at > since this is the indicator for end of img tag, when changing keep in mind
+        suggestionItem.addEventListener("click", function() {
+            if (classGuessed) {
+                inputContent.value = this.innerHTML;
+            } else inputContent.value = this.innerHTML.split(">")[1];
+        })
         suggestionsContainer.appendChild(suggestionItem);
     });
 });
 
 //function similar to getInput(); but only called after class is already guessed
 function getSkillInput() {
-    //clearing suggestion container
-    suggestionsContainer.innerHTML = '';
     let value = inputContent.value;
 
     if (value === alternateSkill) {
