@@ -14,6 +14,8 @@ const guessTable = document.getElementById("guess_table");
 const inputField = document.getElementById("input_guess");
 const inputSubmit = document.getElementById("input_submit")
 const inputDiv = document.getElementById("input_div");
+const responseMessage = document.getElementById("response_message");
+
 const usedCharacters = [];
 
 const correctColor = "rgb(96, 220, 0)";
@@ -78,8 +80,10 @@ function createRow(indexOfChar) {
         const node2 = document.createTextNode("You've guessed the daily character, you can check out the other modes or come back tomorrow.");
         head.appendChild(node1);
         para.appendChild(node2);
-        inputDiv.appendChild(head);
-        inputDiv.appendChild(para);
+        responseMessage.appendChild(head);
+        responseMessage.appendChild(para);
+
+        inputDiv.style.display = "none";
 
         document.querySelectorAll("br.removable").forEach(br => br.remove());
     }
@@ -105,6 +109,7 @@ function getInput() {
     }
 
     inputField.value = "";
+    inputField.focus();
 }
 
 inputField.addEventListener("keypress", function(event) {
@@ -144,6 +149,13 @@ inputField.addEventListener("input", function () {
         let suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item')
         suggestionItem.innerHTML = '<img src="Icons/' + suggestion + '.webp">' + suggestion;
+
+        suggestionItem.addEventListener("click", function() {
+            inputField.value = this.innerHTML.split(">")[1];
+            removeItem(availableCharacterNames, suggestions[0]);
+            getInput();
+        })
+
         suggestionsContainer.appendChild(suggestionItem);
     });
 });

@@ -1,15 +1,15 @@
 body {
     text-align: center;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(218, 218, 218);
 }
 
 .link{
     display: block;
     margin: 20px 30% 0px 30%;
-    border: outset rgb(49, 248, 255);
-    background-color: rgba(78, 249, 255, 0.781);
+    background-color: rgba(0, 29, 124, 0.781);
+    border-radius: 5px;
     text-align: left;
-    padding: 10px 0px 0px 30px;
+    padding: 10px 0px 1px 30px;
     color: black;
     text-decoration: none;
 }
@@ -18,18 +18,23 @@ table {
     width: 60%;
     max-width: 800px;
     border-spacing: 10px;
+    table-layout: fixed;
 }
 
-th, td {
+td {
     border: 2px solid black;
     border-radius: 5px;
     width:  14.2857%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    height: 100px;
 }
 
-tr {
-    height: 100px;
+th {
+    color: black;
+    font-size: 18px;
+    border-bottom: 3px solid black;
+    height: 50px;
 }
 
 b {
@@ -80,4 +85,6 @@ p {
 
 .suggestion-item:hover {
     background-color: rgb(44, 44, 44);
+    border-color: rgb(44, 44, 44);
+    transform: scale(1.02);
 }

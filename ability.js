@@ -148,6 +148,7 @@ function getInput() {
     }
 
     inputContent.value = "";
+    inputContent.focus();
 }
 
 //creates new tablerow for displaying guesses and enables the skill name guess upon correct guess
@@ -294,7 +295,11 @@ inputContent.addEventListener("input", function () {
         suggestionItem.addEventListener("click", function() {
             if (classGuessed) {
                 inputContent.value = this.innerHTML;
-            } else inputContent.value = this.innerHTML.split(">")[1];
+            } else {
+                inputContent.value = this.innerHTML.split(">")[1];
+            }
+            removeItem(availableClasses, suggestions[0]);
+            getInput();
         })
         suggestionsContainer.appendChild(suggestionItem);
     });
