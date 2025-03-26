@@ -285,6 +285,7 @@ inputContent.addEventListener("input", function () {
             suggestionItem.innerHTML = suggestion;
             suggestionItem.style.paddingLeft = "3px";
         }
+        //suggestionItem.setAttribute("class", "autocomplete_item");
         suggestionsContainer.appendChild(suggestionItem);
     });
 });

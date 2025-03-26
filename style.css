@@ -77,3 +77,7 @@ p {
     width: 150px;
     height: 150px;
 }
+
+.suggestion-item:hover {
+    background-color: rgb(44, 44, 44);
+}
