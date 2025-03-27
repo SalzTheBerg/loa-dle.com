@@ -78,6 +78,12 @@ p {
     border-radius: 7%;
 }
 
+.active {
+    background-color: rgb(44, 44, 44);
+    border-color: rgb(44, 44, 44);
+    transform: scale(1.02);
+}
+
 #guess_image img {
     width: 150px;
     height: 150px;

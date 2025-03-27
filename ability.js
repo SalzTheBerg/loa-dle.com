@@ -15,6 +15,8 @@ let dailyClass;
 let dailySkill;
 let dailyImage;
 
+let currentFocus = 0;
+
 const inputContent = document.getElementById("input_guess");
 const inputSubmit = document.getElementById("input_submit");
 const inputDiv = document.getElementById("input_div");
@@ -231,6 +233,35 @@ inputContent.addEventListener("keypress", function(event) {
         getInput();
     }
 });
+
+inputContent.addEventListener("keydown", function(event) {
+    let query = this.value.toLowerCase();
+
+    let x = document.getElementsByClassName("suggestion-item");
+
+    if (currentFocus === x.length) {
+        currentFocus = 0;
+    } else if (currentFocus < 0) {
+        currentFocus = x.length;
+    }
+
+    if (event.keyCode == 40) {
+        event.preventDefault();
+        if (currentFocus !== 0) {
+            x[currentFocus - 1].classList.remove("active");
+        }
+        currentFocus++;
+        x[currentFocus - 1].classList.add("active");
+    }
+    else if (event.keyCode == 38) {
+        event.preventDefault();
+        if (currentFocus !== 0) {
+            x[currentFocus - 1].classList.remove("active");
+        }
+        currentFocus--;
+        x[currentFocus - 1].classList.add("active");
+    }
+})
 
 //function to remove an item out of an array input(array, itemToRemove) output nothing
 function removeItem(array, itemToRemove) {
