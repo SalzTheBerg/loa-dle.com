@@ -13,6 +13,8 @@ const partialMatchColor = "rgb(225, 225, 0)";
 const wrongColor = "rgb(238, 42, 0)";
 
 let characterToGuess;
+let currentFocus;
+let focusActive = false;
 
 //fetches the character list and stores into characterList array
 fetch("characterList.json")
@@ -108,7 +110,7 @@ function getInput() {
 }
 
 //Event listener for enter key
-inputContent.addEventListener("keypress", function(event) {
+/*inputContent.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
 
@@ -118,15 +120,72 @@ inputContent.addEventListener("keypress", function(event) {
             return;
         }
 
-        let suggestions = availableCharacterNames.filter(name => name.toLowerCase().startsWith(query));
-        removeItem(availableCharacterNames, suggestions[0]);
+        
 
         if (suggestions.length > 0) {
             this.value = suggestions[0];
         }
         document.getElementById("input_submit").click();
     }
-});
+});*/
+
+//Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
+inputContent.addEventListener("keydown", function(event) {
+    let query = this.value.toLowerCase();
+
+    if (query === '') {
+        return;
+    }
+
+    let x = document.getElementsByClassName("suggestion-item");
+
+    if (event.keyCode == 40) {
+        event.preventDefault();
+        if (focusActive === false) {
+            focusActive = true;
+            currentFocus = 0;
+        } else {
+            x[currentFocus].classList.remove("active");
+            currentFocus++;
+        }
+        if (currentFocus === x.length) {
+            currentFocus = 0;
+        }
+        x[currentFocus].classList.add("active");
+    }
+    else if (event.keyCode == 38) {
+        event.preventDefault();
+        if (focusActive === false) {
+            focusActive = true;
+            currentFocus = x.length - 1;
+        } else {
+            x[currentFocus].classList.remove("active");
+            currentFocus--;
+        }
+        if (currentFocus < 0) {
+            currentFocus = x.length - 1;
+        }
+        x[currentFocus].classList.add("active");
+    }
+    else if (event.keyCode === 13) {
+        event.preventDefault();
+
+        let suggestions = availableCharacterNames.filter(name => name.toLowerCase().startsWith(query));
+
+        if (focusActive) {
+            removeItem(availableCharacterNames, suggestions[currentFocus]);
+        }else removeItem(availableCharacterNames, suggestions[0]);
+
+        if (suggestions.length > 0) {
+            if (focusActive) {
+                focusActive = false;
+                this.value = suggestions[currentFocus];
+            } else this.value = suggestions[0];
+        }
+        getInput();
+    }
+    else focusActive = false;
+})
 
 //Event listener for input -> creates suggestions
 inputContent.addEventListener("input", function () {

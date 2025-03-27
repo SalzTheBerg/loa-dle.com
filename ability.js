@@ -15,7 +15,8 @@ let dailyClass;
 let dailySkill;
 let dailyImage;
 
-let currentFocus = 0;
+let currentFocus;
+let focusActive = false;
 
 const inputContent = document.getElementById("input_guess");
 const inputSubmit = document.getElementById("input_submit");
@@ -156,6 +157,8 @@ function createRow(indexOfChar) {
     if (classList[indexOfChar] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
         correctGuess();
+        alternateClass = dailyClass;
+        alternateSkill = dailySkill;
 
         responseMessage.innerHTML = '<h2>Congratulations</h2><p>Can you also guess the ability name?</p>';
 
@@ -209,57 +212,68 @@ function checkForGenderUnlock() {
     return false;
 }
 
-//event listener for pressing enter in input field -> calls the submit button function and removes input as a suggestion
-inputContent.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
+//Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
+inputContent.addEventListener("keydown", function(event) {
+
+    let query = this.value.toLowerCase();
+
+    if (query === '') {
+        return;
+    }
+
+    let x = document.getElementsByClassName("suggestion-item");
+
+    if (event.keyCode == 40) {
+        event.preventDefault();
+        if (focusActive === false) {
+            focusActive = true;
+            currentFocus = 0;
+        } else {
+            x[currentFocus].classList.remove("active");
+            currentFocus++;
+        }
+        if (currentFocus === x.length) {
+            currentFocus = 0;
+        }
+        x[currentFocus].classList.add("active");
+    }
+    else if (event.keyCode == 38) {
+        event.preventDefault();
+        if (focusActive === false) {
+            focusActive = true;
+            currentFocus = x.length - 1;
+        } else {
+            x[currentFocus].classList.remove("active");
+            currentFocus--;
+        }
+        if (currentFocus < 0) {
+            currentFocus = x.length - 1;
+        }
+        x[currentFocus].classList.add("active");
+    }
+    else if (event.keyCode === 13) {
         event.preventDefault();
 
-        let query = this.value.toLowerCase();
-
-        if (query === '') {
-            return;
-        }
-        
         let suggestions = availableClasses.filter(name => name.toLowerCase().startsWith(query));
-        removeItem(availableClasses, suggestions[0]);
+
+        if (focusActive) {
+            removeItem(availableClasses, suggestions[currentFocus]);
+        }else removeItem(availableClasses, suggestions[0]);
 
         if (classGuessed) {
             suggestions = abilityList[alternateClass].abilities.filter(name => name.toLowerCase().includes(query));
         }
 
         if (suggestions.length > 0) {
-            this.value = suggestions[0];
+            if (focusActive) {
+                focusActive = false;
+                this.value = suggestions[currentFocus];
+            } else this.value = suggestions[0];
         }
         getInput();
     }
-});
-
-inputContent.addEventListener("keydown", function(event) {
-    let query = this.value.toLowerCase();
-
-    let x = document.getElementsByClassName("suggestion-item");
-
-    if (currentFocus === x.length) {
-        currentFocus = 0;
-    } else if (currentFocus < 0) {
-        currentFocus = x.length;
-    }
-
-    if (event.keyCode == 40) {
-        event.preventDefault();
-        if (currentFocus !== 0) {
-            x[currentFocus - 1].classList.remove("active");
-        }
-        currentFocus++;
-        x[currentFocus - 1].classList.add("active");
-    }
-    else if (event.keyCode == 38) {
-        event.preventDefault();
-        if (currentFocus !== 0) {
-            x[currentFocus - 1].classList.remove("active");
-        }
-        currentFocus--;
-        x[currentFocus - 1].classList.add("active");
+    else {
+        focusActive = false;
     }
 })
 
