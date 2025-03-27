@@ -329,6 +329,16 @@ inputContent.addEventListener("input", function () {
     });
 });
 
+suggestionsContainer.addEventListener("mouseover", function() {
+
+    let x = []
+    x = document.getElementsByClassName("active");
+
+    for (let index = 0; index < x.length; index++) {
+        x[index].classList.remove("active");
+    }
+})
+
 //function similar to getInput(); but only called after class is already guessed
 function getSkillInput() {
     let value = inputContent.value;
