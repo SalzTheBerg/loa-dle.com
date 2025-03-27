@@ -457,6 +457,40 @@
             "Wild Slash"
         ]
     },
+    "Sharpshooter": {
+        "abilities": [
+            "Arrow Shower",
+            "Arrow Wave",
+            "Arthetine Air To Ground Arrow_ Deadeye",
+            "Atomic Arrow",
+            "Blade Storm",
+            "Charged Shot",
+            "Claymore Mine",
+            "Deadly Slash",
+            "DM-42",
+            "Evasive Fire",
+            "Fenrir's Messenger",
+            "Gigantar Bow_ Fenrir",
+            "Golden Eye",
+            "Hawk Shot",
+            "Last Rush",
+            "Lock-On",
+            "Moving Slash",
+            "Rapid Shot",
+            "Salvo",
+            "Shadow Arrow",
+            "Sharpshooter",
+            "Silverhawk Assault",
+            "Slide",
+            "Smokescreen Arrow",
+            "Snipe",
+            "Spiral Arrow",
+            "Stalker",
+            "Stand Up",
+            "Summon Silverhawk",
+            "Wings of Storm"
+        ]
+    },
     "Slayer": {
         "abilities": [
             "Bloodlust",
@@ -491,7 +525,32 @@
     },
     "Sorceress": {
         "abilities": [
-            
+            "Apocalypse Call",
+            "Apocalypse",
+            "Arcane Rupture",
+            "Blaze",
+            "Blink",
+            "Doomsday",
+            "Elegian's Touch",
+            "Energy Discharge",
+            "Enviska's Might",
+            "Esoteric Reaction",
+            "Explosion",
+            "Frost's Call",
+            "Ice Shower",
+            "Inferno",
+            "Lava Blast",
+            "Lightning Bolt",
+            "Lightning Vortex",
+            "Phase Leap",
+            "Punishing Strike",
+            "Reverse Gravity",
+            "Rime Arrow",
+            "Rushing Glacier",
+            "Seraphic Hail",
+            "Squall",
+            "Stand Up",
+            "Transcendent Judgment"
         ]
     },
     "Souleater": {
