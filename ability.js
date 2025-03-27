@@ -4,41 +4,34 @@ let classList = [];
 let availableClasses = [];
 const rotationAngles = [90, 180, 270];
 const dailyRotation = rotationAngles[Math.floor(Math.random()*rotationAngles.length)];
+let classGuessed = false;
 
 const genderUnlockClasses = ["Berserker", "Slayer"];
 let genderUnlockGroups = [];
 let alternateClass;
 let alternateSkill;
-
-let suggestionItem
-
-const imageDiv = document.getElementById("guess_image");
-
-const grayscaleCheckbox = document.getElementById("grayscale_checkbox");
-
-const rotationCheckbox = document.getElementById("rotation_checkbox");
-
-const guessTable = document.getElementById("guess_table")
+let suggestionItem;
+let dailyClass;
+let dailySkill;
+let dailyImage;
 
 const inputContent = document.getElementById("input_guess");
 const inputSubmit = document.getElementById("input_submit");
 const inputDiv = document.getElementById("input_div");
 const skillInput = document.getElementById("skill_input_div");
+const guessTable = document.getElementById("guess_table");
 const skillGuess = document.getElementById("skill_guess");
 const skillSubmit = document.getElementById("skill_submit");
+const imageDiv = document.getElementById("guess_image");
 const suggestionsContainer = document.getElementById("suggestions");
 const responseMessage = document.getElementById("response_message");
+const rotationCheckbox = document.getElementById("rotation_checkbox");
+const grayscaleCheckbox = document.getElementById("grayscale_checkbox");
 
 const correctColor = "rgb(96, 220, 0)";
 const wrongColor = "rgb(238, 42, 0)";
 
 const today = new Date().toISOString().split('T')[0];
-
-let dailyClass;
-let dailySkill;
-let dailyImage;
-
-let classGuessed = false;
 
 //loading the abilityList.json and saving data in abilityList array and class names in classList and availableClasses, calls the loadImg(); function after finishing
 Promise.all([
@@ -50,11 +43,8 @@ Promise.all([
         classList = Object.keys(abilityList);
         availableClasses = Object.keys(abilityList);
         availableClasses.sort();
-        console.log(abilityList);
-        console.log(classList);
 
         genderUnlockGroups = genderUnlockData;
-        console.log(genderUnlockGroups);
         loadImg();
     })
     .catch(error => console.error("Error loading data:", error));
@@ -86,7 +76,6 @@ function fnv1aHash(today) {
         hash ^= today.charCodeAt(i);
         hash = (hash * 0x01000193) >>> 0;
     }
-    console.log(hash);
     return hash;
 }
 
@@ -162,41 +151,26 @@ function createRow(indexOfChar) {
     newCell.innerHTML = classGuess;
 
     if (classList[indexOfChar] === dailyClass) {
-        classGuessed = true;
-        alternateClass = dailyClass;
-        alternateSkill = dailySkill;
         newCell.style.backgroundColor = correctColor;
-        inputContent.placeholder = "Enter skill name..."
-        dailyImage.style.filter = "grayscale(0%)";
-        dailyImage.style.transform = "rotate(" + 0 + "deg)";
+        correctGuess();
 
-        const para = document.createElement("p");
-        const head = document.createElement("h2");
-        const node1 = document.createTextNode("Congratulations!");
-        const node2 = document.createTextNode("Can you also guess the ability name?");
-        head.appendChild(node1);
-        para.appendChild(node2);
-        responseMessage.appendChild(head);
-        responseMessage.appendChild(para);
+        responseMessage.innerHTML = '<h2>Congratulations</h2><p>Can you also guess the ability name?</p>';
+
     } else if (checkForGenderUnlock()) {
-        classGuessed = true;
         newCell.style.backgroundColor = correctColor;
-        inputContent.placeholder = "Enter skill name..."
-        dailyImage.style.filter = "grayscale(0%)";
-        dailyImage.style.transform = "rotate(" + 0 + "deg)";
-        const para = document.createElement("p");
-        const para2 = document.createElement("p");
-        const head = document.createElement("h2");
-        const node1 = document.createTextNode("Congratulations!");
-        const node2 = document.createTextNode("The daily class was " + dailyClass + ", but since this is also a skill for " + alternateClass + " it counts!");
-        const node3 = document.createTextNode("Can you also guess the ability name?");
-        head.appendChild(node1);
-        para.appendChild(node2);
-        para2.appendChild(node3);
-        responseMessage.appendChild(head);
-        responseMessage.appendChild(para);
-        responseMessage.appendChild(para2);
+        correctGuess();
+
+        responseMessage.innerHTML = '<h2>Congratulations</h2><p>The daily class was ' + dailyClass + ', but since this is also a skill for ' + alternateClass + ' it counts!</p><p>Can you also guess the ability name?</p>';
+
     } else newCell.style.backgroundColor = wrongColor;
+}
+
+//removes redundancy from create Row function
+function correctGuess() {
+    classGuessed = true;
+    inputContent.placeholder = "Enter skill name..."
+    dailyImage.style.filter = "grayscale(0%)";
+    dailyImage.style.transform = "rotate(" + 0 + "deg)";
 }
 
 //returns true or false if daily skill is eligible for gender unlock
@@ -221,10 +195,14 @@ function checkForGenderUnlock() {
                         return true;
                     }
                 }
+                alternateClass = dailyClass;
+                alternateSkill = dailySkill;
                 return false;
             }
         }
     }
+    alternateClass = dailyClass;
+    alternateSkill = dailySkill;
     return false;
 }
 

@@ -1,6 +1,20 @@
 let characterList = [];
 let availableCharacterNames = [];
+const usedCharacters = [];
 
+const inputContent = document.getElementById("input_guess");
+const inputSubmit = document.getElementById("input_submit");
+const inputDiv = document.getElementById("input_div");
+const guessTable = document.getElementById("guess_table");
+const responseMessage = document.getElementById("response_message");
+
+const correctColor = "rgb(96, 220, 0)";
+const partialMatchColor = "rgb(225, 225, 0)";
+const wrongColor = "rgb(238, 42, 0)";
+
+let characterToGuess;
+
+//fetches the character list and stores into characterList array
 fetch("characterList.json")
     .then(response => response.json())
     .then(data => {
@@ -10,33 +24,20 @@ fetch("characterList.json")
     })
     .catch(error => console.error("Error loading character data:", error));
 
-const guessTable = document.getElementById("guess_table");
-const inputField = document.getElementById("input_guess");
-const inputSubmit = document.getElementById("input_submit")
-const inputDiv = document.getElementById("input_div");
-const responseMessage = document.getElementById("response_message");
-
-const usedCharacters = [];
-
-const correctColor = "rgb(96, 220, 0)";
-const partialMatchColor = "rgb(225, 225, 0)";
-const wrongColor = "rgb(238, 42, 0)";
-
-let characterToGuess;
-
+//calls the hashing function and gets the daily character
 function getDailyCharacter() {
     const today = new Date().toISOString().split('T')[0];
     const hash = fnv1aHash(today);
     return characterList[hash % characterList.length];
 }
 
+//hashes the input String by fnv1a hashing
 function fnv1aHash(today) {
     let hash = 0x811c9dc5;
     for (let i = 0; i < today.length; i++) {
         hash ^= today.charCodeAt(i);
         hash = (hash * 0x01000193) >>> 0;
     }
-    console.log(hash);
     return hash;
 }
 
@@ -74,14 +75,8 @@ function createRow(indexOfChar) {
         }
     }
     if (characterToGuess === characterList[indexOfChar]) {
-        const para = document.createElement("p");
-        const head = document.createElement("h2");
-        const node1 = document.createTextNode("Congratulations!");
-        const node2 = document.createTextNode("You've guessed the daily character, you can check out the other modes or come back tomorrow.");
-        head.appendChild(node1);
-        para.appendChild(node2);
-        responseMessage.appendChild(head);
-        responseMessage.appendChild(para);
+
+        responseMessage.innerHTML = "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
 
         inputDiv.style.display = "none";
 
@@ -89,12 +84,12 @@ function createRow(indexOfChar) {
     }
 }
 
+//creates a row in the table if input is an available character -> calls create row function
 function getInput() {
-    //clearing suggestion container
     let suggestionsContainer = document.getElementById("suggestions");
     suggestionsContainer.innerHTML = '';
 
-    let value = inputField.value.toLowerCase();
+    let value = inputContent.value.toLowerCase();
 
     for (let i = 0; i < characterList.length; i++) {
         let character = characterList[i];
@@ -108,11 +103,12 @@ function getInput() {
         }
     }
 
-    inputField.value = "";
-    inputField.focus();
+    inputContent.value = "";
+    inputContent.focus();
 }
 
-inputField.addEventListener("keypress", function(event) {
+//Event listener for enter key
+inputContent.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
 
@@ -132,7 +128,8 @@ inputField.addEventListener("keypress", function(event) {
     }
 });
 
-inputField.addEventListener("input", function () {
+//Event listener for input -> creates suggestions
+inputContent.addEventListener("input", function () {
     let query = this.value.toLowerCase();
     let suggestions = availableCharacterNames.filter(name => name.toLowerCase().startsWith(query));
 
@@ -150,8 +147,9 @@ inputField.addEventListener("input", function () {
         suggestionItem.classList.add('suggestion-item')
         suggestionItem.innerHTML = '<img src="Icons/' + suggestion + '.webp">' + suggestion;
 
+        //Event listener for clicking suggestions
         suggestionItem.addEventListener("click", function() {
-            inputField.value = this.innerHTML.split(">")[1];
+            inputContent.value = this.innerHTML.split(">")[1];
             removeItem(availableCharacterNames, suggestions[0]);
             getInput();
         })
@@ -160,6 +158,7 @@ inputField.addEventListener("input", function () {
     });
 });
 
+//functino to removeItem from array
 function removeItem(array, itemToRemove) {
     const index = array.indexOf(itemToRemove);
 
