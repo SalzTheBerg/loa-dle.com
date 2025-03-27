@@ -149,6 +149,7 @@ function createRow(indexOfChar) {
     let newCell = newRow.insertCell(0);
 
     newCell.innerHTML = classGuess;
+    // '<img src="Classes/' + classGuess + '.webp">' + classGuess;
 
     if (classList[indexOfChar] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
