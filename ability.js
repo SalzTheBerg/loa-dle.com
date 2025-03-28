@@ -318,7 +318,7 @@ inputContent.addEventListener("input", function () {
         //IMPORTANT NOTE: Currently splits at > since this is the indicator for end of img tag, when changing keep in mind
         suggestionItem.addEventListener("click", function() {
             if (classGuessed) {
-                inputContent.value = this.innerHTML;
+                inputContent.value = this.innerHTML.replace(/:/g, "_");
             } else {
                 inputContent.value = this.innerHTML.split(">")[1];
             }
