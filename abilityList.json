@@ -675,5 +675,28 @@
             "Ultimate Skill_ Great Raging Demon Kick",
             "Wind's Whisper"
         ]
+    },
+    "Wildsoul": {
+        "abilities": [
+            "Claw",
+            "Crow Commotion",
+            "Crow Parade",
+            "Digger Bear",
+            "Forbidden Sorcery_ Fox Star Rainstorm",
+            "Forbidden Sorcery_ Ripping Bear",
+            "Fox Flame",
+            "Fox Illusion",
+            "Fox Leap",
+            "Fox Orb",
+            "Growling Bear",
+            "Rolling Wheel",
+            "Ruthless Pecking",
+            "Swish Bear",
+            "Tailwind",
+            "Ursine Windup",
+            "Voila!",
+            "Vulpine Velocity",
+            "Zoom!"
+        ]
     }
 }
