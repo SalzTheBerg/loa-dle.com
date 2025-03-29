@@ -35,11 +35,11 @@ function loadImg() {
     dailyContinent = "Arthetine"//availableContinents[Math.floor(Math.random() * availableContinents.length)];
     dailyLocation = "Origins of Stern"//locationList[dailyContinent].locations[Math.floor(Math.random() * locationList[dailyContinent].locations.length)]
     locationsInArea = Object.keys(locationSpecifications[dailyLocation]);
-    dailyLocationImage = "Origins of Stern_1"//locationsInArea[Math.floor(Math.random() * locationsInArea.length)];
+    dailyLocationImage = "Origins of Stern_2"//locationsInArea[Math.floor(Math.random() * locationsInArea.length)];
 
     imageDiv.innerHTML = '<img src="Locations/' + dailyContinent + '_' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = -2000;//locationSpecifications[dailyLocation][dailyLocationImage].centerX[randomSeed];
-    centerY = -1800;//locationSpecifications[dailyLocation][dailyLocationImage].centerY[randomSeed];
+    centerX = -1600;//locationSpecifications[dailyLocation][dailyLocationImage].centerX[randomSeed];
+    centerY = 100;//locationSpecifications[dailyLocation][dailyLocationImage].centerY[randomSeed];
     originalScale = 7;//locationSpecifications[dailyLocation][dailyLocationImage].originalScale[randomSeed];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");

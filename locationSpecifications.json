@@ -40,9 +40,9 @@
             "originalScale": [7, 7, 7, 7]
         },
         "Origins of Stern_2": {
-            "centerX": [],
-            "centerY": [],
-            "originalScale": []
+            "centerX": [1800, -300, 2600, -1600],
+            "centerY": [1400, 1400, 300, 100],
+            "originalScale": [7, 7, 7, 7]
         },
         "Origins of Stern_3": {
             "centerX": [],
