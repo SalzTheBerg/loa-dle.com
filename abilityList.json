@@ -167,6 +167,39 @@
             "Wind Blade"
         ]
     },
+    "Breaker": {
+        "abilities": [
+            "Adamantine Assault",
+            "Asura Featherweight",
+            "Brawl King Twelve Forms_ Falling Blossoms",
+            "Brawl King Twelve Forms_ Violent Waves",
+            "Brawl King's Advance",
+            "Butterfly Sting",
+            "Celestial Door",
+            "Celestial Fist",
+            "Celestial Force Barrage",
+            "Crater Strike",
+            "Earthbreaker",
+            "Explosive Fist",
+            "Eye of the Storm",
+            "Falling Star",
+            "Featherweight",
+            "Flashstep",
+            "Haymaker",
+            "Heavenly King's War Dance",
+            "Heavenly Punishment",
+            "Hundred Fists",
+            "Hurricane Chain",
+            "Nebula Crusher",
+            "Obliteration",
+            "Punishing Wave",
+            "Smashing Blow",
+            "Spiral Uppercut",
+            "Stand Up",
+            "Yeon Galestorm Strike",
+            "Zaffre Nova"
+        ]
+    },
     "Deathblade": {
         "abilities": [
             "Blade Assault",
@@ -582,6 +615,36 @@
             "Vestige"
         ]
     },
+    "Striker": {
+        "abilities": [
+            "Advancing Strike",
+            "Berserk Circle",
+            "Charging Steps",
+            "Esoteric Skill_ Blast Formation",
+            "Esoteric Skill_ Call of the Wind God",
+            "Esoteric Skill_ Charging Kick",
+            "Esoteric Skill_ Lightning Tiger Strike",
+            "Esoteric Skill_ Spiral Impact",
+            "Esoteric Skill_ Tiger Emerges",
+            "Flash Heat Fang",
+            "Lightning Kick",
+            "Lightning Whisper",
+            "Moon Flash Kick",
+            "Phoenix Advent",
+            "Sky Shattering Blow",
+            "Stand Up",
+            "Storm Dragon Kick",
+            "Sweeping Hidden Dragon",
+            "Sweeping Kick",
+            "Swift Wind Kick",
+            "Triple Fist",
+            "Ultimate Skill_ Mountain Lord's Explosive Roar",
+            "Ultimate Skill_ Nova Blast",
+            "Ultimate Skill_ Potent Heavenly Kick",
+            "Ultimate Skill_ Thunderbolt Kick",
+            "Vicious Tiger Dance"
+        ]
+    },
     "Soulfist": {
         "abilities": [
             "Bolting Crash",
@@ -665,7 +728,7 @@
             "Roar of Courage",
             "Sky Shattering Blow",
             "Stand Up",
-            "Sweeping Hidden Tracking",
+            "Sweeping Hidden Dragon",
             "Sweeping Kick",
             "Swift Wind Kick",
             "Triple Fist",

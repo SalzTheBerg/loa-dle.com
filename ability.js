@@ -6,7 +6,7 @@ const rotationAngles = [90, 180, 270];
 const dailyRotation = rotationAngles[Math.floor(Math.random()*rotationAngles.length)];
 let classGuessed = false;
 
-const genderUnlockClasses = ["Berserker", "Slayer"];
+const genderUnlockClasses = ["Berserker", "Slayer", "Striker", "Wardancer"];
 let genderUnlockGroups = [];
 let alternateClass;
 let alternateSkill;

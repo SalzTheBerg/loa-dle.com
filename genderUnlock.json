@@ -61,8 +61,60 @@
             "groupID": ["Striker", "Wardancer"],
             "skills": [
                 {
-                    "Striker": "",
-                    "Wardancer": ""
+                    "Striker": "Charging Steps",
+                    "Wardancer": "Charging Steps"
+                },
+                {
+                    "Striker": "Esoteric Skill_ Blast Formation",
+                    "Wardancer": "Esoteric Skill_ Blast Formation"
+                },
+                {
+                    "Striker": "Esoteric Skill_ Call of the Wind God",
+                    "Wardancer": "Esoteric Skill_ Call of the Wind God"
+                },
+                {
+                    "Striker": "Esoteric Skill_ Spiral Impact",
+                    "Wardancer": "Esoteric Skill_ Spiral Impact"
+                },
+                {
+                    "Striker": "Flash Heat Fang",
+                    "Wardancer": "Flash Heat Fang"
+                },
+                {
+                    "Striker": "Lightning Kick",
+                    "Wardancer": "Lightning Kick"
+                },
+                {
+                    "Striker": "Moon Flash Kick",
+                    "Wardancer": "Moon Flash Kick"
+                },
+                {
+                    "Striker": "Phoenix Advent",
+                    "Wardancer": "Phoenix Advent"
+                },
+                {
+                    "Striker": "Sky Shattering Blow",
+                    "Wardancer": "Sky Shattering Blow"
+                },
+                {
+                    "Striker": "Stand Up",
+                    "Wardancer": "Stand Up"
+                },
+                {
+                    "Striker": "Sweeping Hidden Dragon",
+                    "Wardancer": "Sweeping Hidden Dragon"
+                },
+                {
+                    "Striker": "Sweeping Kick",
+                    "Wardancer": "Sweeping Kick"
+                },
+                {
+                    "Striker": "Swift Wind Kick",
+                    "Wardancer": "Swift Wind Kick"
+                },
+                {
+                    "Striker": "Triple Fist",
+                    "Wardancer": "Triple Fist"
                 }
             ]
         }

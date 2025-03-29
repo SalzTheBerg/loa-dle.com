@@ -109,26 +109,6 @@ function getInput() {
     inputContent.focus();
 }
 
-//Event listener for enter key
-/*inputContent.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-
-        let query = this.value.toLowerCase();
-
-        if (query === '') {
-            return;
-        }
-
-        
-
-        if (suggestions.length > 0) {
-            this.value = suggestions[0];
-        }
-        document.getElementById("input_submit").click();
-    }
-});*/
-
 //Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
 inputContent.addEventListener("keydown", function(event) {
     let query = this.value.toLowerCase();
