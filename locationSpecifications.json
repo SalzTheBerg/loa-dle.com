@@ -1,0 +1,70 @@
+{
+    "Luterra Castle": {
+        "Luterra Castle_1": {
+            "centerX": [1600, 1600, -3400, 2000],
+            "centerY": [-1800, -300, 1800, 400],
+            "originalScale": [7, 7, 7, 7]
+        },
+        "Luterra Castle_2": {
+            "centerX": [600, -2100, -900, 3100],
+            "centerY": [600, 100, 1500, 1500],
+            "originalScale": [5, 6, 7, 6]
+        },
+        "Luterra Castle_3": {
+            "centerX": [1400, -2300, 0, 0],
+            "centerY": [400, -200, 800, -800],
+            "originalScale": [7, 7, 6, 7]
+        }
+    },
+    "Kalinar": {
+        "Kalinar_1": {
+            "centerX": [0, 3000, -1000, -1800],
+            "centerY": [200, -400, 1600, 500],
+            "originalScale": [7, 7, 7, 7]
+        },
+        "Kalinar_2": {
+            "centerX": [0, 2000, -2800, 100],
+            "centerY": [-200, 1800, 100, -1800],
+            "originalScale": [7, 7, 7, 7]
+        },
+        "Kalinar_3": {
+            "centerX": [0, 2400, 0, -1800],
+            "centerY": [0, -200, -1000, -800],
+            "originalScale": [7, 7, 7, 7]
+        }
+    },
+    "Origins of Stern": {
+        "Origins of Stern_1": {
+            "centerX": [0, -2100, 2000, -2000],
+            "centerY": [-1000, 600, -1000, -1800],
+            "originalScale": [7, 7, 7, 7]
+        },
+        "Origins of Stern_2": {
+            "centerX": [],
+            "centerY": [],
+            "originalScale": []
+        },
+        "Origins of Stern_3": {
+            "centerX": [],
+            "centerY": [],
+            "originalScale": []
+        }
+    },
+    "Prideholme": {
+        "Prideholme_1": {
+            "centerX": [800, 0, -2800, 3200],
+            "centerY": [-300, 1400, -2000, 0],
+            "originalScale": [7, 7, 7, 7]
+        },
+        "Prideholme_2": {
+            "centerX": [0, -3200, 1200, 2400],
+            "centerY": [0, 1400, 200, 1500],
+            "originalScale": [10, 10, 10, 10]
+        },
+        "Prideholme_3": {
+            "centerX": [2800, -2000, 2000, -2000],
+            "centerY": [1400, 0, -700, 1600],
+            "originalScale": [7, 7, 7, 7]
+        }
+    }
+}

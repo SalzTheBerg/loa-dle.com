@@ -89,6 +89,20 @@ p {
     height: 150px;
 }
 
+#location_image {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#location_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .suggestion-item:hover {
     background-color: rgb(44, 44, 44);
     border-color: rgb(44, 44, 44);

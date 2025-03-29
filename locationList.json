@@ -1,7 +1,22 @@
 {
+    "Arthetine": {
+        "locations": [
+            "Origins of Stern"
+        ]
+    },
+    "East Luterra": {
+        "locations": [
+            "Luterra Castle"
+        ]
+    },
     "Rethramis": {
         "locations": [
             "Prideholme"
+        ]
+    },
+    "Voldis": {
+        "locations": [
+            "Kalinar"
         ]
     }
 }
