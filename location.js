@@ -10,6 +10,11 @@ let dailyImage;
 
 const imageDiv = document.getElementById("location_image");
 const inputContent = document.getElementById("input_guess");
+const guessTable = document.getElementById("guess_table");
+const responseMessage = document.getElementById("response_message");
+
+const correctColor = "rgb(96, 220, 0)";
+const wrongColor = "rgb(238, 42, 0)";
 
 let centerX;
 let centerY;
@@ -32,15 +37,15 @@ Promise.all([
 
 //loads the daily image randomly and adding it to the DOM
 function loadImg() {
-    dailyContinent = "Arthetine"//availableContinents[Math.floor(Math.random() * availableContinents.length)];
-    dailyLocation = "Origins of Stern"//locationList[dailyContinent].locations[Math.floor(Math.random() * locationList[dailyContinent].locations.length)]
+    dailyContinent = availableContinents[Math.floor(Math.random() * availableContinents.length)];
+    dailyLocation = locationList[dailyContinent].locations[Math.floor(Math.random() * locationList[dailyContinent].locations.length)]
     locationsInArea = Object.keys(locationSpecifications[dailyLocation]);
-    dailyLocationImage = "Origins of Stern_2"//locationsInArea[Math.floor(Math.random() * locationsInArea.length)];
+    dailyLocationImage = locationsInArea[Math.floor(Math.random() * locationsInArea.length)];
 
-    imageDiv.innerHTML = '<img src="Locations/' + dailyContinent + '_' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = -1600;//locationSpecifications[dailyLocation][dailyLocationImage].centerX[randomSeed];
-    centerY = 100;//locationSpecifications[dailyLocation][dailyLocationImage].centerY[randomSeed];
-    originalScale = 7;//locationSpecifications[dailyLocation][dailyLocationImage].originalScale[randomSeed];
+    imageDiv.innerHTML = '<img src="Locations/' + dailyContinent + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
+    centerX = locationSpecifications[dailyLocation][dailyLocationImage].centerX[randomSeed];
+    centerY = locationSpecifications[dailyLocation][dailyLocationImage].centerY[randomSeed];
+    originalScale = locationSpecifications[dailyLocation][dailyLocationImage].originalScale[randomSeed];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
     dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
@@ -61,3 +66,49 @@ inputContent.addEventListener("keydown", function(event) {
         }
     }
 })
+
+//called upon submit or enter -> reads input and adds tablerow (calling createRow(); function) when input == continent
+function getInput() {
+    //suggestionsContainer.innerHTML = '';
+    let value = inputContent.value.toLowerCase();
+
+    /*if (classGuessed) {
+        getSkillInput();
+        return;
+    }*/
+
+    for (let i = 0; i < availableContinents.length; i++) {
+        let continentName = availableContinents[i];
+        if (value === continentName.toLowerCase() /*&& !usedClasses.includes(value)*/) {
+            if (guessTable.style.display === "none") {
+                guessTable.style.display = "table";
+            }
+            createRow(i);
+            //usedClasses.push(className.toLowerCase());
+            break;
+        }
+    }
+
+    inputContent.value = "";
+    inputContent.focus();
+}
+
+//creates new tablerow for displaying guesses /*and enables the location name guess upon correct guess*/
+function createRow(indexOfContinent) {
+
+    let newRow = guessTable.insertRow(0);
+    let continentGuess = availableContinents[indexOfContinent];
+
+    let newCell = newRow.insertCell(0);
+
+    newCell.innerHTML = continentGuess;
+    // '<img src="Classes/' + classGuess + '.webp">' + classGuess;
+
+    if (availableContinents[indexOfContinent] === dailyContinent) {
+        newCell.style.backgroundColor = correctColor;
+        //correctGuess();
+
+        responseMessage.innerHTML = '<h2>Congratulations</h2>';
+
+    } else newCell.style.backgroundColor = wrongColor;
+}

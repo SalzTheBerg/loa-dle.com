@@ -9,14 +9,54 @@
             "Luterra Castle"
         ]
     },
+    "Elgacia": {
+        "locations": [
+            "Ereonnor"
+        ]
+    },
+    "Feiton": {
+        "locations": [
+            "Kalaja"
+        ]
+    },
+    "North Kurzan": {
+        "locations": [
+            "Abidos Garrison"
+        ]
+    },
+    "North Vern": {
+        "locations": [
+            "Vern Castle"
+        ]
+    },
+    "Punika": {
+        "locations": [
+            "Nia Village"
+        ]
+    },
     "Rethramis": {
         "locations": [
             "Prideholme"
         ]
     },
+    "Rohendel": {
+        "locations": [
+            "Rothun"
+        ]
+    },
+    "South Kurzan": {
+        "locations": [
+            "Elnead"
+        ]
+    },
     "Voldis": {
         "locations": [
             "Kalinar"
+        ]
+    },
+    "Yorn": {
+        "locations": [
+            "Great Castle"
         ]
     }
 }

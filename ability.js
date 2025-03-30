@@ -118,7 +118,6 @@ document.getElementById("rotation_checkbox").addEventListener("change", function
 
 //called upon submit or enter -> reads input and adds tablerow (calling createRow(); function) when input == className
 function getInput() {
-    //clearing suggestion container
     suggestionsContainer.innerHTML = '';
     let value = inputContent.value.toLowerCase();
 
