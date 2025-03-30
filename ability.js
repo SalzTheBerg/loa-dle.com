@@ -161,7 +161,7 @@ function createRow(indexOfChar) {
 
         responseMessage.innerHTML = '<h2>Congratulations</h2><p>Can you also guess the ability name?</p>';
 
-    } else if (checkForGenderUnlock()) {
+    } else if (checkForGenderUnlock(classGuess)) {
         newCell.style.backgroundColor = correctColor;
         correctGuess();
 
@@ -179,36 +179,38 @@ function correctGuess() {
 }
 
 //returns true or false if daily skill is eligible for gender unlock
-function checkForGenderUnlock() {
-    for (let indexGroup = 0; indexGroup < genderUnlockGroups.groups.length; indexGroup++) {
-        for (let indexClass = 0; indexClass < genderUnlockGroups.groups[indexGroup].groupID.length; indexClass++) {
-            if (dailyClass === genderUnlockGroups.groups[indexGroup].groupID[indexClass]) {
-                let firstClass = genderUnlockGroups.groups[indexGroup].groupID[0];
-                let secondClass = genderUnlockGroups.groups[indexGroup].groupID[1];
-                if (firstClass === dailyClass) {
-                    for (let indexSkill = 0; indexSkill < genderUnlockGroups.groups[indexGroup].skills.length; indexSkill++) {
-                        if (dailySkill === genderUnlockGroups.groups[indexGroup].skills[indexSkill][firstClass]) {
-                            alternateClass = secondClass;
-                            alternateSkill = genderUnlockGroups.groups[indexGroup].skills[indexSkill][secondClass];
-                            return true;
+function checkForGenderUnlock(classGuess) {
+        for (let indexGroup = 0; indexGroup < genderUnlockGroups.groups.length; indexGroup++) {
+            for (let indexClass = 0; indexClass < genderUnlockGroups.groups[indexGroup].groupID.length; indexClass++) {
+                if (dailyClass === genderUnlockGroups.groups[indexGroup].groupID[indexClass]) {
+                    let firstClass = genderUnlockGroups.groups[indexGroup].groupID[0];
+                    let secondClass = genderUnlockGroups.groups[indexGroup].groupID[1];
+                    if (classGuess === firstClass || classGuess === secondClass) {
+                        if (firstClass === dailyClass) {
+                            for (let indexSkill = 0; indexSkill < genderUnlockGroups.groups[indexGroup].skills.length; indexSkill++) {
+                                if (dailySkill === genderUnlockGroups.groups[indexGroup].skills[indexSkill][firstClass]) {
+                                    alternateClass = secondClass;
+                                    alternateSkill = genderUnlockGroups.groups[indexGroup].skills[indexSkill][secondClass];
+                                    return true;
+                                }
+                            }
+                        } else for (let indexSkill = 0; indexSkill < genderUnlockGroups.groups[indexGroup].skills.length; indexSkill++) {
+                            if (dailySkill === genderUnlockGroups.groups[indexGroup].skills[indexSkill][secondClass]) {
+                                alternateClass = firstClass;
+                                alternateSkill = genderUnlockGroups.groups[indexGroup].skills[indexSkill][firstClass];
+                                return true;
+                            }
                         }
                     }
-                } else for (let indexSkill = 0; indexSkill < genderUnlockGroups.groups[indexGroup].skills.length; indexSkill++) {
-                    if (dailySkill === genderUnlockGroups.groups[indexGroup].skills[indexSkill][secondClass]) {
-                        alternateClass = firstClass;
-                        alternateSkill = genderUnlockGroups.groups[indexGroup].skills[indexSkill][firstClass];
-                        return true;
-                    }
+                    alternateClass = dailyClass;
+                    alternateSkill = dailySkill;
+                    return false;
                 }
-                alternateClass = dailyClass;
-                alternateSkill = dailySkill;
-                return false;
             }
         }
-    }
-    alternateClass = dailyClass;
-    alternateSkill = dailySkill;
-    return false;
+        alternateClass = dailyClass;
+        alternateSkill = dailySkill;
+        return false;
 }
 
 //Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
