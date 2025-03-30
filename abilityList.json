@@ -200,6 +200,43 @@
             "Zaffre Nova"
         ]
     },
+    "Deadeye": {
+        "abilities": [
+            "Aimed Shot",
+            "AT02 Grenade",
+            "Blauer Blitz",
+            "Bursting Flare",
+            "Catastrophe",
+            "Clay Bombardment",
+            "Cruel Tracker",
+            "Deadly Cage",
+            "Death Fire",
+            "Desperado",
+            "Dexterous Shot",
+            "Doom Shot",
+            "Enforce Execution",
+            "Equilibrium",
+            "Judgment Day",
+            "Last Request",
+            "Mark of Death",
+            "Meteor Stream",
+            "One Shot One Skill",
+            "Perfect Shot",
+            "Plasma Bullet",
+            "Quick Fire",
+            "Quick Shot",
+            "Relentless Assault",
+            "Secret Weapon",
+            "Shotgun Dominator",
+            "Shotgun Rapid Fire",
+            "Sign of Apocalypse",
+            "Somersault Shot",
+            "Spiral Flame",
+            "Spiral Tracker",
+            "Stand Up",
+            "Tumbling"
+        ]
+    },
     "Deathblade": {
         "abilities": [
             "Blade Assault",
@@ -356,6 +393,44 @@
             "Stampede",
             "Stand Up",
             "Target Down"
+        ]
+    },
+    "Machinist": {
+        "abilities": [
+            "Air Strike",
+            "Annihilation Mode",
+            "Avalanche",
+            "Backflip Strike",
+            "Battleship Operation",
+            "Bullet Hail",
+            "Comet Strike",
+            "Command_ Active Pulse",
+            "Command_ Baby Drones",
+            "Command_ Blockade",
+            "Command_ Carpet",
+            "Command_ Flare Beam",
+            "Command_ M143 Machine Gun",
+            "Command_ Raid Missile",
+            "Crimson Breaker",
+            "Echelon Beam",
+            "Energy Buster",
+            "EX - Zero Point",
+            "Fiery Escape",
+            "High Voltage Bullet",
+            "Laser Blade",
+            "Mobile Shot",
+            "Neo Fire",
+            "Overcharged Battery",
+            "Point Exclusion",
+            "Project Titan",
+            "Pulse Fire",
+            "Slugshot",
+            "Stand Up",
+            "Strategic Fire",
+            "Surge Blow",
+            "Sync Protocol",
+            "Thruster Move",
+            "Tremors"
         ]
     },
     "Paladin": {

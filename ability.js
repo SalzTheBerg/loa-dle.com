@@ -6,7 +6,7 @@ const rotationAngles = [90, 180, 270];
 const dailyRotation = rotationAngles[Math.floor(Math.random()*rotationAngles.length)];
 let classGuessed = false;
 
-const genderUnlockClasses = ["Berserker", "Slayer", "Striker", "Wardancer"];
+const genderUnlockClasses = ["Berserker", "Slayer", "Striker", "Wardancer", "Deadeye", "Gunslinger"];
 let genderUnlockGroups = [];
 let alternateClass;
 let alternateSkill;
@@ -178,7 +178,7 @@ function correctGuess() {
     dailyImage.style.transform = "rotate(" + 0 + "deg)";
 }
 
-//returns true or false if daily skill is eligible for gender unlock
+//returns true or false if daily skill is eligible for gender unlock and entered character is the opposite gender of it
 function checkForGenderUnlock(classGuess) {
         for (let indexGroup = 0; indexGroup < genderUnlockGroups.groups.length; indexGroup++) {
             for (let indexClass = 0; indexClass < genderUnlockGroups.groups[indexGroup].groupID.length; indexClass++) {

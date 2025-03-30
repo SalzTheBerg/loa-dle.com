@@ -117,6 +117,63 @@
                     "Wardancer": "Triple Fist"
                 }
             ]
+        },
+        {
+            "groupID": ["Deadeye", "Gunslinger"],
+            "skills": [
+                {
+                    "Deadeye": "AT02 Grenade",
+                    "Gunslinger": "AT02 Grenade"
+                },
+                {
+                    "Deadeye": "Catastrophe",
+                    "Gunslinger": "Catastrophe"
+                },
+                {
+                    "Deadeye": "Death Fire",
+                    "Gunslinger": "Death Fire"
+                },
+                {
+                    "Deadeye": "Dexterous Shot",
+                    "Gunslinger": "Dexterous Shot"
+                },
+                {
+                    "Deadeye": "Equilibrium",
+                    "Gunslinger": "Equilibrium"
+                },
+                {
+                    "Deadeye": "Last Request",
+                    "Gunslinger": "Last Request"
+                },
+                {
+                    "Deadeye": "Meteor Stream",
+                    "Gunslinger": "Meteor Stream"
+                },
+                {
+                    "Deadeye": "Perfect Shot",
+                    "Gunslinger": "Perfect Shot"
+                },
+                {
+                    "Deadeye": "Plasma Bullet",
+                    "Gunslinger": "Plasma Bullet"
+                },
+                {
+                    "Deadeye": "Shotgun Rapid Fire",
+                    "Gunslinger": "Shotgun Rapid Fire"
+                },
+                {
+                    "Deadeye": "Somersault Shot",
+                    "Gunslinger": "Somersault Shot"
+                },
+                {
+                    "Deadeye": "Spiral Flame",
+                    "Gunslinger": "Spiral Flame"
+                },
+                {
+                    "Deadeye": "Spiral Tracker",
+                    "Gunslinger": "Spiral Tracker"
+                }
+            ]
         }
     ]    
 }
