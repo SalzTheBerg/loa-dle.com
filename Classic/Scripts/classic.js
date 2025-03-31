@@ -17,7 +17,7 @@ let currentFocus;
 let focusActive = false;
 
 //fetches the character list and stores into characterList array
-fetch("characterList.json")
+fetch("/Classic/Objects/characterList.json")
     .then(response => response.json())
     .then(data => {
         characterList = data;
@@ -55,7 +55,7 @@ function createRow(indexOfChar) {
 
     let image = character.name + ".webp";
 
-    newCell.style.backgroundImage = "url('Icons/" + image + "')";
+    newCell.style.backgroundImage = "url('/Classic/Icons/" + image + "')";
 
     for (let i = 1; i < 7; i++) {
         let newCell = newRow.insertCell(i);
@@ -184,7 +184,7 @@ inputContent.addEventListener("input", function () {
     suggestions.forEach(suggestion => {
         let suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item')
-        suggestionItem.innerHTML = '<img src="Icons/' + suggestion + '.webp">' + suggestion;
+        suggestionItem.innerHTML = '<img src="/Classic/Icons/' + suggestion + '.webp">' + suggestion;
 
         //Event listener for clicking suggestions
         suggestionItem.addEventListener("click", function() {

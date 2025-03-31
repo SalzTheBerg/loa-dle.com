@@ -18,9 +18,9 @@ let dailyImage;
 let currentFocus;
 let focusActive = false;
 
-const inputContent = document.getElementById("input_guess");
-const inputSubmit = document.getElementById("input_submit");
-const inputDiv = document.getElementById("input_div");
+const inputContent = document.getElementById("class_input_guess");
+const inputSubmit = document.getElementById("class_input_submit");
+const inputDiv = document.getElementById("class_input_div");
 const skillInput = document.getElementById("skill_input_div");
 const guessTable = document.getElementById("guess_table");
 const skillGuess = document.getElementById("skill_guess");
@@ -38,8 +38,8 @@ const today = new Date().toISOString().split('T')[0];
 
 //loading the abilityList.json and saving data in abilityList array and class names in classList and availableClasses, calls the loadImg(); function after finishing
 Promise.all([
-    fetch("abilityList.json").then(response => response.json()),
-    fetch("genderUnlock.json").then(response => response.json())
+    fetch("/Ability/Objects/abilityList.json").then(response => response.json()),
+    fetch("/Ability/Objects/genderUnlock.json").then(response => response.json())
 ])
     .then(([abilityListData, genderUnlockData]) => {
         abilityList = abilityListData;
@@ -57,7 +57,7 @@ function loadImg() {
     dailyClass = getDailyClass();
     dailySkill = getDailySkill();
 
-    imageDiv.innerHTML = '<img src="Abilities/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
+    imageDiv.innerHTML = '<img src="/Ability/AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
     applyFilters();
 }
@@ -159,13 +159,20 @@ function createRow(indexOfChar) {
         alternateClass = dailyClass;
         alternateSkill = dailySkill;
 
-        responseMessage.innerHTML = '<h2>Congratulations</h2><p>Can you also guess the ability name?</p>';
+        const head = document.createElement("h2");
+        const para = document.createElement("p");
+        const node1 = document.createTextNode("Nice!");
+        const node2 = document.createTextNode("Can you also guess the ability name?");
+        head.appendChild(node1);
+        para.appendChild(node2);
+        responseMessage.appendChild(head);
+        responseMessage.appendChild(para);
 
     } else if (checkForGenderUnlock(classGuess)) {
         newCell.style.backgroundColor = correctColor;
         correctGuess();
 
-        responseMessage.innerHTML = '<h2>Congratulations</h2><p>The daily class was ' + dailyClass + ', but since this is also a skill for ' + alternateClass + ' it counts!</p><p>Can you also guess the ability name?</p>';
+        responseMessage.innerHTML = '<br><h2>Nice!</h2><p>The daily class was ' + dailyClass + ', but since this is also a skill for ' + alternateClass + ' it counts!</p><p>Can you also guess the ability name?</p>';
 
     } else newCell.style.backgroundColor = wrongColor;
 }
@@ -176,6 +183,9 @@ function correctGuess() {
     inputContent.placeholder = "Enter skill name..."
     dailyImage.style.filter = "grayscale(0%)";
     dailyImage.style.transform = "rotate(" + 0 + "deg)";
+    inputDiv.style.display = "none";
+    responseMessage.style.display = "block";
+    responseMessage.style.backgroundColor = "rgb(79, 97, 36)";
 }
 
 //returns true or false if daily skill is eligible for gender unlock and entered character is the opposite gender of it
@@ -309,7 +319,7 @@ inputContent.addEventListener("input", function () {
         suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item');
         if (!classGuessed) {
-            suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
+            suggestionItem.innerHTML = '<img src="/Ability/Classes/' + suggestion + '.webp">' + suggestion;
         } else { 
             suggestionItem.innerHTML = suggestion;
             suggestionItem.style.paddingLeft = "3px";

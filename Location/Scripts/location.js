@@ -23,8 +23,8 @@ let originalScale;
 let currentScale;
 
 Promise.all([
-    fetch("locationList.json").then(response => response.json()),
-    fetch("locationSpecifications.json").then(response => response.json())
+    fetch("/Location/Objects/locationList.json").then(response => response.json()),
+    fetch("/Location/Objects/locationSpecifications.json").then(response => response.json())
 ])
     .then(([locationsData, specificationsData]) => {
     locationList = locationsData;
@@ -42,7 +42,7 @@ function loadImg() {
     locationsInArea = Object.keys(locationSpecifications[dailyLocation]);
     dailyLocationImage = locationsInArea[Math.floor(Math.random() * locationsInArea.length)];
 
-    imageDiv.innerHTML = '<img src="Locations/' + dailyContinent + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
+    imageDiv.innerHTML = '<img src="/Location/Locations/' + dailyContinent + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
     centerX = locationSpecifications[dailyLocation][dailyLocationImage].centerX[randomSeed];
     centerY = locationSpecifications[dailyLocation][dailyLocationImage].centerY[randomSeed];
     originalScale = locationSpecifications[dailyLocation][dailyLocationImage].originalScale[randomSeed];

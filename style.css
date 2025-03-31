@@ -1,6 +1,9 @@
 body {
     text-align: center;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(0, 0, 0);
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .link{
@@ -107,4 +110,25 @@ p {
     background-color: rgb(44, 44, 44);
     border-color: rgb(44, 44, 44);
     transform: scale(1.02);
+}
+
+#response_message {
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow:
+    -2px -2px 2px 2px #77efff,
+    2px 2px 2px 2px #bd77ff;
+    position: relative;
+    padding: 20px;
+}
+
+#response_message img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    float: left;
 }
