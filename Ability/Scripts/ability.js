@@ -50,7 +50,7 @@ Promise.all([
         genderUnlockGroups = genderUnlockData;
         loadImg();
     })
-    .catch(error => console.error("Error loading data:", error));
+.catch(error => console.error("Error loading data:", error));
 
 //loads the daily image randomly and adding it to the DOM, calls the applyFilters(); method when done
 function loadImg() {
