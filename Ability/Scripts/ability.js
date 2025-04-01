@@ -38,8 +38,8 @@ const today = new Date().toISOString().split('T')[0];
 
 //loading the abilityList.json and saving data in abilityList array and class names in classList and availableClasses, calls the loadImg(); function after finishing
 Promise.all([
-    fetch("/Ability/Objects/abilityList.json").then(response => response.json()),
-    fetch("/Ability/Objects/genderUnlock.json").then(response => response.json())
+    fetch("Objects/abilityList.json").then(response => response.json()),
+    fetch("Objects/genderUnlock.json").then(response => response.json())
 ])
     .then(([abilityListData, genderUnlockData]) => {
         abilityList = abilityListData;
@@ -57,7 +57,7 @@ function loadImg() {
     dailyClass = getDailyClass();
     dailySkill = getDailySkill();
 
-    imageDiv.innerHTML = '<img src="/Ability/AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
+    imageDiv.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
     applyFilters();
 }
@@ -319,7 +319,7 @@ inputContent.addEventListener("input", function () {
         suggestionItem = document.createElement("div");
         suggestionItem.classList.add('suggestion-item');
         if (!classGuessed) {
-            suggestionItem.innerHTML = '<img src="/Ability/Classes/' + suggestion + '.webp">' + suggestion;
+            suggestionItem.innerHTML = '<img src="Classes/' + suggestion + '.webp">' + suggestion;
         } else { 
             suggestionItem.innerHTML = suggestion;
             suggestionItem.style.paddingLeft = "3px";
