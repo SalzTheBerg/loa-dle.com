@@ -1,8 +1,14 @@
-//expects the input field, the array of answers, the correct answer as parameter
-export function manageInput (inputContent, availableAnswers, correctAnswer, focusActive, currentFocus, includesQuery, callback) {
-    const guessTable = document.getElementById("guess_table");
-    const suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';
+//returns the autocompleted input as a string
+export function autocompleteInput ({
+    inputContent,
+    availableAnswers,
+    focusActive,
+    currentFocus = 0,
+    includesQuery = false
+}) {
+
+    /*const suggestionsContainer = document.getElementById("suggestions");
+    suggestionsContainer.innerHTML = '';*/
 
     let query = inputContent.value.toLowerCase();
 
@@ -15,35 +21,35 @@ export function manageInput (inputContent, availableAnswers, correctAnswer, focu
 
     if (suggestions.length > 0) {
         if (focusActive) {
-            inputContent.value = suggestions[currentFocus];
+            return suggestions[currentFocus];
         } else {
-            inputContent.value = suggestions[0];
+            return suggestions[0];
         }
     }
+    return query;
+}
 
+//calls the callback and returns true if the autocomplete is part of availableAnswers - returns false elsewise
+export function checkInput ({
+    availableAnswers,
+    input,
+    guessTable,
+    callback
+}) {
     for (let i = 0; i < availableAnswers.length; i++) {
         let answer = availableAnswers[i];
-        if (inputContent.value.toLowerCase() === answer.toLowerCase()) {
+        if (input.toLowerCase() === answer.toLowerCase()) {
             if (guessTable.style.display === "none") {
                 guessTable.style.display = "table";
             }
             callback(i);
-            break;
+            return true;
         }
     }
-
-    if (focusActive) {
-        removeItem(availableAnswers, suggestions[currentFocus]);
-        focusActive = false;    //maybe this doesnt work
-    }else {
-        removeItem(availableAnswers, suggestions[0]);
-    }
-
-    inputContent.value = "";
-    inputContent.focus();
+    return false;
 }
 
-//function to remove an item out of an array input(array, itemToRemove) output nothing
+//void function to remove an item out of an array input(array, itemToRemove)
 export function removeItem(array, itemToRemove) {
     const index = array.indexOf(itemToRemove);
 

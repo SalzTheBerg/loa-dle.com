@@ -116,7 +116,7 @@ p {
     transform: scale(1.02);
 }
 
-#response_message {
+#response_container {
     width: 30%;
     margin: auto;
     border-radius: 10px;
@@ -134,5 +134,21 @@ p {
     position: absolute;
     top: 15%;
     left: 20%;
-    float: left;
+}
+
+#response_message {
+    height: 200px;
+    text-align: left;
+}
+
+#response_message p {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+#response_message h2 {
+    position: absolute;
+    top: 7.5%;
+    left: 40%;
 }

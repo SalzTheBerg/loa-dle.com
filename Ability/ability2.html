@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOA'dle</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>LOA'dle</h1>
+        <p>Guess the class of the ability screenshot!</p>
+
+        <div id="gameContainer">
+            <label class="grayscale">
+                <input type="checkbox" checked id="grayscaleCheckbox">
+            </label>
+            <span>Toggle grayscale</span>
+
+            <br>
+
+            <label class="rotation">
+                <input type="checkbox" checked id="rotationCheckbox">
+            </label>
+            <span>Toggle rotation</span>
+
+            <br>
+
+            <div id="imageContainer">
+                <div id="guessImage"></div>
+            </div>
+
+            <br>
+                
+            <div id="classInputContainer">
+                <div id="classInputDiv">
+                    <input type="text" id="classInputGuess" placeholder="Enter class here..." autocomplete="off">
+                    <button id="classInputSubmit">Guess!</button>
+                </div>
+                <br class="removable">
+                <div id="classSuggestions"></div>
+            </div>
+
+            <div id="tableContainer">
+                <table id="guessTable" align="center" style="display: none; font-weight: bold; font-size: 24px;">
+                </table>
+            </div>
+
+            <div id="responseContainer" style="display: none;">
+                <div id="responseMessage"></div>
+                <div id="skillInputContainer">
+                    <div id="skillInputDiv">
+                        <input type="text" id="skillInputGuess" placeholder="Enter skill name here..." autocomplete="off">
+                        <button id="skillInputSubmit">Guess!</button>
+                    </div>
+                    <div id="skillSuggestions"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+
+        <a class="link" href="../index.html">
+            <div>
+                <p>Back to main menu</p>
+            </div>
+        </a>
+        
+        <script type="module" src="Scripts/ability2.js"></script>
+    </body>
+</html>
