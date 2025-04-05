@@ -12,10 +12,11 @@ export function autocompleteInput ({
 
     let query = inputContent.value.toLowerCase();
 
-    let suggestions = availableAnswers.filter(name => name.toLowerCase().startsWith(query));
-    if (includesQuery) {
-        suggestions = availableAnswers.filter(name => name.toLowerCase().includes(query));
-    }
+    let suggestions = filterSuggestions({
+        query: query,
+        availableAnswers: availableAnswers,
+        includesQuery: includesQuery
+    })
 
     alert(availableAnswers);
 
@@ -47,6 +48,19 @@ export function checkInput ({
         }
     }
     return false;
+}
+
+
+//returnes filtered suggestions based on input by starts with or includes filter
+export function filterSuggestions ({
+    query,
+    availableAnswers,
+    includesQuery = false
+}) {
+    let lowerQuery = query.toLowerCase();
+
+    let filterMethod = includesQuery ? (name) => name.toLowerCase().includes(lowerQuery) : (name) => name.toLowerCase().startsWith(lowerQuery);
+    return availableAnswers.filter(filterMethod);
 }
 
 //void function to remove an item out of an array input(array, itemToRemove)
