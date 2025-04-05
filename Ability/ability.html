@@ -8,55 +8,53 @@
         <h1>LOA'dle</h1>
         <p>Guess the class of the ability screenshot!</p>
 
-        <div id="game_container">
+        <div id="gameContainer">
             <label class="grayscale">
-                <input type="checkbox" checked id="grayscale_checkbox">
-                <span class="slider_round"></span>
+                <input type="checkbox" checked id="grayscaleCheckbox">
             </label>
             <span>Toggle grayscale</span>
 
             <br>
 
             <label class="rotation">
-                <input type="checkbox" checked id="rotation_checkbox">
-                <span class="slider_round"></span>
+                <input type="checkbox" checked id="rotationCheckbox">
             </label>
             <span>Toggle rotation</span>
 
             <br>
 
-            <div id="image_container">
-                <div id="guess_image"></div>
+            <div id="imageContainer">
+                <div id="guessImage"></div>
             </div>
 
             <br>
                 
-            <div id="class_input_container">
-                <div id="class_input_div">
-                    <input type="text" id="class_input_guess" placeholder="Enter class here..." autocomplete="off">
-                    <button id="class_input_submit">Guess!</button>
+            <div id="classInputContainer">
+                <div id="classInputDiv">
+                    <input type="text" id="classInputContent" placeholder="Enter class here..." autocomplete="off">
+                    <button id="classInputSubmit">Guess!</button>
                 </div>
-                <br class="removable">
-                <div id="class_suggestions"></div>
+                <div id="classSuggestions" class="suggestions"></div>
             </div>
 
-            <div id="table_container">
-                <table id="guess_table" align="center" style="display: none; font-weight: bold; font-size: 24px;">
+            <div id="tableContainer">
+                <table id="guessTable" align="center" style="display: none; font-weight: bold; font-size: 24px;">
                 </table>
             </div>
-
-            <div id="response_container" style="display: none;">
-                <div id="response_message"></div>
-                <div id="skill_input_container">
-                    <div id="skill_input_div">
-                        <input type="text" id="skill_input_guess" placeholder="Enter skill name here..." autocomplete="off">
-                        <button id="skill_input_submit" onclick="getInput()">Guess!</button>
-                    </div>
-                    <div id="skill_suggestions"></div>
-                </div>
-            </div>
-
         </div>
+
+        <div id="responseContainer" style="display: none;">
+            <div id="responseMessage"></div>
+            <div id="skillInputContainer">
+                <div id="skillInputDiv">
+                    <input type="text" id="skillInputContent" placeholder="Enter skill name here..." autocomplete="off">
+                    <button id="skillInputSubmit">Guess!</button>
+                </div>
+                <div id="skillSuggestions" class="suggestions"></div>
+            </div>
+            <div id="skillResponseMessage"></div>
+        </div>
+
 
         <br>
         <br>
@@ -67,6 +65,6 @@
             </div>
         </a>
         
-        <script type="module" src="Scripts/ability.js"></script>
+        <script type="module" src="Scripts/ability2.js"></script>
     </body>
 </html>
