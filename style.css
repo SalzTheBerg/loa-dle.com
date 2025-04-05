@@ -56,15 +56,15 @@ p {
     margin-top: 0px;
 }
 
-#suggestions {
-    width: 250px;
+.suggestions {
+    width: 300px;
     margin: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.suggestion-item {
+.suggestionItem {
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -72,10 +72,11 @@ p {
     border-radius: 5px;
     background-color: rgb(16, 12, 12);
     margin: 3px;
+    padding: 5px;
     color: white;
 }
 
-.suggestion-item img {
+.suggestionItem img {
     width: 50px;
     height: 50px;
     margin-right: 20px;
@@ -91,12 +92,12 @@ p {
     transform: scale(1.02);
 }
 
-#guess_image img {
+#guessImage img {
     width: 150px;
     height: 150px;
 }
 
-#location_image {
+#locationImage {
     width: 1280px;
     height: 720px;
     position: relative;
@@ -104,30 +105,43 @@ p {
     overflow: hidden;
 }
 
-#location_image img {
+#locationImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.suggestion-item:hover {
+.suggestionItem:hover {
     background-color: rgb(44, 44, 44);
     border-color: rgb(44, 44, 44);
     transform: scale(1.02);
 }
 
-#response_container {
+#responseContainer {
     width: 30%;
     margin: auto;
     border-radius: 10px;
     box-shadow:
-    -2px -2px 2px 2px #f6ff77,
-    2px 2px 2px 2px #f6ff77;
+    -2px -2px 2px 2px #000000,
+    2px 2px 2px 2px #000000;
     position: relative;
     padding: 20px;
 }
 
-#response_message img {
+#gameContainer {
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow:
+    -2px -2px 2px 2px #000000,
+    2px 2px 2px 2px #000000;
+    position: relative;
+    padding: 20px;
+    background-color: rgb(143, 143, 143);
+    margin-bottom: 40px;
+}
+
+#responseMessage img {
     width: 100px;
     height: 100px;
     border-radius: 5px;
@@ -136,18 +150,18 @@ p {
     left: 20%;
 }
 
-#response_message {
+#responseMessage {
     height: 200px;
     text-align: left;
 }
 
-#response_message p {
+#responseMessage p {
     position: absolute;
     top: 30%;
     left: 40%;
 }
 
-#response_message h2 {
+#responseMessage h2 {
     position: absolute;
     top: 7.5%;
     left: 40%;

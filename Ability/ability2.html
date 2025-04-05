@@ -31,30 +31,30 @@
                 
             <div id="classInputContainer">
                 <div id="classInputDiv">
-                    <input type="text" id="classInputGuess" placeholder="Enter class here..." autocomplete="off">
+                    <input type="text" id="classInputContent" placeholder="Enter class here..." autocomplete="off">
                     <button id="classInputSubmit">Guess!</button>
                 </div>
-                <br class="removable">
-                <div id="classSuggestions"></div>
+                <div id="classSuggestions" class="suggestions"></div>
             </div>
 
             <div id="tableContainer">
                 <table id="guessTable" align="center" style="display: none; font-weight: bold; font-size: 24px;">
                 </table>
             </div>
-
-            <div id="responseContainer" style="display: none;">
-                <div id="responseMessage"></div>
-                <div id="skillInputContainer">
-                    <div id="skillInputDiv">
-                        <input type="text" id="skillInputGuess" placeholder="Enter skill name here..." autocomplete="off">
-                        <button id="skillInputSubmit">Guess!</button>
-                    </div>
-                    <div id="skillSuggestions"></div>
-                </div>
-            </div>
-
         </div>
+
+        <div id="responseContainer" style="display: none;">
+            <div id="responseMessage"></div>
+            <div id="skillInputContainer">
+                <div id="skillInputDiv">
+                    <input type="text" id="skillInputContent" placeholder="Enter skill name here..." autocomplete="off">
+                    <button id="skillInputSubmit">Guess!</button>
+                </div>
+                <div id="skillSuggestions" class="suggestions"></div>
+            </div>
+            <div id="skillResponseMessage"></div>
+        </div>
+
 
         <br>
         <br>

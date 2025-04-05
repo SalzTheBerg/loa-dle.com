@@ -2,13 +2,11 @@
 export function autocompleteInput ({
     inputContent,
     availableAnswers,
-    focusActive,
-    currentFocus = 0,
-    includesQuery = false
+    focusState,
+    includesQuery = false,
+    suggestionsContainer
 }) {
-
-    /*const suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';*/
+    suggestionsContainer.innerHTML = '';
 
     let query = inputContent.value.toLowerCase();
 
@@ -18,11 +16,9 @@ export function autocompleteInput ({
         includesQuery: includesQuery
     })
 
-    alert(availableAnswers);
-
     if (suggestions.length > 0) {
-        if (focusActive) {
-            return suggestions[currentFocus];
+        if (focusState.focusActive) {
+            return suggestions[focusState.currentFocus];
         } else {
             return suggestions[0];
         }
@@ -70,4 +66,21 @@ export function removeItem(array, itemToRemove) {
     if (index !== -1) {
         array.splice(index, 1);
     }
+}
+
+//void function to disable input and enable response after correct input
+export function correctGuess (inputContainer, responseContainer) {
+    inputContainer.style.display = "none";
+    responseContainer.style.display = "block";
+    responseContainer.style.backgroundColor = "rgb(79, 97, 36)";
+}
+
+//hashes the input by fnv1a hashing
+export function fnv1aHash(input) {
+    let hash = 0x811c9dc5;
+    for (let i = 0; i < input.length; i++) {
+        hash ^= input.charCodeAt(i);
+        hash = (hash * 0x01000193) >>> 0;
+    }
+    return hash;
 }
