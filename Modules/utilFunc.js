@@ -72,7 +72,6 @@ export function removeItem(array, itemToRemove) {
 export function correctGuess (inputContainer, responseContainer) {
     inputContainer.style.display = "none";
     responseContainer.style.display = "block";
-    responseContainer.style.backgroundColor = "rgb(79, 97, 36)";
 }
 
 //hashes the input by fnv1a hashing

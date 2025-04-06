@@ -1,7 +1,7 @@
 body {
     text-align: center;
     background-color: rgb(0, 0, 0);
-    background-image: url("Backgrounds/background.jpg");
+    background-image: url("Backgrounds/loa.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -26,6 +26,8 @@ table {
     max-width: 800px;
     border-spacing: 10px;
     table-layout: fixed;
+    color: black;
+    padding-bottom: 30px;
 }
 
 td {
@@ -68,10 +70,8 @@ p {
     display: flex;
     align-items: center;
     font-size: 24px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: rgb(16, 12, 12);
-    margin: 3px;
+    border: 1px solid rgb(255, 202, 87);
+    background-color: rgb(17, 17, 17);
     padding: 5px;
     color: white;
 }
@@ -88,8 +88,6 @@ p {
 
 .active {
     background-color: rgb(44, 44, 44);
-    border-color: rgb(44, 44, 44);
-    transform: scale(1.02);
 }
 
 #guessImage img {
@@ -113,19 +111,20 @@ p {
 
 .suggestionItem:hover {
     background-color: rgb(44, 44, 44);
-    border-color: rgb(44, 44, 44);
-    transform: scale(1.02);
 }
 
 #responseContainer {
     width: 30%;
+    height: 600px;
     margin: auto;
     border-radius: 10px;
     box-shadow:
-    -2px -2px 2px 2px #000000,
-    2px 2px 2px 2px #000000;
+    -1px -1px 1px 1px #ffca57,
+    1px 1px 1px 1px #ffca57;
     position: relative;
     padding: 20px;
+    background: linear-gradient(to bottom, #100c24, #102434);
+    color: white;
 }
 
 #gameContainer {
@@ -133,12 +132,13 @@ p {
     margin: auto;
     border-radius: 10px;
     box-shadow:
-    -2px -2px 2px 2px #000000,
-    2px 2px 2px 2px #000000;
+    -1px -1px 1px 1px #ffca57,
+    1px 1px 1px 1px #ffca57;
     position: relative;
     padding: 20px;
-    background-color: rgb(143, 143, 143);
+    background: linear-gradient(to bottom, #100c24, #102434);
     margin-bottom: 40px;
+    color: white;
 }
 
 #responseMessage img {

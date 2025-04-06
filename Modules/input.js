@@ -65,6 +65,7 @@ export function handleInput({
     return function() {
         let query = this.value.toLowerCase();
         suggestionsContainer.innerHTML = '';
+        suggestionsContainer.style.border = "none";
 
         if (query === '') {
             return;
@@ -74,6 +75,9 @@ export function handleInput({
             availableAnswers: availableAnswers(),
             includesQuery: includesQuery
         })
+        if (suggestions.length > 0) {
+            suggestionsContainer.style.border = "2px solid rgb(255, 202, 87)";
+        }
         suggestions = suggestions.map(name => name.replace(/_/g, ":"));
 
         suggestions.forEach(suggestion => {

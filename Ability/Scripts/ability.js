@@ -1,6 +1,6 @@
-import { autocompleteInput, checkInput, removeItem, correctGuess, fnv1aHash  } from "/Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "/Modules/utilConsts.js";
-import { setupInput } from "/Modules/inputSetup.js";
+import { autocompleteInput, checkInput, removeItem, correctGuess, fnv1aHash  } from "../Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today } from "../Modules/utilConsts.js";
+import { setupInput } from "../Modules/inputSetup.js";
 
 // Uninitialized variables
 let abilityList = [];
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch for jsons
     Promise.all([
-        fetch("/Ability/Objects/abilityList.json").then(response => response.json()),
-        fetch("/Ability/Objects/genderUnlock.json").then(response => response.json())
+        fetch("../Ability/Objects/abilityList.json").then(response => response.json()),
+        fetch("../Ability/Objects/genderUnlock.json").then(response => response.json())
     ])
         .then(([abilityListData, genderUnlockData]) => {
             abilityList = abilityListData;
