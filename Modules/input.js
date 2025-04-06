@@ -1,7 +1,6 @@
-import { focusState } from "./utilConsts.js";
-import { filterSuggestions } from "/utilFunc.js";
+import { filterSuggestions } from "/Modules/utilFunc.js";
 
-//Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
+// Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
 export function handleKeydown({
     inputFunction,
     focusState
@@ -54,6 +53,7 @@ export function handleKeydown({
     }
 }
 
+// Creates suggestions in suggestionContainer and adds an image if path is given
 export function handleInput({
     availableAnswers,
     includesQuery = false,
@@ -82,7 +82,7 @@ export function handleInput({
             suggestionItem.innerHTML = path !== "" ? '<img src="' + path + suggestion + '.webp">' + suggestion : suggestion;
             suggestionsContainer.appendChild(suggestionItem);
 
-            //event listener for click in suggestion items
+            // Event listener for clicking in suggestion items
             //IMPORTANT NOTE: Currently splits at > since this is the indicator for end of img tag, when changing keep in mind
             suggestionItem.addEventListener("click", function() {
                 inputContent.value = path !== "" ? this.innerHTML.replace(/:/g, "_").split(">")[1] : this.innerHTML.replace(/:/g, "_");
@@ -92,6 +92,7 @@ export function handleInput({
     }
 }
 
+// Removes active items in suggestions when hovering over them
 export function handleMouseover({
     focusState
 }) {

@@ -54,6 +54,10 @@
                 {
                     "Berserker": "Sword Storm",
                     "Slayer": "Mountain Cleave"
+                },
+                {
+                    "Berserker": "Dark Rush",
+                    "Slayer": "Bloodlust"
                 }
             ]
         },
