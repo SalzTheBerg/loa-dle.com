@@ -1,4 +1,4 @@
-import { handleInput, handleKeydown, handleMouseover } from '/Modules/input.js';
+import { handleInput, handleKeydown, handleMouseover } from '../Modules/input.js';
 
 // Sets up the event listeners click, keydown, input and mouseover events
 export function setupInput({
