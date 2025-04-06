@@ -40,10 +40,11 @@ td {
 }
 
 th {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 18px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid rgb(255, 255, 255);
     height: 50px;
+    background-color: rgba(0, 0, 0, 0.582);
 }
 
 b {

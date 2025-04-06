@@ -26,12 +26,13 @@ export function autocompleteInput ({
     return query;
 }
 
-//calls the callback and returns true if the autocomplete is part of availableAnswers - returns false elsewise
+//calls the callback if the autocomplete is part of availableAnswers
 export function checkInput ({
     availableAnswers,
     input,
     guessTable,
-    callback
+    callback,
+    focusState
 }) {
     for (let i = 0; i < availableAnswers.length; i++) {
         let answer = availableAnswers[i];
@@ -40,10 +41,14 @@ export function checkInput ({
                 guessTable.style.display = "table";
             }
             callback(i);
-            return true;
+            if (focusState.focusActive) {
+                removeItem(availableAnswers, input);
+                focusState.focusActive = false;
+            }else {
+                removeItem(availableAnswers, input);
+            }
         }
     }
-    return false;
 }
 
 
@@ -72,6 +77,11 @@ export function removeItem(array, itemToRemove) {
 export function correctGuess (inputContainer, responseContainer) {
     inputContainer.style.display = "none";
     responseContainer.style.display = "block";
+
+    responseContainer.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
 
 //hashes the input by fnv1a hashing

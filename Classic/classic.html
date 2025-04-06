@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LOA'dle</title>
+        <title>LoAdle</title>
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
-        <h1>LOA'dle</h1>
-        <p>Lost Ark guesser</p>
-        
-        <div id="input_div">
-            <input type="text" id="input_guess" placeholder="Enter character name here..." autocomplete="off">
-            <button id="input_submit" onclick="getInput()">Guess!</button>
+        <h1>LoAdle</h1>
+        <p>Lost Ark Guesser</p>
+
+        <div id="gameContainer">
+
+            <h1>Guess the Lost ark NPC/Boss</h1>
+            <h2>Enter any character to start</h2>
+                
+            <div id="inputContainer">
+                <div id="inputDiv">
+                    <input type="text" id="inputContent" placeholder="Enter character here..." autocomplete="off">
+                    <button id="inputSubmit">Guess!</button>
+                </div>
+                <div id="characterSuggestions" class="suggestions"></div>
+
+                <br>
+                
+            </div>
         </div>
-        <br class="removable">
-        <div id="suggestions"></div>
-        <div id="response_message"></div>
 
-        <br class="removable">
+        <div id="tableContainer">
+            <table id="guessTable" align="center" style="display: none;">
+                <tr>
+                    <th>Character</th>
+                    <th>Gender</th>
+                    <th>Race/Species</th>
+                    <th>Region</th>
+                    <th>Occupation</th>
+                    <th>Affiniy to player</th>
+                    <th>Status</th>
+                    <!--th>First Appearance</th-->
+                </tr>
+            </table>
+        </div>
 
-        <table id="guess_table" align="center" style="display: none;">
-            <tr>
-                <th>Character</th>
-                <th>Gender</th>
-                <th>Race/Species</th>
-                <th>Region</th>
-                <th>Occupation</th>
-                <th>Affiniy to player</th>
-                <th>Status</th>
-                <!--th>First Appearance</th-->
-            </tr>
-        </table>
-        
+        <div id="responseContainer" style="display: none;">
+            <div id="responseMessage"></div>
+        </div>
+
+        <br>
+        <br>
 
         <a class="link" href="../index.html">
             <div>
@@ -38,6 +53,6 @@
             </div>
         </a>
         
-        <script src="Scripts/classic.js"></script>
+        <script type="module" src="Scripts/classic.js"></script>
     </body>
 </html>

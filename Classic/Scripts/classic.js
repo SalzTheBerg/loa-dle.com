@@ -1,60 +1,97 @@
+import { today, focusState, correctColor, wrongColor, partialMatchColor } from "../../Modules/utilConsts.js";
+import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
+import { setupInput } from "../../Modules/inputSetup.js";
+
+// Uninitialized Variables
 let characterList = [];
 let availableCharacterNames = [];
-const usedCharacters = [];
-
-const inputContent = document.getElementById("input_guess");
-const inputSubmit = document.getElementById("input_submit");
-const inputDiv = document.getElementById("input_div");
-const guessTable = document.getElementById("guess_table");
-const responseMessage = document.getElementById("response_message");
-
-const correctColor = "rgb(96, 220, 0)";
-const partialMatchColor = "rgb(225, 225, 0)";
-const wrongColor = "rgb(238, 42, 0)";
-
 let characterToGuess;
-let currentFocus;
-let focusActive = false;
 
-//fetches the character list and stores into characterList array
-fetch("Objects/characterList.json")
-    .then(response => response.json())
-    .then(data => {
-        characterList = data;
-        availableCharacterNames = characterList.map(character => character.name);
-        availableCharacterNames.sort();
-    })
-    .catch(error => console.error("Error loading character data:", error));
+// Consts
+const hash = fnv1aHash(today);
 
-//calls the hashing function and gets the daily character
+// Id selectors
+const guessTable = document.getElementById("guessTable");
+const gameContainer = document.getElementById("gameContainer");
+
+const inputContent = document.getElementById("inputContent");
+const inputSubmit = document.getElementById("inputSubmit");
+const suggestionsContainer = document.getElementById("characterSuggestions");
+const responseMessage = document.getElementById("responseMessage");
+
+// Getter functions for changing values
+function getAvailableCharacterNames() {
+    return availableCharacterNames;
+}
+
+// Dom Content loaded
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Fetch for jsons
+    fetch("../../Classic/Objects/characterList.json")
+        .then(response => response.json())
+        .then(data => {
+            characterList = data;
+            availableCharacterNames = characterList.map(character => character.name);
+            availableCharacterNames.sort();
+
+            getDailyCharacter();
+
+            // Setup event listener
+            setupInput({
+                inputField: inputContent,
+                submitButton: inputSubmit,
+                suggestionsContainer: suggestionsContainer,
+                readFunction: readInput,
+                getAvailableAnswers: getAvailableCharacterNames,
+                includesQuery: false,
+                path: 'Icons/',
+                focusState: focusState
+            });
+        })
+        .catch(error => console.error("Error loading character data:", error));
+});
+
+
+// Initializes the daily Character to the characterToGuess variable
 function getDailyCharacter() {
-    const today = new Date().toISOString().split('T')[0];
-    const hash = fnv1aHash(today);
-    return characterList[hash % characterList.length];
+    characterToGuess = characterList[hash % characterList.length];
 }
 
-//hashes the input String by fnv1a hashing
-function fnv1aHash(today) {
-    let hash = 0x811c9dc5;
-    for (let i = 0; i < today.length; i++) {
-        hash ^= today.charCodeAt(i);
-        hash = (hash * 0x01000193) >>> 0;
-    }
-    return hash;
+// Handles logic for character Guessing
+function readInput () {
+    suggestionsContainer.style.border = "none";
+
+    let autocomplete = autocompleteInput({
+        inputContent: inputContent,
+        availableAnswers: getAvailableCharacterNames(),
+        focusState: focusState,
+        includesQuery: false,
+        suggestionsContainer: suggestionsContainer
+    });
+
+    checkInput({
+        availableAnswers: getAvailableCharacterNames(),
+            input: autocomplete,
+            guessTable: guessTable,
+            callback: createRow,
+            focusState
+    });
+
+    inputContent.value = "";
+    inputContent.focus();
 }
 
+// Creates a tablerow and checks if its the correct guess
 function createRow(indexOfChar) {
-    characterToGuess = getDailyCharacter();
+    let characterName = availableCharacterNames[indexOfChar];
 
     let newRow = guessTable.insertRow(1);
-    let character = characterList[indexOfChar];
+    let character = characterList.find(c => c.name === characterName);
 
     let attributes = ["name", "gender", "race", "region", "occupation", "affinity", "status"]
-
     let newCell = newRow.insertCell(0);
-
     let image = character.name + ".webp";
-
     newCell.style.backgroundImage = "url('Icons/" + image + "')";
 
     for (let i = 1; i < 7; i++) {
@@ -76,132 +113,12 @@ function createRow(indexOfChar) {
             newCell.innerHTML = character[attributeName];
         }
     }
-    if (characterToGuess === characterList[indexOfChar]) {
+    if (characterToGuess === character) {
 
-        responseMessage.innerHTML = "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
+        correctGuess(gameContainer, responseContainer);
 
-        inputDiv.style.display = "none";
+        let image = '<img src="Icons/' + character.name + '.webp"';
 
-        document.querySelectorAll("br.removable").forEach(br => br.remove());
-    }
-}
-
-//creates a row in the table if input is an available character -> calls create row function
-function getInput() {
-    let suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';
-
-    let value = inputContent.value.toLowerCase();
-
-    for (let i = 0; i < characterList.length; i++) {
-        let character = characterList[i];
-        if (value === character.name.toLowerCase() && !usedCharacters.includes(value)) {
-            if (guessTable.style.display === "none") {
-                guessTable.style.display = "table";
-            }
-            createRow(i);
-            usedCharacters.push(character.name.toLowerCase());
-            break;
-        }
-    }
-
-    inputContent.value = "";
-    inputContent.focus();
-}
-
-//Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
-inputContent.addEventListener("keydown", function(event) {
-    let query = this.value.toLowerCase();
-
-    if (query === '') {
-        return;
-    }
-
-    let x = document.getElementsByClassName("suggestion-item");
-
-    if (event.keyCode == 40) {
-        event.preventDefault();
-        if (focusActive === false) {
-            focusActive = true;
-            currentFocus = 0;
-        } else {
-            x[currentFocus].classList.remove("active");
-            currentFocus++;
-        }
-        if (currentFocus === x.length) {
-            currentFocus = 0;
-        }
-        x[currentFocus].classList.add("active");
-    }
-    else if (event.keyCode == 38) {
-        event.preventDefault();
-        if (focusActive === false) {
-            focusActive = true;
-            currentFocus = x.length - 1;
-        } else {
-            x[currentFocus].classList.remove("active");
-            currentFocus--;
-        }
-        if (currentFocus < 0) {
-            currentFocus = x.length - 1;
-        }
-        x[currentFocus].classList.add("active");
-    }
-    else if (event.keyCode === 13) {
-        event.preventDefault();
-
-        let suggestions = availableCharacterNames.filter(name => name.toLowerCase().startsWith(query));
-
-        if (focusActive) {
-            removeItem(availableCharacterNames, suggestions[currentFocus]);
-        }else removeItem(availableCharacterNames, suggestions[0]);
-
-        if (suggestions.length > 0) {
-            if (focusActive) {
-                focusActive = false;
-                this.value = suggestions[currentFocus];
-            } else this.value = suggestions[0];
-        }
-        getInput();
-    }
-    else focusActive = false;
-})
-
-//Event listener for input -> creates suggestions
-inputContent.addEventListener("input", function () {
-    let query = this.value.toLowerCase();
-    let suggestions = availableCharacterNames.filter(name => name.toLowerCase().startsWith(query));
-
-    if (query === '') {
-        document.getElementById("suggestions").innerHTML = '';
-        return;
-    }
-
-    let suggestionsContainer = document.getElementById("suggestions");
-    suggestionsContainer.innerHTML = '';
-
-
-    suggestions.forEach(suggestion => {
-        let suggestionItem = document.createElement("div");
-        suggestionItem.classList.add('suggestion-item')
-        suggestionItem.innerHTML = '<img src="Icons/' + suggestion + '.webp">' + suggestion;
-
-        //Event listener for clicking suggestions
-        suggestionItem.addEventListener("click", function() {
-            inputContent.value = this.innerHTML.split(">")[1];
-            removeItem(availableCharacterNames, suggestions[0]);
-            getInput();
-        })
-
-        suggestionsContainer.appendChild(suggestionItem);
-    });
-});
-
-//functino to removeItem from array
-function removeItem(array, itemToRemove) {
-    const index = array.indexOf(itemToRemove);
-
-    if (index !== -1) {
-        array.splice(index, 1);
+        responseMessage.innerHTML = image + "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
     }
 }

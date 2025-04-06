@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOA'dle</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <h1>LOA'dle</h1>
+        <p>Lost Ark guesser</p>
+        
+        <div id="input_div">
+            <input type="text" id="input_guess" placeholder="Enter character name here..." autocomplete="off">
+            <button id="input_submit" onclick="getInput()">Guess!</button>
+        </div>
+        <br class="removable">
+        <div id="suggestions"></div>
+        <div id="response_message"></div>
+
+        <br class="removable">
+
+        <table id="guess_table" align="center" style="display: none;">
+            <tr>
+                <th>Character</th>
+                <th>Gender</th>
+                <th>Race/Species</th>
+                <th>Region</th>
+                <th>Occupation</th>
+                <th>Affiniy to player</th>
+                <th>Status</th>
+                <!--th>First Appearance</th-->
+            </tr>
+        </table>
+        
+
+        <a class="link" href="../index.html">
+            <div>
+                <p>Back to main menu</p>
+            </div>
+        </a>
+        
+        <script src="Scripts/classic.js"></script>
+    </body>
+</html>

@@ -1,4 +1,4 @@
-import { autocompleteInput, checkInput, removeItem, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
 import { correctColor, wrongColor, focusState, today } from "../../Modules/utilConsts.js";
 import { setupInput } from "../../Modules/inputSetup.js";
 
@@ -57,32 +57,32 @@ document.addEventListener("DOMContentLoaded", () => {
             availableClasses.sort();
             genderUnlockGroups = genderUnlockData;
             loadImg();
+
+            // Setup event listeners
+            // Class input
+            setupInput({
+                inputField: classInputContent,
+                submitButton: classInputSubmit,
+                suggestionsContainer: classSuggestionsContainer,
+                readFunction: readClassInput,
+                getAvailableAnswers: getAvailableClasses,
+                includesQuery: false,
+                path: 'Classes/',
+                focusState: focusState
+            });
+
+            // Skill input
+            setupInput({
+                inputField: skillInputContent,
+                submitButton: skillInputSubmit,
+                suggestionsContainer: skillSuggestionsContainer,
+                readFunction: readSkillInput,
+                getAvailableAnswers: getAvailableSkills,
+                includesQuery: true,
+                focusState: focusState
+            });
         })
     .catch(error => console.error("Error loading data:", error));
-
-    // Setup event listeners
-    // Class input
-    setupInput({
-        inputField: classInputContent,
-        submitButton: classInputSubmit,
-        suggestionsContainer: classSuggestionsContainer,
-        readFunction: readClassInput,
-        getAvailableAnswers: getAvailableClasses,
-        includesQuery: false,
-        path: 'Classes/',
-        focusState: focusState
-    });
-
-    // Skill input
-    setupInput({
-        inputField: skillInputContent,
-        submitButton: skillInputSubmit,
-        suggestionsContainer: skillSuggestionsContainer,
-        readFunction: readSkillInput,
-        getAvailableAnswers: getAvailableSkills,
-        includesQuery: true,
-        focusState: focusState
-    });
 });
 
 // Loads the daily image
@@ -125,6 +125,7 @@ function readSkillInput () {
 
 // Handles the logic for class Guessing (calling a lot of functions) -> creates table and automatically closes input when correct answer is given
 function readClassInput () {
+    classSuggestionsContainer.style.border = "none";
 
     let autocomplete = autocompleteInput({
         inputContent: classInputContent,
@@ -134,19 +135,13 @@ function readClassInput () {
         suggestionsContainer: classSuggestionsContainer
     });
 
-    if (checkInput({
+    checkInput({
         availableAnswers: getAvailableClasses(),
         input: autocomplete,
         guessTable: guessTable,
-        callback: createRow
-    })) {
-        if (focusState.focusActive) {
-            removeItem(availableClasses, autocomplete);
-            focusState.focusActive = false;
-        }else {
-            removeItem(availableClasses, autocomplete);
-        }
-    }
+        callback: createRow,
+        focusState
+    });
 
     classInputContent.value = "";
     classInputContent.focus();

@@ -17,6 +17,9 @@ export function handleKeydown({
 
         if (event.keyCode == 40) {
             event.preventDefault();
+            if (x.length < 1) {
+                return;
+            }
             if (focusState.focusActive === false) {
                 focusState.focusActive = true;
                 focusState.currentFocus = 0;
@@ -31,6 +34,9 @@ export function handleKeydown({
         }
         else if (event.keyCode == 38) {
             event.preventDefault();
+            if (x.length < 1) {
+                return;
+            }
             if (focusState.focusActive === false) {
                 focusState.focusActive = true;
                 focusState.currentFocus = x.length - 1;
