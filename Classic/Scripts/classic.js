@@ -1,6 +1,6 @@
-import { today, focusState, correctColor, wrongColor, partialMatchColor } from "../../Modules/utilConsts.js";
-import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
-import { setupInput } from "../../Modules/inputSetup.js";
+import { today, focusState, correctColor, wrongColor, partialMatchColor } from "/LOA-dle/Modules/utilConsts.js";
+import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "/LOA-dle/Modules/utilFunc.js";
+import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -28,7 +28,7 @@ function getAvailableCharacterNames() {
 document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch for jsons
-    fetch("../../Classic/Objects/characterList.json")
+    fetch("/LOA-dle/Classic/Objects/characterList.json")
         .then(response => response.json())
         .then(data => {
             characterList = data;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 readFunction: readInput,
                 getAvailableAnswers: getAvailableCharacterNames,
                 includesQuery: false,
-                path: 'Icons/',
+                path: './Icons/',
                 focusState: focusState
             });
         })
@@ -92,7 +92,7 @@ function createRow(indexOfChar) {
     let attributes = ["name", "gender", "race", "region", "occupation", "affinity", "status"]
     let newCell = newRow.insertCell(0);
     let image = character.name + ".webp";
-    newCell.style.backgroundImage = "url('Icons/" + image + "')";
+    newCell.style.backgroundImage = "url('./Icons/" + image + "')";
 
     for (let i = 1; i < 7; i++) {
         let newCell = newRow.insertCell(i);
@@ -117,7 +117,7 @@ function createRow(indexOfChar) {
 
         correctGuess(gameContainer, responseContainer);
 
-        let image = '<img src="Icons/' + character.name + '.webp"';
+        let image = '<img src="./Icons/' + character.name + '.webp"';
 
         responseMessage.innerHTML = image + "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
     }

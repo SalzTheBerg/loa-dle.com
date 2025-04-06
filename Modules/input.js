@@ -1,4 +1,4 @@
-import { filterSuggestions } from "/Modules/utilFunc.js";
+import { filterSuggestions } from "/LOA-dle/Modules/utilFunc.js";
 
 // Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
 export function handleKeydown({
