@@ -60,7 +60,7 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     geoGuessMap.appendChild(click);
 
     // Distance Conversion depending on Azena 12 kmh
-    let distanceM = Math.floor(distance * distanceConversion);
+    let distanceM = Math.round(distance * distanceConversion).toFixed(2);
 
     //alert(distance);
     
