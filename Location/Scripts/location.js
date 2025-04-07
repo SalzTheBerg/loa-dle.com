@@ -184,6 +184,13 @@ function readAreaInput() {
 
     if (areaInputContent.value.toLowerCase() === dailyArea.toLowerCase()) {
         correctGuess(areaInputContainer, areaResponseContainer);
+
+        // ???? TODO scheinbar geht es nicht anders
+        geoGuessMap.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        })
+
         prepareGeoguesser();
     }
 }
