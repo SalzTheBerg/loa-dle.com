@@ -159,7 +159,7 @@ function createRow(index) {
         newCell.style.backgroundColor = correctColor;
         correctGuess(classInputContainer, responseContainer);
 
-        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp"';
+        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
         responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>Can you also guess the ability name?</p>';
 
@@ -167,7 +167,7 @@ function createRow(index) {
         newCell.style.backgroundColor = correctColor;
         correctGuess(classInputContainer, responseContainer);
 
-        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp"';
+        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
         responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>The daily class was ' + classList[hash % classList.length] + ', but since this is also a skill for ' + dailyClass + ' it counts!<br>Can you also guess the ability name?</p>';
 

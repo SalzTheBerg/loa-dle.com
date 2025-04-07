@@ -1,61 +1,61 @@
 {
     "Arthetine": {
-        "locations": [
+        "areas": [
             "Origins of Stern"
         ]
     },
     "East Luterra": {
-        "locations": [
+        "areas": [
             "Luterra Castle"
         ]
     },
     "Elgacia": {
-        "locations": [
+        "areas": [
             "Ereonnor"
         ]
     },
     "Feiton": {
-        "locations": [
+        "areas": [
             "Kalaja"
         ]
     },
     "North Kurzan": {
-        "locations": [
+        "areas": [
             "Abidos Garrison"
         ]
     },
     "North Vern": {
-        "locations": [
+        "areas": [
             "Vern Castle"
         ]
     },
     "Punika": {
-        "locations": [
+        "areas": [
             "Nia Village"
         ]
     },
     "Rethramis": {
-        "locations": [
+        "areas": [
             "Prideholme"
         ]
     },
     "Rohendel": {
-        "locations": [
+        "areas": [
             "Rothun"
         ]
     },
     "South Kurzan": {
-        "locations": [
+        "areas": [
             "Elnead"
         ]
     },
     "Voldis": {
-        "locations": [
+        "areas": [
             "Kalinar"
         ]
     },
     "Yorn": {
-        "locations": [
+        "areas": [
             "Great Castle"
         ]
     }

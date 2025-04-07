@@ -1,4 +1,4 @@
-import { handleInput, handleKeydown, handleMouseover } from '/LOA-dle/Modules/input.js';
+import { handleInput, handleKeydown, handleMouseover } from './input.js';
 
 // Sets up the event listeners click, keydown, input and mouseover events
 export function setupInput({

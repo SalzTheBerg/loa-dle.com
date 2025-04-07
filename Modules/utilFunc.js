@@ -80,7 +80,7 @@ export function correctGuess (inputContainer, responseContainer) {
 
     responseContainer.scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "center"
     });
 }
 

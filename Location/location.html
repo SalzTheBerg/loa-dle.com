@@ -7,24 +7,53 @@
     <body>
         <h1>LOA'dle</h1>
         <p>Lost Ark guesser</p>
-        <p>Guess the location of the image!</p>
 
-        <br>
+        <div id="gameContainer" style="width: 1400px;">
 
-        <div id="location_image"></div>
+            <h2>Guess the location of the image!</h2>
+            
+            <div id="imageContainer">
+                <div id="locationImage"></div>
+            </div>
 
-        <br>
-
-        <div id="input_div">
-            <input type="text" id="input_guess" placeholder="Enter continent here..." autocomplete="off">
-            <button id="input_submit" onclick="getInput()">Guess!</button>
+            <br>
+                
+            <div id="continentInputContainer">
+                <div id="continentInputDiv">
+                    <input type="text" id="continentInputContent" placeholder="Enter area here..." autocomplete="off">
+                    <button id="continentInputSubmit">Guess!</button>
+                </div>
+                <div id="continentSuggestions" class="suggestions"></div>
+            </div>
         </div>
-        <br class="removable">
-        <div id="suggestions"></div>
-        <div id="response_message"></div>
 
-        <table id="guess_table" align="center" style="display: none; font-weight: bold; font-size: 24px;">
-        </table>
+        <div id="tableContainer">
+            <table id="guessTable" align="center" style="display: none; font-weight: bold; font-size: 24px;">
+            </table>
+        </div>
+
+        <div id="continentResponseContainer" style="display: none;">
+            <div id="continentResponseMessage"></div>
+            <div id="areaInputContainer">
+                <div id="areaInputDiv">
+                    <input type="text" id="areaInputContent" placeholder="Enter area name here..." autocomplete="off">
+                    <button id="areaInputSubmit">Guess!</button>
+                </div>
+                <div id="areaSuggestions" class="suggestions"></div>
+            </div>
+
+            <br>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div id="areaResponseContainer" style="display: none;">
+            <div id="areaResponseMessage"></div>
+            <div id="geoGuessMap"></div>
+        </div>
 
         <a class="link" href="../index.html">
             <div>
@@ -32,6 +61,6 @@
             </div>
         </a>
         
-        <script src="Scripts/location.js"></script>
+        <script type="module" src="Scripts/location.js"></script>
     </body>
 </html>

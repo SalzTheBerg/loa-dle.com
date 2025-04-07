@@ -117,7 +117,7 @@ function createRow(indexOfChar) {
 
         correctGuess(gameContainer, responseContainer);
 
-        let image = '<img src="Icons/' + character.name + '.webp"';
+        let image = '<img src="Icons/' + character.name + '.webp" />';
 
         responseMessage.innerHTML = image + "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
     }
