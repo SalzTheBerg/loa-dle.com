@@ -15,10 +15,7 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     const x = e.offsetX;
     const y = e.offsetY;
 
-    //alert(x);
-    //alert(y);
-
-    let distance = Math.floor(Math.sqrt(Math.pow(correctX - x, 2) + Math.pow(correctY - y, 2)));
+    let distance = Math.sqrt(Math.pow(correctX - x, 2) + Math.pow(correctY - y, 2));
 
     const marker = document.createElement("img");
     marker.src = "MapMarker.png";
@@ -60,20 +57,24 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     geoGuessMap.appendChild(click);
 
     // Distance Conversion depending on Azena 12 kmh
-    let distanceM = Math.round(distance * distanceConversion).toFixed(2);
-
-    //alert(distance);
+    let distanceM = (distance * distanceConversion).toFixed(2);
     
-    let disclaimer = "<br><p>Distance was approximated by an estimated character speed of 12 km/h on each map so it might be a bit off</p>";
+    let disclaimer = "<br><p><i>(Distance was approximated by an estimated character speed of 12 km/h on each map so it might be a bit off)</i></p>";
     
     if (distance < 30) {
         geoGuessResponseMessage.innerHTML = '<h2>Congratulations</h2><p>You absolutely smurfed it with a distance of ' + distanceM + ' m !</p>' + disclaimer;
+    } else if (distance < 100) {
+        geoGuessResponseMessage.innerHTML = '<h2>Nice</h2><p>That counts, you were ' + distanceM + ' m away!</p>' + disclaimer;
     } else if (distance < 200) {
         geoGuessResponseMessage.innerHTML = '<h2>Close</h2><p>You were ' + distanceM + ' m away !</p>' + disclaimer;
-    } else if (distance < 400) {
-        geoGuessResponseMessage.innerHTML = '<h2>Unlucky</h2><p>You were ' + distanceM + ' m away !</p><br><p>Come back tomorrow for another chance</p>' + disclaimer;
-    } else geoGuessResponseMessage.innerHTML = '<h2>Whoops D:</h2><p>You were ' + distanceM + ' m away !</p><br><p>Lets pretend this never happened and try again tomorrow!</p>' + disclaimer;
+    } else if (distance < 350) {
+        geoGuessResponseMessage.innerHTML = '<h2>Unlucky</h2><p>You were ' + distanceM + ' m away, come back tomorrow for another chance!</p>' + disclaimer;
+    } else geoGuessResponseMessage.innerHTML = '<h2>Whoops D:</h2><p>You were ' + distanceM + ' m away, just pretend this never happened and try again tomorrow!</p>' + disclaimer;
 
+
+    //alert(x);
+    //alert(y);
+    //alert(distance);
     guessed = true;
 });
 

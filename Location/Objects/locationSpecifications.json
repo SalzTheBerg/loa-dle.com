@@ -52,17 +52,26 @@
             "Ereonnor_1": {
                 "centerX": [0, 2600, -1800, -2400],
                 "centerY": [-400, -400, 300, -2000],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 120,
+                "correctY": 450,
+                "distanceConversion": 0.3
             },
             "Ereonnor_2": {
                 "centerX": [-2400, 3700, 1000, -600],
                 "centerY": [400, 1200, -800, -500],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 470,
+                "correctY": 365,
+                "distanceConversion": 0.3
             },
             "Ereonnor_3": {
                 "centerX": [2600, -3000, 1200, -1200],
                 "centerY": [500, -1800, -1600, -800],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 545,
+                "correctY": 85,
+                "distanceConversion": 0.3
             }
         }
     },
@@ -71,17 +80,26 @@
             "Kalaja_1": {
                 "centerX": [-900, -1500, 2400, 2800],
                 "centerY": [1200, 600, -700, 700],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 520,
+                "correctY": 485,
+                "distanceConversion": 0.18
             },
             "Kalaja_2": {
                 "centerX": [-1400, 200, 3000, 0],
                 "centerY": [-1400, -800, 800, 700],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 740,
+                "correctY": 395,
+                "distanceConversion": 0.18
             },
             "Kalaja_3": {
                 "centerX": [0, -1500, 2400, 1200],
                 "centerY": [700, 0, -200, 1200],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 220,
+                "correctY": 465,
+                "distanceConversion": 0.18
             }
         }
     },
@@ -90,7 +108,10 @@
             "Abidos Garrison_1": {
                 "centerX": [-100, 1000, -2500, 2200],
                 "centerY": [-400, 400, 800, -500],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 765,
+                "correctY": 340,
+                "distanceConversion": 0.27
             }
         }
     },
@@ -99,17 +120,26 @@
             "Vern Castle_1": {
                 "centerX": [0, 1700, 0, 1600],
                 "centerY": [-1200, -200, 1800, 1800],
-                "originalScale": [7, 7, 8, 7]
+                "originalScale": [7, 7, 8, 7],
+                "correctX": 550,
+                "correctY": 320,
+                "distanceConversion": 0.28
             },
             "Vern Castle_2": {
                 "centerX": [-2400, 400, 3000, -2200],
                 "centerY": [-800, -600, -1400, 1400],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 615,
+                "correctY": 545,
+                "distanceConversion": 0.28
             },
             "Vern Castle_3": {
                 "centerX": [0, 1800, -300, -2300],
                 "centerY": [-400, -500, -1400, 1200],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 215,
+                "correctY": 220,
+                "distanceConversion": 0.28
             }
         }
     },
@@ -118,17 +148,26 @@
             "Nia Village_1": {
                 "centerX": [1100, 0, 2800, -700],
                 "centerY": [-1600, 0, -1000, 1700],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 395,
+                "correctY": 425,
+                "distanceConversion": 0.29
             },
             "Nia Village_2": {
                 "centerX": [0, 3400, -500, -2700],
                 "centerY": [-1000, -1200, -1800, -1200],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 595,
+                "correctY": 550,
+                "distanceConversion": 0.29
             },
             "Nia Village_3": {
                 "centerX": [-1800, 2800, 300, 300],
                 "centerY": [-800, -100, 2200, -1500],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 490,
+                "correctY": 550,
+                "distanceConversion": 0.29
             }
         }
     },
@@ -137,17 +176,26 @@
             "Prideholme_1": {
                 "centerX": [800, 0, -2800, 3200],
                 "centerY": [-300, 1400, -2000, 0],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 205,
+                "correctY": 415,
+                "distanceConversion": 0.12
             },
             "Prideholme_2": {
                 "centerX": [0, -3200, 1200, 2400],
                 "centerY": [0, 1400, 200, 1500],
-                "originalScale": [10, 10, 10, 10]
+                "originalScale": [10, 10, 10, 10],
+                "correctX": 355,
+                "correctY": 515,
+                "distanceConversion": 0.12
             },
             "Prideholme_3": {
                 "centerX": [2800, -2000, 2000, -2000],
                 "centerY": [1400, 0, -700, 1600],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 600,
+                "correctY": 470,
+                "distanceConversion": 0.12
             }
         }
     },
@@ -184,17 +232,26 @@
             "Elnead_1": {
                 "centerX": [2400, -200, -2300, -2800],
                 "centerY": [0, -700, 1500, -600],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 180,
+                "correctY": 230,
+                "distanceConversion": 0.22
             },
             "Elnead_2": {
                 "centerX": [-100, -1500, -2600, 0],
                 "centerY": [-3000, 1300, -1900, -1500],
-                "originalScale": [10, 7, 7, 10]
+                "originalScale": [10, 7, 7, 10],
+                "correctX": 425,
+                "correctY": 350,
+                "distanceConversion": 0.22
             },
             "Elnead_3": {
                 "centerX": [-1600, 2400, 3700, 800],
                 "centerY": [-1400, -400, -800, -600],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 620,
+                "correctY": 235,
+                "distanceConversion": 0.22
             }
         }
     },
@@ -203,17 +260,26 @@
             "Kalinar_1": {
                 "centerX": [0, 3000, -1000, -1800],
                 "centerY": [200, -400, 1600, 500],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 325,
+                "correctY": 345,
+                "distanceConversion": 0.27
             },
             "Kalinar_2": {
                 "centerX": [0, 2000, -2800, 100],
                 "centerY": [-200, 1800, 100, -1800],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 390,
+                "correctY": 110,
+                "distanceConversion": 0.27
             },
             "Kalinar_3": {
                 "centerX": [0, 2400, 0, -1800],
                 "centerY": [0, -200, -1000, -800],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 280,
+                "correctY": 550,
+                "distanceConversion": 0.27
             }
         }
     },
@@ -222,17 +288,26 @@
             "Great Castle_1": {
                 "centerX": [0, 0, -2800, 1900],
                 "centerY": [600, -600, 0, -200],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 590,
+                "correctY": 185,
+                "distanceConversion": 0.21
             },
             "Great Castle_2": {
                 "centerX": [0, 0, 1800, -1000],
                 "centerY": [-1200, 800, 600, -800],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 320,
+                "correctY": 285,
+                "distanceConversion": 0.21
             },
             "Great Castle_3": {
                 "centerX": [0, 0, -1600, 1800],
                 "centerY": [-1200, -300, -1000, 600],
-                "originalScale": [7, 7, 7, 7]
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 405,
+                "correctY": 405,
+                "distanceConversion": 0.21
             }
         }
     }
