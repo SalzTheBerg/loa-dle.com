@@ -189,7 +189,8 @@ p {
 }
 
 #areaResponseContainer {
-    width: 1000px;
+    width: 1400px;
+    height: 1200px;
     margin: auto;
     border-radius: 10px;
     box-shadow:
@@ -199,11 +200,18 @@ p {
     padding: 20px;
     background: linear-gradient(to bottom, #100c24, #102434);
     color: white;
+    align-items: center;
 }
 
 #areaResponseContainer img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transform: scale(0.8);
+}
+
+#geoGuessContainer {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }

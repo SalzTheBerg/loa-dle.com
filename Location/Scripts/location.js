@@ -1,9 +1,9 @@
 import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
 import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
 import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { geoGuessInitializer } from "./geoGuess.js";
 
 // Uninitialized Variables
-let locationList = [];
 let availableContinents = [];
 let locationSpecifications = [];
 
@@ -48,60 +48,62 @@ function getAvailableContinents() {
     return availableContinents;
 }
 function getAvailableAreas() {
-    return locationList[dailyContinent].areas;
+    return Object.keys(locationSpecifications[dailyContinent]);
+}
+export function getLocationSpecifications() {
+    return locationSpecifications;
 }
 
 // Dom Content loaded
 document.addEventListener("DOMContentLoaded", () => {
-    Promise.all([
-        fetch("Objects/locationList.json").then(response => response.json()),
-        fetch("Objects/locationSpecifications.json").then(response => response.json())
-    ])
-        .then(([locationsData, specificationsData]) => {
-        locationList = locationsData;
-        availableContinents = Object.keys(locationList);
-        availableContinents.sort();
-        locationSpecifications = specificationsData;
-        loadImg();
 
-        // Setup event listeners
-        // Continent input
-        setupInput({
-            inputField: continentInputContent,
-            submitButton: continentInputSubmit,
-            suggestionsContainer: continentSuggestionsContainer,
-            readFunction: readContinentInput,
-            getAvailableAnswers: getAvailableContinents,
-            includesQuery: false,
-            focusState: focusState
-        });
+    fetch("Objects/locationSpecifications.json")
+        .then(response => response.json())
+        .then(data => {
+            locationSpecifications = data;
+            availableContinents = Object.keys(locationSpecifications);
+            availableContinents.sort();
 
-        // Area input
-        setupInput({
-            inputField: areaInputContent,
-            submitButton: areaInputSubmit,
-            suggestionsContainer: areaSuggestionsContainer,
-            readFunction: readAreaInput,
-            getAvailableAnswers: getAvailableAreas,
-            includesQuery: false,
-            focusState: focusState
-        });
-    })
-    .catch(error => console.error("Error loading data:", error));
+            loadImg();
 
+            // TODO disable empty guess
+            // Setup event listeners
+            // Continent input
+            setupInput({
+                inputField: continentInputContent,
+                submitButton: continentInputSubmit,
+                suggestionsContainer: continentSuggestionsContainer,
+                readFunction: readContinentInput,
+                getAvailableAnswers: getAvailableContinents,
+                includesQuery: false,
+                focusState: focusState
+            });
+
+            // Area input
+            setupInput({
+                inputField: areaInputContent,
+                submitButton: areaInputSubmit,
+                suggestionsContainer: areaSuggestionsContainer,
+                readFunction: readAreaInput,
+                getAvailableAnswers: getAvailableAreas,
+                includesQuery: true,
+                focusState: focusState
+            });
+        })
+        .catch(error => console.error("Error loading character data:", error));
 });
 
 // Loads the daily image randomly and adding it to the DOM
 function loadImg() {
     dailyContinent = availableContinents[hash % availableContinents.length];
-    dailyArea = locationList[dailyContinent].areas[hash % locationList[dailyContinent].areas.length];
-    locationsInArea = Object.keys(locationSpecifications[dailyArea]);
+    dailyArea = getAvailableAreas()[hash % getAvailableAreas().length];
+    locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
     dailyLocationImage = locationsInArea[hash % locationsInArea.length];
 
-    image.innerHTML = '<img src="Continents/' + dailyContinent + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = locationSpecifications[dailyArea][dailyLocationImage].centerX[randomSeed];
-    centerY = locationSpecifications[dailyArea][dailyLocationImage].centerY[randomSeed];
-    originalScale = locationSpecifications[dailyArea][dailyLocationImage].originalScale[randomSeed];
+    image.innerHTML = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
+    centerX = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeed];
+    centerY = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeed];
+    originalScale = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeed];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
     dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
@@ -142,7 +144,7 @@ function createRow(indexOfContinent) {
         newCell.style.backgroundColor = correctColor;
         correctGuess(continentInputContainer, continentResponseContainer);
 
-        let dailyImageTag = '<img src="Continents/' + dailyContinent + '/' + dailyLocationImage + '.jpg" />';
+        let dailyImageTag = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" />';
 
         continentResponseMessage.innerHTML = dailyImageTag + '<h2>Congratulations</h2><p>Can you also guess the zone name?</p>';
 
@@ -196,6 +198,7 @@ function readAreaInput() {
 }
 
 function prepareGeoguesser() {
-    geoGuessMap.innerHTML = '<img src="Continents/' + dailyContinent + '/Maps/' + dailyLocationImage + '.webp" />';
-    areaResponseMessage.innerHTML = '<h2>Do you also know where the image was taken?</h2><br><p>Click anywhere on the Map</p><br><h1>Still WIP be patient pls</h1>'
+    geoGuessMap.innerHTML = '<img src="Continents/' + dailyContinent + '/Maps/' + dailyArea + '.jpg" />';
+    areaResponseMessage.innerHTML = '<h2>Do you also know where the image was taken?</h2><br><p>Click anywhere on the Map</p>';
+    geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImage);
 }
