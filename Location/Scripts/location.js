@@ -189,7 +189,7 @@ function readAreaInput() {
         geoGuessMap.scrollIntoView({
             behavior: "smooth",
             block: "center"
-        })
+        });
 
         prepareGeoguesser();
     }
