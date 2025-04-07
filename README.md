@@ -18,12 +18,6 @@ Highly inspired by Loldle and Wordle, but for the Lost Ark gamers!
 
 A daily challenge for Lost Ark fans – to test your knowledge and have fun
 
-## Tech Stack
-
-- HTML, CSS, JavaScript
-- Modular structure using shared utility functions
-- Input handling, autocomplete, and game state management included
-
 ## 📌 Notes
 
 This is a personal fan project and not affiliated with Smilegate or Amazon Games.
