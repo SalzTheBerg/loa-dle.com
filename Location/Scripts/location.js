@@ -19,7 +19,7 @@ let originalScale;
 let currentScale;
 
 // Consts
-const hash = fnv1aHash("2025-04-10");
+const hash = fnv1aHash(today);
 const randomSeed = Math.floor(Math.random() * 4);
 
 // Id selectors
