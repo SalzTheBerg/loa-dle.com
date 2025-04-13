@@ -28,7 +28,7 @@ function getAvailableCharacterNames() {
 document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch for jsons
-    fetch("/LOA-dle/Classic/Objects/characterList.json")
+    fetch("Objects/characterList.json")
         .then(response => response.json())
         .then(data => {
             characterList = data;
@@ -115,7 +115,7 @@ function createRow(indexOfChar) {
     }
     if (characterToGuess === character) {
 
-        correctGuess(gameContainer, responseContainer);
+        correctGuess(gameContainer, responseContainer, responseMessage);
 
         let image = '<img src="Icons/' + character.name + '.webp" />';
 

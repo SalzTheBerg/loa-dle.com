@@ -54,7 +54,7 @@ export function checkInput ({
 
 //returnes filtered suggestions based on input by starts with or includes filter
 export function filterSuggestions ({
-    query,
+    query = "",
     availableAnswers,
     includesQuery = false
 }) {
@@ -74,11 +74,11 @@ export function removeItem(array, itemToRemove) {
 }
 
 //void function to disable input and enable response after correct input
-export function correctGuess (inputContainer, responseContainer) {
+export function correctGuess (inputContainer, responseContainer, scrollTo) {
     inputContainer.style.display = "none";
     responseContainer.style.display = "block";
 
-    responseContainer.scrollIntoView({
+    scrollTo.scrollIntoView({
         behavior: "smooth",
         block: "center"
     });

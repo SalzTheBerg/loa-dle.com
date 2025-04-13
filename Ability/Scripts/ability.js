@@ -1,6 +1,7 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
-import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash, filterSuggestions  } from "../../Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today, suggestionsBorder } from "../../Modules/utilConsts.js";
+import { setupInput } from "../../Modules/inputSetup.js";
+import { createSuggestions } from "../../Modules/input.js";
 
 // Uninitialized variables
 let abilityList = [];
@@ -29,7 +30,6 @@ const responseContainer = document.getElementById("responseContainer");
 
 const skillInputContainer = document.getElementById("skillInputContainer");
 const skillInputContent = document.getElementById("skillInputContent");
-const skillInputSubmit = document.getElementById("skillInputSubmit");
 const skillSuggestionsContainer = document.getElementById("skillSuggestions");
 const skillResponseMessage = document.getElementById("skillResponseMessage");
 
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch for jsons
     Promise.all([
-        fetch("/LOA-dle/Ability/Objects/abilityList.json").then(response => response.json()),
-        fetch("/LOA-dle/Ability/Objects/genderUnlock.json").then(response => response.json())
+        fetch("Objects/abilityList.json").then(response => response.json()),
+        fetch("Objects/genderUnlock.json").then(response => response.json())
     ])
         .then(([abilityListData, genderUnlockData]) => {
             abilityList = abilityListData;
@@ -74,12 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // Skill input
             setupInput({
                 inputField: skillInputContent,
-                submitButton: skillInputSubmit,
                 suggestionsContainer: skillSuggestionsContainer,
                 readFunction: readSkillInput,
                 getAvailableAnswers: getAvailableSkills,
                 includesQuery: true,
-                focusState: focusState
+                focusState: focusState,
+                suggestAlways: true
             });
         })
     .catch(error => console.error("Error loading data:", error));
@@ -157,21 +157,49 @@ function createRow(index) {
 
     if (availableClasses[index] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
-        correctGuess(classInputContainer, responseContainer);
+        correctGuess(classInputContainer, responseContainer, skillInputContainer);
 
         let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
         responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>Can you also guess the ability name?</p>';
 
+        prepareSkillGuess();
+
     } else if (checkForGenderUnlock(classGuess)) {
         newCell.style.backgroundColor = correctColor;
-        correctGuess(classInputContainer, responseContainer);
+        correctGuess(classInputContainer, responseContainer, skillInputContainer);
 
         let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
         responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>The daily class was ' + classList[hash % classList.length] + ', but since this is also a skill for ' + dailyClass + ' it counts!<br>Can you also guess the ability name?</p>';
 
+        prepareSkillGuess();
+
     } else newCell.style.backgroundColor = wrongColor;
+}
+
+function prepareSkillGuess () {
+    let suggestions = filterSuggestions({
+                availableAnswers: getAvailableSkills()
+            });
+    skillSuggestionsContainer.style.border = suggestionsBorder;
+    suggestions = suggestions.map(name => name.replace(/_/g, ":"));      
+    createSuggestions({
+        suggestions: suggestions,
+        suggestionsContainer: skillSuggestionsContainer,
+        inputContent: skillInputContent,
+        callback: readSkillInput
+    });
+
+
+    // Prevents mouse wheel up or down when at start / end
+    skillSuggestionsContainer.addEventListener('wheel', function(e) {
+        const atTop = skillSuggestionsContainer.scrollTop === 0;
+        const atBottom = skillSuggestionsContainer.scrollHeight - skillSuggestionsContainer.scrollTop === skillSuggestionsContainer.clientHeight;
+        if ((atTop && e.deltaY < 0) || (atBottom && e.deltaY > 0)) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 }
 
 

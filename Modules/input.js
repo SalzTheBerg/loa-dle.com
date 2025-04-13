@@ -1,3 +1,4 @@
+import { suggestionsBorder } from "./utilConsts.js";
 import { filterSuggestions } from "./utilFunc.js";
 
 // Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
@@ -66,40 +67,57 @@ export function handleInput({
     suggestionsContainer,
     inputContent,
     callback,
-    path = ""
+    path = "",
+    suggestAlways = false
 }) {
     return function() {
         let query = this.value.toLowerCase();
         suggestionsContainer.innerHTML = '';
         suggestionsContainer.style.border = "none";
 
-        if (query === '') {
+        if (query === '' && !suggestAlways) {
             return;
         }
         let suggestions = filterSuggestions({
             query: query,
             availableAnswers: availableAnswers(),
             includesQuery: includesQuery
-        })
+        });
         if (suggestions.length > 0) {
-            suggestionsContainer.style.border = "2px solid rgb(255, 202, 87)";
+            suggestionsContainer.style.border = suggestionsBorder;
         }
         suggestions = suggestions.map(name => name.replace(/_/g, ":"));
 
-        suggestions.forEach(suggestion => {
-            let suggestionItem = document.createElement("div");
-            suggestionItem.classList.add('suggestionItem');
-            suggestionItem.innerHTML = path !== "" ? '<img src="' + path + suggestion + '.webp">' + suggestion : suggestion;
-            suggestionsContainer.appendChild(suggestionItem);
+        createSuggestions({
+            suggestions: suggestions,
+            suggestionsContainer: suggestionsContainer,
+            inputContent: inputContent,
+            callback: callback,
+            path: path
+        });
+    };
+}
 
-            // Event listener for clicking in suggestion items
-            //IMPORTANT NOTE: Currently splits at > since this is the indicator for end of img tag, when changing keep in mind
-            suggestionItem.addEventListener("click", function() {
-                inputContent.value = path !== "" ? this.innerHTML.replace(/:/g, "_").split(">")[1] : this.innerHTML.replace(/:/g, "_");
-                callback();
-            })
-        })
-    }
+export function createSuggestions ({
+    suggestions,
+    suggestionsContainer,
+    inputContent,
+    callback,
+    path = ""
+}) {
+    suggestions.forEach(suggestion => {
+        let suggestionItem = document.createElement("div");
+        suggestionItem.classList.add('suggestionItem');
+        suggestionItem.innerHTML = path !== "" ? '<img src="' + path + suggestion + '.webp">' + suggestion : suggestion;
+        suggestionsContainer.appendChild(suggestionItem);
+
+        // Event listener for clicking in suggestion items
+        //IMPORTANT NOTE: Currently splits at > since this is the indicator for end of img tag, when changing keep in mind
+        suggestionItem.addEventListener("click", function() {
+            inputContent.value = path !== "" ? this.innerHTML.replace(/:/g, "_").split(">")[1] : this.innerHTML.replace(/:/g, "_");
+            callback();
+        });
+    });
 }
 
 // Removes active items in suggestions when hovering over them

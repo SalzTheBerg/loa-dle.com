@@ -3,16 +3,19 @@ import { handleInput, handleKeydown, handleMouseover } from './input.js';
 // Sets up the event listeners click, keydown, input and mouseover events
 export function setupInput({
     inputField,
-    submitButton,
+    submitButton = false,
     suggestionsContainer,
     readFunction,
     getAvailableAnswers,
     includesQuery = false,
     path = '',
-    focusState
+    focusState,
+    suggestAlways = false
 }) {
     // Submit button listener
-    submitButton.addEventListener("click", readFunction);
+    if (submitButton !== false) {
+        submitButton.addEventListener("click", readFunction);
+    }
 
     // Enter and arrow keys listener
     inputField.addEventListener("keydown", handleKeydown({
@@ -27,7 +30,8 @@ export function setupInput({
         suggestionsContainer,
         inputContent: inputField,
         callback: readFunction,
-        path
+        path,
+        suggestAlways: suggestAlways
     }));
 
     // Mouseover for disabling focus state

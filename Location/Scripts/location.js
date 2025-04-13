@@ -1,6 +1,6 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
-import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today } from "../../Modules/utilConsts.js";
+import { setupInput } from "../../Modules/inputSetup.js";
 import { geoGuessInitializer } from "./geoGuess.js";
 
 // Uninitialized Variables
@@ -31,10 +31,8 @@ const continentInputContent = document.getElementById("continentInputContent");
 const continentInputSubmit = document.getElementById("continentInputSubmit");
 const continentSuggestionsContainer = document.getElementById("continentSuggestions");
 
-const areaInputContainer = document.getElementById("areaInputContainer");
-const areaInputContent = document.getElementById("areaInputContent");
-const areaInputSubmit = document.getElementById("areaInputSubmit");
-const areaSuggestionsContainer = document.getElementById("areaSuggestions");
+const areaInputDiv = document.getElementById("areaInputDiv");
+
 
 const continentResponseContainer = document.getElementById("continentResponseContainer");
 const continentResponseMessage = document.getElementById("continentResponseMessage");
@@ -75,17 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 suggestionsContainer: continentSuggestionsContainer,
                 readFunction: readContinentInput,
                 getAvailableAnswers: getAvailableContinents,
-                includesQuery: false,
-                focusState: focusState
-            });
-
-            // Area input
-            setupInput({
-                inputField: areaInputContent,
-                submitButton: areaInputSubmit,
-                suggestionsContainer: areaSuggestionsContainer,
-                readFunction: readAreaInput,
-                getAvailableAnswers: getAvailableAreas,
                 includesQuery: true,
                 focusState: focusState
             });
@@ -142,17 +129,14 @@ function createRow(indexOfContinent) {
 
     if (availableContinents[indexOfContinent] === dailyContinent) {
         newCell.style.backgroundColor = correctColor;
-        correctGuess(continentInputContainer, continentResponseContainer);
 
         let dailyImageTag = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" />';
 
         continentResponseMessage.innerHTML = dailyImageTag + '<h2>Congratulations</h2><p>Can you also guess the zone name?</p>';
 
-        // ???? TODO scheinbar geht es nicht anders
-        continentResponseMessage.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-        })
+        correctGuess(continentInputContainer, continentResponseContainer, continentResponseMessage);
+
+        prepareAreaGuess();
 
     } else {
         newCell.style.backgroundColor = wrongColor;
@@ -172,33 +156,39 @@ function createRow(indexOfContinent) {
 }
 
 function readAreaInput() {
-    areaSuggestionsContainer.style.border = "none";
 
-    let autocomplete = autocompleteInput({
-        inputContent: areaInputContent,
-        availableAnswers: getAvailableAreas(),
-        focusState: focusState,
-        includesQuery: false,
-        suggestionsContainer: areaSuggestionsContainer
+        if (this.innerHTML === dailyArea) {
+            this.style.backgroundColor = "green";
+            areaResponseContainer.style.display = "block";
+            prepareGeoguesser();
+        }
+}
+
+function prepareAreaGuess() {
+    getAvailableAreas().forEach(element => {
+        let x = document.createElement('button');
+        let y = document.createTextNode(element);
+        x.appendChild(y);
+        x.addEventListener("click", readAreaInput);
+        areaInputDiv.appendChild(x);
     });
+}
 
-    areaInputContent.value = autocomplete;
+function prepareGeoguesser() {
+    const img = new Image();
+    img.src = 'Continents/' + dailyContinent + '/Maps/' + dailyArea + '.jpg';
 
-    if (areaInputContent.value.toLowerCase() === dailyArea.toLowerCase()) {
-        correctGuess(areaInputContainer, areaResponseContainer);
+    img.onload = () => {
+        geoGuessMap.innerHTML = '';
+        geoGuessMap.appendChild(img);
 
-        // ???? TODO scheinbar geht es nicht anders
+        areaResponseMessage.innerHTML = "<h2>Do you also know where the image was taken?</h2><br><p>Click anywhere on the Map</p>";
+        geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImage);
+
         geoGuessMap.scrollIntoView({
             behavior: "smooth",
             block: "center"
         });
+    };
 
-        prepareGeoguesser();
-    }
-}
-
-function prepareGeoguesser() {
-    geoGuessMap.innerHTML = '<img src="Continents/' + dailyContinent + '/Maps/' + dailyArea + '.jpg" />';
-    areaResponseMessage.innerHTML = '<h2>Do you also know where the image was taken?</h2><br><p>Click anywhere on the Map</p>';
-    geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImage);
 }
