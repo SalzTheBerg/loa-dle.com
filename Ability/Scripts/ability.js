@@ -1,5 +1,5 @@
 import { autocompleteInput, checkInput, correctGuess, fnv1aHash, filterSuggestions  } from "/LOA-dle/Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today, suggestionsBorder } from "/LOA-dle/Modules/utilConsts.js";
+import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
 import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
 import { createSuggestions } from "/LOA-dle/Modules/input.js";
 
@@ -182,7 +182,6 @@ function prepareSkillGuess () {
     let suggestions = filterSuggestions({
                 availableAnswers: getAvailableSkills()
             });
-    skillSuggestionsContainer.style.border = suggestionsBorder;
     suggestions = suggestions.map(name => name.replace(/_/g, ":"));      
     createSuggestions({
         suggestions: suggestions,

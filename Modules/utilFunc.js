@@ -6,9 +6,13 @@ export function autocompleteInput ({
     includesQuery = false,
     suggestionsContainer
 }) {
-    suggestionsContainer.innerHTML = '';
-
     let query = inputContent.value.toLowerCase();
+    
+    if (query === "") {
+        return;
+    }
+
+    suggestionsContainer.innerHTML = '';
 
     let suggestions = filterSuggestions({
         query: query,

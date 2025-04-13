@@ -10,14 +10,13 @@ body {
 .link{
     display: block;
     margin: 40px 40% 40px 40%;
-    background-color: rgb(232, 255, 149);
+    background-color: rgb(17, 17, 17);
+    border: 1px solid rgb(255, 202, 87);
     border-radius: 5px;
-    padding: 20px 0 5px 0;
-    color: black;
+    padding: 10px;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-}
-
-.link:hover {
+} .link:hover {
     transform: scale(1.005);
 }
 
@@ -36,41 +35,24 @@ body {
 }
 
 table {
-    width: 60%;
     max-width: 800px;
     border-spacing: 10px;
     table-layout: fixed;
     color: black;
     padding-bottom: 30px;
-}
-
-td {
+} td {
     border: 2px solid black;
     border-radius: 5px;
     width:  14.2857%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100px;
-}
-
-th {
+} th {
     color: rgb(255, 255, 255);
     font-size: 18px;
     border-bottom: 3px solid rgb(255, 255, 255);
     height: 50px;
     background-color: rgba(0, 0, 0, 0.582);
-}
-
-b {
-    font-size: 24px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-p {
-    font-size: 18px;
-    padding-top: 0px;
-    margin-top: 0px;
 }
 
 .suggestions {
@@ -81,44 +63,17 @@ p {
     transform: translateX(-50%);   
     max-height: 350px;
     overflow-y: auto;
-}
-
-#skillInputDiv {
-    background-color: rgb(17, 17, 17);
-    border: 2px solid rgb(255, 202, 87);
-    border-radius: 5px;
-    width: 300px;
-    margin: auto;
-    height: 350px;
-}
-
-#skillInputContent {
-    width: 95%;
-    height: 30px;
-    background-color: rgb(17, 17, 17);
-    color: white;
-    outline: none;
-    border: none;
-    font-size: 20px;
-}
-
-.inputContent {
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-.suggestionItem {
+} .suggestionItem {
+    margin-top: -1px;
     display: flex;
     align-items: center;
     font-size: 24px;
     border: 1px solid rgb(255, 202, 87);
     background-color: rgb(17, 17, 17);
+    /*Todo*/
     padding: 5px;
     color: white;
-}
-
-.suggestionItem img {
+} .suggestionItem img {
     width: 50px;
     height: 50px;
     margin-right: 20px;
@@ -126,14 +81,36 @@ p {
     border-left: 1px solid black;
     border-right: 1px solid black;*/
     border-radius: 7%;
+} .suggestionItem:hover {
+    background-color: rgb(44, 44, 44);
+} .active {
+    background-color: rgb(44, 44, 44);
+} #skillSuggestions {
+    border-bottom: 1px solid rgb(255, 202, 87);
 }
 
-.suggestionItem:hover {
-    background-color: rgb(44, 44, 44);
-}
-
-.active {
-    background-color: rgb(44, 44, 44);
+.inputDiv {
+    width: 300px;
+    margin: auto;
+    display: flex;
+} .inputContent {
+    padding-left: 15px;
+    border: 1px solid rgb(255, 202, 87);
+    width: 100%;
+    height: 40px;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    outline: none;
+    font-size: 20px;
+    box-shadow: none;
+} .inputSubmit {
+    width: 70px;
+    background-color: rgb(255, 202, 87);
+    border: 1px solid rgb(255, 202, 87);
+    color: rgb(0, 0, 0);
+} .inputSubmit svg {
+    width: 30px;
+    height: 30px;
 }
 
 #guessImage img {
@@ -147,9 +124,7 @@ p {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-}
-
-#locationImage img {
+} #locationImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -169,27 +144,21 @@ p {
     color: white;
 }
 
-#responseMessage img {
+#responseMessage {
+    height: 200px;
+    text-align: left;
+} #responseMessage img {
     width: 100px;
     height: 100px;
     border-radius: 5px;
     position: absolute;
     top: 15%;
     left: 20%;
-}
-
-#responseMessage {
-    height: 200px;
-    text-align: left;
-}
-
-#responseMessage p {
+} #responseMessage p {
     position: absolute;
     top: 30%;
     left: 40%;
-}
-
-#responseMessage h2 {
+} #responseMessage h2 {
     position: absolute;
     top: 7.5%;
     left: 40%;
@@ -206,9 +175,7 @@ p {
     padding: 20px;
     background: linear-gradient(to bottom, #100c24, #102434);
     color: white;
-}
-
-#continentResponseContainer img {
+} #continentResponseContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -228,9 +195,7 @@ p {
     background: linear-gradient(to bottom, #100c24, #102434);
     color: white;
     align-items: center;
-}
-
-#areaResponseContainer img {
+} #areaResponseContainer img {
     width: 100%;
     height: 100%;
 }

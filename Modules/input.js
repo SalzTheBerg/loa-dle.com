@@ -1,4 +1,3 @@
-import { suggestionsBorder } from "./utilConsts.js";
 import { filterSuggestions } from "./utilFunc.js";
 
 // Event listener for enter and arrow keys, sets focus and inputs the top or the current focus image when pressing enter
@@ -83,9 +82,6 @@ export function handleInput({
             availableAnswers: availableAnswers(),
             includesQuery: includesQuery
         });
-        if (suggestions.length > 0) {
-            suggestionsContainer.style.border = suggestionsBorder;
-        }
         suggestions = suggestions.map(name => name.replace(/_/g, ":"));
 
         createSuggestions({

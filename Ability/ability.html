@@ -30,15 +30,19 @@
             <br>
                 
             <div id="classInputContainer">
-                <div id="classInputDiv">
-                    <input type="text" id="classInputContent" placeholder="Enter class here..." autocomplete="off">
-                    <button id="classInputSubmit">Guess!</button>
+                <div id="classInputDiv" class="inputDiv">
+                    <input type="text" id="classInputContent" class="inputContent" placeholder="Enter class here..." autocomplete="off">
+                    <button id="classInputSubmit" class="inputSubmit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
                 </div>
                 <div id="classSuggestions" class="suggestions"></div>
             </div>
         </div>
 
-        <div id="tableContainer">
+        <div id="tableContainer" class="smallTable">
             <table id="guessTable" align="center" style="display: none; font-weight: bold; font-size: 24px;">
             </table>
         </div>
@@ -46,10 +50,10 @@
         <div id="responseContainer" style="display: none;">
             <div id="responseMessage"></div>
             <div id="skillInputContainer">
-                <div id="skillInputDiv">
+                <div id="skillInputDiv" class="inputDiv">
                     <input type="text" id="skillInputContent" class="inputContent" placeholder="Filter skills..." autocomplete="off">
-                    <div id="skillSuggestions" class="suggestions"></div>
                 </div>
+                <div id="skillSuggestions" class="suggestions"></div>
             </div>
             <div id="skillResponseMessage"></div>
         </div>

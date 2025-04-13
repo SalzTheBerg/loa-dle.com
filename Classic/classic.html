@@ -14,9 +14,13 @@
             <h2>Enter any character to start</h2>
                 
             <div id="inputContainer">
-                <div id="inputDiv">
-                    <input type="text" id="inputContent" placeholder="Enter character here..." autocomplete="off">
-                    <button id="inputSubmit">Guess!</button>
+                <div id="characterInputDiv" class="inputDiv">
+                    <input type="text" id="characterInputContent" class="inputContent" placeholder="Enter character here..." autocomplete="off">
+                    <button id="characterInputSubmit" class="inputSubmit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
                 </div>
                 <div id="characterSuggestions" class="suggestions"></div>
 

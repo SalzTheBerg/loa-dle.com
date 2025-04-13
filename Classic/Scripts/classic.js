@@ -14,8 +14,8 @@ const hash = fnv1aHash(today);
 const guessTable = document.getElementById("guessTable");
 const gameContainer = document.getElementById("gameContainer");
 
-const inputContent = document.getElementById("inputContent");
-const inputSubmit = document.getElementById("inputSubmit");
+const characterInputContent = document.getElementById("characterInputContent");
+const characterInputSubmit = document.getElementById("characterInputSubmit");
 const suggestionsContainer = document.getElementById("characterSuggestions");
 const responseMessage = document.getElementById("responseMessage");
 
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Setup event listener
             setupInput({
-                inputField: inputContent,
-                submitButton: inputSubmit,
+                inputField: characterInputContent,
+                submitButton: characterInputSubmit,
                 suggestionsContainer: suggestionsContainer,
                 readFunction: readInput,
                 getAvailableAnswers: getAvailableCharacterNames,
@@ -63,7 +63,7 @@ function readInput () {
     suggestionsContainer.style.border = "none";
 
     let autocomplete = autocompleteInput({
-        inputContent: inputContent,
+        inputContent: characterInputContent,
         availableAnswers: getAvailableCharacterNames(),
         focusState: focusState,
         includesQuery: false,
@@ -78,8 +78,8 @@ function readInput () {
             focusState
     });
 
-    inputContent.value = "";
-    inputContent.focus();
+    characterInputContent.value = "";
+    characterInputContent.focus();
 }
 
 // Creates a tablerow and checks if its the correct guess
