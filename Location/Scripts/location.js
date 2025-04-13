@@ -1,6 +1,6 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "../../Modules/utilConsts.js";
-import { setupInput } from "../../Modules/inputSetup.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
+import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
 import { geoGuessInitializer } from "./geoGuess.js";
 
 // Uninitialized Variables

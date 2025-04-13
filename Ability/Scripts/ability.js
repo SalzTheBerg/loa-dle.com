@@ -1,7 +1,7 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash, filterSuggestions  } from "../../Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today, suggestionsBorder } from "../../Modules/utilConsts.js";
-import { setupInput } from "../../Modules/inputSetup.js";
-import { createSuggestions } from "../../Modules/input.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash, filterSuggestions  } from "/LOA-dle/Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today, suggestionsBorder } from "/LOA-dle/Modules/utilConsts.js";
+import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { createSuggestions } from "/LOA-dle/Modules/input.js";
 
 // Uninitialized variables
 let abilityList = [];
