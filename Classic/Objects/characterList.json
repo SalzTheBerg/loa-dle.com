@@ -147,7 +147,7 @@
         "name": "Thaemine",
         "gender": "Male",
         "race": ["Demon"],
-        "region": ["Petrania", "Luterra"],
+        "region": ["Petrania", "Luterra", "South Rimeria"],
         "occupation": ["Combatant", "Legion Commander"],
         "affinity": ["Enemy"],
         "status": ["Alive"]
