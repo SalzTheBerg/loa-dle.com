@@ -4,7 +4,13 @@ export const wrongColor = "rgb(238, 42, 0)";
 
 export const suggestionsBorder = "2px solid rgb(255, 202, 87)";
 
-export const today = new Date().toISOString().split('T')[0];
+const todayMEZ = new Date().toLocaleDateString('de-DE', {
+    timeZone: 'Europe/Berlin',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  });
+export const today = todayMEZ.split('.').reverse().join('-');
 
 export const focusState = {
     focusActive: false,
