@@ -10,6 +10,7 @@
 - ~~Disable possibility of Empty Guess~~
 - ~~Add all main locations~~
 - ~~Maybe change the second Input, since there are max 8 areas per continent~~
+- ~~Includes query not working for location guess function~~
 
 ### __Ability__
 - Add grayscale and rotation options

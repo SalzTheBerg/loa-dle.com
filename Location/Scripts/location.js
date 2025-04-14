@@ -103,7 +103,7 @@ function readContinentInput() {
             inputContent: continentInputContent,
             availableAnswers: getAvailableContinents(),
             focusState: focusState,
-            includesQuery: false,
+            includesQuery: true,
             suggestionsContainer: continentSuggestionsContainer
     });
 
