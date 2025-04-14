@@ -9,19 +9,35 @@
         <p>Guess the class of the ability screenshot!</p>
 
         <div id="gameContainer">
-            <label class="grayscale">
-                <input type="checkbox" checked id="grayscaleCheckbox">
-            </label>
-            <span>Toggle grayscale</span>
+            <button class="button">🔧 Difficulty</button>
 
-            <br>
+            <div id="imageFilterOverlay" class="overlay">
+                <div class="popup">
+                    <h1>Difficulty</h1>
+                    <hr class="underline">
+                    <p>Pick how tough (or easy) you want it</p>
 
-            <label class="rotation">
-                <input type="checkbox" checked id="rotationCheckbox">
-            </label>
-            <span>Toggle rotation</span>
+                    <div class="toggle-option">
+                        <label for="toggleGrayscale">Grayscale:</label>
+                        <label class="switch">
+                          <input id="toggleGrayscale" type="checkbox" checked>
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                      
+                      <div class="toggle-option">
+                        <label for="toggleRotation">Rotation:</label>
+                        <label class="switch">
+                          <input id="toggleRotation" type="checkbox" checked>
+                          <span class="slider"></span>
+                        </label>
+                      </div>
 
-            <br>
+                    <button class="closeButton">&times;</button>
+                </div>
+            </div>
+
+            <br><br>
 
             <div id="imageContainer">
                 <div id="guessImage"></div>
@@ -69,5 +85,6 @@
         </a>
         
         <script type="module" src="Scripts/ability.js"></script>
+        <script type="module" src="Scripts/imageFilters.js"></script>
     </body>
 </html>

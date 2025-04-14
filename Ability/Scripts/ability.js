@@ -92,8 +92,11 @@ function loadImg () {
 
     image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
-    dailyImage.style.filter = "grayscale(100%)";
-    dailyImage.style.transform = "rotate(" + dailyRotation + "deg)";
+
+    dailyImage.onload = () => {
+        const event = new CustomEvent("dailySkillImageReady", { detail: { img: dailyImage } });
+        window.dispatchEvent(event);
+    };
 }
 
 
@@ -157,28 +160,48 @@ function createRow(index) {
 
     if (availableClasses[index] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
-        correctGuess(classInputContainer, responseContainer, skillInputContainer);
 
         let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
-        responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>Can you also guess the ability name?</p>';
+        responseMessage.innerHTML = `
+            ${dailyImageTag}
+            <div id="responseMessageText">
+                <h2>Nice!</h2>
+                <p>Can you also guess the ability name?</p>
+            </div>
+            `;
 
         prepareSkillGuess();
 
     } else if (checkForGenderUnlock(classGuess)) {
         newCell.style.backgroundColor = correctColor;
-        correctGuess(classInputContainer, responseContainer, skillInputContainer);
 
         let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
 
-        responseMessage.innerHTML = dailyImageTag + '<h2>Nice!</h2><p>The daily class was ' + classList[hash % classList.length] + ', but since this is also a skill for ' + dailyClass + ' it counts!<br>Can you also guess the ability name?</p>';
+        responseMessage.innerHTML = `
+        ${dailyImageTag}
+        <div id="responseMessageText">
+            <h2>Nice!</h2>
+            <p>The daily class was
+            ${classList[hash % classList.length]}
+            , but since this is also a skill for
+            ${dailyClass}
+             it counts!
+            <br>
+            Can you also guess the ability name?</p>
+        </div>
+        `;
 
         prepareSkillGuess();
 
     } else newCell.style.backgroundColor = wrongColor;
 }
 
+// Prepares the skill guess Container with suggestions
 function prepareSkillGuess () {
+    correctGuess(classInputContainer, responseContainer, skillInputContainer);
+    skillInputContent.focus();
+
     let suggestions = filterSuggestions({
                 availableAnswers: getAvailableSkills()
             });

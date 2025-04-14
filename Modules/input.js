@@ -72,7 +72,6 @@ export function handleInput({
     return function() {
         let query = this.value.toLowerCase();
         suggestionsContainer.innerHTML = '';
-        suggestionsContainer.style.border = "none";
 
         if (query === '' && !suggestAlways) {
             return;

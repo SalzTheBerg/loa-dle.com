@@ -1,6 +1,6 @@
-import { today, focusState, correctColor, wrongColor, partialMatchColor } from "/LOA-dle/Modules/utilConsts.js";
-import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "/LOA-dle/Modules/utilFunc.js";
-import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { today, focusState, correctColor, wrongColor, partialMatchColor } from "../../Modules/utilConsts.js";
+import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
+import { setupInput } from "../../Modules/inputSetup.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -119,6 +119,12 @@ function createRow(indexOfChar) {
 
         let image = '<img src="Icons/' + character.name + '.webp" />';
 
-        responseMessage.innerHTML = image + "<h2>Congratulations!</h2><p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>";
+        responseMessage.innerHTML = `
+            ${image}
+            <div id="responseMessageText">
+                <h2>Congratulations!</h2>
+                <p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>
+            </div>
+        `;
     }
 }

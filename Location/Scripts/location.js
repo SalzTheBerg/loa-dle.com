@@ -158,10 +158,11 @@ function createRow(indexOfContinent) {
 function readAreaInput() {
 
         if (this.innerHTML === dailyArea) {
-            this.style.backgroundColor = "green";
+            this.style.backgroundColor = correctColor;
+            this.style.color = "black";
             areaResponseContainer.style.display = "block";
             prepareGeoguesser();
-        }
+        } else this.style.backgroundColor = wrongColor;
 }
 
 function prepareAreaGuess() {
@@ -169,6 +170,7 @@ function prepareAreaGuess() {
         let x = document.createElement('button');
         let y = document.createTextNode(element);
         x.appendChild(y);
+        x.classList.add("button")
         x.addEventListener("click", readAreaInput);
         areaInputDiv.appendChild(x);
     });
