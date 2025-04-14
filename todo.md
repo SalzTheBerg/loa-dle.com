@@ -4,6 +4,7 @@
 #### - Add comfortable switching between gamemodes
 #### - Keep Content when refreshing
 #### - Add timers for daily reset
+#### - Fix the f**ng suggestions
 
 ### __Location__
 - Recapture Rohendel, East Luterra and Origins of Stern Map pictures and remove portals but still include the Tripods
@@ -13,7 +14,7 @@
 - ~~Includes query not working for location guess function~~
 
 ### __Ability__
-- Add grayscale and rotation options
+- ~~Add grayscale and rotation options~~
 - ~~Insta suggestions on skill guess~~
 
 ### __Character__
