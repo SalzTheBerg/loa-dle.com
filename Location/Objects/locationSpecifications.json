@@ -1,4 +1,32 @@
 {
+    "Anikka": {
+        "Port City Changhun": {
+            "Port City Changhun_1": {
+                "centerX": [2100, 0, 0, -3200],
+                "centerY": [600, -600, 600, -400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 640,
+                "correctY": 550,
+                "distanceConversion": 1
+            },
+            "Port City Changhun_2": {
+                "centerX": [0, 1600, -3000, 2400],
+                "centerY": [-100, -1500, -100, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 265,
+                "correctY": 175,
+                "distanceConversion": 1
+            },
+            "Port City Changhun_3": {
+                "centerX": [0, 3400, 0, -1200],
+                "centerY": [-400, -1000, 800, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 365,
+                "correctY": 650,
+                "distanceConversion": 1
+            }
+        }
+    },
     "Arthetine": {
         "Origins of Stern": {
             "Origins of Stern_1": {
@@ -143,6 +171,34 @@
             }
         }
     },
+    "Pleccia": {
+        "Pleccia": {
+            "Pleccia_1": {
+                "centerX": [0, -2800, 3200, -1800],
+                "centerY": [600, 0, 1100, 600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 380,
+                "correctY": 640,
+                "distanceConversion": 0.28
+            },
+            "Pleccia_2": {
+                "centerX": [-2500, 0, 1000, 3000],
+                "centerY": [-600, 400, -1300, -1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 455,
+                "correctY": 355,
+                "distanceConversion": 0.28
+            },
+            "Pleccia_3": {
+                "centerX": [0, 2800, 2100, 0],
+                "centerY": [1500, 200, 900, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 420,
+                "correctY": 220,
+                "distanceConversion": 0.28
+            }
+        }
+    },
     "Punika": {
         "Nia Village": {
             "Nia Village_1": {
@@ -227,6 +283,62 @@
             }
         }
     },
+    "Rowen": {
+        "Fang River": {
+            "Fang River_1": {
+                "centerX": [1800, -3400, 0, 2400],
+                "centerY": [0, -1000, 500, -1300],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 640,
+                "correctY": 545,
+                "distanceConversion": 1
+            },
+            "Fang River_2": {
+                "centerX": [-3400, 1200, -3200, -400],
+                "centerY": [-1300, 0, 600, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 210,
+                "correctY": 325,
+                "distanceConversion": 1
+            },
+            "Fang River_3": {
+                "centerX": [-200, -600, -3000, 3000],
+                "centerY": [600, -200, -400, -100],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 710,
+                "correctY": 360,
+                "distanceConversion": 1
+            }
+        }
+    },
+    "Shushire": {
+        "Rigens Village": {
+            "Rigens Village_1": {
+                "centerX": [2500, -1500, -3000, 1600],
+                "centerY": [-800, -1200, 0, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 515,
+                "correctY": 700,
+                "distanceConversion": 1
+            },
+            "Rigens Village_2": {
+                "centerX": [-1500, 1100, 500, -2800],
+                "centerY": [-800, 700, -500, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 385,
+                "correctY": 340,
+                "distanceConversion": 1
+            },
+            "Rigens Village_3": {
+                "centerX": [-1400, 2400, -2200, 700],
+                "centerY": [-800, -800, 400, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 740,
+                "correctY": 465,
+                "distanceConversion": 1
+            }
+        }
+    },
     "South Kurzan": {
         "Elnead": {
             "Elnead_1": {
@@ -252,6 +364,62 @@
                 "correctX": 620,
                 "correctY": 235,
                 "distanceConversion": 0.22
+            }
+        }
+    },
+    "South Vern": {
+        "Bellion Ruins": {
+            "Bellion Ruins_1": {
+                "centerX": [-700, 2900, -2500, -400],
+                "centerY": [-1800, -300, -1200, 1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 360,
+                "correctY": 515,
+                "distanceConversion": 1
+            },
+            "Bellion Ruins_2": {
+                "centerX": [-800, -2800, 1600, -700],
+                "centerY": [-400, -1200, 600, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 100,
+                "correctY": 540,
+                "distanceConversion": 1
+            },
+            "Bellion Ruins_3": {
+                "centerX": [0, 2400, -2000, -1500],
+                "centerY": [0, 800, -1200, 400],
+                "originalScale": [5, 7, 7, 7],
+                "correctX": 475,
+                "correctY": 635,
+                "distanceConversion": 1
+            }
+        }
+    },
+    "Tortoyk": {
+        "Mokoko Village": {
+            "Mokoko Village_1": {
+                "centerX": [-100, 200, 1200, 800],
+                "centerY": [-500, 200, -1700, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 370,
+                "correctY": 275,
+                "distanceConversion": 1
+            },
+            "Mokoko Village_2": {
+                "centerX": [0, 1000, 200, 1800],
+                "centerY": [-600, 0, 100, 800],
+                "originalScale": [5, 7, 5, 5],
+                "correctX": 255,
+                "correctY": 125,
+                "distanceConversion": 1
+            },
+            "Mokoko Village_3": {
+                "centerX": [1000, 2800, -2800, 400],
+                "centerY": [-200, -200, -300, -300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 345,
+                "correctY": 610,
+                "distanceConversion": 1
             }
         }
     },
@@ -283,6 +451,18 @@
             }
         }
     },
+    "West Luterra": {
+        "Medrick Monastery": {
+            "Medrick Monastery_1": {
+                "centerX": [0, -1900, 1000, 0],
+                "centerY": [500, 1300, -200, 1000],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 430,
+                "correctY": 465,
+                "distanceConversion": 1
+            }
+        }
+    },
     "Yorn": {
         "Great Castle": {
             "Great Castle_1": {
@@ -308,6 +488,34 @@
                 "correctX": 405,
                 "correctY": 405,
                 "distanceConversion": 0.21
+            }
+        }
+    },
+    "Yudia": {
+        "Saland Hill": {
+            "Saland Hill_1": {
+                "centerX": [-600, 0, 2800, 1600],
+                "centerY": [200, -400, -400, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 270,
+                "correctY": 645,
+                "distanceConversion": 1
+            },
+            "Saland Hill_2": {
+                "centerX": [-200, 2000, 800, -1400],
+                "centerY": [-400, -1000, 600, 400],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 375,
+                "correctY": 420,
+                "distanceConversion": 1
+            },
+            "Saland Hill_3": {
+                "centerX": [2000, 800, -800, -2800],
+                "centerY": [-1100, 1000, -400, -200],
+                "originalScale": [5, 7, 7, 7],
+                "correctX": 570,
+                "correctY": 500,
+                "distanceConversion": 1
             }
         }
     }

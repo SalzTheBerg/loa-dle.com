@@ -1,6 +1,6 @@
-import { today, focusState, correctColor, wrongColor, partialMatchColor } from "../../Modules/utilConsts.js";
-import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
-import { setupInput } from "../../Modules/inputSetup.js";
+import { today, focusState, correctColor, wrongColor, partialMatchColor } from "/LOA-dle/Modules/utilConsts.js";
+import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "/LOA-dle/Modules/utilFunc.js";
+import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
 
 // Uninitialized Variables
 let characterList = [];

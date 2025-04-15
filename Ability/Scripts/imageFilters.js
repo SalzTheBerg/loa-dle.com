@@ -1,5 +1,5 @@
-import { today } from "../../Modules/utilConsts.js";
-import { fnv1aHash } from "../../Modules/utilFunc.js";
+import { today } from "/LOA-dle/Modules/utilConsts.js";
+import { fnv1aHash } from "/LOA-dle/Modules/utilFunc.js";
 
 const hash = fnv1aHash(today);
 const rotationAngles = [90, 180, 270];

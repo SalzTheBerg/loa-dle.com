@@ -20,7 +20,7 @@ let currentScale;
 
 // Consts
 const hash = fnv1aHash(today);
-const randomSeed = Math.floor(Math.random() * 4);
+const randomSeed = hash % 4;
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");
@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             loadImg();
 
-            // TODO disable empty guess
             // Setup event listeners
             // Continent input
             setupInput({
