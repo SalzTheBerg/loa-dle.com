@@ -92,7 +92,7 @@
     {
         "name": "Kadan",
         "gender": "Male",
-        "race": ["Human", "Lazenith", "Sylvain"],
+        "race": ["Haal"],
         "region": ["Unknown"],
         "occupation": ["Combatant", "Sidereal"],
         "affinity": ["Ally"],
