@@ -122,6 +122,10 @@ table {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow:
+        -1px -1px 1px 1px #ffca57,
+        1px 1px 1px 1px #ffca57;
 } #locationImage img {
     width: 100%;
     height: 100%;
@@ -175,15 +179,19 @@ table {
     background: linear-gradient(to bottom, #100c24, #102434);
     color: white;
 } #continentResponseContainer img {
-    width: 100%;
-    height: 100%;
+    margin-top: 40px;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
-    transform: scale(0.9);
+    border-radius: 10px;
+    box-shadow:
+        -1px -1px 1px 1px #ffca57,
+        1px 1px 1px 1px #ffca57;
 }
 
 #areaResponseContainer {
     width: 1400px;
-    height: 1200px;
+    height: 100%;
     margin: auto;
     border-radius: 10px;
     box-shadow:
@@ -193,18 +201,27 @@ table {
     padding: 20px;
     background: linear-gradient(to bottom, #100c24, #102434);
     color: white;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-} #areaResponseContainer img {
-    width: 100%;
-    height: 100%;
 }
 
 #geoGuessContainer {
     width: 900px;
-    height: 900px;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translate(-50%);
+} #geoGuessMap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow:
+        -1px -1px 1px 1px #ffca57,
+        1px 1px 1px 1px #ffca57;
+} .borderless {
+    border-radius: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .button {

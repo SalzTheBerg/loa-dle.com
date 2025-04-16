@@ -25,6 +25,7 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     marker.style.objectFit = "contain";
     marker.style.left = `${correctX - 15}px`;
     marker.style.top = `${correctY - 28}px`;
+    marker.classList.add("borderless");
 
     const click = document.createElement("img");
     click.src = "XMarker.png";
@@ -34,6 +35,7 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     click.style.left = `${x - 15}px`;
     click.style.top = `${y - 15}px`;
     click.style.objectFit = "contain";
+    click.classList.add("borderless");
 
     const canvas = document.createElement("canvas");
     canvas.width = geoGuessMap.offsetWidth;
