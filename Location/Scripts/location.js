@@ -1,6 +1,6 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
-import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today } from "../../Modules/utilConsts.js";
+import { setupInput } from "../../Modules/inputSetup.js";
 import { geoGuessInitializer } from "./geoGuess.js";
 
 // Uninitialized Variables
@@ -129,13 +129,22 @@ function createRow(indexOfContinent) {
     if (availableContinents[indexOfContinent] === dailyContinent) {
         newCell.style.backgroundColor = correctColor;
 
-        let dailyImageTag = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" />';
+        const img = new Image();
+        img.src = 'Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg'
 
-        continentResponseMessage.innerHTML = dailyImageTag + '<h2>Congratulations</h2><p>Can you also guess the zone name?</p>';
+        const title = document.createElement('h2');
+        title.textContent = 'Congratulations';
+        const text = document.createElement('p');
+        text.textContent = 'Can you also guess the zone name?';
 
-        correctGuess(continentInputContainer, continentResponseContainer, continentResponseMessage);
+        continentResponseMessage.appendChild(img);
+        continentResponseMessage.appendChild(title);
+        continentResponseMessage.appendChild(text);
 
-        prepareAreaGuess();
+        img.onload = () => {
+            correctGuess(continentInputContainer, continentResponseContainer, continentResponseMessage);
+            prepareAreaGuess();
+        }
 
     } else {
         newCell.style.backgroundColor = wrongColor;
