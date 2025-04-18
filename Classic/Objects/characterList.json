@@ -77,7 +77,7 @@
         "First Appearance": "Rohendel",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
-        "Height": ["Large"],
+        "Height": ["Large", "Giant"],
         "Status": ["Alive"]
     },
     "Ealyn": {
