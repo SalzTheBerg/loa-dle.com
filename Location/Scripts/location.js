@@ -1,6 +1,7 @@
-import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "../../Modules/utilFunc.js";
-import { correctColor, wrongColor, focusState, today } from "../../Modules/utilConsts.js";
-import { setupInput } from "../../Modules/inputSetup.js";
+import { autocompleteInput, checkInput, correctGuess, fnv1aHash  } from "/LOA-dle/Modules/utilFunc.js";
+import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
+import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { createParagraph, createHeader } from "/LOA-dle/Modules/utilDOM.js";
 import { geoGuessInitializer } from "./geoGuess.js";
 
 // Uninitialized Variables
@@ -32,7 +33,6 @@ const continentInputSubmit = document.getElementById("continentInputSubmit");
 const continentSuggestionsContainer = document.getElementById("continentSuggestions");
 
 const areaInputDiv = document.getElementById("areaInputDiv");
-
 
 const continentResponseContainer = document.getElementById("continentResponseContainer");
 const continentResponseMessage = document.getElementById("continentResponseMessage");
@@ -130,16 +130,13 @@ function createRow(indexOfContinent) {
         newCell.style.backgroundColor = correctColor;
 
         const img = new Image();
-        img.src = 'Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg'
-
-        const title = document.createElement('h2');
-        title.textContent = 'Congratulations';
-        const text = document.createElement('p');
-        text.textContent = 'Can you also guess the zone name?';
+        img.src = 'Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg';
+        let h2 = 'Congratulations';
+        let p = 'Can you also guess the zone name?';
 
         continentResponseMessage.appendChild(img);
-        continentResponseMessage.appendChild(title);
-        continentResponseMessage.appendChild(text);
+        createHeader(h2, 2, continentResponseMessage);
+        createParagraph(p, continentResponseMessage);
 
         img.onload = () => {
             correctGuess(continentInputContainer, continentResponseContainer, continentResponseMessage);
@@ -192,7 +189,12 @@ function prepareGeoguesser() {
         geoGuessMap.innerHTML = '';
         geoGuessMap.appendChild(img);
 
-        areaResponseMessage.innerHTML = "<h2>Do you also know where the image was taken?</h2><br><p>Click anywhere on the Map</p>";
+        let h2 = 'Do you also know where the image was taken?';
+        let p = 'Click anywhere on the Map';
+        
+        createHeader(h2, 2, areaResponseMessage);
+        createParagraph(p, areaResponseMessage);
+
         geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImage);
 
         geoGuessMap.scrollIntoView({
@@ -200,5 +202,4 @@ function prepareGeoguesser() {
             block: "center"
         });
     };
-
 }

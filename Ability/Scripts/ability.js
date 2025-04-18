@@ -2,6 +2,7 @@ import { autocompleteInput, checkInput, correctGuess, fnv1aHash, filterSuggestio
 import { correctColor, wrongColor, focusState, today } from "/LOA-dle/Modules/utilConsts.js";
 import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
 import { createSuggestions } from "/LOA-dle/Modules/input.js";
+import { createHeader, createParagraph } from "/LOA-dle/Modules/utilDOM.js";
 
 // Uninitialized variables
 let abilityList = [];
@@ -26,6 +27,7 @@ const classInputContent = document.getElementById("classInputContent");
 const classInputSubmit = document.getElementById("classInputSubmit");
 const classSuggestionsContainer = document.getElementById("classSuggestions");
 const responseMessage = document.getElementById("responseMessage");
+const responseMessageText = document.getElementById("responseMessageText");
 const responseContainer = document.getElementById("responseContainer");
 
 const skillInputContainer = document.getElementById("skillInputContainer");
@@ -87,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image
 function loadImg () {
-    dailyClass = classList[hash % classList.length];
-    dailySkill = abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
+    dailyClass = "Slayer";//classList[hash % classList.length];
+    dailySkill = "Wild Stomp";//abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
 
     image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
@@ -116,7 +118,7 @@ function readSkillInput () {
         skillResponseMessage.innerHTML = "Skill name and class entered correctly!<br>Congratulations!";
     }
     else if (abilityList[dailyClass].abilities.includes(skillInputContent.value)) {
-        skillResponseMessage.innerHTML = "Wrong! ):<<br>The skill to guess was: " + dailySkill.replace(/_/g, ":") + "<br> At least you got the class right!";
+        skillResponseMessage.innerHTML = "Wrong! ):<<br>The skill to guess was: " + dailySkill.replace(/_/g, ":") + "<br>At least you got the class right!";
     }
     else {
         skillInputContent.value = "";
@@ -161,36 +163,23 @@ function createRow(index) {
     if (availableClasses[index] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
 
-        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
-
-        responseMessage.innerHTML = `
-            ${dailyImageTag}
-            <div id="responseMessageText">
-                <h2>Nice!</h2>
-                <p>Can you also guess the ability name?</p>
-            </div>
-            `;
+        const h2 = 'Nice!';
+        const p = 'Can you also guess the ability name?';
+        createHeader(h2, 2, responseMessageText);
+        createParagraph(p, responseMessageText);
 
         prepareSkillGuess();
 
     } else if (checkForGenderUnlock(classGuess)) {
         newCell.style.backgroundColor = correctColor;
 
-        let dailyImageTag = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" />';
+        const h2 = 'Nice!';
+        const p = 'The daily class was ' + classList[hash % classList.length] + ', but since this is also a skill for ' + dailyClass + ' it counts!';
+        const p2 = 'Can you also guess the ability name?';
 
-        responseMessage.innerHTML = `
-        ${dailyImageTag}
-        <div id="responseMessageText">
-            <h2>Nice!</h2>
-            <p>The daily class was
-            ${classList[hash % classList.length]}
-            , but since this is also a skill for
-            ${dailyClass}
-             it counts!
-            <br>
-            Can you also guess the ability name?</p>
-        </div>
-        `;
+        createHeader(h2, 2, responseMessageText);
+        createParagraph(p, responseMessageText);
+        createParagraph(p2, responseMessageText);
 
         prepareSkillGuess();
 
@@ -199,6 +188,10 @@ function createRow(index) {
 
 // Prepares the skill guess Container with suggestions
 function prepareSkillGuess () {
+    const img = document.createElement('img');
+    img.src = 'AbilityImages/' + dailyClass + '/' + dailySkill + '.webp';
+    responseMessage.prepend(img);
+
     correctGuess(classInputContainer, responseContainer, skillInputContainer);
     skillInputContent.focus();
 

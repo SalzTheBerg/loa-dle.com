@@ -35,7 +35,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 453,
                 "correctY": 478,
-                "distanceConversion": 0.25
+                "distanceConversion": 0.34
             },
             "Origins of Stern_2": {
                 "centerX": [1800, -300, 2600, -1600],
@@ -43,7 +43,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 545,
                 "correctY": 680,
-                "distanceConversion": 0.25
+                "distanceConversion": 0.34
             }
         }
     },
@@ -55,7 +55,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 350,
                 "correctY": 200,
-                "distanceConversion": 0.24
+                "distanceConversion": 0.32
             },
             "Luterra Castle_2": {
                 "centerX": [600, -2100, -900, 3100],
@@ -63,7 +63,7 @@
                 "originalScale": [5, 6, 7, 6],
                 "correctX": 230,
                 "correctY": 275,
-                "distanceConversion": 0.24
+                "distanceConversion": 0.32
             },
             "Luterra Castle_3": {
                 "centerX": [1400, -2300, 0, 0],
@@ -71,7 +71,7 @@
                 "originalScale": [7, 7, 6, 7],
                 "correctX": 385,
                 "correctY": 335,
-                "distanceConversion": 0.24
+                "distanceConversion": 0.32
             }
         }
     },
@@ -83,7 +83,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 120,
                 "correctY": 450,
-                "distanceConversion": 0.3
+                "distanceConversion": 0.4
             },
             "Ereonnor_2": {
                 "centerX": [-2400, 3700, 1000, -600],
@@ -91,7 +91,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 470,
                 "correctY": 365,
-                "distanceConversion": 0.3
+                "distanceConversion": 0.4
             },
             "Ereonnor_3": {
                 "centerX": [2600, -3000, 1200, -1200],
@@ -99,7 +99,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 545,
                 "correctY": 85,
-                "distanceConversion": 0.3
+                "distanceConversion": 0.4
             }
         }
     },
@@ -111,7 +111,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 520,
                 "correctY": 485,
-                "distanceConversion": 0.18
+                "distanceConversion": 0.24
             },
             "Kalaja_2": {
                 "centerX": [-1400, 200, 3000, 0],
@@ -119,7 +119,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 740,
                 "correctY": 395,
-                "distanceConversion": 0.18
+                "distanceConversion": 0.24
             },
             "Kalaja_3": {
                 "centerX": [0, -1500, 2400, 1200],
@@ -127,7 +127,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 220,
                 "correctY": 465,
-                "distanceConversion": 0.18
+                "distanceConversion": 0.24
             }
         }
     },
@@ -139,7 +139,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 765,
                 "correctY": 340,
-                "distanceConversion": 0.27
+                "distanceConversion": 0.36
             }
         }
     },
@@ -151,7 +151,7 @@
                 "originalScale": [7, 7, 8, 7],
                 "correctX": 550,
                 "correctY": 320,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             },
             "Vern Castle_2": {
                 "centerX": [-2400, 400, 3000, -2200],
@@ -159,7 +159,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 615,
                 "correctY": 545,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             },
             "Vern Castle_3": {
                 "centerX": [0, 1800, -300, -2300],
@@ -167,7 +167,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 215,
                 "correctY": 220,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             }
         }
     },
@@ -179,7 +179,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 380,
                 "correctY": 640,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             },
             "Pleccia_2": {
                 "centerX": [-2500, 0, 1000, 3000],
@@ -187,7 +187,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 455,
                 "correctY": 355,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             },
             "Pleccia_3": {
                 "centerX": [0, 2800, 2100, 0],
@@ -195,7 +195,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 420,
                 "correctY": 220,
-                "distanceConversion": 0.28
+                "distanceConversion": 0.38
             }
         }
     },
@@ -207,7 +207,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 395,
                 "correctY": 425,
-                "distanceConversion": 0.29
+                "distanceConversion": 0.39
             },
             "Nia Village_2": {
                 "centerX": [0, 3400, -500, -2700],
@@ -215,7 +215,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 595,
                 "correctY": 550,
-                "distanceConversion": 0.29
+                "distanceConversion": 0.39
             },
             "Nia Village_3": {
                 "centerX": [-1800, 2800, 300, 300],
@@ -223,7 +223,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 490,
                 "correctY": 550,
-                "distanceConversion": 0.29
+                "distanceConversion": 0.39
             }
         }
     },
@@ -235,7 +235,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 205,
                 "correctY": 415,
-                "distanceConversion": 0.12
+                "distanceConversion": 0.16
             },
             "Prideholme_2": {
                 "centerX": [0, -3200, 1200, 2400],
@@ -243,7 +243,7 @@
                 "originalScale": [10, 10, 10, 10],
                 "correctX": 355,
                 "correctY": 515,
-                "distanceConversion": 0.12
+                "distanceConversion": 0.16
             },
             "Prideholme_3": {
                 "centerX": [2800, -2000, 2000, -2000],
@@ -251,7 +251,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 600,
                 "correctY": 470,
-                "distanceConversion": 0.12
+                "distanceConversion": 0.16
             }
         }
     },
@@ -263,7 +263,7 @@
                 "originalScale": [6, 7, 7, 7],
                 "correctX": 425,
                 "correctY": 365,
-                "distanceConversion": 0.2
+                "distanceConversion": 0.26
             },
             "Rothun_2": {
                 "centerX": [-2300, 1000, 3000, 400],
@@ -271,7 +271,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 220,
                 "correctY": 505,
-                "distanceConversion": 0.2
+                "distanceConversion": 0.26
             },
             "Rothun_3": {
                 "centerX": [1400, -400, -3000, -1400],
@@ -279,7 +279,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 430,
                 "correctY": 500,
-                "distanceConversion": 0.2
+                "distanceConversion": 0.26
             }
         }
     },
@@ -347,7 +347,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 180,
                 "correctY": 230,
-                "distanceConversion": 0.22
+                "distanceConversion": 0.3
             },
             "Elnead_2": {
                 "centerX": [-100, -1500, -2600, 0],
@@ -355,7 +355,7 @@
                 "originalScale": [10, 7, 7, 10],
                 "correctX": 425,
                 "correctY": 350,
-                "distanceConversion": 0.22
+                "distanceConversion": 0.3
             },
             "Elnead_3": {
                 "centerX": [-1600, 2400, 3700, 800],
@@ -363,7 +363,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 620,
                 "correctY": 235,
-                "distanceConversion": 0.22
+                "distanceConversion": 0.3
             }
         }
     },
@@ -431,7 +431,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 325,
                 "correctY": 345,
-                "distanceConversion": 0.27
+                "distanceConversion": 0.36
             },
             "Kalinar_2": {
                 "centerX": [0, 2000, -2800, 100],
@@ -439,7 +439,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 390,
                 "correctY": 110,
-                "distanceConversion": 0.27
+                "distanceConversion": 0.36
             },
             "Kalinar_3": {
                 "centerX": [0, 2400, 0, -1800],
@@ -447,7 +447,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 280,
                 "correctY": 550,
-                "distanceConversion": 0.27
+                "distanceConversion": 0.36
             }
         }
     },
@@ -459,7 +459,7 @@
                 "originalScale": [7, 7, 5, 7],
                 "correctX": 430,
                 "correctY": 465,
-                "distanceConversion": 1
+                "distanceConversion": 0.58
             }
         }
     },
@@ -471,7 +471,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 590,
                 "correctY": 185,
-                "distanceConversion": 0.21
+                "distanceConversion": 0.28
             },
             "Great Castle_2": {
                 "centerX": [0, 0, 1800, -1000],
@@ -479,7 +479,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 320,
                 "correctY": 285,
-                "distanceConversion": 0.21
+                "distanceConversion": 0.28
             },
             "Great Castle_3": {
                 "centerX": [0, 0, -1600, 1800],
@@ -487,7 +487,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 405,
                 "correctY": 405,
-                "distanceConversion": 0.21
+                "distanceConversion": 0.28
             }
         }
     },

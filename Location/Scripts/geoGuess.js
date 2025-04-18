@@ -1,4 +1,5 @@
 import { getLocationSpecifications } from "./location.js";
+import { createHeader, createParagraph } from "/LOA-dle/Modules/utilDOM.js";
 
 const geoGuessMap = document.getElementById("geoGuessMap");
 const geoGuessResponseMessage = document.getElementById("geoGuessResponseMessage");
@@ -58,21 +59,34 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     geoGuessMap.appendChild(marker);
     geoGuessMap.appendChild(click);
 
-    // Distance Conversion depending on Azena 12 kmh
+    // Distance Conversion depending on Azena 16 kmh
     let distanceM = (distance * distanceConversion).toFixed(2);
     
-    let disclaimer = "<br><p><i>(Distance was approximated by an estimated character speed of 12 km/h on each map so it might be a bit off)</i></p>";
-    
-    if (distance < 30) {
-        geoGuessResponseMessage.innerHTML = '<h2>Congratulations</h2><p>You absolutely smurfed it with a distance of ' + distanceM + ' m !</p>' + disclaimer;
-    } else if (distance < 100) {
-        geoGuessResponseMessage.innerHTML = '<h2>Nice</h2><p>That counts, you were ' + distanceM + ' m away!</p>' + disclaimer;
-    } else if (distance < 200) {
-        geoGuessResponseMessage.innerHTML = '<h2>Close</h2><p>You were ' + distanceM + ' m away !</p>' + disclaimer;
-    } else if (distance < 350) {
-        geoGuessResponseMessage.innerHTML = '<h2>Unlucky</h2><p>You were ' + distanceM + ' m away, come back tomorrow for another chance!</p>' + disclaimer;
-    } else geoGuessResponseMessage.innerHTML = '<h2>Whoops D:</h2><p>You were ' + distanceM + ' m away, just pretend this never happened and try again tomorrow!</p>' + disclaimer;
+    let disclaimer = "(Distance was approximated by an estimated character speed of 16 km/h (for 1400 swift) on each map so it might be a bit off)";
+    let h2;
+    let p;
 
+
+    if (distance < 30) {
+        h2 = 'Congratulations';
+        p =  'You absolutely smurfed it with a distance of ' + distanceM + ' m !';
+    } else if (distance < 100) {
+        h2 = 'Nice';
+        p = 'That counts, you were ' + distanceM + ' m away!';
+    } else if (distance < 200) {
+        h2 = 'Close';
+        p = 'You were ' + distanceM + ' m away !';
+    } else if (distance < 350) {
+        h2 = 'Unlucky'
+        p = 'You were ' + distanceM + ' m away, come back tomorrow for another chance!';
+    } else {
+        h2 = 'Whoops D:';
+        p = 'You were ' + distanceM + ' m away, just pretend this never happened and try again tomorrow!';
+    } 
+
+    createHeader(h2, 2, geoGuessResponseMessage);
+    createParagraph(p, geoGuessResponseMessage);
+    createParagraph(disclaimer, geoGuessResponseMessage);
 
     //alert(x);
     //alert(y);

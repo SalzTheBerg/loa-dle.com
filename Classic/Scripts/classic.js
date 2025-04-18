@@ -1,6 +1,7 @@
 import { today, focusState, correctColor, wrongColor, partialMatchColor } from "/LOA-dle/Modules/utilConsts.js";
 import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "/LOA-dle/Modules/utilFunc.js";
 import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
+import { createHeader, createParagraph } from "/LOA-dle/Modules/utilDOM.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -18,6 +19,7 @@ const characterInputContent = document.getElementById("characterInputContent");
 const characterInputSubmit = document.getElementById("characterInputSubmit");
 const suggestionsContainer = document.getElementById("characterSuggestions");
 const responseMessage = document.getElementById("responseMessage");
+const responseMessageText = document.getElementById("responseMessageText");
 
 // Getter functions for changing values
 function getAvailableCharacterNames() {
@@ -114,17 +116,15 @@ function createRow(indexOfChar) {
         }
     }
     if (characterToGuess === character) {
+        const img = document.createElement('img');
+        img.src = 'Icons/' + character.name + '.webp';
+        let h2 = 'Congratulations!';
+        let p = "You've guessed the daily character, you can check out the other modes or come back tomorrow.";
+
+        responseMessage.prepend(img);
+        createHeader(h2, 2, responseMessageText);
+        createParagraph(p, responseMessageText);
 
         correctGuess(gameContainer, responseContainer, responseMessage);
-
-        let image = '<img src="Icons/' + character.name + '.webp" />';
-
-        responseMessage.innerHTML = `
-            ${image}
-            <div id="responseMessageText">
-                <h2>Congratulations!</h2>
-                <p>You've guessed the daily character, you can check out the other modes or come back tomorrow.</p>
-            </div>
-        `;
     }
 }

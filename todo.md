@@ -12,8 +12,8 @@
 - ~~Add all main locations~~
 - ~~Maybe change the second Input, since there are max 8 areas per continent~~
 - ~~Includes query not working for location guess function~~
-- Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, West Luterra, Yudia
-- Fix response message to adapt in size
+- Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, Yudia
+- ~~Fix response message to adapt in size~~
 
 ### __Ability__
 - ~~Add grayscale and rotation options~~
