@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image
 function loadImg () {
-    dailyClass = "Slayer";//classList[hash % classList.length];
-    dailySkill = "Wild Stomp";//abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
+    dailyClass = classList[hash % classList.length];
+    dailySkill = abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
 
     image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
     dailyImage = document.getElementById("dailySkill");
