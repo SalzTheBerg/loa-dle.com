@@ -14,7 +14,7 @@
         "First Appearance": "Shushire",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
-        "Height": ["Large"],
+        "Height": ["Large", "Giant"],
         "Status": ["Alive"]
     },
     "Armen": {
@@ -131,7 +131,7 @@
         "First Appearance": "East Luterra",
         "Affinity": ["Unclear"],
         "Card Rarity": ["Legendary"],
-        "Height": ["Tiny", "Large"],
+        "Height": ["Tiny", "Large", "Giant"],
         "Status": ["Alive"]
     },
     "Kazeros": {
