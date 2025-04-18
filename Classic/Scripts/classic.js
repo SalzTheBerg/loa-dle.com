@@ -1,7 +1,7 @@
-import { today, focusState, correctColor, wrongColor, partialMatchColor } from "/LOA-dle/Modules/utilConsts.js";
-import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "/LOA-dle/Modules/utilFunc.js";
-import { setupInput } from "/LOA-dle/Modules/inputSetup.js";
-import { createHeader, createParagraph } from "/LOA-dle/Modules/utilDOM.js";
+import { today, focusState, correctColor, wrongColor, partialMatchColor, arrowUp, arrowDown } from "../../Modules/utilConsts.js";
+import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
+import { setupInput } from "../../Modules/inputSetup.js";
+import { createHeader, createParagraph } from "../../Modules/utilDOM.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -10,6 +10,7 @@ let characterToGuess;
 
 // Consts
 const hash = fnv1aHash(today);
+const areasInOrder = ["Beatrice", "Rethramis", "Yudia", "West Luterra", "East Luterra", "Tortoyk", "Anikka", "Arthetine", "North Vern", "Shushire", "Rohendel", "Yorn", "Feiton", "Whispering Islet", "Punika", "Isteri", "South Vern", "Rowen", "Elgacia", "Pleccia", "Voldis", "South Kurzan", "North Kurzan", "South Rimeria", "North Rimeria"];
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");
@@ -34,8 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             characterList = data;
-            availableCharacterNames = characterList.map(character => character.name);
-            availableCharacterNames.sort();
+            availableCharacterNames = Object.keys(characterList);
+            //availableCharacterNames.sort();
+
+            console.log(characterList);
+            console.log(availableCharacterNames);
 
             getDailyCharacter();
 
@@ -57,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initializes the daily Character to the characterToGuess variable
 function getDailyCharacter() {
-    characterToGuess = characterList[hash % characterList.length];
+    characterToGuess = availableCharacterNames[hash % availableCharacterNames.length];
 }
 
 // Handles logic for character Guessing
@@ -86,38 +90,46 @@ function readInput () {
 
 // Creates a tablerow and checks if its the correct guess
 function createRow(indexOfChar) {
-    let characterName = availableCharacterNames[indexOfChar];
-
+    let guess = availableCharacterNames[indexOfChar];
     let newRow = guessTable.insertRow(1);
-    let character = characterList.find(c => c.name === characterName);
 
-    let attributes = ["name", "gender", "race", "region", "occupation", "affinity", "status"]
+    const guessChar = characterList[guess];
+    const targetChar = characterList[characterToGuess];
+
+    let attributes = ["Gender", "Race", "First Appearance", "Affinity", "Card Rarity", "Height", "Status"];
     let newCell = newRow.insertCell(0);
-    let image = character.name + ".webp";
+    let image = guess + ".webp";
     newCell.style.backgroundImage = "url('Icons/" + image + "')";
 
-    for (let i = 1; i < 7; i++) {
-        let newCell = newRow.insertCell(i);
-
+    for (let i = 0; i < 7; i++) {
+        let newCell = newRow.insertCell(i + 1);
         let attributeName = attributes[i];
 
-        if(character[attributeName] === characterToGuess[attributeName] || JSON.stringify(character[attributeName]) === JSON.stringify(characterToGuess[attributeName])) {
+        if(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName])) {
             newCell.style.backgroundColor = correctColor;
-        } else if(character[attributeName].constructor === Array && character[attributeName].some(item => characterToGuess[attributeName].includes(item))) {
+        } else if(guessChar[attributeName].constructor === Array && guessChar[attributeName].some(item => targetChar[attributeName].includes(item))) {
             newCell.style.backgroundColor = partialMatchColor;
         } else {
             newCell.style.backgroundColor = wrongColor;
         }
 
-        if(character[attributeName].constructor === Array){
-            newCell.innerHTML = character[attributeName].join(",<br>");
+        if(guessChar[attributeName].constructor === Array){
+            newCell.innerHTML = guessChar[attributeName].join(",<br>");
         } else {
-            newCell.innerHTML = character[attributeName];
+            newCell.innerHTML = guessChar[attributeName];
+        }
+
+        if (attributeName == "First Appearance") {
+            if (areasInOrder.indexOf(guessChar[attributeName]) > areasInOrder.indexOf(targetChar[attributeName])) {
+                newCell.innerHTML += arrowDown;
+            } else if (areasInOrder.indexOf(guessChar[attributeName]) < areasInOrder.indexOf(targetChar[attributeName])) {
+                newCell.innerHTML += arrowUp;
+            }
         }
     }
-    if (characterToGuess === character) {
+    if (characterToGuess === guess) {
         const img = document.createElement('img');
-        img.src = 'Icons/' + character.name + '.webp';
+        img.src = 'Icons/' + guess + '.webp';
         let h2 = 'Congratulations!';
         let p = "You've guessed the daily character, you can check out the other modes or come back tomorrow.";
 

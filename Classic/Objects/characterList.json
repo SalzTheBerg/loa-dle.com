@@ -1,308 +1,299 @@
-[
-    {
-        "name": "Neria",
-        "gender": "Female",
-        "race": ["Human"],
-        "region": ["Rethramis", "Luterra", "Arthetine",  "Yorn", "South Vern", "Voldis"],
-        "occupation": ["Tavern Keeper"],
-        "affinity": ["Rapport"],
-        "status": ["Alive"]
+{
+    "Aegir": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "North Kurzan",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["None"],
+        "Height": ["Giant"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Thirain",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Luterra"],
-        "occupation": ["King", "Combatant", "Sidereal"],
-        "affinity": ["Rapport", "Ally", "Affection"],
-        "status": ["Alive"]
+    "Akkan": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "Shushire",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Sasha",
-        "gender": "Female",
-        "race": ["Human"],
-        "region": ["Arthetine"],
-        "occupation": ["Treasurer", "Combatant"],
-        "affinity": ["Rapport", "Ally", "Affection"],
-        "status": ["Alive"]
+    "Armen": {
+        "Gender": "Male",
+        "Race": ["Human", "Demon"],
+        "First Appearance": "Rethramis",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Bastian",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Arthetine"],
-        "occupation": ["Administator", "Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Avele": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "South Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Avele",
-        "gender": "Female",
-        "race": ["Human"],
-        "region": ["North Vern"],
-        "occupation": ["Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Azena": {
+        "Gender": "Female",
+        "Race": ["Sylvain"],
+        "First Appearance": "Rohendel",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Azena",
-        "gender": "Female",
-        "race": ["Sylvain"],
-        "region": ["Rohendel"],
-        "occupation": ["Queen", "Combatant", "Sidereal"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Balthorr": {
+        "Gender": "Male",
+        "Race": ["Umar"],
+        "First Appearance": "Yorn",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Tiny"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Inanna",
-        "gender": "Female",
-        "race": ["Sylvain"],
-        "region": ["Rohendel"],
-        "occupation": ["Queen", "Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Deceased", "Dual soul"]
+    "Bastian": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Arthetine",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Luterra",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Luterra"],
-        "occupation": ["King", "Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Deceased"]
+    "Beatrice": {
+        "Gender": "Female",
+        "Race": ["Lazenith"],
+        "First Appearance": "Trixion",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Sien",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Anikka"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["None"],
-        "status": ["Deceased"]
+    "Brelshaza": {
+        "Gender": "Female",
+        "Race": ["Demon"],
+        "First Appearance": "Rohendel",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Nineveh",
-        "gender": "Female",
-        "race": ["Lazenith"],
-        "region": ["Elgacia", "Sea of Procyon"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["Rapport", "Ally", "Affection"],
-        "status": ["Alive"]
+    "Ealyn": {
+        "Gender": "Female",
+        "Race": ["Sylvain"],
+        "First Appearance": "North Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Kadan",
-        "gender": "Male",
-        "race": ["Haal"],
-        "region": ["Unknown"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
+    "Echidna": {
+        "Gender": "Female",
+        "Race": ["Demon"],
+        "First Appearance": "South Kurzan",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large", "Giant"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Galatur",
-        "gender": "Male",
-        "race": ["Umar"],
-        "region": ["Yorn"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["None"],
-        "status": ["Deceased"]
+    "Galatur": {
+        "Gender": "Male",
+        "Race": ["Umar"],
+        "First Appearance": "Yorn",
+        "Affinity": ["None"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Tiny"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Shandi",
-        "gender": "Male",
-        "race": ["Yoz"],
-        "region": ["Luterra", "Sea of Procyon"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
+    "Inanna": {
+        "Gender": "Female",
+        "Race": ["Sylvain"],
+        "First Appearance": "Rohendel",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Deceased", "Dual Soul"]
     },
-    {
-        "name": "Wei",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Anikka"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
+    "Kadan": {
+        "Gender": "Male",
+        "Race": ["Haal"],
+        "First Appearance": "Isteri",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Balthorr",
-        "gender": "Male",
-        "race": ["Umar"],
-        "region": ["Yorn"],
-        "occupation": ["Combatant", "Sidereal"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
+    "Kakul Saydon": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "East Luterra",
+        "Affinity": ["Unclear"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Tiny", "Large"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Kazeros",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Kurzan"],
-        "occupation": ["Combatant", "Archdemon"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Kazeros": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "North Kurzan",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Giant"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Thaemine",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Luterra", "South Rimeria"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Lauriel": {
+        "Gender": "Male",
+        "Race": ["Lazenith"],
+        "First Appearance": "Elgacia",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Valtan",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Luterra"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Deceased"]
+    "Luen": {
+        "Gender": "Male",
+        "Race": ["Guardian"],
+        "First Appearance": "Anikka",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Giant"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Vykas",
-        "gender": "Female",
-        "race": ["Demon"],
-        "region": ["Petrania", "Annika"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Deceased"]
+    "Luterra": {
+        "Gender": "Male",
+        "Race": ["Haal"],
+        "First Appearance": "West Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Kakul Saydon",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Luterra"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Neria": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Rethramis",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Brelshaza",
-        "gender": "Female",
-        "race": ["Demon"],
-        "region": ["Petrania", "Rohendel"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Nineveh": {
+        "Gender": "Female",
+        "Race": ["Lazenith"],
+        "First Appearance": "Whispering Islet",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Akkan",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Arthetine", "Shushire"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Ren": {
+        "Gender": "Female",
+        "Race": ["Human", "Demon"],
+        "First Appearance": "South Kurzan",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Echidna",
-        "gender": "Female",
-        "race": ["Demon"],
-        "region": ["Petrania", "Kurzan"],
-        "occupation": ["Combatant", "Legion Commander"],
-        "affinity": ["Enemy"],
-        "status": ["Deceased"]
+    "Sasha": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Arthetine",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Aegir",
-        "gender": "Male",
-        "race": ["Demon"],
-        "region": ["Petrania", "Kurzan"],
-        "occupation": ["Combatant", "Kazeros Servant"],
-        "affinity": ["Enemy"],
-        "status": ["Deceased"]
+    "Shandi": {
+        "Gender": "Male",
+        "Race": ["Yoz"],
+        "First Appearance": "Illusion Isle",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Tiny"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Lauriel",
-        "gender": "Male",
-        "race": ["Lazenith"],
-        "region": ["Elgacia"],
-        "occupation": ["Combatant"],
-        "affinity": ["Enemy"],
-        "status": ["Deceased"]
+    "Sien": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Anikka",
+        "Affinity": ["None"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Ealyn",
-        "gender": "Female",
-        "race": ["Sylvain"],
-        "region": ["North Vern"],
-        "occupation": ["Queen", "Combatant"],
-        "affinity": ["Rapport", "Ally", "Affection"],
-        "status": ["Alive"]
+    "Thaemine": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "South Vern",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Beatrice",
-        "gender": "Female",
-        "race": ["Lazenith"],
-        "region": ["Trixion"],
-        "occupation": ["Watcher"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Thar": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "South Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Armen",
-        "gender": "Male",
-        "race": ["Human", "Demon", "Delain"],
-        "region": ["Rethramis", "Luterra"],
-        "occupation": ["Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Thirain": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "West Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Ren",
-        "gender": "Female",
-        "race": ["Human", "Demon", "Delain"],
-        "region": ["Kurzan"],
-        "occupation": ["Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Vairgrys": {
+        "Gender": "Male",
+        "Race": ["Guardian"],
+        "First Appearance": "North Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Giant"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Thar",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["South Vern"],
-        "occupation": ["Commander", "Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Alive"]
+    "Valtan": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "West Luterra",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Zinnervale",
-        "gender": "Male",
-        "race": ["Human"],
-        "region": ["Luterra", "Sea of Procyon"],
-        "occupation": ["Combatant"],
-        "affinity": ["Rapport", "Ally"],
-        "status": ["Deceased"]
+    "Varkan": {
+        "Gender": "Male",
+        "Race": ["Guardian"],
+        "First Appearance": "Voldis",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Giant"],
+        "Status": ["Alive"]
     },
-    {
-        "name": "Varkan",
-        "gender": "Male",
-        "race": ["Guardian"],
-        "region": ["Voldis"],
-        "occupation": ["Guardian", "Guardian of Chaos"],
-        "affinity": ["Enemy"],
-        "status": ["Alive"]
+    "Vykas": {
+        "Gender": "Female",
+        "Race": ["Demon"],
+        "First Appearance": "Anikka",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Large"],
+        "Status": ["Deceased"]
     },
-    {
-        "name": "Vairgrys",
-        "gender": "Male",
-        "race": ["Guardian"],
-        "region": ["Sea of Gineah"],
-        "occupation": ["Guardian"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
-    },
-    {
-        "name": "Luen",
-        "gender": "Male",
-        "race": ["Guardian"],
-        "region": ["Anikka"],
-        "occupation": ["Guardian", "Guardian of Light"],
-        "affinity": ["Ally"],
-        "status": ["Alive"]
+    "Wei": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Anikka",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     }
-]
+}

@@ -16,3 +16,13 @@ export const focusState = {
     focusActive: false,
     currentFocus: 0
 }
+
+export const arrowUp = `
+<svg class="arrowIcon" fill="#000000" width="800px" height="800px" viewBox="0 0 20 20">
+  <path d="M10 2.5l7.5 7.5H14v7H6v-7H2.5L10 2.5z"/>
+</svg>`;
+
+export const arrowDown = `
+<svg class="arrowIcon" fill="#000000" width="800px" height="800px" viewBox="0 0 20 20">
+<path d="M2.5 10H6V3h8v7h3.5L10 17.5 2.5 10z"/>
+</svg>`;
