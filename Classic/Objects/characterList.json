@@ -71,6 +71,15 @@
         "Height": ["Average"],
         "Status": ["Alive"]
     },
+    "Behemoth": {
+        "Gender": "Male",
+        "Race": ["Guardian"],
+        "First Appearance": "South Kurzan",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Legendary", "Epic"],
+        "Height": ["Giant"],
+        "Status": ["Deceased"]
+    },
     "Brelshaza": {
         "Gender": "Female",
         "Race": ["Demon"],
@@ -98,6 +107,15 @@
         "Height": ["Large", "Giant"],
         "Status": ["Alive"]
     },
+    "Executor Solas": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "East Luterra",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Average"],
+        "Status": ["Deceased"]
+    },
     "Galatur": {
         "Gender": "Male",
         "Race": ["Umar"],
@@ -107,6 +125,15 @@
         "Height": ["Tiny"],
         "Status": ["Deceased"]
     },
+    "Gustaven": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Pleccia",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
+    },
     "Inanna": {
         "Gender": "Female",
         "Race": ["Sylvain"],
@@ -115,6 +142,15 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Deceased", "Dual Soul"]
+    },
+    "Jederico": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Feiton",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
     },
     "Kadan": {
         "Gender": "Male",
@@ -141,6 +177,15 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
+        "Status": ["Alive"]
+    },
+    "Kharmine": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "Trua the Forgotten Land",
+        "Affinity": ["Unclear"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
         "Status": ["Alive"]
     },
     "Lauriel": {
@@ -179,6 +224,15 @@
         "Height": ["Average"],
         "Status": ["Alive"]
     },
+    "Nia": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Punika",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Small"],
+        "Status": ["Alive"]
+    },
     "Nineveh": {
         "Gender": "Female",
         "Race": ["Lazenith"],
@@ -201,6 +255,15 @@
         "Gender": "Female",
         "Race": ["Human"],
         "First Appearance": "Arthetine",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"]
+    },
+    "Shana": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Punika",
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
@@ -295,5 +358,14 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"]
+    },
+    "Zeherade": {
+        "Gender": "Female",
+        "Race": ["Homunculus"],
+        "First Appearance": "",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Small"],
+        "Status": ["Deceased"]
     }
 }

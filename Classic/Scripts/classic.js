@@ -10,7 +10,7 @@ let characterToGuess;
 
 // Consts
 const hash = fnv1aHash(today);
-const areasInOrder = ["Beatrice", "Rethramis", "Yudia", "West Luterra", "East Luterra", "Tortoyk", "Anikka", "Arthetine", "North Vern", "Shushire", "Rohendel", "Yorn", "Feiton", "Whispering Islet", "Punika", "Isteri", "South Vern", "Rowen", "Elgacia", "Pleccia", "Voldis", "South Kurzan", "North Kurzan", "South Rimeria", "North Rimeria"];
+const areasInOrder = ["Trixion", "Trua, the Forgotten Land", "Rethramis", "Yudia", "West Luterra", "East Luterra", "Tortoyk", "Anikka", "Arthetine", "North Vern", "Shushire", "Rohendel", "Yorn", "Feiton", "Whispering Islet", "Punika", "Isteri", "South Vern", "Rowen", "Elgacia", "Pleccia", "Voldis", "South Kurzan", "North Kurzan", "South Rimeria", "North Rimeria"];
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");

@@ -21,3 +21,5 @@
 
 ### __Character__
 - Add information when hovering over th description
+- Validate Attributes
+- Implement same region yellow arrow depending on order seen
