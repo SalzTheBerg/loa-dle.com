@@ -367,5 +367,14 @@
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
         "Status": ["Deceased"]
+    },
+    "Zinnervale": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Illusion Isle",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Legendary"],
+        "Height": ["Average"],
+        "Status": ["Deceased"]
     }
 }
