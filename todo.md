@@ -22,4 +22,5 @@
 ### __Character__
 - Add information when hovering over th description
 - Validate Attributes
-- Implement same region yellow arrow depending on order seen
+- ~~Implement same region green arrow depending on order seen~~
+- Reverse check card rarity

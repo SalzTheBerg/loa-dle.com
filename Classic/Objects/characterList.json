@@ -6,7 +6,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["None"],
         "Height": ["Giant"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Kurzan"
     },
     "Akkan": {
         "Gender": "Male",
@@ -15,7 +16,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Shushire"
     },
     "Armen": {
         "Gender": "Male",
@@ -24,7 +26,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Avele": {
         "Gender": "Female",
@@ -33,7 +36,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Vern"
     },
     "Azena": {
         "Gender": "Female",
@@ -42,7 +46,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Rohendel"
     },
     "Balthorr": {
         "Gender": "Male",
@@ -51,7 +56,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Yorn"
     },
     "Bastian": {
         "Gender": "Male",
@@ -60,7 +66,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Arthetine"
     },
     "Beatrice": {
         "Gender": "Female",
@@ -69,16 +76,28 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Trixion"
     },
     "Behemoth": {
         "Gender": "Male",
         "Race": ["Guardian"],
         "First Appearance": "South Kurzan",
         "Affinity": ["Enemy"],
-        "Card Rarity": ["Legendary", "Epic"],
+        "Card Rarity": ["Epic", "Legendary"],
         "Height": ["Giant"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Kurzan"
+    },
+    "Blackfang": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "East Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Brelshaza": {
         "Gender": "Female",
@@ -87,7 +106,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Rohendel"
     },
     "Ealyn": {
         "Gender": "Female",
@@ -96,7 +116,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Vern"
     },
     "Echidna": {
         "Gender": "Female",
@@ -105,7 +126,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Kurzan"
     },
     "Executor Solas": {
         "Gender": "Male",
@@ -114,7 +136,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Uncommon"],
         "Height": ["Average"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Luterra"
     },
     "Galatur": {
         "Gender": "Male",
@@ -123,7 +146,8 @@
         "Affinity": ["None"],
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Yorn"
     },
     "Gustaven": {
         "Gender": "Male",
@@ -132,7 +156,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Pleccia"
     },
     "Inanna": {
         "Gender": "Female",
@@ -141,7 +166,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Deceased", "Dual Soul"]
+        "Status": ["Deceased", "Dual Soul"],
+        "Continent": "Rohendel"
     },
     "Jederico": {
         "Gender": "Male",
@@ -150,7 +176,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Feiton"
+    },
+    "Jahara": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Punika",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Punika"
     },
     "Kadan": {
         "Gender": "Male",
@@ -159,16 +196,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Isteri"
     },
     "Kakul Saydon": {
         "Gender": "Male",
         "Race": ["Demon"],
         "First Appearance": "East Luterra",
-        "Affinity": ["Unclear"],
+        "Affinity": ["Ally", "Enemy", "Unclear"],
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny", "Large", "Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Kazeros": {
         "Gender": "Male",
@@ -177,16 +216,18 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Kurzan"
     },
     "Kharmine": {
         "Gender": "Male",
         "Race": ["Demon"],
-        "First Appearance": "Trua the Forgotten Land",
-        "Affinity": ["Unclear"],
+        "First Appearance": "Trua, the Forgotten Land",
+        "Affinity": ["Ally", "Enemy", "Unclear"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Lauriel": {
         "Gender": "Male",
@@ -195,7 +236,18 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Elgacia"
+    },
+    "Liru": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Punika",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Punika"
     },
     "Luen": {
         "Gender": "Male",
@@ -204,7 +256,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Anikka"
     },
     "Luterra": {
         "Gender": "Male",
@@ -213,7 +266,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Luterra"
+    },
+    "Mariu": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Voldis",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Yorn"
     },
     "Neria": {
         "Gender": "Female",
@@ -222,7 +286,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Rare"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Nia": {
         "Gender": "Female",
@@ -231,7 +296,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Punika"
     },
     "Nineveh": {
         "Gender": "Female",
@@ -240,7 +306,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Whispering Islet"
     },
     "Ren": {
         "Gender": "Female",
@@ -249,7 +316,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Kurzan"
     },
     "Sasha": {
         "Gender": "Female",
@@ -258,7 +326,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Arthetine"
     },
     "Shana": {
         "Gender": "Female",
@@ -267,16 +336,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Punika"
     },
     "Shandi": {
         "Gender": "Male",
         "Race": ["Yoz"],
-        "First Appearance": "Illusion Isle",
+        "First Appearance": "Illusion Bamboo Island",
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Illusion Bamboo Island"
     },
     "Sien": {
         "Gender": "Male",
@@ -285,7 +356,8 @@
         "Affinity": ["None"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Anikka"
     },
     "Thaemine": {
         "Gender": "Male",
@@ -294,7 +366,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Vern"
     },
     "Thar": {
         "Gender": "Male",
@@ -303,7 +376,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Vern"
     },
     "Thirain": {
         "Gender": "Male",
@@ -312,7 +386,8 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Luterra"
     },
     "Vairgrys": {
         "Gender": "Male",
@@ -321,16 +396,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Vern"
     },
     "Valtan": {
         "Gender": "Male",
         "Race": ["Demon"],
-        "First Appearance": "West Luterra",
+        "First Appearance": "East Luterra",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Luterra"
     },
     "Varkan": {
         "Gender": "Male",
@@ -339,7 +416,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Yorn"
     },
     "Vykas": {
         "Gender": "Female",
@@ -348,7 +426,8 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Anikka"
     },
     "Wei": {
         "Gender": "Male",
@@ -357,7 +436,18 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Alive"]
+        "Status": ["Alive"],
+        "Continent": "Anikka"
+    },
+    "Zaika": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "Feiton",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Feiton"
     },
     "Zeherade": {
         "Gender": "Female",
@@ -366,15 +456,17 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Yorn"
     },
     "Zinnervale": {
         "Gender": "Male",
         "Race": ["Human"],
-        "First Appearance": "Illusion Isle",
+        "First Appearance": "Illusion Bamboo Island",
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
-        "Status": ["Deceased"]
+        "Status": ["Deceased"],
+        "Continent": "Illusion Bamboo Island"
     }
 }

@@ -2,6 +2,7 @@ import { today, focusState, correctColor, wrongColor, partialMatchColor, arrowUp
 import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
 import { setupInput } from "../../Modules/inputSetup.js";
 import { createHeader, createParagraph } from "../../Modules/utilDOM.js";
+import { characterOrder } from "./consts.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -10,7 +11,8 @@ let characterToGuess;
 
 // Consts
 const hash = fnv1aHash(today);
-const areasInOrder = ["Trixion", "Trua, the Forgotten Land", "Rethramis", "Yudia", "West Luterra", "East Luterra", "Tortoyk", "Anikka", "Arthetine", "North Vern", "Shushire", "Rohendel", "Yorn", "Feiton", "Whispering Islet", "Punika", "Isteri", "South Vern", "Rowen", "Elgacia", "Pleccia", "Voldis", "South Kurzan", "North Kurzan", "South Rimeria", "North Rimeria"];
+//remove once dict is done
+const areasInOrder = ["Trixion", "Trua, the Forgotten Land", "Rethramis", "Yudia", "West Luterra", "East Luterra", "Tortoyk", "Anikka", "Arthetine", "North Vern", "Shushire", "Rohendel", "Yorn", "Feiton", "Whispering Islet", "Illusion Bamboo Island", "Punika", "Isteri", "South Vern", "Rowen", "Elgacia", "Pleccia", "Voldis", "South Kurzan", "North Kurzan", "South Rimeria", "North Rimeria"];
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");
@@ -62,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
 // Initializes the daily Character to the characterToGuess variable
 function getDailyCharacter() {
     characterToGuess = availableCharacterNames[hash % availableCharacterNames.length];
+    let x;
+    for (let checkCharacter in availableCharacterNames) {
+        x = characterOrder[characterList[availableCharacterNames[checkCharacter]]["First Appearance"]];
+        if (Array.isArray(x) && x.length > 0) {
+            if (!x.includes(availableCharacterNames[checkCharacter])) {
+                console.log("Character: " + availableCharacterNames[checkCharacter] + " is not right in consts");
+            }
+        }
+    }
 }
 
 // Handles logic for character Guessing
@@ -124,6 +135,16 @@ function createRow(indexOfChar) {
                 newCell.innerHTML += arrowDown;
             } else if (areasInOrder.indexOf(guessChar[attributeName]) < areasInOrder.indexOf(targetChar[attributeName])) {
                 newCell.innerHTML += arrowUp;
+            } else {
+                let x = characterOrder[guessChar[attributeName]];
+                if (x.indexOf(guess) > x.indexOf(characterToGuess)) {
+                    newCell.innerHTML += arrowDown;
+                } else if (x.indexOf(guess) < x.indexOf(characterToGuess)) {
+                    newCell.innerHTML += arrowUp;
+                }
+            }
+            if (guessChar.Continent === targetChar.Continent && !(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName]))) {
+                newCell.style.backgroundColor = partialMatchColor;
             }
         }
     }
