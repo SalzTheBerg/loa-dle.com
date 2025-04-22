@@ -14,6 +14,7 @@ export const characterOrder = {
     "Yorn": ["Galatur", "Balthorr"],
     "Feiton": ["Jederico", "Zaika"],
     "Whispering Islet": ["Nineveh"],
+    "Illusion Bamboo Island": ["Shandi", "Zinnervale"],
     "Punika": ["Liru", "Nia", "Shana", "Jahara"],
     "Isteri": ["Kadan"],
     "South Vern": ["Avele", "Thaemine", "Thar"],
