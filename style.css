@@ -151,7 +151,7 @@ table {
 #responseContainer {
     width: 30%;
     max-width: 400px;
-    height: 600px;
+    height: 120%;
     margin: auto;
     border-radius: 10px;
     box-shadow:
