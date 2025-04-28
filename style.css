@@ -249,6 +249,8 @@ table {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    margin: 0 20px 0 20px;
+    vertical-align: top;
 }
 
 .overlay {

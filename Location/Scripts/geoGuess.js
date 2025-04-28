@@ -1,5 +1,5 @@
 import { getLocationSpecifications } from "./location.js";
-import { createHeader, createParagraph } from "../../Modules/utilDOM.js";
+import { createHeader, createParagraph } from "/LOA-dle/Modules/utilDOM.js";
 
 const geoGuessMap = document.getElementById("geoGuessMap");
 const geoGuessResponseMessage = document.getElementById("geoGuessResponseMessage");

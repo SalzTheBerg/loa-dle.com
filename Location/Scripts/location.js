@@ -19,9 +19,12 @@ let centerY;
 let originalScale;
 let currentScale;
 
+let correctAreaInput = false;
+
 // Consts
 const hash = fnv1aHash(today);
 const randomSeed = hash % 4;
+const randomSeedTesting = Math.floor(Math.random() * 4);
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");
@@ -161,13 +164,20 @@ function createRow(indexOfContinent) {
 }
 
 function readAreaInput() {
+        if (correctAreaInput) {
+            return;
+        }
 
         if (this.innerHTML === dailyArea) {
             this.style.backgroundColor = correctColor;
             this.style.color = "black";
             areaResponseContainer.style.display = "block";
             prepareGeoguesser();
-        } else this.style.backgroundColor = wrongColor;
+            correctAreaInput = true;
+        } else {
+            this.style.backgroundColor = wrongColor;
+            this.style.color = "black";
+        }
 }
 
 function prepareAreaGuess() {

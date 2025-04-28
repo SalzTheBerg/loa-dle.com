@@ -140,10 +140,222 @@
                 "correctX": 765,
                 "correctY": 340,
                 "distanceConversion": 0.36
+            },
+            "Abidos Garrison_2": {
+                "centerX": [3200, 3600, -1200, -2500],
+                "centerY": [1200, -700, 1600, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 555,
+                "correctY": 110,
+                "distanceConversion": 0.36
+            },
+            "Abidos Garrison_3": {
+                "centerX": [0, 0, -2200, 3200],
+                "centerY": [600, -900, 600, -900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 475,
+                "correctY": 445,
+                "distanceConversion": 0.36
+            },
+            "Abidos Garrison_4": {
+                "centerX": [3000, -500, -3200, 700],
+                "centerY": [-400, 600, 0, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 235,
+                "correctY": 505,
+                "distanceConversion": 0.36
+            },
+            "Abidos Garrison_5": {
+                "centerX": [-1400, 200, -3200, 3400],
+                "centerY": [400, 500, 0, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 440,
+                "correctY": 635,
+                "distanceConversion": 0.36
+            },
+            "Abidos Garrison_6": {
+                "centerX": [0, 1500, -1700, -1400],
+                "centerY": [-200, -200, 300, -1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 595,
+                "correctY": 445,
+                "distanceConversion": 0.36
+            }
+        },
+        "Seuht Valley": {
+            "Seuht Valley_1": {
+                "centerX": [-1800, 0, 2000, -1100],
+                "centerY": [300, 200, 200, -1000],
+                "originalScale": [5, 7, 7, 7],
+                "correctX": 385,
+                "correctY": 635,
+                "distanceConversion": 0.35
+            },
+            "Seuht Valley_2": {
+                "centerX": [0, 0, 2200, -2000],
+                "centerY": [1400, -1400, 800, -1800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 650,
+                "correctY": 100,
+                "distanceConversion": 0.35
+            },
+            "Seuht Valley_3": {
+                "centerX": [3700, 400, -1000, -300],
+                "centerY": [0, 800, -100, -2000],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 300,
+                "correctY": 70,
+                "distanceConversion": 0.35
+            },
+            "Seuht Valley_4": {
+                "centerX": [-2400, 1800, -3500, 0],
+                "centerY": [-800, -1200, 600, -1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 390,
+                "correctY": 615,
+                "distanceConversion": 0.35
+            },
+            "Seuht Valley_5": {
+                "centerX": [300, -3000, 2200, -600],
+                "centerY": [-300, -500, 0, -1900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 470,
+                "correctY": 265,
+                "distanceConversion": 0.35
             }
         }
     },
     "North Vern": {
+        "Balankar Mountains": {
+            "Balankar Mountains_1": {
+                "centerX": [0, 0, -2000, 3200],
+                "centerY": [-200, -1300, 700, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 380,
+                "correctY": 535,
+                "distanceConversion": 0.52
+            },
+            "Balankar Mountains_2": {
+                "centerX": [1500, 300, 800, 3200],
+                "centerY": [600, 1100, 800, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 670,
+                "correctY": 525,
+                "distanceConversion": 0.52
+            },
+            "Balankar Mountains_3": {
+                "centerX": [-2200, -500, 300, 2900],
+                "centerY": [600, -1100, -200, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 205,
+                "correctY": 305,
+                "distanceConversion": 0.52
+            }
+        },
+        "Fesnar Highland": {
+            "Fesnar Highland_1": {
+                "centerX": [0, 1400, 200, -1100],
+                "centerY": [-900, -700, 0, -1100],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 435,
+                "correctY": 540,
+                "distanceConversion": 0.39
+            },
+            "Fesnar Highland_2": {
+                "centerX": [2800, -2300, 1200, -1200],
+                "centerY": [-900, 1100, -700, -200],
+                "originalScale": [6, 6, 7, 7],
+                "correctX": 205,
+                "correctY": 350,
+                "distanceConversion": 0.39
+            },
+            "Fesnar Highland_3": {
+                "centerX": [0, -1200, 700, 0],
+                "centerY": [1200, 100, 1200, -500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 455,
+                "correctY": 105,
+                "distanceConversion": 0.39
+            }
+        },
+        "Parna Forest": {
+            "Parna Forest_1": {
+                "centerX": [-200, 1000, -1300, -1000],
+                "centerY": [-200, 300, -400, 700],
+                "originalScale": [6, 7, 6, 6],
+                "correctX": 50,
+                "correctY": 500,
+                "distanceConversion": 0.41
+            },
+            "Parna Forest_2": {
+                "centerX": [100, -200, 1900, -900],
+                "centerY": [900, -900, -700, 400],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 520,
+                "correctY": 450,
+                "distanceConversion": 0.41
+            },
+            "Parna Forest_3": {
+                "centerX": [-900, -500, 2200, -2600],
+                "centerY": [-200, -1400, -800, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 440,
+                "correctY": 190,
+                "distanceConversion": 0.41
+            }
+        },
+        "Port Krona": {
+            "Port Krona_1": {
+                "centerX": [3100, -2400, 500, 1200],
+                "centerY": [-500, 0, -600, 400],
+                "originalScale": [7, 7, 6, 7],
+                "correctX": 640,
+                "correctY": 680,
+                "distanceConversion": 0.41
+            },
+            "Port Krona_2": {
+                "centerX": [-700, -1400, -2400, 1000],
+                "centerY": [-300, -1000, 1400, 1600],
+                "originalScale": [7, 7, 6, 7],
+                "correctX": 575,
+                "correctY": 720,
+                "distanceConversion": 0.41
+            },
+            "Port Krona_3": {
+                "centerX": [-1000, 1000, 3400, 400],
+                "centerY": [-1200, -400, -600, 600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 645,
+                "correctY": 350,
+                "distanceConversion": 0.41
+            }
+        },
+        "Rania Village": {
+            "Rania Village_1": {
+                "centerX": [2200, 800, -3200, 3200],
+                "centerY": [-600, 1200, 1400, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 660,
+                "correctY": 510,
+                "distanceConversion": 0.26
+            },
+            "Rania Village_2": {
+                "centerX": [600, -2200, 1800, 0],
+                "centerY": [0, 600, -600, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 610,
+                "correctY": 575,
+                "distanceConversion": 0.26
+            },
+            "Rania Village_3": {
+                "centerX": [0, 3000, -2100, 0],
+                "centerY": [-400, -900, 700, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 430,
+                "correctY": 485,
+                "distanceConversion": 0.26
+            }
+        },
         "Vern Castle": {
             "Vern Castle_1": {
                 "centerX": [0, 1700, 0, 1600],
@@ -168,6 +380,32 @@
                 "correctX": 215,
                 "correctY": 220,
                 "distanceConversion": 0.38
+            }
+        },
+        "Vernese Forest": {
+            "Vernese Forest_1": {
+                "centerX": [0, 0, 1600, 1300],
+                "centerY": [800, -1200, 0, 1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 595,
+                "correctY": 585,
+                "distanceConversion": 0.57
+            },
+            "Vernese Forest_2": {
+                "centerX": [-3000, -1200, 300, 3200],
+                "centerY": [800, -200, 0, -1100],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 440,
+                "correctY": 215,
+                "distanceConversion": 0.57
+            },
+            "Vernese Forest_3": {
+                "centerX": [2900, 2200, -1600],
+                "centerY": [400, -1100, 200],
+                "originalScale": [7, 7, 5],
+                "correctX": 480,
+                "correctY": 435,
+                "distanceConversion": 0.57
             }
         }
     },
