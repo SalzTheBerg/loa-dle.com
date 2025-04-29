@@ -24,3 +24,4 @@
 - Validate Attributes
 - ~~Implement same region green arrow depending on order seen~~
 - Reverse check card rarity
+- Partial match on continent guess
