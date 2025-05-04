@@ -63,7 +63,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Initializes the daily Character to the characterToGuess variable
 function getDailyCharacter() {
-    characterToGuess = availableCharacterNames[hash % availableCharacterNames.length];
+    fetch("./Scripts/getDailyCharacter.php")
+        .then(response => response.json())
+        .then(data => {
+            characterToGuess = data.characterToGuess;
+            alert(availableCharacterNames.length);
+        })
+        .catch(error => console.error("Error fetching character:", error));
+
+    //Test for regions
     let x;
     for (let checkCharacter in availableCharacterNames) {
         x = characterOrder[characterList[availableCharacterNames[checkCharacter]]["First Appearance"]];

@@ -6,8 +6,6 @@
 #### - Add timers for daily reset
 #### - Fix the f**ng suggestions
 
-## php testing
-
 ### __Location__
 - Recapture Rohendel, East Luterra and Origins of Stern Map pictures and remove portals but still include the Tripods
 - ~~Disable possibility of Empty Guess~~
