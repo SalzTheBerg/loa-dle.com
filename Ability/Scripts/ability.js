@@ -89,16 +89,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image
 function loadImg () {
-    dailyClass = classList[hash % classList.length];
-    dailySkill = abilityList[dailyClass].abilities[hash % abilityList[dailyClass].abilities.length];
+    fetch("./Scripts/getDailySkill.php")
+        .then(response => response.json())
+        .then(data => {
+            dailyClass = data.className;
+            dailySkill = data.skillName;
 
-    image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
-    dailyImage = document.getElementById("dailySkill");
+            image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
+            dailyImage = document.getElementById("dailySkill");
 
-    dailyImage.onload = () => {
-        const event = new CustomEvent("dailySkillImageReady", { detail: { img: dailyImage } });
-        window.dispatchEvent(event);
-    };
+            dailyImage.onload = () => {
+                const event = new CustomEvent("dailySkillImageReady", { detail: { img: dailyImage } });
+                window.dispatchEvent(event);
+            };
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
 }
 
 

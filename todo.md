@@ -12,16 +12,18 @@
 - ~~Add all main locations~~
 - ~~Maybe change the second Input, since there are max 8 areas per continent~~
 - ~~Includes query not working for location guess function~~
-- Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, Yudia
+- Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, Yudia and others
 - ~~Fix response message to adapt in size~~
+- check origins of stern 1 correct x/y
 
 ### __Ability__
 - ~~Add grayscale and rotation options~~
 - ~~Insta suggestions on skill guess~~
+- Wildsoul incomplete / Artillerist missing
 
 ### __Character__
 - Add information when hovering over th description
 - Validate Attributes
 - ~~Implement same region green arrow depending on order seen~~
 - Reverse check card rarity
-- Partial match on continent guess
+- ~~Partial match on continent guess~~
