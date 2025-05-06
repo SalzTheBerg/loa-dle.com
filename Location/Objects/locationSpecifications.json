@@ -1,5 +1,57 @@
 {
     "Anikka": {
+        "Delphi Township": {
+            "Delphi Township_1": {
+                "centerX": [1000, -700, -3200, -2200],
+                "centerY": [0, -300, -600, -1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 405,
+                "correctY": 680,
+                "distanceConversion": 0.4
+            },
+            "Delphi Township_2": {
+                "centerX": [0, 2200, -3300, 1600],
+                "centerY": [1800, 400, 1300, -1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 200,
+                "correctY": 330,
+                "distanceConversion": 0.4
+            },
+            "Delphi Township_3": {
+                "centerX": [-1600, 600, 600, 1600],
+                "centerY": [0, 1500, -600, 800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 550,
+                "correctY": 895,
+                "distanceConversion": 0.4
+            }
+        },
+        "Melody Forest": {
+            "Melody Forest_1": {
+                "centerX": [0, 0, -2100, 2100],
+                "centerY": [-600, -1700, 700, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 185,
+                "correctY": 635,
+                "distanceConversion": 0.34
+            },
+            "Melody Forest_2": {
+                "centerX": [-1600, 2000, 200, -2500],
+                "centerY": [-400, 200, -800, 2000],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 290,
+                "correctY": 760,
+                "distanceConversion": 0.34
+            },
+            "Melody Forest_3": {
+                "centerX": [2500, 400, -2400, 1300],
+                "centerY": [200, 1000, 400, 700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 775,
+                "correctY": 370,
+                "distanceConversion": 0.34
+            }
+        },
         "Port City Changhun": {
             "Port City Changhun_1": {
                 "centerX": [2100, 0, 0, -3200],
@@ -7,7 +59,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 640,
                 "correctY": 550,
-                "distanceConversion": 1
+                "distanceConversion": 0.24
             },
             "Port City Changhun_2": {
                 "centerX": [0, 1600, -3000, 2400],
@@ -15,7 +67,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 265,
                 "correctY": 175,
-                "distanceConversion": 1
+                "distanceConversion": 0.24
             },
             "Port City Changhun_3": {
                 "centerX": [0, 3400, 0, -1200],
@@ -23,11 +75,133 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 365,
                 "correctY": 650,
-                "distanceConversion": 1
+                "distanceConversion": 0.24
+            }
+        },
+        "Prisma Valley": {
+            "Prisma Valley_1": {
+                "centerX": [0, 1200, -1200, -1600],
+                "centerY": [-100, 1100, 600, 500],
+                "originalScale": [7, 7, 7, 5],
+                "correctX": 465,
+                "correctY": 465,
+                "distanceConversion": 0.39
+            },
+            "Prisma Valley_2": {
+                "centerX": [-3200, 0, 2500, 1800],
+                "centerY": [1400, -500, -800, -100],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 365,
+                "correctY": 500,
+                "distanceConversion": 0.39
+            },
+            "Prisma Valley_3": {
+                "centerX": [100, -1300, 3300, 100],
+                "centerY": [-1000, 0, -900, 1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 275,
+                "correctY": 305,
+                "distanceConversion": 0.39
+            }
+        },
+        "Rattan Hill": {
+            "Rattan Hill_1": {
+                "centerX": [0, -3600, -2600, 3600],
+                "centerY": [-600, 300, 1300, 1800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 360,
+                "correctY": 850,
+                "distanceConversion": 0.28
+            },
+            "Rattan Hill_2": {
+                "centerX": [-800, -2800, 0, 2200],
+                "centerY": [-800, -600, 0, 1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 555,
+                "correctY": 490,
+                "distanceConversion": 0.28
+            },
+            "Rattan Hill_3": {
+                "centerX": [-400, 3600, 200, -3200],
+                "centerY": [200, 1800, 600, -300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 390,
+                "correctY": 930,
+                "distanceConversion": 0.28
+            }
+        },
+        "Twilight Mists": {
+            "Twilight Mists_1": {
+                "centerX": [-1000, 1400, 2500, -2100],
+                "centerY": [1300, -1900, -500, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 165,
+                "correctY": 850,
+                "distanceConversion": 0.33
+            },
+            "Twilight Mists_2": {
+                "centerX": [0, 2600, -2800, -2800],
+                "centerY": [200, 200, -600, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 525,
+                "correctY": 480,
+                "distanceConversion": 0.33
+            },
+            "Twilight Mists_3": {
+                "centerX": [0, 0, 200, 2200],
+                "centerY": [0, -1200, 1000, 1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 350,
+                "correctY": 575,
+                "distanceConversion": 0.33
             }
         }
     },
     "Arthetine": {
+        "Arid Path": {
+            "Arid Path_1": {
+                "centerX": [-1600, -3500, 1000, 100],
+                "centerY": [400, 0, 200, -2000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 280,
+                "correctY": 790,
+                "distanceConversion": 0.44
+            },
+            "Arid Path_2": {
+                "centerX": [-1800, -600, -2000, 3200],
+                "centerY": [-200, -600, 900, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 355,
+                "correctY": 765,
+                "distanceConversion": 0.44
+            },
+            "Arid Path_3": {
+                "centerX": [-100, 3200, -2200, -3600],
+                "centerY": [-800, -800, 0, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 360,
+                "correctY": 185,
+                "distanceConversion": 0.44
+            }
+        },
+        "Nebelhorn": {
+            "Nebelhorn_1": {
+                "centerX": [0, 2800, 0, 0],
+                "centerY": [-1800, -1600, -800, 800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 430,
+                "correctY": 550,
+                "distanceConversion": 0.47
+            },
+            "Nebelhorn_2": {
+                "centerX": [2600, -2600, -900, 1500],
+                "centerY": [-200, 500, -1100, -400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 375,
+                "correctY": 215,
+                "distanceConversion": 0.47
+            }
+        },
         "Origins of Stern": {
             "Origins of Stern_1": {
                 "centerX": [0, -2100, 2000, -2000],
@@ -45,9 +219,215 @@
                 "correctY": 680,
                 "distanceConversion": 0.34
             }
+        },
+        "Red Sand Desert": {
+            "Red Sand Desert_1": {
+                "centerX": [0, -2200, 1200, 3500],
+                "centerY": [-400, -600, 100, 100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 480,
+                "correctY": 430,
+                "distanceConversion": 0.21
+            }
+        },
+        "Riza Falls": {
+            "Riza Falls_1": {
+                "centerX": [1000, 2700, 0, -2500],
+                "centerY": [1600, 200, -1200, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 320,
+                "correctY": 160,
+                "distanceConversion": 0.5
+            },
+            "Riza Falls_2": {
+                "centerX": [3100, 0, -2200, 0],
+                "centerY": [-400, 700, 700, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 335,
+                "correctY": 260,
+                "distanceConversion": 0.5
+            }
+        },
+        "Scraplands": {
+            "Scraplands_1": {
+                "centerX": [0, -2600, 2600, 600],
+                "centerY": [-600, -300, -700, 1700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 465,
+                "correctY": 500,
+                "distanceConversion": 0.47
+            },
+            "Scraplands_2": {
+                "centerX": [100, 1200, -2800, 300],
+                "centerY": [-100, 500, 1000, -1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 60,
+                "correctY": 430,
+                "distanceConversion": 0.47
+            }
+        },
+        "Totrich": {
+            "Totrich_1": {
+                "centerX": [-1100, 1000, -3000, 3600],
+                "centerY": [-1600, 1600, 0, 1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 465,
+                "correctY": 530,
+                "distanceConversion": 0.41
+            },
+            "Totrich_2": {
+                "centerX": [600, 600, 1400, -2200],
+                "centerY": [400, -1400, -800, 800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 365,
+                "correctY": 590,
+                "distanceConversion": 0.41
+            }
+        },
+        "Windbringer Hills": {
+            "Windbringer Hills_1": {
+                "centerX": [1500, 2700, -1500, -1700],
+                "centerY": [200, -1500, -800, 1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 540,
+                "correctY": 355,
+                "distanceConversion": 0.38
+            },
+            "Windbringer Hills_2": {
+                "centerX": [200, 2200, 1600, -1800],
+                "centerY": [-500, -700, 0, 1500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 165,
+                "correctY": 360,
+                "distanceConversion": 0.38
+            },
+            "Windbringer Hills_3": {
+                "centerX": [0, 2400, 200, -2000],
+                "centerY": [-600, 1200, -1000, 0],
+                "originalScale": [7, 7, 5, 5],
+                "correctX": 455,
+                "correctY": 120,
+                "distanceConversion": 0.38
+            }
         }
     },
     "East Luterra": {
+        "Blackrose Chapel": {
+            "Blackrose Chapel_1": {
+                "centerX": [1200, -3000, 900, -500],
+                "centerY": [-900, 400, 1700, 500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 270,
+                "correctY": 340,
+                "distanceConversion": 0.41
+            },
+            "Blackrose Chapel_2": {
+                "centerX": [0, 2400, 0, -1500],
+                "centerY": [-1200, 600, 1600, 2000],
+                "originalScale": [5, 7, 7, 7],
+                "correctX": 115,
+                "correctY": 340,
+                "distanceConversion": 0.41
+            },
+            "Blackrose Chapel_3": {
+                "centerX": [-1000, 2600, -2600, 0],
+                "centerY": [-700, -900, 900, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 225,
+                "correctY": 370,
+                "distanceConversion": 0.41
+            }
+        },
+        "Borea's Domain": {
+            "Borea's Domain_1": {
+                "centerX": [-600, -1700, 1100, -3200],
+                "centerY": [400, -1200, 0, 600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 280,
+                "correctY": 590,
+                "distanceConversion": 0.46
+            },
+            "Borea's Domain_2": {
+                "centerX": [-800, 0, 2200, -2200],
+                "centerY": [-400, 1900, 0, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 645,
+                "correctY": 620,
+                "distanceConversion": 0.46
+            }
+        },
+        "Croconys Seashore": {
+            "Croconys Seashore_1": {
+                "centerX": [-200, -3000, 3000, 1500],
+                "centerY": [-400, 200, 200, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 225,
+                "correctY": 405,
+                "distanceConversion": 0.68
+            },
+            "Croconys Seashore_2": {
+                "centerX": [0, -2400, 900, -200],
+                "centerY": [-600, 600, 1200, 1500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 175,
+                "correctY": 535,
+                "distanceConversion": 0.68
+            }
+        },
+        "Dyorika Plain": {
+            "Dyorika Plain_1": {
+                "centerX": [0, 200, 1800, -1800],
+                "centerY": [0, 1500, 0, -900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 355,
+                "correctY": 465,
+                "distanceConversion": 0.44
+            },
+            "Dyorika Plain_2": {
+                "centerX": [0, 400, 2100, -3700],
+                "centerY": [0, 1200, 0, 1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 145,
+                "correctY": 430,
+                "distanceConversion": 0.44
+            }
+        },
+        "Flowering Orchard": {
+            "Flowering Orchard_1": {
+                "centerX": [400, -1400, 400, -1300],
+                "centerY": [400, -400, -800, 800],
+                "originalScale": [7, 7, 4, 7],
+                "correctX": 285,
+                "correctY": 125,
+                "distanceConversion": 0.49
+            },
+            "Flowering Orchard_2": {
+                "centerX": [3200, -2100, 400, 2100],
+                "centerY": [-600, 100, -200, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 245,
+                "correctY": 210,
+                "distanceConversion": 0.49
+            }
+        },
+        "Leyar Terrace": {
+            "Leyar Terrace_1": {
+                "centerX": [0, 700, 900, -2000],
+                "centerY": [-1200, 1600, 0, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 180,
+                "correctY": 520,
+                "distanceConversion": 0.41
+            },
+            "Leyar Terrace_2": {
+                "centerX": [0, 2500, -1500, -1800],
+                "centerY": [-1400, 0, 0, -1800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 365,
+                "correctY": 475,
+                "distanceConversion": 0.41
+            }
+        },
         "Luterra Castle": {
             "Luterra Castle_1": {
                 "centerX": [1600, 1600, -3400, 2000],
@@ -72,6 +452,50 @@
                 "correctX": 385,
                 "correctY": 335,
                 "distanceConversion": 0.32
+            }
+        },
+        "Sunbright Hill": {
+            "Sunbright Hill_1": {
+                "centerX": [-100, -600, 1600, -1600],
+                "centerY": [-700, 1500, 500, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 630,
+                "correctY": 265,
+                "distanceConversion": 0.38
+            },
+            "Sunbright Hill_2": {
+                "centerX": [-700, 1000, -1100, 1100],
+                "centerY": [1100, -400, 1400, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 480,
+                "correctY": 175,
+                "distanceConversion": 0.38
+            }
+        },
+        "Wavestrand Port": {
+            "Wavestrand Port_1": {
+                "centerX": [-500, 0, 2000, -2600],
+                "centerY": [-1400, 600, -600, -1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 160,
+                "correctY": 225,
+                "distanceConversion": 0.21
+            },
+            "Wavestrand Port_2": {
+                "centerX": [0, 400, -2400, -1200],
+                "centerY": [0, 1400, -700, -300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 780,
+                "correctY": 335,
+                "distanceConversion": 0.21
+            },
+            "Wavestrand Port_3": {
+                "centerX": [1600, -900, -2900, 3300],
+                "centerY": [0, 200, 0, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 395,
+                "correctY": 330,
+                "distanceConversion": 0.21
             }
         }
     },
@@ -100,6 +524,90 @@
                 "correctX": 545,
                 "correctY": 85,
                 "distanceConversion": 0.4
+            },
+            "Ereonnor_4": {
+                "centerX": [0, 2500, -2700, 0],
+                "centerY": [-1400, -1800, -600, -500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 680,
+                "correctY": 570,
+                "distanceConversion": 0.4
+            },
+            "Ereonnor_5": {
+                "centerX": [100, -600, 2400, 100],
+                "centerY": [500, -1700, -1000, 1600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 220,
+                "correctY": 740,
+                "distanceConversion": 0.4
+            }
+        },
+        "Hestera Garden": {
+            "Hestera Garden_1": {
+                "centerX": [500, -500, -1200, 2200],
+                "centerY": [-1700, 1100, -1700, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 405,
+                "correctY": 115,
+                "distanceConversion": 0.46
+            },
+            "Hestera Garden_2": {
+                "centerX": [0, 0, 1000, 1000],
+                "centerY": [-1500, 1500, 100, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 430,
+                "correctY": 610,
+                "distanceConversion": 0.46
+            },
+            "Hestera Garden_3": {
+                "centerX": [0, 2500, 600, -1700],
+                "centerY": [-800, 1400, -2000, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 740,
+                "correctY": 365,
+                "distanceConversion": 0.46
+            },
+            "Hestera Garden_4": {
+                "centerX": [0, 0, 2000, -2800],
+                "centerY": [1300, -1300, -600, -400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 435,
+                "correctY": 295,
+                "distanceConversion": 0.46
+            }
+        },
+        "Mount Phylantos": {
+            "Mount Phylantos_1": {
+                "centerX": [-2500, 0, 0, 1500],
+                "centerY": [400, 100, -1800, 500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 355,
+                "correctY": 160,
+                "distanceConversion": 0.46
+            },
+            "Mount Phylantos_2": {
+                "centerX": [0, 1900, 0, -1400],
+                "centerY": [-700, -400, 1200, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 200,
+                "correctY": 620,
+                "distanceConversion": 0.46
+            },
+            "Mount Phylantos_3": {
+                "centerX": [-1400, -200, -1500, -500],
+                "centerY": [-1000, -200, 800, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 520,
+                "correctY": 965,
+                "distanceConversion": 0.46
+            },
+            "Mount Phylantos_4": {
+                "centerX": [1400, 2200, 600, -1800],
+                "centerY": [1600, -400, 1600, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 475,
+                "correctY": 395,
+                "distanceConversion": 0.46
             }
         }
     },
@@ -128,6 +636,94 @@
                 "correctX": 220,
                 "correctY": 465,
                 "distanceConversion": 0.24
+            }
+        },
+        "Nameless Valley": {
+            "Nameless Valley_1": {
+                "centerX": [0, 2300, -2300, -2700],
+                "centerY": [0, -400, 1300, -1500],
+                "originalScale": [5, 7, 7, 7],
+                "correctX": 450,
+                "correctY": 715,
+                "distanceConversion": 0.41
+            },
+            "Nameless Valley_2": {
+                "centerX": [100, 1200, 800, 3200],
+                "centerY": [-500, -500, 1000, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 90,
+                "correctY": 390,
+                "distanceConversion": 0.41
+            }
+        },
+        "Red Moonshade": {
+            "Red Moonshade_1": {
+                "centerX": [1800, -1800, 0, -500],
+                "centerY": [-100, 700, 0, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 315,
+                "correctY": 285,
+                "distanceConversion": 0.45
+            },
+            "Red Moonshade_2": {
+                "centerX": [-2500, 600, -2600, 1500],
+                "centerY": [1000, 200, -100, -1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 680,
+                "correctY": 250,
+                "distanceConversion": 0.45
+            },
+            "Red Moonshade_3": {
+                "centerX": [-700, 2000, -900, 500],
+                "centerY": [-1100, 400, 400, 700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 655,
+                "correctY": 415,
+                "distanceConversion": 0.45
+            }
+        },
+        "Shady Cliff": {
+            "Shady Cliff_1": {
+                "centerX": [0, 0, -800, 2600],
+                "centerY": [1200, -500, 700, 1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 245,
+                "correctY": 730,
+                "distanceConversion": 0.39
+            },
+            "Shady Cliff_2": {
+                "centerX": [0, 800, 0, 2200],
+                "centerY": [300, -200, -1000, 500],
+                "originalScale": [7, 7, 5, 6],
+                "correctX": 630,
+                "correctY": 570,
+                "distanceConversion": 0.39
+            }
+        },
+        "Wailing Swamp": {
+            "Wailing Swamp_1": {
+                "centerX": [1000, -1600, -1300, 400],
+                "centerY": [1000, -700, 500, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 415,
+                "correctY": 475,
+                "distanceConversion": 0.44
+            },
+            "Wailing Swamp_2": {
+                "centerX": [400, 600, -1200, 3200],
+                "centerY": [-700, 400, 0, -400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 645,
+                "correctY": 350,
+                "distanceConversion": 0.44
+            },
+            "Wailing Swamp_3": {
+                "centerX": [2600, 1800, -1400, -2000],
+                "centerY": [-1400, -200, -1000, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 760,
+                "correctY": 590,
+                "distanceConversion": 0.44
             }
         }
     },
