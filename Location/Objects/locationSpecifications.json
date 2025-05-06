@@ -1030,6 +1030,56 @@
                 "correctX": 420,
                 "correctY": 220,
                 "distanceConversion": 0.38
+            },
+            "Pleccia_4": {
+                "centerX": [0, 0, -1700, 2700],
+                "centerY": [-500, -1100, 0, 700],
+                "originalScale": [7, 5, 7, 7],
+                "correctX": 340,
+                "correctY": 200,
+                "distanceConversion": 0.38
+            },
+            "Pleccia_5": {
+                "centerX": [0, 1700, -1000, 0],
+                "centerY": [200, -1400, 0, -1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 475,
+                "correctY": 450,
+                "distanceConversion": 0.38
+            },
+            "Pleccia_6": {
+                "centerX": [-200, -2200, 0, -1700],
+                "centerY": [-900, -900, 700, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 585,
+                "correctY": 465,
+                "distanceConversion": 0.38
+            }
+        },
+        "Prehilia Prairie": {
+            "Prehilia Prairie_1": {
+                "centerX": [-1000, 600, -1300, 2100],
+                "centerY": [-1200, -400, 0, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 545,
+                "correctY": 240,
+                "distanceConversion": 0.33
+            },
+            "Prehilia Prairie_2": {
+                "centerX": [1600, 0, 3200, -2200],
+                "centerY": [400, 800, -800, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 450,
+                "correctY": 175,
+                "distanceConversion": 0.33
+            },
+            "Prehilia Prairie_3": {
+                "centerX": [2500, -1000, 0, 3200],
+                "centerY": [400, 1500, -1700, -1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 695,
+                "correctY": 790,
+                "distanceConversion": 0.33
             }
         }
     },
@@ -1058,6 +1108,50 @@
                 "correctX": 490,
                 "correctY": 550,
                 "distanceConversion": 0.39
+            }
+        },
+        "Secret Forest": {
+            "Secret Forest_1": {
+                "centerX": [1600, 0, -1200, 0],
+                "centerY": [0, -1200, -500, 800],
+                "originalScale": [6, 7, 5, 5],
+                "correctX": 230,
+                "correctY": 185,
+                "distanceConversion": 0.29
+            },
+            "Secret Forest_2": {
+                "centerX": [500, -1500, -2500, 0],
+                "centerY": [-1000, 1000, 0, -1800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 530,
+                "correctY": 160,
+                "distanceConversion": 0.29
+            },
+            "Secret Forest_3": {
+                "centerX": [-1800, 2600, 2200, -500],
+                "centerY": [0, 1900, -600, -500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 270,
+                "correctY": 555,
+                "distanceConversion": 0.29
+            }
+        },
+        "Starsand Beach": {
+            "Starsand Beach_1": {
+                "centerX": [-200, -3200, 0, 3200],
+                "centerY": [-1800, -1800, 0, 1900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 770,
+                "correctY": 535,
+                "distanceConversion": 0.38
+            },
+            "Starsand Beach_2": {
+                "centerX": [],
+                "centerY": [],
+                "originalScale": [],
+                "correctX": 285,
+                "correctY": 335,
+                "distanceConversion": 0.38
             }
         }
     },
