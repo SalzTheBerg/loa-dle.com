@@ -1146,12 +1146,64 @@
                 "distanceConversion": 0.38
             },
             "Starsand Beach_2": {
-                "centerX": [],
-                "centerY": [],
-                "originalScale": [],
+                "centerX": [1700, 2700, 0, -2000],
+                "centerY": [-1600, -400, 0, 300],
+                "originalScale": [7, 7, 5, 7],
                 "correctX": 285,
                 "correctY": 335,
                 "distanceConversion": 0.38
+            }
+        },
+        "Tideshelf Path": {
+            "Tideshelf Path_1": {
+                "centerX": [1100, -1700, 1700, -2700],
+                "centerY": [-1500, 2000, 400, -2000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 635,
+                "correctY": 495,
+                "distanceConversion": 0.41
+            },
+            "Tideshelf Path_2": {
+                "centerX": [0, 0, -2400, 3400],
+                "centerY": [-700, 1200, 200, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 160,
+                "correctY": 490,
+                "distanceConversion": 0.41
+            },
+            "Tideshelf Path_3": {
+                "centerX": [0, -2800, 3000, 600],
+                "centerY": [-1000, -500, 2000, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 580,
+                "correctY": 345,
+                "distanceConversion": 0.41
+            }
+        },
+        "Tikatika Colony": {
+            "Tikatika Colony_1": {
+                "centerX": [0, -1000, 2000, 0],
+                "centerY": [1200, 0, -1500, -100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 505,
+                "correctY": 435,
+                "distanceConversion": 0.42
+            },
+            "Tikatika Colony_2": {
+                "centerX": [0, -1100, -1400, 1400],
+                "centerY": [-1100, 600, -600, 0],
+                "originalScale": [6, 7, 7, 7],
+                "correctX": 285,
+                "correctY": 225,
+                "distanceConversion": 0.42
+            },
+            "Tikatika Colony_3": {
+                "centerX": [-1000, 700, 3200, -1700],
+                "centerY": [300, 1000, 0, 1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 295,
+                "correctY": 585,
+                "distanceConversion": 0.42
             }
         }
     },
@@ -1184,6 +1236,94 @@
         }
     },
     "Rohendel": {
+        "Breezesome Brae": {
+            "Breezesome Brae_1": {
+                "centerX": [0, 2000, -900, -2600],
+                "centerY": [700, 200, 1200, 1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 555,
+                "correctY": 870,
+                "distanceConversion": 0.42
+            },
+            "Breezesome Brae_2": {
+                "centerX": [1400, 1000, -1800, 500],
+                "centerY": [-1200, 1400, -1500, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 580,
+                "correctY": 505,
+                "distanceConversion": 0.42
+            }
+        },
+        "Elzowin's Shade": {
+            "Elzowin's Shade_1": {
+                "centerX": [-1600, 0, 3000, -1500],
+                "centerY": [0, 1800, -800, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 110,
+                "correctY": 240,
+                "distanceConversion": 0.42
+            },
+            "Elzowin's Shade_2": {
+                "centerX": [300, -2800, 1500, 1900],
+                "centerY": [-400, 500, -700, 900],
+                "originalScale": [7, 7, 5, 7],
+                "correctX": 535,
+                "correctY": 135,
+                "distanceConversion": 0.42
+            }
+        },
+        "Glass Lotus Lake": {
+            "Glass Lotus Lake_1": {
+                "centerX": [-800, -400, -200, -2200],
+                "centerY": [-200, -1200, 700, -500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 370,
+                "correctY": 740,
+                "distanceConversion": 0.41
+            },
+            "Glass Lotus Lake_2": {
+                "centerX": [0, 0, 2500, -1200],
+                "centerY": [-1700, 0, -700, 300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 295,
+                "correctY": 425,
+                "distanceConversion": 0.41
+            },
+            "Glass Lotus Lake_3": {
+                "centerX": [-200, 1000, -2400, 2200],
+                "centerY": [-1300, 700, -1400, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 505,
+                "correctY": 830,
+                "distanceConversion": 0.41
+            }
+        },
+        "Lake Shiverwave": {
+            "Lake Shiverwave_1": {
+                "centerX": [0, 0, -1800, 2700],
+                "centerY": [-1000, -400, -200, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 610,
+                "correctY": 450,
+                "distanceConversion": 0.53
+            },
+            "Lake Shiverwave_2": {
+                "centerX": [0, 0, 1800, -2200],
+                "centerY": [1900, 0, -700, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 533,
+                "correctY": 350,
+                "distanceConversion": 0.53
+            },
+            "Lake Shiverwave_3": {
+                "centerX": [-600, 1900, -3200, -600],
+                "centerY": [600, 600, -800, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 160,
+                "correctY": 560,
+                "distanceConversion": 0.53
+            }
+        },
         "Rothun": {
             "Rothun_1": {
                 "centerX": [0, 2400, 0, -800],
@@ -1208,6 +1348,24 @@
                 "correctX": 430,
                 "correctY": 500,
                 "distanceConversion": 0.26
+            }
+        },
+        "Xeneela Ruins": {
+            "Xeneela Ruins_1": {
+                "centerX": [0, 0, -1800, 3400],
+                "centerY": [-600, 1800, -500, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 400,
+                "correctY": 380,
+                "distanceConversion": 0.44
+            },
+            "Xeneela Ruins_2": {
+                "centerX": [2000, -1000, 1000, 600],
+                "centerY": [1200, -600, 400, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 350,
+                "correctY": 495,
+                "distanceConversion": 0.44
             }
         }
     },
@@ -1240,6 +1398,104 @@
         }
     },
     "Shushire": {
+        "Bitterwind Hill": {
+            "Bitterwind Hill_1": {
+                "centerX": [0, -1000, -1500, 100],
+                "centerY": [-1400, 0, -1700, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 290,
+                "correctY": 225,
+                "distanceConversion": 0.35
+            },
+            "Bitterwind Hill_2": {
+                "centerX": [0, 2000, -2500, -2500],
+                "centerY": [0, 0, 200, -900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 390,
+                "correctY": 180,
+                "distanceConversion": 0.35
+            }
+        },
+        "Frozen Sea": {
+            "Frozen Sea_1": {
+                "centerX": [-200, 2800, -2800, -2600],
+                "centerY": [1200, -600, 0, 1500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 255,
+                "correctY": 190,
+                "distanceConversion": 0.49
+            },
+            "Frozen Sea_2": {
+                "centerX": [0, -3000, 0, -1400],
+                "centerY": [2100, -600, 0, 500],
+                "originalScale": [9, 7, 9, 7],
+                "correctX": 205,
+                "correctY": 345,
+                "distanceConversion": 0.49
+            },
+            "Frozen Sea_3": {
+                "centerX": [1400, -400, 2400, -700],
+                "centerY": [-1100, -500, -1500, 900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 700,
+                "correctY": 375,
+                "distanceConversion": 0.49
+            }
+        },
+        "Iceblood Plateau": {
+            "Iceblood Plateau_1": {
+                "centerX": [-2500, 1800, 2200, 200],
+                "centerY": [1700, 1900, -800, -700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 565,
+                "correctY": 410,
+                "distanceConversion": 0.3
+            },
+            "Iceblood Plateau_2": {
+                "centerX": [100, -900, -3600, 3400],
+                "centerY": [-1000, 400, 800, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 400,
+                "correctY": 170,
+                "distanceConversion": 0.3
+            }
+        },
+        "Icewing Heights": {
+            "Icewing Heights_1": {
+                "centerX": [1400, -3400, -1400, -400],
+                "centerY": [-1600, 200, -1600, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 480,
+                "correctY": 405,
+                "distanceConversion": 0.41
+            },
+            "Icewing Heights_2": {
+                "centerX": [0, -3400, -3000, 3100],
+                "centerY": [100, 900, -900, 700],
+                "originalScale": [9, 7, 7, 7],
+                "correctX": 505,
+                "correctY": 70,
+                "distanceConversion": 0.41
+            }
+        },
+        "Lake Eternity": {
+            "Lake Eternity_1": {
+                "centerX": [300, 0, 2800, -2700],
+                "centerY": [400, -1400, -800, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 585,
+                "correctY": 335,
+                "distanceConversion": 0.43
+            },
+            "Lake Eternity_2": {
+                "centerX": [200, -1000, 1200, -1900],
+                "centerY": [-2000, 400, -800, -700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 450,
+                "correctY": 125,
+                "distanceConversion": 0.43
+            }
+        },
         "Rigens Village": {
             "Rigens Village_1": {
                 "centerX": [2500, -1500, -3000, 1600],
@@ -1247,7 +1503,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 515,
                 "correctY": 700,
-                "distanceConversion": 1
+                "distanceConversion": 0.17
             },
             "Rigens Village_2": {
                 "centerX": [-1500, 1100, 500, -2800],
@@ -1255,7 +1511,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 385,
                 "correctY": 340,
-                "distanceConversion": 1
+                "distanceConversion": 0.17
             },
             "Rigens Village_3": {
                 "centerX": [-1400, 2400, -2200, 700],
@@ -1263,7 +1519,7 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 740,
                 "correctY": 465,
-                "distanceConversion": 1
+                "distanceConversion": 0.17
             }
         }
     },
@@ -1392,6 +1648,32 @@
         }
     },
     "Yorn": {
+        "Black Anvil Mine": {
+            "Black Anvil Mine_1": {
+                "centerX": [1600, 600, -1000, -1800],
+                "centerY": [1900, 800, 0, 1600],
+                "originalScale": [7, 7, 6, 7],
+                "correctX": 665,
+                "correctY": 370,
+                "distanceConversion": 0.55
+            },
+            "Black Anvil Mine_2": {
+                "centerX": [0, 0, -2000, 1800],
+                "centerY": [-1600, 1100, -400, 100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 515,
+                "correctY": 215,
+                "distanceConversion": 0.55
+            },
+            "Black Anvil Mine_3": {
+                "centerX": [-2000, 500, -300, -2300],
+                "centerY": [1600, 300, -1200, -1800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 455,
+                "correctY": 160,
+                "distanceConversion": 0.55
+            }
+        },
         "Great Castle": {
             "Great Castle_1": {
                 "centerX": [0, 0, -2800, 1900],

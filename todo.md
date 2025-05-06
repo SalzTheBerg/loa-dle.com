@@ -8,6 +8,7 @@
 
 ### __Location__
 - Recapture Rohendel, East Luterra and Origins of Stern Map pictures and remove portals but still include the Tripods
+- Recapture Bitterwind Hill Map picture when event portal is gone
 - ~~Disable possibility of Empty Guess~~
 - ~~Add all main locations~~
 - ~~Maybe change the second Input, since there are max 8 areas per continent~~
@@ -15,6 +16,7 @@
 - Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, Yudia and others
 - ~~Fix response message to adapt in size~~
 - check origins of stern 1 correct x/y
+- check all distance conversion by searching
 
 ### __Ability__
 - ~~Add grayscale and rotation options~~

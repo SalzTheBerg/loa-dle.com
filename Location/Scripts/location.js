@@ -84,15 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image randomly and adding it to the DOM
 function loadImg() {
-    dailyContinent = "Punika";//availableContinents[hash % availableContinents.length];
-    dailyArea = "Starsand Beach";//getAvailableAreas()[hash % getAvailableAreas().length];
+    dailyContinent = "Yorn";//availableContinents[hash % availableContinents.length];
+    dailyArea = "Black Anvil Mine";//getAvailableAreas()[hash % getAvailableAreas().length];
     locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
-    dailyLocationImage = "Starsand Beach_2";//locationsInArea[hash % locationsInArea.length];
+    dailyLocationImage = "Black Anvil Mine_3";//locationsInArea[hash % locationsInArea.length];
 
     image.innerHTML = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = 3200;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
-    centerY = 900;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeedTesting];
-    originalScale = 7;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
+    centerX = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
+    centerY = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeedTesting];
+    originalScale = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
     dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
