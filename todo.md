@@ -6,6 +6,10 @@
 #### - Add timers for daily reset
 #### - Fix the f**ng suggestions
 
+## __Performance:__
+- Fetch daily Images in main menu and other modes? And change image path via Php
+- Preload via js all suggestion images - check if images still in cache and don't load?
+
 ### __Location__
 - Recapture Rohendel, East Luterra and Origins of Stern Map pictures and remove portals but still include the Tripods
 - ~~Disable possibility of Empty Guess~~
