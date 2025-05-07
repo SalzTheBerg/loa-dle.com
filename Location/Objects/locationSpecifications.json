@@ -1699,6 +1699,94 @@
                 "correctY": 405,
                 "distanceConversion": 0.28
             }
+        },
+        "Hall of Promise": {
+            "Hall of Promise_1": {
+                "centerX": [100, 500, -600, -2400],
+                "centerY": [-300, -1700, -1400, -900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 290,
+                "correctY": 305,
+                "distanceConversion": 0.44
+            },
+            "Hall of Promise_2": {
+                "centerX": [0, 0, -3200, 2200],
+                "centerY": [-400, -1600, -400, -1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 430,
+                "correctY": 675,
+                "distanceConversion": 0.44
+            }
+        },
+        "Iron Hammer Mine": {
+            "Iron Hammer Mine_1": {
+                "centerX": [-2200, -800, 2300, -1300],
+                "centerY": [-700, -600, -600, 1200],
+                "originalScale": [7, 7, 6, 6],
+                "correctX": 665,
+                "correctY": 310,
+                "distanceConversion": 0.53
+            },
+            "Iron Hammer Mine_2": {
+                "centerX": [-2500, -1500, 1700, 2700],
+                "centerY": [800, 0, 800, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 580,
+                "correctY": 625,
+                "distanceConversion": 0.53
+            },
+            "Iron Hammer Mine_3": {
+                "centerX": [3700, -1700, -1800, 1400],
+                "centerY": [-1200, -1200, 100, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 525,
+                "correctY": 440,
+                "distanceConversion": 0.53
+            }
+        },
+        "Unfinished Garden": {
+            "Unfinished Garden_1": {
+                "centerX": [0, 3000, 0, -1700],
+                "centerY": [-1600, -900, 700, 300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 425,
+                "correctY": 605,
+                "distanceConversion": 0.35
+            },
+            "Unfinished Garden_2": {
+                "centerX": [-1900, 1600, 600, 3000],
+                "centerY": [200, 400, -1100, -1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 670,
+                "correctY": 320,
+                "distanceConversion": 0.35
+            }
+        },
+        "Yorn's Cradle": {
+            "Yorn's Cradle_1": {
+                "centerX": [0, -1600, 0, 2800],
+                "centerY": [-700, 700, 1200, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 660,
+                "correctY": 505,
+                "distanceConversion": 0.48
+            },
+            "Yorn's Cradle_2": {
+                "centerX": [2800, 1000, -600, -1800],
+                "centerY": [1400, -500, -300, 200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 630,
+                "correctY": 335,
+                "distanceConversion": 0.48
+            },
+            "Yorn's Cradle_3": {
+                "centerX": [0, -2300, 2000, -3700],
+                "centerY": [1200, -1000, -400, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 340,
+                "correctY": 245,
+                "distanceConversion": 0.48
+            }
         }
     },
     "Yudia": {
