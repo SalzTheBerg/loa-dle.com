@@ -67,7 +67,6 @@ function getDailyCharacter() {
         .then(response => response.json())
         .then(data => {
             characterToGuess = data.characterToGuess;
-            alert(availableCharacterNames.length);
         })
         .catch(error => console.error("Error fetching character:", error));
 
