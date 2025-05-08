@@ -121,6 +121,7 @@ function createRow(indexOfChar) {
 
     for (let i = 0; i < 7; i++) {
         let newCell = newRow.insertCell(i + 1);
+        newCell.classList.add("cell-hidden");
         let attributeName = attributes[i];
 
         if(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName])) {
@@ -154,17 +155,25 @@ function createRow(indexOfChar) {
                 newCell.style.backgroundColor = partialMatchColor;
             }
         }
-    }
-    if (characterToGuess === guess) {
-        const img = document.createElement('img');
-        img.src = 'Icons/' + guess + '.webp';
-        let h2 = 'Congratulations!';
-        let p = "You've guessed the daily character, you can check out the other modes or come back tomorrow.";
-
-        responseMessage.prepend(img);
-        createHeader(h2, 2, responseMessageText);
-        createParagraph(p, responseMessageText);
-
-        correctGuess(gameContainer, responseContainer, responseMessage);
+        setTimeout(() => {
+            newCell.classList.remove("cellHidden");
+            newCell.classList.add("animatedCell");
+        }, i * 500);
+        if (i === attributes.length - 1) {
+            newCell.addEventListener("animationend", () => {
+                if (characterToGuess === guess) {
+                    const img = document.createElement('img');
+                    img.src = 'Icons/' + guess + '.webp';
+                    let h2 = 'Congratulations!';
+                    let p = "You've guessed the daily character, you can check out the other modes or come back tomorrow.";
+    
+                    responseMessage.prepend(img);
+                    createHeader(h2, 2, responseMessageText);
+                    createParagraph(p, responseMessageText);
+    
+                    correctGuess(gameContainer, responseContainer, responseMessage);
+                }
+            }, { once: true });
+        }
     }
 }

@@ -17,13 +17,18 @@ body {
     font-weight: bold;
     width: 20%;
     height: 100px;
-    background-color: rgb(17, 17, 17);
+    background: linear-gradient(to bottom, #100c24, #102434);
     border: 2px solid rgb(255, 202, 87);
-    border-radius: 30px;
+    border-radius: 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;
 } .link:hover {
     transform: scale(1.005);
+} .link h2 {
+    margin: 5px;
+    font-weight: bold;
+} .link p {
+    margin: 5px;
 }
 
 #gameContainer {
@@ -343,6 +348,8 @@ table {
     position: absolute;
     top: 20px;
     right: 20px;
+} #footer:hover {
+    transform: scale(1.02);
 }
 
 #infoDiv {
@@ -363,4 +370,24 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cellHidden {
+    opacity: 0;
+    transform: translateX(100%);
+}
+  
+.animatedCell {
+    animation: slideInRight 1s ease forwards;
+}
+  
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
