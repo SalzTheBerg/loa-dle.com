@@ -121,7 +121,7 @@ function createRow(indexOfChar) {
 
     for (let i = 0; i < 7; i++) {
         let newCell = newRow.insertCell(i + 1);
-        newCell.classList.add("cell-hidden");
+        newCell.classList.add("cellHidden");
         let attributeName = attributes[i];
 
         if(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName])) {
