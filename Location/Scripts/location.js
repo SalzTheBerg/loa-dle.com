@@ -84,10 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image randomly and adding it to the DOM
 function loadImg() {
-    /*dailyContinent = "Yorn";//availableContinents[hash % availableContinents.length];
-    dailyArea = "Yorn's Cradle";//getAvailableAreas()[hash % getAvailableAreas().length];
-    dailyLocationImage = "Yorn's Cradle_3";//locationsInArea[hash % locationsInArea.length];*/
-    fetch("./Scripts/getDailyLocation.php")
+    /*fetch("./Scripts/getDailyLocation.php")
         .then(response => response.json())
         .then(data => {
             dailyContinent = data.continentName;
@@ -103,17 +100,20 @@ function loadImg() {
             dailyImage = document.getElementById("dailyLocation");
             dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
         })
-        .catch(error => console.error('Error fetching data:', error)); 
-
-    /*locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
+        .catch(error => console.error('Error fetching data:', error));*/
+    
+    dailyContinent = "Rethramis";
+    dailyArea = "Rethramis Border";
+    dailyLocationImage = "Rethramis Border_3";
+    locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
 
     image.innerHTML = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = -3700;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
+    centerX = 1700//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
     centerY = 0//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeedTesting];
     originalScale = 7;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
-    dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";*/
+    dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
 }
 
 function readContinentInput() {

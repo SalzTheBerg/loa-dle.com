@@ -1208,6 +1208,42 @@
         }
     },
     "Rethramis": {
+        "Ankumo Mountain": {
+            "Ankumo Mountain_1": {
+                "centerX": [1100, -1700, -1400, 1000],
+                "centerY": [1400, 1300, -1500, 700],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 285,
+                "correctY": 625,
+                "distanceConversion": 1
+            },
+            "Ankumo Mountain_2": {
+                "centerX": [1200, -800, -1400, 2000],
+                "centerY": [600, 900, -900, -500],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 370,
+                "correctY": 115,
+                "distanceConversion": 1
+            }
+        },
+        "Loghill": {
+            "Loghill_1": {
+                "centerX": [0, -1400, 800, 1600],
+                "centerY": [-100, -300, 1100, 600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 405,
+                "correctY": 850,
+                "distanceConversion": 1
+            },
+            "Loghill_2": {
+                "centerX": [-1600, -1100, 2600, -3100],
+                "centerY": [0, 1100, 800, 1900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 545,
+                "correctY": 645,
+                "distanceConversion": 1
+            }
+        },
         "Prideholme": {
             "Prideholme_1": {
                 "centerX": [800, 0, -2800, 3200],
@@ -1232,6 +1268,32 @@
                 "correctX": 600,
                 "correctY": 470,
                 "distanceConversion": 0.16
+            }
+        },
+        "Rethramis Border": {
+            "Rethramis Border_1": {
+                "centerX": [0, -3400, 1100, 2400],
+                "centerY": [0, 0, 900, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 470,
+                "correctY": 520,
+                "distanceConversion": 1
+            },
+            "Rethramis Border_2": {
+                "centerX": [2500, 0, -2200, -1400],
+                "centerY": [2000, -500, 500, 2000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 435,
+                "correctY": 555,
+                "distanceConversion": 1
+            },
+            "Rethramis Border_3": {
+                "centerX": [600, 0, -1500, 1700],
+                "centerY": [1600, 0, -400, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 210,
+                "correctY": 350,
+                "distanceConversion": 1
             }
         }
     },
@@ -1580,6 +1642,24 @@
         }
     },
     "Tortoyk": {
+        "Forest of Giants": {
+            "Forest of Giants_1": {
+                "centerX": [0, -2200, -600, 1200],
+                "centerY": [0, -600, 1800, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 565,
+                "correctY": 325,
+                "distanceConversion": 1
+            },
+            "Forest of Giants_2": {
+                "centerX": [0, -2000, 400, 3400],
+                "centerY": [0, 600, 1400, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 490,
+                "correctY": 910,
+                "distanceConversion": 1
+            }
+        },
         "Mokoko Village": {
             "Mokoko Village_1": {
                 "centerX": [-100, 200, 1200, 800],
@@ -1603,6 +1683,68 @@
                 "originalScale": [7, 7, 7, 7],
                 "correctX": 345,
                 "correctY": 610,
+                "distanceConversion": 1
+            }
+        },
+        "Seaswept Woods": {
+            "Seaswept Woods_1": {
+                "centerX": [-700, -700, -2700, 3200],
+                "centerY": [-400, 1400, 1000, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 420,
+                "correctY": 780,
+                "distanceConversion": 1
+            },
+            "Seaswept Woods_2": {
+                "centerX": [400, -1400, 2400, -1600],
+                "centerY": [0, 600, 900, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 360,
+                "correctY": 515,
+                "distanceConversion": 1
+            }
+        },
+        "Skyreach Steppe": {
+            "Skyreach Steppe_1": {
+                "centerX": [600, -2200, 0, -1200],
+                "centerY": [900, -600, -900, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 520,
+                "correctY": 725,
+                "distanceConversion": 1
+            },
+            "Skyreach Steppe_2": {
+                "centerX": [1400, -2200, 2400, -400],
+                "centerY": [400, 600, 0, 1000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 555,
+                "correctY": 700,
+                "distanceConversion": 1
+            }
+        },
+        "Sweetwater Forest": {
+            "Sweetwater Forest_1": {
+                "centerX": [0, 2000, -600, -1600],
+                "centerY": [600, 0, -1000, 0],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 470,
+                "correctY": 620,
+                "distanceConversion": 1
+            },
+            "Sweetwater Forest_2": {
+                "centerX": [-1200, 2600, -2800, 1500],
+                "centerY": [0, -300, 900, 1900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 335,
+                "correctY": 600,
+                "distanceConversion": 1
+            },
+            "Sweetwater Forest_3": {
+                "centerX": [3000, 1200, -2200, -1600],
+                "centerY": [-300, -1100, 1100, -1100],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 220,
+                "correctY": 570,
                 "distanceConversion": 1
             }
         }
@@ -1636,6 +1778,68 @@
         }
     },
     "West Luterra": {
+        "Battlebound Plains": {
+            "Battlebound Plains_1": {
+                "centerX": [-1500, 2800, 1400, -3400],
+                "centerY": [1000, -1200, 900, 400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 545,
+                "correctY": 460,
+                "distanceConversion": 1
+            },
+            "Battlebound Plains_2": {
+                "centerX": [2400, -3400, -700, -1200],
+                "centerY": [1400, 1800, -300, 2000],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 625,
+                "correctY": 155,
+                "distanceConversion": 1
+            }
+        },
+        "Bilbrin Forest": {
+            "Bilbrin Forest_1": {
+                "centerX": [-1200, 1800, 0, -400],
+                "centerY": [-800, 400, 0, 1400],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 335,
+                "correctY": 545,
+                "distanceConversion": 1
+            },
+            "Bilbrin Forest_2": {
+                "centerX": [1200, -2200, 2000, 2500],
+                "centerY": [-200, -600, -1300, 1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 595,
+                "correctY": 190,
+                "distanceConversion": 1
+            },
+            "Bilbrin Forest_3": {
+                "centerX": [500, -600, 1500, -800],
+                "centerY": [-500, -2000, -1500, -800],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 495,
+                "correctY": 410,
+                "distanceConversion": 1
+            }
+        },
+        "Lakebar": {
+            "Lakebar_1": {
+                "centerX": [-400, 800, -3200, -1700],
+                "centerY": [800, -1000, -600, 1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 510,
+                "correctY": 410,
+                "distanceConversion": 1
+            },
+            "Lakebar_2": {
+                "centerX": [-1200, 2200, -900, -2800],
+                "centerY": [1600, -1000, 200, -600],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 425,
+                "correctY": 530,
+                "distanceConversion": 1
+            }
+        },
         "Medrick Monastery": {
             "Medrick Monastery_1": {
                 "centerX": [0, -1900, 1000, 0],
@@ -1644,6 +1848,40 @@
                 "correctX": 430,
                 "correctY": 465,
                 "distanceConversion": 0.58
+            },
+            "Medrick Monastery_2": {
+                "centerX": [0, -2000, 0, 2200],
+                "centerY": [800, 1200, -600, -200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 535,
+                "correctY": 445,
+                "distanceConversion": 0.58
+            }
+        },
+        "Mount Zagoras": {
+            "Mount Zagoras_1": {
+                "centerX": [-3700, 0, 1800, 2800],
+                "centerY": [1800, 400, -200, -1200],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 170,
+                "correctY": 310,
+                "distanceConversion": 1
+            },
+            "Mount Zagoras_2": {
+                "centerX": [1600, -2500, -500, 900],
+                "centerY": [-500, -700, 900, 900],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 605,
+                "correctY": 175,
+                "distanceConversion": 1
+            },
+            "Mount Zagoras_3": {
+                "centerX": [-3300, 2300, -1300, 900],
+                "centerY": [300, -700, -900, 1300],
+                "originalScale": [7, 7, 7, 7],
+                "correctX": 780,
+                "correctY": 350,
+                "distanceConversion": 1
             }
         }
     },
