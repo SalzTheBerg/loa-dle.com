@@ -88,10 +88,10 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     createParagraph(p, geoGuessResponseMessage);
     createParagraph(disclaimer, geoGuessResponseMessage);
 
-    alert(x);
-    alert(y);
-    alert(distance);
-    //guessed = true;
+    //alert(x);
+    //alert(y);
+    //alert(distance);
+    guessed = true;
 });
 
 export function geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImage) {

@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Loads the daily image randomly and adding it to the DOM
 function loadImg() {
-    /*fetch("./Scripts/getDailyLocation.php")
+    fetch("./Scripts/getDailyLocation.php")
         .then(response => response.json())
         .then(data => {
             dailyContinent = data.continentName;
@@ -100,9 +100,9 @@ function loadImg() {
             dailyImage = document.getElementById("dailyLocation");
             dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
         })
-        .catch(error => console.error('Error fetching data:', error));*/
+        .catch(error => console.error('Error fetching data:', error));
     
-    dailyContinent = "Rethramis";
+    /*dailyContinent = "Rethramis";
     dailyArea = "Rethramis Border";
     dailyLocationImage = "Rethramis Border_3";
     locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
@@ -113,7 +113,7 @@ function loadImg() {
     originalScale = 7;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
-    dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
+    dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";*/
 }
 
 function readContinentInput() {
