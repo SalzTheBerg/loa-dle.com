@@ -17,6 +17,10 @@ let dailyClass;
 const rotationAngles = [90, 180, 270];
 const dailyRotation = rotationAngles[Math.floor(Math.random()*rotationAngles.length)];
 const hash = fnv1aHash(today);
+let guessAmount = 0;
+let nameGuessed = false;
+let guessWithoutGrayscale = false;
+let guessWithoutRotation = false;
 
 // Id selectors
 const guessTable = document.getElementById("guessTable");
@@ -121,6 +125,7 @@ function readSkillInput () {
 
     if (skillInputContent.value.toLowerCase() === dailySkill.toLowerCase()) {
         skillResponseMessage.innerHTML = "Skill name and class entered correctly!<br>Congratulations!";
+        nameGuessed = true;
     }
     else if (abilityList[dailyClass].abilities.includes(skillInputContent.value)) {
         skillResponseMessage.innerHTML = "Wrong! ):<<br>The skill to guess was: " + dailySkill.replace(/_/g, ":") + "<br>At least you got the class right!";
@@ -131,6 +136,8 @@ function readSkillInput () {
         return;
     }
     skillInputContainer.style.display = "none";
+
+    getScore();
 }
 
 // Handles the logic for class Guessing (calling a lot of functions) -> creates table and automatically closes input when correct answer is given
@@ -160,6 +167,7 @@ function readClassInput () {
 
 // Creates a tablerow and checks if its the correct guess
 function createRow(index) {
+    guessAmount += 1;
     let newRow = guessTable.insertRow(0);
     let classGuess = availableClasses[index];
     let newCell = newRow.insertCell(0);
@@ -193,6 +201,7 @@ function createRow(index) {
 
 // Prepares the skill guess Container with suggestions
 function prepareSkillGuess () {
+
     const img = document.createElement('img');
     img.src = 'AbilityImages/' + dailyClass + '/' + dailySkill + '.webp';
     responseMessage.prepend(img);
@@ -252,4 +261,44 @@ function checkForGenderUnlock(classGuess) {
         }
     }
     return false;
+}
+
+window.addEventListener("grayscaleDeactivated", () => {
+    guessWithoutGrayscale = guessAmount;
+});
+
+window.addEventListener("rotationDeactivated", () => {
+    guessWithoutRotation = guessAmount;
+});
+
+function getScore() {
+    if (typeof(guessWithoutGrayscale) === "boolean") {
+        guessWithoutGrayscale = guessAmount;
+    }
+    if (typeof(guessWithoutRotation) === "boolean") {
+        guessWithoutRotation = guessAmount;
+    }
+
+    const data = {
+        guesses: guessAmount,
+        nameGuessed: nameGuessed,
+        withoutGrayscale: guessWithoutGrayscale,
+        withoutRotation: guessWithoutRotation
+    };
+    alert(guessAmount);
+    alert(guessWithoutGrayscale);
+    alert(guessWithoutRotation);
+  
+    fetch('./Scripts/getScore.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        console.log('Score vom Server:', response.score);
+    })
+    .catch(error => console.error('Fehler:', error));
 }

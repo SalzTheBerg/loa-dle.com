@@ -33,18 +33,44 @@ window.addEventListener("dailySkillImageReady", (e) => {
 
     if (toggleGrayscale.checked) {
         dailyImage.style.filter = "grayscale(100%)";
+    } else {
+        grayscaleDeactivated();
     }
     
     if (toggleRotation.checked) {
         dailyImage.style.transform = "rotate(" + dailyRotation + "deg)";
+    } else {
+        rotationDeactivated();
     }
 
     toggleGrayscale.addEventListener("change", (ev) => {
         dailyImage.style.filter = ev.target.checked ? "grayscale(100%)" : "none";
+        if (!ev.target.checked) {
+            grayscaleDeactivated();
+        }
     });
     
     toggleRotation.addEventListener("change", (ev) => {
         dailyImage.style.transform = ev.target.checked ? "rotate(" + dailyRotation + "deg)" : "none";
+        if (!ev.target.checked) {
+            rotationDeactivated();
+        }
     });
 });
-  
+
+let grayscaleInactive = false;
+let rotationInactive = false;
+
+function grayscaleDeactivated() {
+    if (!grayscaleInactive) {
+        grayscaleInactive = true;
+        window.dispatchEvent(new CustomEvent("grayscaleDeactivated"));
+    }
+}
+
+function rotationDeactivated() {
+    if (!rotationInactive) {
+        rotationInactive = true;
+        window.dispatchEvent(new CustomEvent("rotationDeactivated"));
+    }
+}
