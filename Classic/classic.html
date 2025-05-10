@@ -30,17 +30,52 @@
             </div>
         </div>
 
+        <div id="guide" class="container">
+            <h2 style="margin-bottom: 20px; font-size: 34px;">Guide <img id="classicGuide" class="icon" src="../questionmark.webp" width="20px"  height="20px" style="vertical-align: 14px;"></h2>
+            <button id="closeGuide" class="closeButton">✖</button>
+            <div class="flexRow" style="gap: 40px;">
+                <div class="flexColumn">
+                    <img style="width: 50px; height: 50px; background-color: rgb(96, 220, 0); border: 2px solid rgb(255, 202, 87);">
+                    <p>Correct</p>
+                </div>
+                <div class="flexColumn">
+                    <img style="width: 50px; height: 50px; background-color: rgb(221, 199, 0); border: 2px solid rgb(255, 202, 87);">
+                    <p>Partially</p>
+                </div>
+                <div class="flexColumn">
+                    <img style="width: 50px; height: 50px; background-color: rgb(238, 42, 0); border: 2px solid rgb(255, 202, 87);">
+                    <p>Wrong</p>
+                </div>
+                <div class="flexColumn">
+                    <div style="width: 50px; height: 50px; border: 2px solid rgb(255, 202, 87); position: relative;">
+                        <svg class="arrowIcon" width="800px" height="800px" viewBox="0 0 20 20" style="z-index: 0; opacity: 0.2">
+                            <path d="M10 2.5l7.5 7.5H14v7H6v-7H2.5L10 2.5z"/>
+                        </svg>
+                    </div>
+                    <p>Later</p>
+                </div>
+                <div class="flexColumn">
+                    <div style="width: 50px; height: 50px; border: 2px solid rgb(255, 202, 87); position: relative;">
+                        <svg class="arrowIcon" width="800px" height="800px" viewBox="0 0 20 20" style="z-index: 0; opacity: 0.2">
+                            <path d="M2.5 10H6V3h8v7h3.5L10 17.5 2.5 10z"/>
+                        </svg>
+                    </div>
+                    <p>Earlier</p>
+                </div>
+            </div>
+        </div>
+
         <div id="tableContainer">
             <table id="guessTable" align="center" style="display: none;">
                 <tr>
-                    <th>Character</th>
-                    <th>Gender</th>
-                    <th>Race</th>
-                    <th>First Appearance</th>
-                    <th>Affinity</th>
-                    <th>Card Rarity</th>
-                    <th>Height</th>
-                    <th>Status</th>
+                    <th class="tooltip" data-tooltip="The character you guessed displayed as an image.">Character</th>
+                    <th class="tooltip" data-tooltip="Male or female. Pretty straightforward">Gender</th>
+                    <th class="tooltip" data-tooltip="Their race or species. Delains are considered Human and Demon">Race</th>
+                    <th class="tooltip" data-tooltip="Their first story appearance if you do it chronologically. Partially means the Continent is right (e.g. Yudia shows partially when the character is in East Luterra)">First Appearance</th>
+                    <th class="tooltip" data-tooltip="The affinity towards the player. For most characters either Ally, Enemy or Unclear for some characters">Affinity</th>
+                    <th class="tooltip" data-tooltip="Their card’s rarity in the catalogue. Not counting Event exclusive cards (e.g. Azena under the Starlight). Some might have multiple rarities.">Card Rarity</th>
+                    <th class="tooltip" data-tooltip="Their approximate height. Some Legion Commanders (e.g. Akkan) are Giant during their 0x">Height</th>
+                    <th class="tooltip" data-tooltip="Alive, Deceased with rare exceptions">Status</th>
                 </tr>
             </table>
         </div>
@@ -49,6 +84,7 @@
             <div id="responseMessage">
                 <div id="responseMessageText"></div>
             </div>
+            <div id="scoreClassic" class="score"></div>
         </div>
 
         <br>
@@ -61,10 +97,11 @@
         </a>
 
         <div id="footer">
-            <img id="info" src="../info.webp" width="64px"  height="64px">
+            <img id="info" class="icon" src="../info.webp" width="50px"  height="50px">
         </div>
         
         <script type="module" src="Scripts/classic.js"></script>
         <script src="../about.js"></script>
+        <script src="Scripts/guide.js"></script>
     </body>
 </html>

@@ -9,6 +9,9 @@ let characterList = [];
 let availableCharacterNames = [];
 let characterToGuess;
 
+let guessAmount = 0;
+let correctAttributes = 0;
+
 // Consts
 const hash = fnv1aHash(today);
 //remove once dict is done
@@ -39,9 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
             characterList = data;
             availableCharacterNames = Object.keys(characterList);
             //availableCharacterNames.sort();
-
-            console.log(characterList);
-            console.log(availableCharacterNames);
 
             getDailyCharacter();
 
@@ -108,6 +108,8 @@ function readInput () {
 
 // Creates a tablerow and checks if its the correct guess
 function createRow(indexOfChar) {
+    guessAmount++;
+
     let guess = availableCharacterNames[indexOfChar];
     let newRow = guessTable.insertRow(1);
 
@@ -126,6 +128,7 @@ function createRow(indexOfChar) {
 
         if(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName])) {
             newCell.style.backgroundColor = correctColor;
+            correctAttributes++;
         } else if(guessChar[attributeName].constructor === Array && guessChar[attributeName].some(item => targetChar[attributeName].includes(item))) {
             newCell.style.backgroundColor = partialMatchColor;
         } else {
@@ -158,10 +161,11 @@ function createRow(indexOfChar) {
         setTimeout(() => {
             newCell.classList.remove("cellHidden");
             newCell.classList.add("animatedCell");
-        }, i * 500);
+        }, i * 350);
         if (i === attributes.length - 1) {
             newCell.addEventListener("animationend", () => {
                 if (characterToGuess === guess) {
+                    document.getElementById("guide").style.display = "none";
                     const img = document.createElement('img');
                     img.src = 'Icons/' + guess + '.webp';
                     let h2 = 'Congratulations!';
@@ -172,8 +176,34 @@ function createRow(indexOfChar) {
                     createParagraph(p, responseMessageText);
     
                     correctGuess(gameContainer, responseContainer, responseMessage);
+
+                    getScore();
                 }
             }, { once: true });
         }
     }
+}
+
+function getScore() {
+
+    const data = {
+        guesses: guessAmount,
+        correctAttributes: correctAttributes
+    };
+  
+    fetch('./Scripts/getScore.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        const scoreElement = document.getElementById('scoreClassic');
+        if (scoreElement) {
+            scoreElement.textContent = `Your score for the classic mode today: ${response.score}`;
+        }
+    })
+    .catch(error => console.error('Fehler:', error));
 }

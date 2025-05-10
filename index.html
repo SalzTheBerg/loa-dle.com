@@ -7,11 +7,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>LoA-dle</h1>
+        <img src="./Backgrounds/loadle.png">
 
         <a class="link" href="Classic/classic.html">
             <div>
                 <h2>Classic</h2>
+                <hr class="underline">
                 <p>Guess the character</p>
             </div>
         </a>
@@ -19,6 +20,7 @@
         <a class="link" href="Ability/ability.html">
             <div>
                 <h2>Ability</h2>
+                <hr class="underline">
                 <p>Which class has this ability?</p>
             </div>
         </a>
@@ -26,14 +28,30 @@
         <a class="link" href="Location/location.html">
             <div>
                 <h2>Location</h2>
+                <hr class="underline">
                 <p>Where was the image taken?</p>
             </div>
         </a>
 
         <div id="footer">
-            <img id="info" src="info.webp" width="64px"  height="64px">
+            <img id="info" class="icon" src="info.webp" width="50px"  height="50px">
         </div>
 
+        <div id="notice" class="infoDiv" style="display: none;">
+            <h2 style="margin-top: 0;">Early Access Notice</h2>
+            <p>This site is still in early access and actively being developed.<br>
+                You may encounter bugs or unfinished features.<br>
+                Visuals and gameplay elements will continue to improve with future updates.<br>
+                Thanks for your patience and feedback!
+            </p>
+            <button class="confirmButton" onclick="closeNotice()">Go !</button>
+        </div>
+       
+        <footer style="text-align: center; padding: 20px; font-size: 14px;">
+            <a href="/impressum.html">Impressum (nach § 5 TMG)</a>
+        </footer>
+
         <script src="about.js"></script>
+        <script src="notice.js"></script>
     </body>
 </html>

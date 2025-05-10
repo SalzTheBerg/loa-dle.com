@@ -18,6 +18,9 @@ geoGuessMap.addEventListener("mousedown", (e) => {
 
     let distance = Math.sqrt(Math.pow(correctX - x, 2) + Math.pow(correctY - y, 2));
 
+    const event = new CustomEvent('distanceCalculated', { detail: distance });
+    document.dispatchEvent(event);
+
     const marker = document.createElement("img");
     marker.src = "MapMarker.png";
     marker.style.position = "absolute";

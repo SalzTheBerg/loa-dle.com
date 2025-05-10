@@ -124,11 +124,11 @@ function readSkillInput () {
     skillInputContent.value = autocomplete;
 
     if (skillInputContent.value.toLowerCase() === dailySkill.toLowerCase()) {
-        skillResponseMessage.innerHTML = "Skill name and class entered correctly!<br>Congratulations!";
+        skillResponseMessage.innerHTML = "<p>Skill name and class entered correctly!</p><p><strong>Congratulations!</strong></p>";
         nameGuessed = true;
     }
     else if (abilityList[dailyClass].abilities.includes(skillInputContent.value)) {
-        skillResponseMessage.innerHTML = "Wrong! ):<<br>The skill to guess was: " + dailySkill.replace(/_/g, ":") + "<br>At least you got the class right!";
+        skillResponseMessage.innerHTML = "<p>The skill to guess was: <strong>" + dailySkill.replace(/_/g, ":") + "</strong>,<br>at least you got the class right!</p>";
     }
     else {
         skillInputContent.value = "";
@@ -285,9 +285,6 @@ function getScore() {
         withoutGrayscale: guessWithoutGrayscale,
         withoutRotation: guessWithoutRotation
     };
-    alert(guessAmount);
-    alert(guessWithoutGrayscale);
-    alert(guessWithoutRotation);
   
     fetch('./Scripts/getScore.php', {
         method: 'POST',
@@ -298,7 +295,10 @@ function getScore() {
     })
     .then(res => res.json())
     .then(response => {
-        console.log('Score vom Server:', response.score);
+        const scoreElement = document.getElementById('scoreAbility');
+        if (scoreElement) {
+            scoreElement.textContent = `Your score for the ability mode today: ${response.score}`;
+        }
     })
     .catch(error => console.error('Fehler:', error));
 }

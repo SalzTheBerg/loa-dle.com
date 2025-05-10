@@ -20,6 +20,8 @@ let originalScale;
 let currentScale;
 
 let correctAreaInput = false;
+let continentGuessAmount = 0;
+let areaGuessAmount = 0;
 
 // Consts
 const hash = fnv1aHash(today);
@@ -140,6 +142,7 @@ function readContinentInput() {
 }
 
 function createRow(indexOfContinent) {
+    continentGuessAmount++;
 
     let newRow = guessTable.insertRow(0);
     let continentGuess = availableContinents[indexOfContinent];
@@ -185,6 +188,7 @@ function readAreaInput() {
         if (correctAreaInput) {
             return;
         }
+        areaGuessAmount++;
 
         if (this.innerHTML === dailyArea) {
             this.style.backgroundColor = correctColor;
@@ -231,3 +235,30 @@ function prepareGeoguesser() {
         });
     };
 }
+
+document.addEventListener('distanceCalculated', function(e) {
+    const distance = e.detail;
+
+    const data = {
+        continentGuesses: continentGuessAmount,
+        areaGuesses: areaGuessAmount,
+        areaAmount: getAvailableAreas().length,
+        distance: e.detail
+    };
+
+    fetch('./Scripts/getScore.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        const scoreElement = document.getElementById('scoreLocation');
+        if (scoreElement) {
+            scoreElement.textContent = `Your score for the location mode today: ${response.score}`;
+        }
+    })
+    .catch(error => console.error('Fehler:', error));
+});

@@ -3,25 +3,17 @@
 $input = json_decode(file_get_contents('php://input'), true);
 
 $guesses = $input['guesses'];
-$nameGuessed = $input['nameGuessed'];
-$withoutGrayscale = $input['withoutGrayscale'];
-$withoutRotation = $input['withoutRotation'];
+$correctAttributes = $input['correctAttributes'];
 
-$score = 8000;
-if ($withoutGrayscale === 0) {
-    $score -= 500;
-}
-if ($withoutRotation === 0) {
-    $score -= 200;
-}
+$score = 10000;
 
 $firstPenaltyThreshold = 5;
 $secondPenaltyThreshold = 10;
-$highPenalty = 750;
-$mediumPenalty = 450;
-$lowPenalty = 250;
+$highPenalty = 1350;
+$mediumPenalty = 750;
+$lowPenalty = 350;
 
-$falseGuesses = $guesses - 1;
+$falseGuesses = max(0, $guesses - 2);
 
 if ($falseGuesses > 0) {
     $highPenaltyTurns = min($falseGuesses, $firstPenaltyThreshold);
@@ -33,11 +25,6 @@ if ($falseGuesses > 0) {
     $score -= $lowPenaltyTurns * $lowPenalty;
 }
 
-if ($nameGuessed) {
-    $score += 2000;
-}
-
-$score -= ($guesses - $withoutGrayscale) * 100;
-$score -= ($guesses - $withoutRotation) * 25;
+$score += $correctAttributes * 20;
 
 echo json_encode(['score' => min(10000, max(0, $score))]);
