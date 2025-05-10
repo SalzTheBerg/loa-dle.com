@@ -28,7 +28,7 @@
 - Wildsoul incomplete / Artillerist missing
 
 ### __Character__
-- Add information when hovering over th description
+- ~~Add information when hovering over th description~~
 - Validate Attributes
 - ~~Implement same region green arrow depending on order seen~~
 - Reverse check card rarity
