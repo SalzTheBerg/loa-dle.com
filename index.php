@@ -75,7 +75,7 @@ setcookie($cookieName, $randomId, $expiry, "/");
         </div>
        
         <footer style="text-align: center; padding: 20px; font-size: 14px;">
-            <a href="/impressum.html">Impressum (nach § 5 TMG)</a>
+            <a href="./impressumNotice.html">Impressum (nach § 5 TMG)</a>
         </footer>
 
         <script src="about.js"></script>
