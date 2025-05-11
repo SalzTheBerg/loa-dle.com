@@ -1,5 +1,5 @@
 <?php
-require_once '../../config.php';
+/*require_once '../../config.php';
 
 $json = file_get_contents("../Objects/characterList.json");
 $data = json_decode($json, true);
@@ -37,4 +37,4 @@ foreach ($data as $name => $info) {
     $stmt->close();
 }
 
-echo "<h3>Successful.</h3>";
+echo "<h3>Successful.</h3>";*/

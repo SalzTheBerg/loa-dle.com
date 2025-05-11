@@ -39,6 +39,16 @@
         "Status": ["Alive"],
         "Continent": "Vern"
     },
+    "Azakiel": {
+        "Gender": "Male",
+        "Race": ["Lazenith"],
+        "First Appearance": "Elgacia",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Elgacia"
+    },
     "Azena": {
         "Gender": "Female",
         "Race": ["Sylvain"],
@@ -278,6 +288,16 @@
         "Height": ["Average"],
         "Status": ["Alive"],
         "Continent": "Yorn"
+    },
+    "Narkiel": {
+        "Gender": "Male",
+        "Race": ["Demon"],
+        "First Appearance": "Atlas",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Large"],
+        "Status": ["Deceased"],
+        "Continent": "Atlas"
     },
     "Neria": {
         "Gender": "Female",

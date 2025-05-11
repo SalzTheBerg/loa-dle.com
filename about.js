@@ -1,10 +1,19 @@
 document.getElementById("info").addEventListener("click", () => {
+    dispayInfoDiv();
+});
+
+document.getElementById("privacyPolicy").addEventListener("click", () => {
+    dispayInfoDiv();
+});
+
+function dispayInfoDiv() {
     let overlay = document.getElementById("overlay");
     let infoDiv = document.getElementById("aboutDiv");
 
     if (!overlay) {
         overlay = document.createElement("div");
         overlay.classList.add("overlay");
+        overlay.setAttribute("id", "overlay");
         document.body.appendChild(overlay);
     }
 
@@ -43,4 +52,4 @@ document.getElementById("info").addEventListener("click", () => {
 
     infoDiv.style.display = "block";
     overlay.style.display = "block";
-});
+}

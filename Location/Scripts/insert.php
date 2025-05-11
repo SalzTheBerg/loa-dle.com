@@ -1,5 +1,5 @@
 <?php
-require_once '../../config.php';
+/*require_once '../../config.php';
 
 $json = file_get_contents("../Objects/locationSpecifications.json");
 $data = json_decode($json, true);
@@ -49,4 +49,5 @@ foreach ($data as $continent => $areas) {
     }
 }
 
-echo "<h3>Successful.</h3>";
+echo "<h3>Successful.</h3>";*/
+echo "<h3>Remove php comments to use this script.</h3>";

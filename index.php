@@ -34,7 +34,7 @@ setcookie($cookieName, $randomId, $expiry, "/");
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <img src="./Backgrounds/loadle.png">
+        <img src="./Backgrounds/logo.png" alt="Logo of the loa-dle (lostarkdle) minigame website." style="width: 500px; padding: 50px;">
 
         <a class="link" href="Classic/classic.html">
             <div>
@@ -74,7 +74,9 @@ setcookie($cookieName, $randomId, $expiry, "/");
             <button class="confirmButton" onclick="closeNotice()">Go !</button>
         </div>
        
-        <footer style="text-align: center; padding: 20px; font-size: 14px;">
+        <footer style="max-width: 300px font-size: 14px; display: flex; flex-direction: column;">
+            <a href="./index.php">loa-dle.com</a>
+            <a id="privacyPolicy">Privacy Policy</a>
             <a href="./impressumNotice.html">Impressum (nach § 5 TMG)</a>
         </footer>
 

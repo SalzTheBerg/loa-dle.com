@@ -32,6 +32,12 @@ body {
     font-size: 24px;
 }
 
+footer a {
+    text-decoration: underline;
+    color: #5c0099;
+    cursor: pointer;
+}
+
 #gameContainer {
     width: 30%;
     margin: auto;
