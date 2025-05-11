@@ -1,5 +1,5 @@
 document.getElementById("info").addEventListener("click", () => {
-    let overlay = document.querySelector(".overlay");
+    let overlay = document.getElementById("overlay");
     let infoDiv = document.getElementById("aboutDiv");
 
     if (!overlay) {
@@ -16,12 +16,12 @@ document.getElementById("info").addEventListener("click", () => {
             <h2>About</h2>
             <button class="closeButton">✖</button>
             <hr class="underline">
-            <p>Guess a new Lost Ark character every day – across three unique game modes: <strong>Classic</strong>, <strong>Ability</strong>, and <strong>Location</strong>. This site is not affiliated with or endorsed by Amazon Games or Smilegate RPG. It was created under Amazon’s 
+            <p>Guess a new Lost Ark character/class/location every day – across three unique game modes: <strong>Classic</strong>, <strong>Ability</strong>, and <strong>Location</strong>. This site is not affiliated with or endorsed by Amazon Games or Smilegate RPG. It was created under Amazon’s 
                 <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GNX7GA7HXVL9V8XZ&pop-up=1&ref=d6k_applink_bb_dls&dplnkId=918af686-541f-4591-86b1-8274ec899788&dplnkId=ca5876ce-64a6-4bdc-a374-f2501c47bfbc" target="_blank" rel="noopener noreferrer">Content Usage Policy</a></p>
             <br>
             <h2>Privacy Policy</h2>
             <hr class="underline">
-            <p>This website does not collect, store, or transmit any personal data. No information is sent to the server apart from what is technically required to load the page.</p>
+            <p>This website uses essential cookies to store game-related data such as your guesses and scores. These cookies are necessary for restoring your game progress and ensuring the core functionality of the site. No personal data is collected beyond what is required for gameplay. No analytics, tracking, or advertising cookies are used. All data is used solely to support your game experience and is not shared with third parties.</p>
             <br>
             <h2>Contact</h2>
             <hr class="underline">

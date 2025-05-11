@@ -23,6 +23,14 @@ let correctAreaInput = false;
 let continentGuessAmount = 0;
 let areaGuessAmount = 0;
 
+let existingScore = null;
+let existingContinentGuesses = null;
+let existingAreaGuesses = null;
+let existingX = null;
+let existingY = null;
+let saveContinents = true;
+let saveAreas = true;
+
 // Consts
 const hash = fnv1aHash(today);
 const randomSeed = hash % 4;
@@ -101,8 +109,10 @@ function loadImg() {
             currentScale = originalScale;
             dailyImage = document.getElementById("dailyLocation");
             dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
+
+            loadLocationSave();
         })
-        .catch(error => console.error('Error fetching data:', error));
+    .catch(error => console.error('Error fetching data:', error));
     
     /*dailyContinent = "Rethramis";
     dailyArea = "Rethramis Border";
@@ -142,10 +152,13 @@ function readContinentInput() {
 }
 
 function createRow(indexOfContinent) {
-    continentGuessAmount++;
-
     let newRow = guessTable.insertRow(0);
     let continentGuess = availableContinents[indexOfContinent];
+
+    continentGuessAmount++;
+    if (saveContinents) {
+    saveContinentGuess(continentGuess);
+    }
 
     let newCell = newRow.insertCell(0);
     newCell.innerHTML = continentGuess;
@@ -189,6 +202,9 @@ function readAreaInput() {
             return;
         }
         areaGuessAmount++;
+        if (saveAreas) {
+            saveAreaGuess(this.innerHTML);
+        }
 
         if (this.innerHTML === dailyArea) {
             this.style.backgroundColor = correctColor;
@@ -211,6 +227,20 @@ function prepareAreaGuess() {
         x.addEventListener("click", readAreaInput);
         areaInputDiv.appendChild(x);
     });
+
+    if (existingAreaGuesses !== null) {
+        saveAreas = false;
+        let buttons = document.getElementsByClassName("button");
+        const array = JSON.parse(existingAreaGuesses);
+        array.forEach(guess => {
+            for (let i = 0; i < buttons.length; i++) {
+                if (buttons[i].innerHTML === guess) {
+                    buttons[i].click();
+                }
+            }
+        });
+        saveAreas = true;
+    }
 }
 
 function prepareGeoguesser() {
@@ -233,11 +263,29 @@ function prepareGeoguesser() {
             behavior: "smooth",
             block: "center"
         });
+
+        if (existingX !== null && existingY !== null) {
+            const geoGuessMap = document.getElementById("geoGuessMap");
+            const event = new MouseEvent("mousedown", {
+                bubbles: true,
+                cancelable: true,
+                view: window,
+                clientX: geoGuessMap.getBoundingClientRect().left + existingX,
+                clientY: geoGuessMap.getBoundingClientRect().top + existingY
+            });
+            geoGuessMap.dispatchEvent(event);
+        }
     };
 }
 
 document.addEventListener('distanceCalculated', function(e) {
-    const distance = e.detail;
+    if (existingScore !== null && existingScore !== 0) {
+        const scoreElement = document.getElementById('scoreLocation');
+        scoreElement.textContent = `Your score for the location mode today: ${existingScore}`;
+
+        getRanking(existingScore);
+        return;
+    }
 
     const data = {
         continentGuesses: continentGuessAmount,
@@ -256,9 +304,89 @@ document.addEventListener('distanceCalculated', function(e) {
     .then(res => res.json())
     .then(response => {
         const scoreElement = document.getElementById('scoreLocation');
-        if (scoreElement) {
-            scoreElement.textContent = `Your score for the location mode today: ${response.score}`;
-        }
+        scoreElement.textContent = `Your score for the location mode today: ${response.score}`;
+
+        getRanking(response.score);
     })
-    .catch(error => console.error('Fehler:', error));
+    .catch(error => console.error('error:', error));
 });
+
+function getRanking(score) {
+    const data = {
+        score: score
+    };
+
+    fetch('Scripts/getLocationRanking.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        const rankingElement = document.getElementById('rankingLocation');
+        rankingElement.innerHTML = `<hr class="underline" style="background-color: rgb(255, 202, 87);">
+  You're in the <span style="color: rgb(82, 220, 255);">top ${response.percentage}%</span> of 
+  <span style="color: rgb(82, 220, 255)">${response.all}</span> location players today.`;
+    })
+    .catch(error => console.error('error:', error));
+}
+
+function saveContinentGuess(guess) {
+    const data = {
+        guess: guess
+    };
+
+    fetch('./Scripts/saveContinentGuess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
+}
+
+function saveAreaGuess(guess) {
+    const data = {
+        guess: guess
+    };
+
+    fetch('./Scripts/saveAreaGuess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
+}
+
+function loadLocationSave() {
+    fetch("./Scripts/loadLocationSave.php")
+        .then(response => response.json())
+        .then(data => {
+            existingScore = data.score,
+            existingContinentGuesses = data.guessedContinents,
+            existingAreaGuesses = data.guessedAreas,
+            existingX = data.x,
+            existingY = data.y
+
+            if (existingContinentGuesses !== null) {
+                saveContinents = false;
+                guessTable.style.display = "table";
+                const array = JSON.parse(existingContinentGuesses);
+                array.forEach(guess => {
+                    continentInputContent.value = guess;
+                    readContinentInput();
+                });
+                saveContinents = true;
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}

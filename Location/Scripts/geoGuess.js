@@ -16,6 +16,8 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     const x = e.offsetX;
     const y = e.offsetY;
 
+    saveGeoguess(x, y);
+
     let distance = Math.sqrt(Math.pow(correctX - x, 2) + Math.pow(correctY - y, 2));
 
     const event = new CustomEvent('distanceCalculated', { detail: distance });
@@ -71,20 +73,15 @@ geoGuessMap.addEventListener("mousedown", (e) => {
 
 
     if (distance < 30) {
-        h2 = 'Congratulations';
-        p =  'You absolutely smurfed it with a distance of ' + distanceM + ' m !';
+        p =  'Congratulations! You absolutely smurfed it with a distance of ' + distanceM + ' m !';
     } else if (distance < 100) {
-        h2 = 'Nice';
-        p = 'That counts, you were ' + distanceM + ' m away!';
+        p = 'Nice! That counts, you were ' + distanceM + ' m away!';
     } else if (distance < 200) {
-        h2 = 'Close';
-        p = 'You were ' + distanceM + ' m away !';
+        p = 'Close! You were ' + distanceM + ' m away !';
     } else if (distance < 350) {
-        h2 = 'Unlucky'
-        p = 'You were ' + distanceM + ' m away, come back tomorrow for another chance!';
+        p = 'Unlucky... You were ' + distanceM + ' m away, come back tomorrow for another chance!';
     } else {
-        h2 = 'Whoops D:';
-        p = 'You were ' + distanceM + ' m away, just pretend this never happened and try again tomorrow!';
+        p = 'Whoops... You were ' + distanceM + ' m away, just pretend this never happened and try again tomorrow!';
     } 
 
     createHeader(h2, 2, geoGuessResponseMessage);
@@ -101,4 +98,22 @@ export function geoGuessInitializer(dailyContinent, dailyArea, dailyLocationImag
     correctX = getLocationSpecifications()[dailyContinent][dailyArea][dailyLocationImage].correctX;
     correctY = getLocationSpecifications()[dailyContinent][dailyArea][dailyLocationImage].correctY;
     distanceConversion = getLocationSpecifications()[dailyContinent][dailyArea][dailyLocationImage].distanceConversion;
+}
+
+function saveGeoguess(x, y) {
+    const data = {
+        guessX: x,
+        guessY: y
+    };
+
+    fetch('./Scripts/saveGeoguess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
 }

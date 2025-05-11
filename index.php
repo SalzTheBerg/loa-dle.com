@@ -1,3 +1,30 @@
+<?php
+require_once 'config.php';
+
+$cookieName = "loa_user_id";
+
+if (!isset($_COOKIE[$cookieName])) {
+    do {
+        $randomId = bin2hex(random_bytes(8));
+        $stmt = $mysqli->prepare("SELECT COUNT(*) FROM users WHERE user_id = ?");
+        $stmt->bind_param("s", $randomId);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        $stmt->fetch();
+        $stmt->close();
+    } while ($count > 0);
+
+    $insert = $mysqli->prepare("INSERT INTO users (user_id) VALUES (?)");
+    $insert->bind_param("s", $randomId);
+    $insert->execute();
+    $insert->close();
+
+} else {
+    $randomId = $_COOKIE[$cookieName];
+}
+$expiry = time() + (365 * 24 * 60 * 60);
+setcookie($cookieName, $randomId, $expiry, "/");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +61,7 @@
         </a>
 
         <div id="footer">
-            <img id="info" class="icon" src="info.webp" width="50px"  height="50px">
+            <img id="info" class="icon" src="info.webp" width="32px"  height="32px">
         </div>
 
         <div id="notice" class="infoDiv" style="display: none;">

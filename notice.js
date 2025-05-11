@@ -7,4 +7,5 @@ window.addEventListener("load", () => {
 function closeNotice() {
   document.getElementById("notice").style.display = "none";
   localStorage.setItem("noticeShown", "true");
+  document.getElementById("info").click();
 }

@@ -12,6 +12,10 @@ let characterToGuess;
 let guessAmount = 0;
 let correctAttributes = 0;
 
+let existingScore = null;
+let existingCharacterGuesses = null;
+let saveCharacters = true;
+
 // Consts
 const hash = fnv1aHash(today);
 //remove once dict is done
@@ -67,6 +71,8 @@ function getDailyCharacter() {
         .then(response => response.json())
         .then(data => {
             characterToGuess = data.characterToGuess;
+
+            loadClassicSave();
         })
         .catch(error => console.error("Error fetching character:", error));
 
@@ -108,10 +114,14 @@ function readInput () {
 
 // Creates a tablerow and checks if its the correct guess
 function createRow(indexOfChar) {
-    guessAmount++;
 
     let guess = availableCharacterNames[indexOfChar];
     let newRow = guessTable.insertRow(1);
+
+    guessAmount++;
+    if (saveCharacters) {
+        saveCharacterGuess(guess);
+    }
 
     const guessChar = characterList[guess];
     const targetChar = characterList[characterToGuess];
@@ -158,33 +168,50 @@ function createRow(indexOfChar) {
                 newCell.style.backgroundColor = partialMatchColor;
             }
         }
+
+        if (saveCharacters) {
         setTimeout(() => {
             newCell.classList.remove("cellHidden");
             newCell.classList.add("animatedCell");
-        }, i * 350);
+            }, i * 350);
+        } else {
+            newCell.classList.remove("cellHidden");
+        }
         if (i === attributes.length - 1) {
-            newCell.addEventListener("animationend", () => {
+            const onGuessCorrect = () => {
                 if (characterToGuess === guess) {
                     document.getElementById("guide").style.display = "none";
                     const img = document.createElement('img');
                     img.src = 'Icons/' + guess + '.webp';
                     let h2 = 'Congratulations!';
                     let p = "You've guessed the daily character, you can check out the other modes or come back tomorrow.";
-    
+
                     responseMessage.prepend(img);
                     createHeader(h2, 2, responseMessageText);
                     createParagraph(p, responseMessageText);
-    
-                    correctGuess(gameContainer, responseContainer, responseMessage);
 
+                    correctGuess(gameContainer, responseContainer, responseMessage);
                     getScore();
                 }
-            }, { once: true });
+            };
+
+            if (saveCharacters) {
+                newCell.addEventListener("animationend", onGuessCorrect, { once: true });
+            } else {
+                onGuessCorrect();
+            }
         }
     }
 }
 
 function getScore() {
+    if (existingScore !== null && existingScore !== 0) {
+        const scoreElement = document.getElementById('scoreClassic');
+        scoreElement.textContent = `Your score for the classic mode today: ${existingScore}`;
+
+        getRanking(existingScore);
+        return;
+    }
 
     const data = {
         guesses: guessAmount,
@@ -203,7 +230,69 @@ function getScore() {
         const scoreElement = document.getElementById('scoreClassic');
         if (scoreElement) {
             scoreElement.textContent = `Your score for the classic mode today: ${response.score}`;
+
+            getRanking(response.score);
         }
     })
     .catch(error => console.error('Fehler:', error));
+}
+
+function getRanking(score) {
+    const data = {
+        score: score
+    };
+
+    fetch('Scripts/getClassicRanking.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        const rankingElement = document.getElementById('rankingClassic');
+        rankingElement.innerHTML = `<hr class="underline" style="background-color: rgb(255, 202, 87);">
+  You're in the <span style="color: rgb(82, 220, 255);">top ${response.percentage}%</span> of 
+  <span style="color: rgb(82, 220, 255)">${response.all}</span> classic players today.`;
+    })
+    .catch(error => console.error('error:', error));
+}
+
+function saveCharacterGuess(guess) {
+    const data = {
+        guess: guess
+    };
+
+    fetch('./Scripts/saveCharacterGuess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
+}
+
+function loadClassicSave() {
+    fetch("./Scripts/loadClassicSave.php")
+        .then(response => response.json())
+        .then(data => {
+            existingScore = data.score,
+            existingCharacterGuesses = data.guessedCharacters
+
+            if (existingCharacterGuesses !== null) {
+                saveCharacters = false;
+                guessTable.style.display = "table";
+                const array = JSON.parse(existingCharacterGuesses);
+                array.forEach(guess => {
+                    characterInputContent.value = guess;
+                    readInput();
+                });
+                saveCharacters = true;
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }

@@ -1,7 +1,7 @@
 <?php
 require_once '../../config.php';
 
-$currentDate = date(format: 'Y-m-d');
+$currentDate = date('Y-m-d');
 $mode = 'location';
 
 $query = "SELECT target FROM daily_targets WHERE date = '$currentDate' AND mode = '$mode'";

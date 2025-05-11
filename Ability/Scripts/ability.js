@@ -22,6 +22,12 @@ let nameGuessed = false;
 let guessWithoutGrayscale = false;
 let guessWithoutRotation = false;
 
+let existingScore = null;
+let existingClassGuesses = null;
+let existingSkillGuess = null;
+let saveClasses = true;
+let saveSkill = true;
+
 // Id selectors
 const guessTable = document.getElementById("guessTable");
 const image = document.getElementById("guessImage");
@@ -106,6 +112,8 @@ function loadImg () {
                 const event = new CustomEvent("dailySkillImageReady", { detail: { img: dailyImage } });
                 window.dispatchEvent(event);
             };
+
+            loadAbilitySave();
         })
         .catch(error => console.error('Error fetching data:', error));
 }
@@ -122,6 +130,10 @@ function readSkillInput () {
     });
 
     skillInputContent.value = autocomplete;
+
+    if (saveSkill) {
+        saveSkillGuess(autocomplete);
+    }
 
     if (skillInputContent.value.toLowerCase() === dailySkill.toLowerCase()) {
         skillResponseMessage.innerHTML = "<p>Skill name and class entered correctly!</p><p><strong>Congratulations!</strong></p>";
@@ -167,11 +179,15 @@ function readClassInput () {
 
 // Creates a tablerow and checks if its the correct guess
 function createRow(index) {
-    guessAmount += 1;
     let newRow = guessTable.insertRow(0);
     let classGuess = availableClasses[index];
     let newCell = newRow.insertCell(0);
     newCell.innerHTML = classGuess;
+
+    guessAmount++;
+    if (saveClasses) {
+        saveClassGuess(classGuess);
+    }
 
     if (availableClasses[index] === dailyClass) {
         newCell.style.backgroundColor = correctColor;
@@ -220,7 +236,6 @@ function prepareSkillGuess () {
         callback: readSkillInput
     });
 
-
     // Prevents mouse wheel up or down when at start / end
     skillSuggestionsContainer.addEventListener('wheel', function(e) {
         const atTop = skillSuggestionsContainer.scrollTop === 0;
@@ -229,6 +244,12 @@ function prepareSkillGuess () {
             e.preventDefault();
         }
     }, { passive: false });
+
+    if (existingSkillGuess !== null) {
+        saveSkill = false;
+        skillInputContent.value = existingSkillGuess;
+        readSkillInput();
+    }
 }
 
 
@@ -272,6 +293,14 @@ window.addEventListener("rotationDeactivated", () => {
 });
 
 function getScore() {
+    if (existingScore !== null && existingScore !== 0) {
+        const scoreElement = document.getElementById('scoreAbility');
+        scoreElement.textContent = `Your score for the ability mode today: ${existingScore}`;
+
+        getRanking(existingScore);
+        return;
+    }
+
     if (typeof(guessWithoutGrayscale) === "boolean") {
         guessWithoutGrayscale = guessAmount;
     }
@@ -298,7 +327,88 @@ function getScore() {
         const scoreElement = document.getElementById('scoreAbility');
         if (scoreElement) {
             scoreElement.textContent = `Your score for the ability mode today: ${response.score}`;
+
+            getRanking(response.score);
         }
     })
     .catch(error => console.error('Fehler:', error));
+}
+
+function getRanking(score) {
+    const data = {
+        score: score
+    };
+
+    fetch('Scripts/getAbilityRanking.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(response => {
+        const rankingElement = document.getElementById('rankingAbility');
+        rankingElement.innerHTML = `<hr class="underline" style="background-color: rgb(255, 202, 87);">
+  You're in the <span style="color: rgb(82, 220, 255);">top ${response.percentage}%</span> of 
+  <span style="color: rgb(82, 220, 255)">${response.all}</span> ability players today.`;
+    })
+    .catch(error => console.error('error:', error));
+}
+
+
+function saveClassGuess(guess) {
+    const data = {
+        guess: guess
+    };
+
+    fetch('./Scripts/saveClassGuess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
+}
+
+function saveSkillGuess(guess) {
+    const data = {
+        guess: guess
+    };
+
+    fetch('./Scripts/saveSkillGuess.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving guess:', error);
+    });
+}
+
+function loadAbilitySave() {
+    fetch("./Scripts/loadAbilitySave.php")
+        .then(response => response.json())
+        .then(data => {
+            existingScore = data.score,
+            existingClassGuesses = data.guessedClasses,
+            existingSkillGuess = data.guessedSkill
+
+            if (existingClassGuesses !== null) {
+                saveClasses = false;
+                guessTable.style.display = "table";
+                const array = JSON.parse(existingClassGuesses);
+                array.forEach(guess => {
+                    classInputContent.value = guess;
+                    readClassInput();
+                });
+                saveClasses = true;
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }
