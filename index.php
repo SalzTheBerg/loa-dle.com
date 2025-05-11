@@ -82,5 +82,6 @@ setcookie($cookieName, $randomId, $expiry, "/");
 
         <script src="about.js"></script>
         <script src="notice.js"></script>
+        <script src="privacyPolicy.js"></script>
     </body>
 </html>

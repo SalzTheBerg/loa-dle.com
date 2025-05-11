@@ -1,4 +1,4 @@
-document.getElementById("info").addEventListener("click", () => {
+document.getElementById("privacyPolicy").addEventListener("click", () => {
     dispayInfoDiv();
 });
 
