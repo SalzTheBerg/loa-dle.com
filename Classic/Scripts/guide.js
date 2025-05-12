@@ -55,11 +55,11 @@ document.getElementById("closeGuide").addEventListener("click", () => {
         guideButton.classList.add("icon");
         guideButton.setAttribute("id", "guideButton")
         guideButton.style.position = "absolute";
-        guideButton.style.bottom = "10px";
-        guideButton.style.right = "10px";
+        guideButton.style.bottom = "-35px";
+        guideButton.style.right = "-30px";
         guideButton.innerHTML = '<img id="openClassicGuide" class="icon" src="../questionmark.webp" width="32px"  height="32px">'
-        let inputContainer = document.getElementById("inputContainer");
-        inputContainer.appendChild(guideButton);
+        let gameContainer = document.getElementById("gameContainer");
+        gameContainer.appendChild(guideButton);
         guideButton.addEventListener("click", () => {
             document.getElementById("guide").style.display = "block";
             guideButton.style.display = "none";
