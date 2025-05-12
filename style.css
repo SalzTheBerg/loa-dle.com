@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
 }
 
 .link{
@@ -14,8 +15,8 @@ body {
     align-items: center;
     margin: 40px auto 40px auto;
     font-weight: bold;
-    width: 35%;
-    height: 160px;
+    width: 40%;
+    height: 12vh;
     background: linear-gradient(to bottom, #100c24, #102434);
     border: 2px solid rgb(255, 202, 87);
     border-radius: 20px;
@@ -127,7 +128,7 @@ table {
 } th.tooltip:hover::before {
     content: '';
     position: absolute;
-    top: calc(130% - 8px); /* leicht über dem Tooltip */
+    top: calc(130% - 8px);
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     width: 16px;
@@ -136,6 +137,8 @@ table {
     border-left: 2px solid white;
     border-top: 2px solid white;
     z-index: 5;
+} .smallTable td {
+    font-size: 24px;
 }
 
 .suggestions {
@@ -219,7 +222,7 @@ table {
 #responseContainer {
     width: 30%;
     max-width: 600px;
-    height: 100%;
+    height: auto;
     margin: auto;
     border-radius: 10px;
     box-shadow:
@@ -277,7 +280,7 @@ table {
 
 #areaResponseContainer {
     width: 1400px;
-    height: 100%;
+    height: auto;
     margin: auto;
     border-radius: 10px;
     box-shadow:
@@ -417,6 +420,8 @@ table {
     position: absolute;
     top: 20px;
     right: 20px;
+} .icon {
+    padding: 20px;
 } .icon:hover {
     transform: scale(1.05);
     cursor: pointer;
@@ -483,4 +488,17 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 14px;
+}
+
+#dailyReset {
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: auto;
+    width: 400px;
+    height: auto;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+    /*border: solid 1px #ffca57;
+    background: linear-gradient(to bottom, #100c24, #102434);*/
 }

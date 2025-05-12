@@ -111,6 +111,14 @@ function loadImg () {
             dailyImage.onload = () => {
                 const event = new CustomEvent("dailySkillImageReady", { detail: { img: dailyImage } });
                 window.dispatchEvent(event);
+
+                image.addEventListener("contextmenu", (e) => {
+                    e.preventDefault();
+                });
+
+                image.addEventListener("dragstart", (e) => {
+                    e.preventDefault();
+                });
             };
 
             loadAbilitySave();

@@ -49,3 +49,45 @@ function dispayInfoDiv() {
     infoDiv.style.display = "block";
     overlay.style.display = "block";
 }
+
+document.getElementById("changelogIcon").addEventListener("click", () => {
+    displayChangelog();
+});
+
+function displayChangelog() {
+    let overlay = document.getElementById("overlay");
+    let changelogDiv = document.getElementById("changelogDiv");
+
+    if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        overlay.setAttribute("id", "overlay");
+        document.body.appendChild(overlay);
+    }
+
+    if (!changelogDiv) {
+        fetch("./changelog.html")
+            .then(response => response.text())
+            .then(html => {
+            document.body.insertAdjacentHTML("beforeend", html);
+
+            changelogDiv = document.getElementById("changelogDiv");
+
+            changelogDiv.querySelector(".closeButton").addEventListener("click", () => {
+                changelogDiv.style.display = "none";
+                overlay.style.display = "none";
+            });
+
+            overlay.addEventListener("click", () => {
+                changelogDiv.style.display = "none";
+                overlay.style.display = "none";
+            });
+
+            changelogDiv.style.display = "block";
+            overlay.style.display = "block";
+        });
+    } else {
+        changelogDiv.style.display = "block";
+        overlay.style.display = "block";
+    }
+}

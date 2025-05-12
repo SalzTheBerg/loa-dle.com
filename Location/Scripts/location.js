@@ -110,6 +110,14 @@ function loadImg() {
             dailyImage = document.getElementById("dailyLocation");
             dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";
 
+            dailyImage.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+            });
+
+            dailyImage.addEventListener("dragstart", (e) => {
+                e.preventDefault();
+            });
+
             loadLocationSave();
         })
     .catch(error => console.error('Error fetching data:', error));
@@ -176,6 +184,14 @@ function createRow(indexOfContinent) {
         createParagraph(p, continentResponseMessage);
 
         img.onload = () => {
+            img.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+            });
+
+            img.addEventListener("dragstart", (e) => {
+                e.preventDefault();
+            });
+
             correctGuess(continentInputContainer, continentResponseContainer, continentResponseMessage);
             prepareAreaGuess();
         }

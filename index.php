@@ -24,17 +24,22 @@ if (!isset($_COOKIE[$cookieName])) {
 }
 $expiry = time() + (365 * 24 * 60 * 60);
 setcookie($cookieName, $randomId, $expiry, "/");
+
+$currentTime = time();
+$targetTime = strtotime('tomorrow 00:00:00', $currentTime);
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>LoAdle</title>
+        <title>LoA-dle</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <img src="./Backgrounds/logo.png" alt="Logo of the loa-dle (lostarkdle) minigame website." style="width: 500px; padding: 50px;">
+
+        <div id="dailyReset"></div>
 
         <a class="link" href="Classic/classic.html">
             <div>
@@ -61,6 +66,7 @@ setcookie($cookieName, $randomId, $expiry, "/");
         </a>
 
         <div id="footer">
+            <img id="changelogIcon" class="icon" src="changelog.webp" width="32px"  height="32px">
             <img id="info" class="icon" src="info.webp" width="32px"  height="32px">
         </div>
 
@@ -83,5 +89,24 @@ setcookie($cookieName, $randomId, $expiry, "/");
         <script src="about.js"></script>
         <script src="notice.js"></script>
         <script src="privacyPolicy.js"></script>
+
+        <script>
+            const targetTime = <?php echo $targetTime * 1000; ?>;
+
+            function updateTimer() {
+                const currentTime = new Date().getTime();
+                const timeLeft = targetTime - currentTime;
+
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                const formatTime = (time) => (time < 10 ? "0" + time : time);
+
+                document.getElementById("dailyReset").innerHTML = `Daily reset: ${formatTime(hours)} : ${formatTime(minutes)} : ${formatTime(seconds)}`;
+            }
+
+            const timerInterval = setInterval(updateTimer, 1000);
+        </script>
     </body>
 </html>

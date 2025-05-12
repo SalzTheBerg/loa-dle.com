@@ -271,7 +271,7 @@
     },
     "Luterra": {
         "Gender": "Male",
-        "Race": ["Haal"],
+        "Race": ["Human"],
         "First Appearance": "West Luterra",
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
@@ -382,7 +382,7 @@
     "Thaemine": {
         "Gender": "Male",
         "Race": ["Demon"],
-        "First Appearance": "South Vern",
+        "First Appearance": "Feiton",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
@@ -392,7 +392,7 @@
     "Thar": {
         "Gender": "Male",
         "Race": ["Human"],
-        "First Appearance": "South Vern",
+        "First Appearance": "North Vern",
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
