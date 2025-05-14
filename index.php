@@ -104,6 +104,11 @@ $targetTime = strtotime('tomorrow 00:00:00', $currentTime);
                 const formatTime = (time) => (time < 10 ? "0" + time : time);
 
                 document.getElementById("dailyReset").innerHTML = `Daily reset: ${formatTime(hours)} : ${formatTime(minutes)} : ${formatTime(seconds)}`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    location.reload();
+                }
             }
 
             const timerInterval = setInterval(updateTimer, 1000);

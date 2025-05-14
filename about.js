@@ -73,11 +73,6 @@ function displayChangelog() {
 
             changelogDiv = document.getElementById("changelogDiv");
 
-            changelogDiv.querySelector(".closeButton").addEventListener("click", () => {
-                changelogDiv.style.display = "none";
-                overlay.style.display = "none";
-            });
-
             overlay.addEventListener("click", () => {
                 changelogDiv.style.display = "none";
                 overlay.style.display = "none";
