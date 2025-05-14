@@ -76,7 +76,37 @@
     },
     "Artillerist": {
         "abilities": [
-            
+            "A.C.O.M. Attack",
+            "A.C.O.M. Bombardment Support",
+            "Air Raid",
+            "Barrage Attack",
+            "Barrage_ Energy Cannon",
+            "Barrage_ Focus Fire",
+            "Barrage_ Howitzer",
+            "Barrage_ Impregnability",
+            "Barrage_ Steel Rain",
+            "Buckshot",
+            "Energy Field",
+            "Enhanced Shell",
+            "Flamethrower",
+            "Forward Barrage",
+            "Gatling Gun",
+            "Gravity Explosion",
+            "Heavy Turret",
+            "Homing Barrage",
+            "Howitzer",
+            "Jump Barrage",
+            "Kindle",
+            "Missile Barrage",
+            "Missile Launcher",
+            "Multi-Rocket Launcher",
+            "Napalm Shot",
+            "Plasma Storm",
+            "Pressurized Heatbomb",
+            "Roll",
+            "Stand Up",
+            "Summon Turret",
+            "Swing"
         ]
     },
     "Artist": {
