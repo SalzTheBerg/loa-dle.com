@@ -23,7 +23,7 @@
                 
             <div id="continentInputContainer">
                 <div id="continentInputDiv" class="inputDiv">
-                    <input type="text" id="continentInputContent" class="inputContent" placeholder="Enter area here..." autocomplete="off">
+                    <input type="text" id="continentInputContent" class="inputContent" placeholder="Enter continent here..." autocomplete="off">
                     <button id="continentInputSubmit" class="inputSubmit">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -72,6 +72,14 @@
 
         <div id="footer">
             <img id="info" class="icon" src="../info.webp" width="32px"  height="32px">
+        </div>
+
+        <div id="geoguessGuide" class="infoDiv" style="display: none; text-align: left;">
+            <h2 style="margin-top: 0; text-decoration: underline;">Quick reminder</h2>
+            <button class="closeButton">✖</button>
+            <p>Since I've seen a lot of people missing out on the geoguess feature I thought I'll add a quick reminder that you can click on the map after the area guess</p>
+            <p>And a small addition I'd like to add: Holy shit you guys are smurfin on this, I thought it would be way harder</p>
+            <img src="./guide.gif" style="width: 80%;">
         </div>
         
         <script type="module" src="Scripts/location.js"></script>

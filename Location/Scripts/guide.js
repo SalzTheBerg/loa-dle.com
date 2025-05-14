@@ -43,3 +43,14 @@ document.getElementById("openLocationGuide").addEventListener("click", () => {
     locationGuideDiv.style.display = "block";
     overlay.style.display = "block";
 });
+
+window.addEventListener("load", () => {
+  if (!localStorage.getItem("geoguessGuide")) {
+    let geoguessGuide = document.getElementById("geoguessGuide");
+    geoguessGuide.style.display = "flex";
+    geoguessGuide.querySelector(".closeButton").addEventListener("click", () => {
+            geoguessGuide.style.display = "none";
+            localStorage.setItem("geoguessGuide", "true");
+    });
+  }
+});

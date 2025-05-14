@@ -67,7 +67,6 @@ geoGuessMap.addEventListener("mousedown", (e) => {
     // Distance Conversion depending on Azena 16 kmh
     let distanceM = (distance * distanceConversion).toFixed(2);
     
-    let disclaimer = "(Distance was approximated by an estimated character speed of 16 km/h (for 1400 swift) on each map so it might be a bit off)";
     let h2;
     let p;
 
@@ -86,7 +85,6 @@ geoGuessMap.addEventListener("mousedown", (e) => {
 
     createHeader(h2, 2, geoGuessResponseMessage);
     createParagraph(p, geoGuessResponseMessage);
-    createParagraph(disclaimer, geoGuessResponseMessage);
 
     //alert(x);
     //alert(y);

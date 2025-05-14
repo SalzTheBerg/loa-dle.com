@@ -122,15 +122,15 @@ function loadImg() {
         })
     .catch(error => console.error('Error fetching data:', error));
     
-    /*dailyContinent = "Rethramis";
-    dailyArea = "Rethramis Border";
-    dailyLocationImage = "Rethramis Border_3";
+    /*dailyContinent = "West Luterra";
+    dailyArea = "Mount Zagoras";
+    dailyLocationImage = "Mount Zagoras_2";
     locationsInArea = Object.keys(locationSpecifications[dailyContinent][dailyArea]);
 
     image.innerHTML = '<img src="Continents/' + dailyContinent + '/' + dailyArea + '/' + dailyLocationImage + '.jpg" id="dailyLocation">';
-    centerX = 1700//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
-    centerY = 0//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeedTesting];
-    originalScale = 7;//locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
+    centerX = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerX[randomSeedTesting];
+    centerY = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].centerY[randomSeedTesting];
+    originalScale = locationSpecifications[dailyContinent][dailyArea][dailyLocationImage].originalScale[randomSeedTesting];
     currentScale = originalScale;
     dailyImage = document.getElementById("dailyLocation");
     dailyImage.style.transform = "translate(" + centerX + "px, " + centerY + "px) scale(" + originalScale + ")";*/
