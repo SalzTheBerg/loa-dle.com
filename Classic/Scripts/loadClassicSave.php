@@ -15,16 +15,17 @@ if (isset($_COOKIE[$cookieName])) {
     $stmt->fetch();
     $stmt->close();
 
-    $stmt = $mysqli->prepare("SELECT score, guessed_characters FROM user_classic_data WHERE user_id = ? AND date = ?");
+    $stmt = $mysqli->prepare("SELECT score, guessed_characters, hint_unlocked FROM user_classic_data WHERE user_id = ? AND date = ?");
     $stmt->bind_param("ss", $id, $currentDate);
     $stmt->execute();
-    $stmt->bind_result($score, $guessedCharacters);
+    $stmt->bind_result($score, $guessedCharacters, $hintUnlocked);
     $stmt->fetch();
     $stmt->close();
 
     header(header: 'Content-Type: application/json');
     echo json_encode(value: [
         "score" => $score,
-        "guessedCharacters" => $guessedCharacters
+        "guessedCharacters" => $guessedCharacters,
+        "hintUnlocked"=> $hintUnlocked
     ]);
 }

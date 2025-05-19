@@ -14,9 +14,10 @@
         <div id="gameContainer">
 
             <h1>Guess the Lost ark NPC/Boss</h1>
-            <h2>Enter any character to start</h2>
+            <h2 id="removeOnGuess">Enter any character to start</h2>
                 
             <div id="inputContainer">
+                <div id="hint" style="margin: 10px;"></div>
                 <div id="characterInputDiv" class="inputDiv">
                     <input type="text" id="characterInputContent" class="inputContent" placeholder="Enter character here..." autocomplete="off">
                     <button id="characterInputSubmit" class="inputSubmit">
@@ -71,7 +72,7 @@
             <table id="guessTable" align="center" style="display: none;">
                 <tr>
                     <th class="tooltip" data-tooltip="The character you guessed displayed as an image.">Character</th>
-                    <th class="tooltip" data-tooltip="Male or female. Pretty straightforward">Gender</th>
+                    <th class="tooltip" data-tooltip="Male or female or unknown">Gender</th>
                     <th class="tooltip" data-tooltip="Their race or species. Delains are considered Human and Demon">Race</th>
                     <th class="tooltip" data-tooltip="Their first story appearance if you do it chronologically. Partially means the Continent is right (e.g. Yudia shows partially when the character is in East Luterra)">First Appearance</th>
                     <th class="tooltip" data-tooltip="The affinity towards the player. For most characters either Ally, Enemy or Unclear for some characters">Affinity</th>

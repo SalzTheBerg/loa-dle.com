@@ -7,7 +7,19 @@
         "Card Rarity": ["None"],
         "Height": ["Giant"],
         "Status": ["Deceased"],
-        "Continent": "Kurzan"
+        "Continent": "Kurzan",
+        "Hint": "(No card description available) A giant fought at the Nameless Fortress"
+    },
+    "Albion": {
+        "Gender": "Unknown",
+        "Race": ["Guardian"],
+        "First Appearance": "Punika",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Giant"],
+        "Status": ["Alive"],
+        "Continent": "Punika",
+        "Hint": "The Solar Guardian, who led the Sidereals to Elgacia in the past."
     },
     "Akkan": {
         "Gender": "Male",
@@ -17,7 +29,41 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
         "Status": ["Alive"],
-        "Continent": "Shushire"
+        "Continent": "Shushire",
+        "Hint": "The commander of the Plague Legion who has the ability to control diseases and corruption. He absorbs everything that breathes, craving for a body for himself."
+    },
+    "Allegro": {
+        "Gender": "Male",
+        "Race": ["Lazenith"],
+        "First Appearance": "West Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "A tranquil bard who spends his days recounting stories of his life in song. He gives the impression that he's learned everything that there is to know about the world"
+    },
+    "Anabel": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "North Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Vern",
+        "Hint": "A clerk working at the Adventurer's Guild. Her adventurere parents died on a journey when she was young, and Gideon took her under his wing and raided her with help from the rest of the Guild."
+    },
+    "Argos": {
+        "Gender": "Unknown",
+        "Race": ["Guardian"],
+        "First Appearance": "Punika",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Giant"],
+        "Status": ["Deceased"],
+        "Continent": "Punika",
+        "Hint": "The Chaos Guardian that attempted to destroy Punika long ago."
     },
     "Armen": {
         "Gender": "Male",
@@ -27,7 +73,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "A young priest searching for the lost Arks of legend in hopes of saving the mortal world and healing its people."
     },
     "Avele": {
         "Gender": "Female",
@@ -37,7 +84,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Vern"
+        "Continent": "Vern",
+        "Hint": "The Knight Commander of Vern. Free-spirited and popular with everyone."
     },
     "Azakiel": {
         "Gender": "Male",
@@ -47,9 +95,10 @@
         "Card Rarity": ["Rare"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Elgacia"
+        "Continent": "Elgacia",
+        "Hint": "One of the Swords of the Lazeniths. They are in charge of record-keeping and education, and manage the Library of Honor."
     },
-    "Azena": {
+    "Azena & Inanna": {
         "Gender": "Female",
         "Race": ["Sylvain"],
         "First Appearance": "Rohendel",
@@ -57,7 +106,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Rohendel"
+        "Continent": "Rohendel",
+        "Hint": "A member of the Sidereals and queen of the Sylvains. She has two souls in one body."
     },
     "Balthorr": {
         "Gender": "Male",
@@ -67,7 +117,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
         "Status": ["Alive"],
-        "Continent": "Yorn"
+        "Continent": "Yorn",
+        "Hint": "The Sidereal Galatur's descendant. He's pleasant and boastful, but very loyal."
     },
     "Bastian": {
         "Gender": "Male",
@@ -77,7 +128,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Arthetine"
+        "Continent": "Arthetine",
+        "Hint": "One of the three leaders of the Republic of Arthetine. His boyish appearance belies his levelheadedness and charisma."
     },
     "Beatrice": {
         "Gender": "Female",
@@ -87,17 +139,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Trixion"
+        "Continent": "Trixion",
+        "Hint": "A Lazenith who watchs over the world from Trixion, a rift in spacetime, under the order of the god Regulus."
     },
     "Behemoth": {
-        "Gender": "Male",
+        "Gender": "Unknown",
         "Race": ["Guardian"],
         "First Appearance": "South Kurzan",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Epic", "Legendary"],
         "Height": ["Giant"],
         "Status": ["Deceased"],
-        "Continent": "Kurzan"
+        "Continent": "Kurzan",
+        "Hint": "A Chaos Guardian who follows Varkan. They were an infamous symbol of terror during the Chain War."
     },
     "Blackfang": {
         "Gender": "Female",
@@ -107,7 +161,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "Composed and Charismatic. ..., the captain of the Black Fox, maintains order while searching the high seas for Bloodclaw, who is missing."
     },
     "Brelshaza": {
         "Gender": "Female",
@@ -117,7 +172,30 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
         "Status": ["Alive"],
-        "Continent": "Rohendel"
+        "Continent": "Rohendel",
+        "Hint": "The commander of the Phantom Legion. Known as the most cunning and ruthless of all legion commanders, she charms her enemies and inflicts awful hallucinations upon them."
+    },
+    "Cals": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "East Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "The eldest son of the Moronto Family and the lord of Wavestrand Port. Pretentious and arrogant, having been made lord at a young age."
+    },
+    "Danika": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Rowen",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Rowen",
+        "Hint": "The Boulder Warrior, one of the strongest Tarunian warriors. She fires a bow as long as she is tall."
     },
     "Ealyn": {
         "Gender": "Female",
@@ -127,7 +205,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Vern"
+        "Continent": "Vern",
+        "Hint": "The Queen of Vern. She is regal, gracious, and merciful, but is less self-assured than she pretends."
     },
     "Echidna": {
         "Gender": "Female",
@@ -137,7 +216,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
         "Status": ["Alive"],
-        "Continent": "Kurzan"
+        "Continent": "Kurzan",
+        "Hint": "Long thought to be dead, this individual concealed their whereabouts only to unexpectedly show up again."
     },
     "Executor Solas": {
         "Gender": "Male",
@@ -147,7 +227,8 @@
         "Card Rarity": ["Uncommon"],
         "Height": ["Average"],
         "Status": ["Deceased"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "A coldhearted executioner from the Sacrian Order. He made an irreversible mistake, punishing the wrong people for heresy."
     },
     "Galatur": {
         "Gender": "Male",
@@ -157,7 +238,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
         "Status": ["Deceased"],
-        "Continent": "Yorn"
+        "Continent": "Yorn",
+        "Hint": "A heroic member of the Sidereals who fought against Kazeros during the Chain War. His exemplary skills crafted the Sidereals's armaments."
+    },
+    "Gideon": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "North Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Vern",
+        "Hint": "The master of the Adventurer's Guild. He was appointed the Guildmaster after solving various quests in North Vern in his younger days. He has a reputation for loyalty and magnanimity among the people of the north."
     },
     "Gustaven": {
         "Gender": "Male",
@@ -167,17 +260,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Pleccia"
+        "Continent": "Pleccia",
+        "Hint": "The benevolent Archon of Sacria. He leads the Dawn Priests."
     },
-    "Inanna": {
-        "Gender": "Female",
-        "Race": ["Sylvain"],
-        "First Appearance": "Rohendel",
+    "Hidaka": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Rowen",
         "Affinity": ["Ally"],
-        "Card Rarity": ["Legendary"],
+        "Card Rarity": ["Epic"],
         "Height": ["Average"],
-        "Status": ["Deceased", "Dual Soul"],
-        "Continent": "Rohendel"
+        "Status": ["Deceased"],
+        "Continent": "Rowen",
+        "Hint": "The leader of the Wolves of Vengeance. ...'s enormous axe crushes anything that stands in their way."
     },
     "Jederico": {
         "Gender": "Male",
@@ -187,7 +282,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Feiton"
+        "Continent": "Feiton",
+        "Hint": "A Dawn Priest who was sent to Feiton to monitor the area."
     },
     "Jahara": {
         "Gender": "Female",
@@ -197,7 +293,8 @@
         "Card Rarity": ["Rare"],
         "Height": ["Small"],
         "Status": ["Alive"],
-        "Continent": "Punika"
+        "Continent": "Punika",
+        "Hint": "A historian in Punika. Not very good with new people."
     },
     "Kadan": {
         "Gender": "Male",
@@ -207,7 +304,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Isteri"
+        "Continent": "Isteri",
+        "Hint": "A member of the Sidereals who remains veiled in mystery. He is known as the first Guardian Slayer."
     },
     "Kakul Saydon": {
         "Gender": "Male",
@@ -217,7 +315,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny", "Large", "Giant"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "The Commander of the Mayhem Legion. Behind his playful, clownish facade, he hides an evil, maddening power."
+    },
+    "Kaysarr": {
+        "Gender": "Male",
+        "Race": ["Umar"],
+        "First Appearance": "Yorn",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Tiny"],
+        "Status": ["Alive"],
+        "Continent": "Yorn",
+        "Hint": "The king who rules Yorn. Calm and very charismatic."
     },
     "Kazeros": {
         "Gender": "Male",
@@ -227,7 +337,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
         "Status": ["Alive"],
-        "Continent": "Kurzan"
+        "Continent": "Kurzan",
+        "Hint": "The Archdemon who rules Petrania. Also known as the Abyss Lord."
     },
     "Kharmine": {
         "Gender": "Male",
@@ -237,7 +348,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "An insidious Demon who operates with ill intent. He has the ability to absorb the powers of other Demons."
+    },
+    "Krause": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Arthetine",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Arthetine",
+        "Hint": "One of the three leaders of the Republic of Arthetine. He wants to lead the Cykins to a higher stage of evolution in order to protect Arkesia against Demons."
     },
     "Lauriel": {
         "Gender": "Male",
@@ -247,7 +370,19 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Deceased"],
-        "Continent": "Elgacia"
+        "Continent": "Elgacia",
+        "Hint": "The leader of the Swords of the Lazeniths in Elgacia. He has a gentle and benevolent personality and is respected by all of the Lazeniths."
+    },
+    "Levi": {
+        "Gender": "Male",
+        "Race": ["Human", "Demon"],
+        "First Appearance": "Feiton",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Feiton",
+        "Hint": "A new member of Avesta, Feiton's Order of Assassins. Bright and cheerful."
     },
     "Liru": {
         "Gender": "Female",
@@ -257,7 +392,19 @@
         "Card Rarity": ["Rare"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Punika"
+        "Continent": "Punika",
+        "Hint": "The militia leader whose stunning combat skills make her renowned in Punika."
+    },
+    "Ludwig": {
+        "Gender": "Male",
+        "Race": ["Sylvain"],
+        "First Appearance": "South Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Vern",
+        "Hint": "Former head mage of the Solar Knights. He has been living quietly ever since they disbanded."
     },
     "Luen": {
         "Gender": "Male",
@@ -267,7 +414,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
         "Status": ["Alive"],
-        "Continent": "Anikka"
+        "Continent": "Anikka",
+        "Hint": "A neutral Guardian that belongs to neither light nor darkness. They watch Arkesia through the eyes of a prophet."
     },
     "Luterra": {
         "Gender": "Male",
@@ -277,7 +425,30 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Deceased"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "The leader of the Sidereals, a hero who fought against Kazeros during the Chain War."
+    },
+    "Lutia": {
+        "Gender": "Female",
+        "Race": ["Human", "Demon"],
+        "First Appearance": "Feiton",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Feiton",
+        "Hint": "A Firekeeper that burns Chaos Shards and appeases the spirits of fallen Delains."
+    },
+    "Madnick": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Shushire",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Shushire",
+        "Hint": "A warrior who once dominated the Arena. Leader of the Daybreakers, he fights to abolish prison profiteering and bring a new dawn to Shushire."
     },
     "Mariu": {
         "Gender": "Male",
@@ -287,7 +458,30 @@
         "Card Rarity": ["Rare"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Yorn"
+        "Continent": "Yorn",
+        "Hint": "An aspiring sage from Raiya. Highly talented at crafting homunculi."
+    },
+    "Mokamoka": {
+        "Gender": "Male",
+        "Race": ["Mokoko"],
+        "First Appearance": "Tortoyk",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Tiny"],
+        "Status": ["Alive"],
+        "Continent": "Tortoyk",
+        "Hint": "A curious Mokoko boy. He's embarked upon the greates adventure of his life: to find Tortoyk's Heart."
+    },
+    "Morina": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Yudia",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "A young woman in Yudia who is trying to became a shaman."
     },
     "Narkiel": {
         "Gender": "Male",
@@ -297,7 +491,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Large"],
         "Status": ["Deceased"],
-        "Continent": "Atlas"
+        "Continent": "Atlas",
+        "Hint": "One of the four pirates who reigns over the seas. With a reputation for cruelty and a sinister demeanor, this pirate is adept in various magicks and curses."
     },
     "Neria": {
         "Gender": "Female",
@@ -307,7 +502,8 @@
         "Card Rarity": ["Rare"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "A kind cheerful girl who works at the Prideholme tavern and likes to cook."
     },
     "Nia": {
         "Gender": "Female",
@@ -317,7 +513,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
         "Status": ["Alive"],
-        "Continent": "Punika"
+        "Continent": "Punika",
+        "Hint": "A bright, cheerful Punikan girl who works hard to be a good chief."
     },
     "Nineveh": {
         "Gender": "Female",
@@ -327,7 +524,30 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Whispering Islet"
+        "Continent": "Whispering Islet",
+        "Hint": "A Lazenith who is a Sidereal. She can communicate with any object."
+    },
+    "Osphere": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Rowen",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Rowen",
+        "Hint": "A Sacrian Holy Knight dispatched to Rowen. He has been steeped in Sacrian doctrine since his youth."
+    },
+    "Prunya": {
+        "Gender": "Female",
+        "Race": ["Lazenith"],
+        "First Appearance": "Elgacia",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Elgacia",
+        "Hint": "One of the Swords of the Lazeniths in Elgacia. They are in charge of order and regulations, and they have a cool and tranquil charisma."
     },
     "Ren": {
         "Gender": "Female",
@@ -337,7 +557,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Kurzan"
+        "Continent": "Kurzan",
+        "Hint": "A Delain who has mastered controlling Sylmael. She is the daughter of Tamut, the leader of the Assar."
     },
     "Sasha": {
         "Gender": "Female",
@@ -347,7 +568,19 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Arthetine"
+        "Continent": "Arthetine",
+        "Hint": "One of the three leaders of the Republic of Arthetine. She manages her nation's finances with an iron fist."
+    },
+    "Scherrit": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "East Luterra",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Luterra",
+        "Hint": "The regent of Luterra. He poisoned the former king and colluded with Demons to take the crown for himself."
     },
     "Shana": {
         "Gender": "Female",
@@ -357,7 +590,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Punika"
+        "Continent": "Punika",
+        "Hint": "A mysterious girl who was raised by the previous chief. Like a sister to Nia."
     },
     "Shandi": {
         "Gender": "Male",
@@ -367,7 +601,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Tiny"],
         "Status": ["Alive"],
-        "Continent": "Illusion Bamboo Island"
+        "Continent": "Illusion Bamboo Island",
+        "Hint": "One of the Seven Sidereals. This carefree man wanders the world with his student."
     },
     "Sien": {
         "Gender": "Male",
@@ -377,7 +612,19 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Anikka"
+        "Continent": "Anikka",
+        "Hint": "A heroic member of the Sidereals who fought against Kazeros during the Chain War. He was a master of the Sihwa School and took on Immortal Dochul."
+    },
+    "Siera": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Rethramis",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Normal"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "A bard who lives in Prideholme."
     },
     "Thaemine": {
         "Gender": "Male",
@@ -387,7 +634,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
         "Status": ["Alive"],
-        "Continent": "Feiton"
+        "Continent": "Feiton",
+        "Hint": "The commander of the Darkness Legion. He is the strongest and most mysterious of Kazeros's commanders."
     },
     "Thar": {
         "Gender": "Male",
@@ -397,7 +645,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Vern"
+        "Continent": "Vern",
+        "Hint": "Vern's Knight Commander, who once was called the Silver Spear. He died in a battle against a necromancer a hundred years ago, and something recently brought him back to life."
     },
     "Thirain": {
         "Gender": "Male",
@@ -407,7 +656,41 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "The righteous and incorruptible prince of Luterra."
+    },
+    "Thunder": {
+        "Gender": "Female",
+        "Race": ["Human"],
+        "First Appearance": "Yudia",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "A nomad priestress who worships the sky. She can perform a ritual to appeal to the sky and make it rain."
+    },
+    "Tienis": {
+        "Gender": "Male",
+        "Race": ["Lazenith"],
+        "First Appearance": "Elgacia",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Elgacia",
+        "Hint": "One of the Swords of the Lazeniths in Elgacia. They have a serious personality and are skilled with a giant greatsword."
+    },
+    "Urr": {
+        "Gender": "Male",
+        "Race": ["Umar"],
+        "First Appearance": "West Luterra",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Uncommon"],
+        "Height": ["Tiny"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "An Umar blacksmith in Lakebar. Just a touch of his hammer can turn an ordinary weapon into a masterpiece."
     },
     "Vairgrys": {
         "Gender": "Male",
@@ -417,7 +700,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
         "Status": ["Alive"],
-        "Continent": "Vern"
+        "Continent": "Vern",
+        "Hint": "The first Guardian and leader of the Solar Guardians. They were born by combining the order ot Regulus and the chaos of Zosma."
     },
     "Valtan": {
         "Gender": "Male",
@@ -427,7 +711,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
         "Status": ["Deceased"],
-        "Continent": "Luterra"
+        "Continent": "Luterra",
+        "Hint": "The Demon Beast Commander, who leads the Demon Beasts of Petrania. His unstoppable charge inspires terror in his enemies."
     },
     "Varkan": {
         "Gender": "Male",
@@ -437,7 +722,30 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
         "Status": ["Alive"],
-        "Continent": "Yorn"
+        "Continent": "Yorn",
+        "Hint": "A Guardianthat leads Chaos Guardians. In the past, they abandones Vairgrys and left for Petrania."
+    },
+    "Varut": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Rethramis",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Luterra",
+        "Hint": "A gentle priest at the Prideholme Cathedral. A member of the Sacrian Order and one of the Dawn Priests who supports Archon Gustaven."
+    },
+    "Vrad": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Shushire",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Shushire",
+        "Hint": "A prisoner broker of Shushire. He's amassed an enormous fortune, owns the Red Curtain Arena, and is now colluding with Demons."
     },
     "Vykas": {
         "Gender": "Female",
@@ -447,7 +755,8 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Large"],
         "Status": ["Deceased"],
-        "Continent": "Anikka"
+        "Continent": "Anikka",
+        "Hint": "The commander of the Covetous Legion. She manipulates others' desires with sweet words. She is looking for a vessel to accept Kazeros."
     },
     "Wei": {
         "Gender": "Male",
@@ -457,7 +766,30 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Alive"],
-        "Continent": "Anikka"
+        "Continent": "Anikka",
+        "Hint": "A fighter who inherited the name of Sidereal. Having avenged his master, Dochul, he is now ready to save the world."
+    },
+    "Wilhelm": {
+        "Gender": "Male",
+        "Race": ["Human"],
+        "First Appearance": "Rowen",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Rowen",
+        "Hint": "Sacrian Archbishop. He is widely acclaimed for his vast knowledge and understanding of both doctrine and faith."
+    },
+    "Xereon": {
+        "Gender": "Male",
+        "Race": ["Sylvain"],
+        "First Appearance": "South Vern",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Deceased"],
+        "Continent": "Vern",
+        "Hint": "A former mage of the Solar Knights. He was in the Adventurer's Guild until just recently."
     },
     "Zaika": {
         "Gender": "Male",
@@ -467,7 +799,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
         "Status": ["Deceased"],
-        "Continent": "Feiton"
+        "Continent": "Feiton",
+        "Hint": "The head of Avesta, Feiton's Order of Assassins. He is cool and charismatic."
     },
     "Zeherade": {
         "Gender": "Female",
@@ -477,7 +810,8 @@
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
         "Status": ["Deceased"],
-        "Continent": "Yorn"
+        "Continent": "Yorn",
+        "Hint": "A mysterious figure you encountered in Kalinar. Takes a special interest in homunculi."
     },
     "Zinnervale": {
         "Gender": "Male",
@@ -487,6 +821,7 @@
         "Card Rarity": ["Legendary"],
         "Height": ["Average"],
         "Status": ["Deceased"],
-        "Continent": "Illusion Bamboo Island"
+        "Continent": "Illusion Bamboo Island",
+        "Hint": "Sidereal Shandi's student. Cheerful and flippant, he travels the continent with his master, hoping to one day learn all he knows."
     }
 }

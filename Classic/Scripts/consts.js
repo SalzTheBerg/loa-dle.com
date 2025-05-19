@@ -1,4 +1,4 @@
-export const characterOrder = {
+/*export const characterOrder = {
     "Trixion": ["Beatrice"],
     "Trua, the Forgotten Land": ["Kharmine"],
     "Rethramis": ["Armen", "Neria"],
@@ -27,4 +27,5 @@ export const characterOrder = {
     "North Kurzan": ["Aegir", "Kazeros"],
     "South Rimeria": [],
     "North Rimeria": []
-}
+    ADD it when sure about order otherwise this is trash
+}*/

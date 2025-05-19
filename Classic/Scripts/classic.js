@@ -2,7 +2,7 @@ import { today, focusState, correctColor, wrongColor, partialMatchColor, arrowUp
 import { fnv1aHash, autocompleteInput, checkInput, correctGuess } from "../../Modules/utilFunc.js";
 import { setupInput } from "../../Modules/inputSetup.js";
 import { createHeader, createParagraph } from "../../Modules/utilDOM.js";
-import { characterOrder } from "./consts.js";
+//import { characterOrder } from "./consts.js";
 
 // Uninitialized Variables
 let characterList = [];
@@ -11,6 +11,7 @@ let characterToGuess;
 
 let guessAmount = 0;
 let correctAttributes = 0;
+let hintUnlocked = false;
 
 let existingScore = null;
 let existingCharacterGuesses = null;
@@ -30,6 +31,7 @@ const characterInputSubmit = document.getElementById("characterInputSubmit");
 const suggestionsContainer = document.getElementById("characterSuggestions");
 const responseMessage = document.getElementById("responseMessage");
 const responseMessageText = document.getElementById("responseMessageText");
+const hint = document.getElementById("hint");
 
 // Getter functions for changing values
 function getAvailableCharacterNames() {
@@ -75,17 +77,6 @@ function getDailyCharacter() {
             loadClassicSave();
         })
         .catch(error => console.error("Error fetching character:", error));
-
-    //Test for regions
-    let x;
-    for (let checkCharacter in availableCharacterNames) {
-        x = characterOrder[characterList[availableCharacterNames[checkCharacter]]["First Appearance"]];
-        if (Array.isArray(x) && x.length > 0) {
-            if (!x.includes(availableCharacterNames[checkCharacter])) {
-                console.log("Character: " + availableCharacterNames[checkCharacter] + " is not right in consts");
-            }
-        }
-    }
 }
 
 // Handles logic for character Guessing
@@ -115,16 +106,33 @@ function readInput () {
 // Creates a tablerow and checks if its the correct guess
 function createRow(indexOfChar) {
 
+    const el = document.getElementById("removeOnGuess");
+    if (el) {
+        el.remove();
+    }
+
     let guess = availableCharacterNames[indexOfChar];
     let newRow = guessTable.insertRow(1);
+
+    const guessChar = characterList[guess];
+    const targetChar = characterList[characterToGuess];
 
     guessAmount++;
     if (saveCharacters) {
         saveCharacterGuess(guess);
     }
-
-    const guessChar = characterList[guess];
-    const targetChar = characterList[characterToGuess];
+    
+    if (5 - guessAmount === 0) {
+        hint.innerHTML = '<button id="unlockHint" class="button" style="height: 30px;">Unlock hint';
+        document.getElementById("unlockHint").addEventListener("click", function() {
+            hint.innerHTML = "Card Description: " + targetChar["Hint"];
+            hintUnlocked = true;
+            saveHintUnlocked();
+        });
+        if (hintUnlocked === true) {
+            document.getElementById("unlockHint").click();
+        }
+    } else if (guessAmount > 0) hint.innerHTML = "Hint unlocked in: " + (5 - guessAmount) + " guesses";
 
     let attributes = ["Gender", "Race", "First Appearance", "Affinity", "Card Rarity", "Height", "Status"];
     let newCell = newRow.insertCell(0);
@@ -156,14 +164,14 @@ function createRow(indexOfChar) {
                 newCell.innerHTML += arrowDown;
             } else if (areasInOrder.indexOf(guessChar[attributeName]) < areasInOrder.indexOf(targetChar[attributeName])) {
                 newCell.innerHTML += arrowUp;
-            } else {
+            }/* else {
                 let x = characterOrder[guessChar[attributeName]];
                 if (x.indexOf(guess) > x.indexOf(characterToGuess)) {
                     newCell.innerHTML += arrowDown;
                 } else if (x.indexOf(guess) < x.indexOf(characterToGuess)) {
                     newCell.innerHTML += arrowUp;
                 }
-            }
+            }*/
             if (guessChar.Continent === targetChar.Continent && !(guessChar[attributeName] === targetChar[attributeName] || JSON.stringify(guessChar[attributeName]) === JSON.stringify(targetChar[attributeName]))) {
                 newCell.style.backgroundColor = partialMatchColor;
             }
@@ -215,7 +223,8 @@ function getScore() {
 
     const data = {
         guesses: guessAmount,
-        correctAttributes: correctAttributes
+        correctAttributes: correctAttributes,
+        hintUnlocked: hintUnlocked
     };
   
     fetch('./Scripts/getScore.php', {
@@ -276,14 +285,33 @@ function saveCharacterGuess(guess) {
     });
 }
 
+function saveHintUnlocked() {
+    const data = {
+        hintUnlocked: hintUnlocked
+    };
+
+    fetch('./Scripts/saveHintUnlocked.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .catch(error => {
+        console.error('Error saving hint:', error);
+    });
+}
+
 function loadClassicSave() {
     fetch("./Scripts/loadClassicSave.php")
         .then(response => response.json())
         .then(data => {
             existingScore = data.score,
-            existingCharacterGuesses = data.guessedCharacters
+            existingCharacterGuesses = data.guessedCharacters,
+            hintUnlocked = data.hintUnlocked
 
             if (existingCharacterGuesses !== null) {
+                hintUnlocked = Boolean(hintUnlocked);
                 saveCharacters = false;
                 guessTable.style.display = "table";
                 const array = JSON.parse(existingCharacterGuesses);

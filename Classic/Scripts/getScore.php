@@ -5,13 +5,18 @@ $input = json_decode(file_get_contents('php://input'), true);
 
 $guesses = $input['guesses'];
 $correctAttributes = $input['correctAttributes'];
+$hintUnlocked = $input['hintUnlocked'];
 
 $score = 10000;
+
+if ($hintUnlocked) {
+    $score -= 1000;
+}
 
 $firstPenaltyThreshold = 5;
 $secondPenaltyThreshold = 10;
 $highPenalty = 1350;
-$mediumPenalty = 750;
+$mediumPenalty = 50;
 $lowPenalty = 350;
 
 $falseGuesses = max(0, $guesses - 2);
