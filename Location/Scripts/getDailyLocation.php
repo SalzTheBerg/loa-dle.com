@@ -8,10 +8,32 @@ $query = "SELECT target FROM daily_targets WHERE date = '$currentDate' AND mode 
 $result = mysqli_query(mysql: $mysqli, query: $query);
 
 if (!$result || $result->num_rows === 0) {
-    // select random image from continent then area then image -> subject to change later on to make it more "random"
-    $randomContinent = $mysqli->query("SELECT id, name FROM location_continents ORDER BY RAND() LIMIT 1")->fetch_assoc();
-    $randomArea = $mysqli->query("SELECT id, name FROM location_areas WHERE continent_id = {$randomContinent['id']} ORDER BY RAND() LIMIT 1")->fetch_assoc();
-    $randomImage = $mysqli->query("SELECT id, name, used_coordinate_index FROM location_images WHERE area_id = {$randomArea['id']} ORDER BY RAND() LIMIT 1")->fetch_assoc();
+    // select random image continents have 3 days cd and images 150 days
+    $randomImage = $mysqli->query("SELECT i.id, i.name, i.used_coordinate_index
+                                            FROM location_images i
+                                            JOIN location_areas a ON i.area_id = a.id
+                                            WHERE a.continent_id NOT IN (
+                                                SELECT continent_id FROM (
+                                                    SELECT a2.continent_id
+                                                    FROM daily_targets t
+                                                    JOIN location_images i2 ON t.target = i2.id
+                                                    JOIN location_areas a2 ON i2.area_id = a2.id
+                                                    WHERE t.mode = 'location'
+                                                    ORDER BY t.date DESC
+                                                    LIMIT 3
+                                                ) AS recent_continents
+                                            )
+                                            AND i.id NOT IN (
+                                                SELECT target FROM (
+                                                    SELECT target
+                                                    FROM daily_targets
+                                                    WHERE mode = 'location'
+                                                    ORDER BY date DESC
+                                                    LIMIT 150
+                                                ) AS recent_targets
+                                            )
+                                            ORDER BY RAND()
+                                            LIMIT 1")->fetch_assoc();
 
     $imageName = $randomImage["name"];
     $randomImageId = $randomImage["id"];

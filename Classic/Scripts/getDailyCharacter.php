@@ -12,7 +12,19 @@ if ($result && $result->num_rows > 0) {
     echo json_encode(value: ["characterToGuess" => $existingCharacter]);
 } else {
     // select name from characters db
-    $query = "SELECT name FROM classic_characters ORDER BY RAND() LIMIT 1";
+    $query = "SELECT c.name
+                FROM classic_characters c
+                WHERE c.name NOT IN (
+                    SELECT target FROM (
+                        SELECT target
+                        FROM daily_targets
+                        WHERE mode = 'classic'
+                        ORDER BY date DESC
+                        LIMIT 10
+                    ) AS recent_targets
+                )
+                ORDER BY RAND()
+                LIMIT 1";
     $result = mysqli_query(mysql: $mysqli, query: $query);
     $randomCharacter = $result->fetch_assoc()['name'];
 
