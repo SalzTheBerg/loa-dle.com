@@ -122,7 +122,7 @@ function createRow(indexOfChar) {
         saveCharacterGuess(guess);
     }
     
-    if (5 - guessAmount === 0) {
+    if (5 - guessAmount <= 0) {
         hint.innerHTML = '<button id="unlockHint" class="button" style="height: 30px;">Unlock hint';
         document.getElementById("unlockHint").addEventListener("click", function() {
             hint.innerHTML = "Card Description: " + targetChar["Hint"];
