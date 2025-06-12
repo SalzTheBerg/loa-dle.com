@@ -12,6 +12,7 @@ let genderUnlockGroups = [];
 let dailyImage;
 let dailySkill;
 let dailyClass;
+let originalDailyClass;
 
 // Consts
 const rotationAngles = [90, 180, 270];
@@ -103,6 +104,7 @@ function loadImg () {
         .then(response => response.json())
         .then(data => {
             dailyClass = data.className;
+            originalDailyClass = data.className;
             dailySkill = data.skillName;
 
             image.innerHTML = '<img src="AbilityImages/' + dailyClass + '/' + dailySkill + '.webp" id="dailySkill">';
@@ -211,7 +213,7 @@ function createRow(index) {
         newCell.style.backgroundColor = correctColor;
 
         const h2 = 'Nice!';
-        const p = 'The daily class was ' + classList[hash % classList.length] + ', but since this is also a skill for ' + dailyClass + ' it counts!';
+        const p = 'The daily class was ' + originalDailyClass + ', but since this is also a skill for ' + dailyClass + ' it counts!';
         const p2 = 'Can you also guess the ability name?';
 
         createHeader(h2, 2, responseMessageText);
