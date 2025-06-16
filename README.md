@@ -1,9 +1,9 @@
 # Lost Ark 'dle
 
-A small fan-made web app offering daily mini-games inspired by **Lost Ark**.  
+The source code for a small fan-made web app offering daily mini-games inspired by **Lost Ark**.
 Highly inspired by Loldle and Wordle, but for the Lost Ark gamers!
 
-## 🎮 Game Modes
+## Game Modes
 
 - **Classic**  
   Guess the correct character step by step – getting more and more hints with every guess.
@@ -18,7 +18,7 @@ Highly inspired by Loldle and Wordle, but for the Lost Ark gamers!
 
 A daily challenge for Lost Ark fans – to test your knowledge and have fun
 
-## 📌 Notes
+## Notes
 
 This is a personal fan project and not affiliated with Smilegate or Amazon Games.
 
