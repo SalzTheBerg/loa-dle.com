@@ -485,7 +485,7 @@
     },
     "Narkiel": {
         "Gender": "Male",
-        "Race": ["Demon"],
+        "Race": ["Human"],
         "First Appearance": "Atlas",
         "Affinity": ["Enemy"],
         "Card Rarity": ["Epic"],
@@ -620,7 +620,7 @@
         "Race": ["Human"],
         "First Appearance": "Rethramis",
         "Affinity": ["Ally"],
-        "Card Rarity": ["Normal"],
+        "Card Rarity": ["Uncommon"],
         "Height": ["Average"],
         "Status": ["Alive"],
         "Continent": "Luterra",
