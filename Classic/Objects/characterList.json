@@ -1,7 +1,7 @@
 {
     "Aegir": {
         "Gender": "Male",
-        "Race": ["Demon"],
+        "Race": ["Abyssal"],
         "First Appearance": "North Kurzan",
         "Affinity": ["Enemy"],
         "Card Rarity": ["None"],
@@ -424,7 +424,7 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Legendary"],
         "Height": ["Giant"],
-        "Status": ["Alive"],
+        "Status": ["Deceased"],
         "Continent": "Anikka",
         "Hint": "A neutral Guardian that belongs to neither light nor darkness. They watch Arkesia through the eyes of a prophet."
     },
@@ -493,6 +493,17 @@
         "Status": ["Alive"],
         "Continent": "Tortoyk",
         "Hint": "A curious Mokoko boy. He's embarked upon the greates adventure of his life: to find Tortoyk's Heart."
+    },
+    "Mordum": {
+        "Gender": "Male",
+        "Race": ["Abyssal"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["None"],
+        "Height": ["Giant"],
+        "Status": ["Deceased"],
+        "Continent": "Rimeria",
+        "Hint": "(No card description available) A giant fought at the Thunderous Storm Tower."
     },
     "Morina": {
         "Gender": "Female",
