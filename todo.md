@@ -20,16 +20,22 @@
 - Distance conversion of Anikka, Rowen, Shushire, South Vern, Tortoyk, Yudia and others
 - ~~Fix response message to adapt in size~~
 - check origins of stern 1 correct x/y
-- check all distance conversion by searching
+- ~~check all distance conversion by searching~~
 
 ### __Ability__
 - ~~Add grayscale and rotation options~~
 - ~~Insta suggestions on skill guess~~
-- Wildsoul incomplete / Artillerist missing
+- ~~Wildsoul incomplete / Artillerist missing~~
 
 ### __Character__
 - ~~Add information when hovering over th description~~
 - Validate Attributes
 - ~~Implement same region green arrow depending on order seen~~
-- Reverse check card rarity
 - ~~Partial match on continent guess~~
+
+## Changelog so far
+### Classic
+- Check again what attributes changed
+- Small and tiny regrouped into small
+- Added South Rimeria characters
+

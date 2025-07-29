@@ -28,7 +28,7 @@
         "Affinity": ["Enemy"],
         "Card Rarity": ["Legendary"],
         "Height": ["Large", "Giant"],
-        "Status": ["Alive"],
+        "Status": ["Deceased"],
         "Continent": "Shushire",
         "Hint": "The commander of the Plague Legion who has the ability to control diseases and corruption. He absorbs everything that breathes, craving for a body for himself."
     },
@@ -78,8 +78,8 @@
     },
     "Avele": {
         "Gender": "Female",
-        "Race": ["Human"],
-        "First Appearance": "South Vern",
+        "Race": ["Sylvain"],
+        "First Appearance": "North Vern",
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Average"],
@@ -240,6 +240,17 @@
         "Status": ["Deceased"],
         "Continent": "Yorn",
         "Hint": "A heroic member of the Sidereals who fought against Kazeros during the Chain War. His exemplary skills crafted the Sidereals's armaments."
+    },
+    "Ghin": {
+        "Gender": "Male",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Rimeria",
+        "Hint": "A disciple of Pahu, one of the elders of Rimeria. A native of North Rimeria, he has a cheerful personality."
     },
     "Gideon": {
         "Gender": "Male",
@@ -439,6 +450,17 @@
         "Continent": "Feiton",
         "Hint": "A Firekeeper that burns Chaos Shards and appeases the spirits of fallen Delains."
     },
+    "Lynn": {
+        "Gender": "Female",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Enemy"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Small"],
+        "Status": ["Deceased"],
+        "Continent": "Rimeria",
+        "Hint": "A Fallen One, touched by the darkness beyond the rift. In the past, she was the successor to Yaruz, an elder of Rimeria."
+    },
     "Madnick": {
         "Gender": "Male",
         "Race": ["Human"],
@@ -537,6 +559,17 @@
         "Status": ["Deceased"],
         "Continent": "Rowen",
         "Hint": "A Sacrian Holy Knight dispatched to Rowen. He has been steeped in Sacrian doctrine since his youth."
+    },
+    "Pahu": {
+        "Gender": "Male",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Rimeria",
+        "Hint": "One of the four elders of Rimeria. He is a master of illusions involving umbrella knives."
     },
     "Prunya": {
         "Gender": "Female",
@@ -791,6 +824,28 @@
         "Continent": "Vern",
         "Hint": "A former mage of the Solar Knights. He was in the Adventurer's Guild until just recently."
     },
+    "Yaruz": {
+        "Gender": "Female",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Average"],
+        "Status": ["Alive"],
+        "Continent": "Rimeria",
+        "Hint": "One of the four elders of Rimeria. A native of North Rimeria, she is a master of illusions involving scrolls."
+    },
+    "Yonfay": {
+        "Gender": "Female",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Epic"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Rimeria",
+        "Hint": "One of the four elders of Rimeria. A disciple of Zakra, she is currently the youngest elder in Rimeria."
+    },
     "Zaika": {
         "Gender": "Male",
         "Race": ["Demon"],
@@ -802,6 +857,17 @@
         "Continent": "Feiton",
         "Hint": "The head of Avesta, Feiton's Order of Assassins. He is cool and charismatic."
     },
+    "Zakra": {
+        "Gender": "Female",
+        "Race": ["Yoz"],
+        "First Appearance": "South Rimeria",
+        "Affinity": ["Ally"],
+        "Card Rarity": ["Rare"],
+        "Height": ["Small"],
+        "Status": ["Alive"],
+        "Continent": "Rimeria",
+        "Hint": "An elder from Rimeria and a renowned master of illusion skills. She may be eccentric, but she is extremely skilled."
+    },
     "Zeherade": {
         "Gender": "Female",
         "Race": ["Homunculus"],
@@ -809,7 +875,7 @@
         "Affinity": ["Ally"],
         "Card Rarity": ["Epic"],
         "Height": ["Small"],
-        "Status": ["Deceased"],
+        "Status": ["Alive"],
         "Continent": "Yorn",
         "Hint": "A mysterious figure you encountered in Kalinar. Takes a special interest in homunculi."
     },
